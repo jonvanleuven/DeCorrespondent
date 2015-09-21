@@ -43,6 +43,8 @@ namespace DeCorrespondent.Test.Impl
             Assert.IsFalse(result.Html.Contains("share-publication-footer"));
             Assert.IsFalse(result.Html.Contains("publication-body-link"));
             Assert.IsFalse(result.Html.Contains("class=\"header"));
+            Assert.IsFalse(result.Html.Contains("8 uur geleden"));
+            Assert.IsTrue(result.Html.Contains("16-9-2015 5:45"));
             Assert.NotNull(result.Reference);
             Assert.AreEqual("Drie manieren waarop mobiele telefoons bijdragen aan betere data", result.Title);
             Assert.AreEqual("6-7", result.ReadingTime);

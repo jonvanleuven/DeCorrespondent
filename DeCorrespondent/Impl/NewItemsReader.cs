@@ -79,6 +79,11 @@ namespace DeCorrespondent.Impl
                 n.SetAttributeValue("src", url);
                 n.SetAttributeValue("data-src", "");
             });
+            (body.SelectNodes("//time[string-length(@title) > 0]") ?? EmptyNodes).ToList().ForEach(n =>
+            {
+                n.ParentNode.PrependChild(HtmlNode.CreateNode("<span>"  + n.Attributes["title"].Value + "&nbsp;</span>"));
+                n.Remove();
+            });
             var title = body.SelectSingleNode("//h1[@data-field='title']").InnerText;
             var readingTime = ReadingTime(body);
             var authorSurname = body.SelectSingleNode("//span[@class='author-surname']").InnerText;
