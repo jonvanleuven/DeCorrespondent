@@ -1,0 +1,720 @@
+
+<!DOCTYPE html>
+    <!--[if lt IE 9]><script type="text/javascript">window.location = "/notsupported";</script><![endif]--><!--[if IE 9 ]><html class="ie ie9" lang="nl" class="ie ie9 no-js"><![endif]--><!--[if (gte IE 9)|!(IE)]><!--><html lang="nl" class="no-js"><!--<![endif]--><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="description" content=""><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><meta name="generator" content="Momkai|Respondens" /><title>De Correspondent</title><script type="application/ld+json">
+	{ "@context" : "http://schema.org",
+		"@type" : "Organization",
+		"name" : "De Correspondent",
+		"url" : "https://decorrespondent.nl",
+		"sameAs" : [
+			"https://facebook.com/decorrespondent",
+			"https://twitter.com/decorrespondent",
+			"https://plus.google.com/+DecorrespondentNl",
+			"https://www.youtube.com/leesverder",
+			"http://vimeo.com/decorrespondent"
+		]
+	}
+</script><link href="https://static.decorrespondent.nl/ff-gdad60bc/images/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"><link rel="apple-touch-icon" href="https://static.decorrespondent.nl/ff-gdad60bc/images/favicons/icon-precomposed.png" /><link rel="apple-touch-icon-precomposed" href="https://static.decorrespondent.nl/ff-gdad60bc/images/favicons/icon-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://static.decorrespondent.nl/ff-gdad60bc/images/favicons/icon-60x60-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://static.decorrespondent.nl/ff-gdad60bc/images/favicons/icon-120x120-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://static.decorrespondent.nl/ff-gdad60bc/images/favicons/icon-57x57-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://static.decorrespondent.nl/ff-gdad60bc/images/favicons/icon-114x114-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://static.decorrespondent.nl/ff-gdad60bc/images/favicons/icon-76x76-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://static.decorrespondent.nl/ff-gdad60bc/images/favicons/icon-152x152-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://static.decorrespondent.nl/ff-gdad60bc/images/favicons/icon-72x72-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://static.decorrespondent.nl/ff-gdad60bc/images/favicons/icon-144x144-precomposed.png" /><meta name="msapplication-TileImage" content="https://static.decorrespondent.nl/ff-gdad60bc/images/favicons/icon-precomposed.png"/><meta name="msapplication-TileColor" content="#DF5B57"/><meta name="msapplication-navbutton-color" content="#DF5B57" /><meta name="msapplication-tooltip" content="Een dagelijks medicijn tegen de waan van de dag" /><meta name="msapplication-starturl" content="/nieuw" /><meta name="application-name" content="De Correspondent" /><script type="text/javascript">
+	window.App = window.App || {};
+	window.Correspondent = window.Correspondent || {};
+	Correspondent.isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+	document.getElementsByTagName('html')[0].className += Correspondent.isTouch ? ' touch' : ' no-touch';
+</script><script>
+	document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script><link rel="stylesheet" href="https://static.decorrespondent.nl/ff-gdad60bc/css/styles/main.css"><script src="//use.typekit.net/nlo7vhf.js"></script><script>try{Typekit.load();}catch(e){}</script></head><body  class=" font-size-l nightmode "><script>
+        dataLayer = [];
+        	dataLayer = [{
+	'page_type': 'feed',
+	'page_public': 'no'
+	}];
+    </script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WM3BVT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WM3BVT');
+    </script><svg display="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewBox="0 0 12 12"><defs><symbol id="preloader"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.4,14.5c0.3-0.6,0.7-0.8,1.1-1.3c0.4-0.6,0.5-1.1,0.1-1.5   c-0.5-0.4-1.5,0.1-2.1,1.2c-3.1,5.8,2.5,8.8,2.5,8.8C12.1,18.9,12.4,16.5,13.4,14.5z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M33.5,31c-3.4,3-12.1,9.1-16.4,6.1c-4.3-3-0.4-10,5.6-16c6-6,12.2-8.5,15.1-7.4   c2.9,1,2.6,5.2-2.4,8.3C28.9,25.8,22,24.6,22,24.6s3.6,1.1,7.8,0.3c5-1,10.9-4.1,11.6-8.6c0.7-4.6-4.4-7.8-15.2-0.9   C15.3,22.3,6.5,35.3,14.7,39.7C22.6,44,33.5,31,33.5,31z"></path></symbol><symbol id="hamburger"><path d="M0,1 20,1" /><path d="M0,6 20,6" /><path d="M0,11 20,11" /></symbol><symbol id="latest"><polygon fill-rule="evenodd" clip-rule="evenodd" points="7,5 3,5 0,12 5,7 9,7 12,0 "/></symbol><symbol id="podcasts"><path d="M6,2v5.3C5.7,7.1,5.4,7,5,7C3.9,7,3,7.9,3,9s0.9,2,2,2c1.1,0,2-0.9,2-2V4h3V2H7H6z"/></symbol><symbol id="dossiers"><path d="M3,1v1h7v6h1V1H3z M1,11h8V3H1V11z M2,4h6v6H2V4z"/></symbol><symbol id="dossiers2"><path d="M3,1v1h7v6h1V1H3z M1,11h8V3H1V11z"/></symbol><symbol id="documentaries"><path d="M6,0C2.7,0,0,2.7,0,6c0,3.3,2.7,6,6,6c3.3,0,6-2.7,6-6C12,2.7,9.3,0,6,0z M6,10.9c-2.7,0-4.9-2.2-4.9-4.9
+	c0-2.7,2.2-4.9,4.9-4.9c2.7,0,4.9,2.2,4.9,4.9C10.9,8.7,8.7,10.9,6,10.9z"/><polygon points="8.2,6 5,4 5,8 "/></symbol><symbol id="documentaries2"><path d="M3,10l6-4L3,2L3,10z"/></symbol><symbol id="following"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.6,9.2c-1-0.2-3-0.7-3.1-1.4c0-0.2-0.1-0.8-0.1-0.8S9,6.7,9,3.5
+	C9,1.2,7.5,0,6,0S3,1.2,3,3.5c0,3.2,1.5,3.5,1.5,3.5s0,0.6-0.1,0.8C4.3,8.5,2.4,9,1.4,9.2C0.4,9.4,0,12,0,12h12
+	C12,12,11.6,9.4,10.6,9.2z"/></symbol><symbol id="stored"><path d="M12,12L8,9l-4,3V1h8V12z"/></symbol><symbol id="correspondents"><path d="M7.1,8c-0.6-0.1-2-0.5-2-1c0-0.2,0-0.6,0-0.6s1-0.4,1-3C6,1.9,5,1,4,1S2,1.9,2,3.5c0,2.6,1,3,1,3S3,6.8,3,7
+		c-0.1,0.5-1.4,0.9-2,1C0.3,8.1,0,10,0,10h8C8,10,7.7,8.1,7.1,8z"/><path d="M12,10c-0.1-0.5-0.3-1.6-0.8-1.7c-0.6-0.1-1.7-0.4-1.8-0.9c0-0.1,0-0.5,0-0.5s0.7-0.3,0.7-2C10,3.5,9.4,3,8.5,3
+		S7,3.5,7,4.9c0,1.6,0.7,2,0.7,2s0,0.2,0,0.3C8.5,7.6,8.8,9,9,10H12z"/></symbol><symbol id="searchIcon"><path d="m12.001 10.585l-2.826-2.826c0.523-0.79 0.832-1.736 0.832-2.756 0-2.763-2.24-5.003-5.003-5.003-2.764 0-5.004 2.24-5.004 5.003s2.24 5.004 5.004 5.004c1.019 0 1.965-0.309 2.756-0.833l2.826 2.826 1.415-1.415zm-6.997-2.58c-1.656 0-3.002-1.346-3.002-3.002 0-1.655 1.346-3.002 3.002-3.002 1.655 0 3.002 1.347 3.002 3.002 0 1.656-1.347 3.002-3.002 3.002z"/></symbol></defs></svg><aside class="panel panel-left"><nav role="navigation" class="menu-secondary scrollable"><ul ><li class=""><a href="/correspondenten"><svg class="correspondents"><use xlink:href="#correspondents"></use></svg>Correspondenten</a></li><li class=""><a href="/documentaires"><svg class="documentaries"><use xlink:href="#documentaries"></use></svg>Documentaires</a></li><li class=""><a href="/podcasts"><svg class="podcasts"><use xlink:href="#podcasts"></use></svg>Podcasts</a></li></ul><ul ><li class=""><a href="/contact">Contact</a></li><li class=""><a href="/kiosk">Kiosk</a></li><li class=""><a href="/geef-cadeau">Cadeaulidmaatschap</a></li><li class=""><a href="/agenda">Evenementen</a></li></ul><ul class="secondary"><li class=""><a href="/over">Over ons</a></li><li class=""><a href="/vacatures">Vacatures</a></li><li class=""><a href="/veelgestelde-vragen">Veelgestelde vragen</a></li><li class=""><a href="/voorwaarden">Voorwaarden</a></li></ul></nav></aside><header class="header" data-module="Header" data-options='{"sticky": true}' data-priority="1"><div class="left-panel-toggle"><span class="menu-label">Menu</span><div class="icons"><div class="close-icon"><span></span><span></span><span></span><span></span></div><div class="open-icon"><span></span><span></span><span></span></div></div></div><nav class="menu-primary"><ul><li class="active"><a href="/nieuw" class="latest"><svg class="latest"><use xlink:href="#latest"></use></svg>Nieuw</a></li><li ><a href="/volgend" class="following"><svg class="following"><use xlink:href="#following"></use></svg>Volgend</a></li><li ><a href="/bewaard" class="stored"><svg class="stored"><use xlink:href="#stored"></use></svg>Bewaard</a></li></ul></nav><div class="logo"><a title="naar de homepage" href="/nieuw"></a></div><div class="search-input"><svg class="search-icon"><use xlink:href="#searchIcon"></use></svg><small>Zoeken</small></div><form class="header-search" action="/zoek" method="get" accept-charset="UTF-8"><label>
+        Zoeken
+		<svg class="search-icon"><use xlink:href="#searchIcon"></use></svg></label><fieldset><input  name="search_query"
+				type="search"
+				placeholder="Zoek op artikelen en correspondenten"
+				data-placeholder="Doorzoek de Correspondent"
+				autocomplete="off"
+		/></fieldset><div class="search-close"><div class="close-icon"><span></span><span></span><span></span><span></span></div></div></form><div class="personal-menu-control" title="open je persoonlijke menu"><div class="personal-menu-toggle"><div class="user-avatar"><img width="32" class="lazyload" data-src="https://static.decorrespondent.nl/ff-gdad60bc/images/users/avatars/64/J.png" alt="Jon van Leuven"></div><div class="personal-menu-arrows"><span class="up"></span><span class="down"></span></div></div><nav class="menu-personal"><ul><li class=""><a href="/instellingen">Instellingen</a></li><li class=""><a href="/account">Account</a></li><li class=""><a href="/gelezen">Gelezen</a></li></ul><div class="secondary"><a onclick="document.getElementById('logout').submit();" href="javascript:void(0);">Uitloggen</a><form hidden id='logout' action='/logout' method='post' accept-charset='UTF-8'></form></div></nav></div></header><section id="container">
+    	
+  
+
+
+<section id="feed" class="feed normal"
+      data-module="InfiniteScroll"
+    data-options='{
+      "feedName": "nieuw"
+      ,"offset": 1}'
+  >
+
+  
+<section class="feed-items">
+
+      
+        
+        
+    
+    
+    
+        
+  <header class="featured-item-header">
+    <figure>
+                        
+          <img class="mainimage" data-src="https://dynamic.decorrespondent.nl/ff-1442238611/media/{breakpoint-name}/55f6c6d9d77980441472406.jpg" alt="North of the Philippine city of Tacloban, new houses are being built for victims of the Typhoon Yolanda. Photos by Pieter van den Boogert for The Correspondent">
+          <noscript><img src="https://dynamic.decorrespondent.nl/ff-1442238611/media/1920/55f6c6d9d77980441472406.jpg alt="North of the Philippine city of Tacloban, new houses are being built for victims of the Typhoon Yolanda. Photos by Pieter van den Boogert for The Correspondent" }}"></noscript>
+                  </figure>
+
+    <h1><a href="https://decorrespondent.nl/3352/Married-with-aid-workers-A-post-disaster-love-story/165783923272-ecaf0fab" class="feed-item-link" data-article-id="3352" data-field="title">Married with aid workers -- A post-disaster love story</a></h1>
+  </header>
+
+
+<article class="featured-item">
+    <h4>Verhaal van de dag</h4>
+
+    <span class="comment-count">0</span>
+
+  <div class="clear"></div>
+  <div class="text">
+    <p data-field="intro">
+      A year after Typhoon Haiyan hit the Philippines, leaving 6000 dead and 4 million homeless, the arranged marriage between the country and its aid workers is showing signs of strain. The main point of contention: Who&#39;s in charge of humanitarian relief? Photographer Pieter van den Boogert and I delved into the workings of the humanitarian aid machine.
+    </p>
+
+      
+					
+	
+							
+		<span class="reading-time">Leestijd
+			12 - 16 minuten
+		</span>
+
+	
+
+
+    <a href="https://decorrespondent.nl/3352/Married-with-aid-workers-A-post-disaster-love-story/165783923272-ecaf0fab" data-article-id="3352" class="glyph-right-after more feed-item-link"></a>
+    <div class="clear"></div>
+
+      <img width="80" height="70" class="author-avatar" src="https://dynamic.decorrespondent.nl/ff-1433250969/media/160/556dac99a68228116799384.png" alt="Avatar Maite Vermeulen">
+
+  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow">
+        <a href="/maitevermeulen">
+          <span>Maite</span> Vermeulen
+        </a>
+      </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">1&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip"><div class="mid"><ul class="share-options"
+	data-parent="ul"
+	data-url="https://decorrespondent.nl/3352/Married-with-aid-workers-A-post-disaster-love-story/165783923272-ecaf0fab"
+	data-id="3352"
+	data-title="Married with aid workers -- A post-disaster love story"
+	data-text=""
+	data-related="maitevermeulen"
+	data-expertise="Correspondent Conflict &amp; Ontwikkeling"
+	data-mailto="mailto:?subject=Tip: Married%20with%20aid%20workers%20--%20A%20post-disaster%20love%20story&body=Op De Correspondent zag ik een verhaal van Maite%20Vermeulen dat ik graag met je wil delen:%0D%0A%0D%0AMarried%20with%20aid%20workers%20--%20A%20post-disaster%20love%20story - https%3A%2F%2Fdecorrespondent.nl%2F3352%2FMarried-with-aid-workers-A-post-disaster-love-story%2F165783923272-ecaf0fab%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail"
+	data-object-name="publication"
+><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">Linkedin</a></li><li class="mail"><a
+			href="javascript: void(0);"
+			data-share-type="mail"
+			class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/3352/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/3352.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="3352"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2015-09-14" title="14-9-2015 15:50">
+	9 minuten geleden</time></li></ul>      </footer>
+  </article>
+      
+        
+    
+    
+    
+        
+
+<article class="column-item">
+    <a data-article-id="3345" class="feed-item-link" href="https://decorrespondent.nl/3345/Thuis-ben-je-waar-zwangerschap-het-beste-in-je-naar-voren-haalt/165437715795-9cd4e9bf">
+    <div class="image">
+          <img class="lazyload" data-src="https://dynamic.decorrespondent.nl/ff-1442238309/media/660/55f68065955847355100493.jpg" alt="">
+  <noscript><img alt="" src="https://dynamic.decorrespondent.nl/ff-1442238309/media/660/55f68065955847355100493.jpg"></noscript>
+
+        <span class="comment-count">0</span>
+        
+					
+	
+							
+		<span class="reading-time">Leestijd
+			2 minuten
+		</span>
+
+	
+
+
+      <div class="title-wrapper">
+        <h3 data-field="title">Thuis ben je waar zwangerschap het beste in je naar voren haalt</h3>
+      </div>
+
+      <h4>Column</h4>
+
+      <span class="glyph-right"></span>
+    </div>
+  </a>
+
+  <footer class="feed-item-footer">
+              <div class="name ">
+        <a href="/arnongrunberg">
+          <span>Arnon</span> Grunberg
+        </a>
+      </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">1&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip"><div class="mid"><ul class="share-options"
+	data-parent="ul"
+	data-url="https://decorrespondent.nl/3345/Thuis-ben-je-waar-zwangerschap-het-beste-in-je-naar-voren-haalt/165437715795-9cd4e9bf"
+	data-id="3345"
+	data-title="Thuis ben je waar zwangerschap het beste in je naar voren haalt"
+	data-text=""
+	data-related="arnonyy"
+	data-expertise="Correspondent Hotelmens"
+	data-mailto="mailto:?subject=Tip: Thuis%20ben%20je%20waar%20zwangerschap%20het%20beste%20in%20je%20naar%20voren%20haalt&body=Op De Correspondent zag ik een verhaal van Arnon%20Grunberg dat ik graag met je wil delen:%0D%0A%0D%0AThuis%20ben%20je%20waar%20zwangerschap%20het%20beste%20in%20je%20naar%20voren%20haalt - https%3A%2F%2Fdecorrespondent.nl%2F3345%2FThuis-ben-je-waar-zwangerschap-het-beste-in-je-naar-voren-haalt%2F165437715795-9cd4e9bf%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail"
+	data-object-name="publication"
+><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">Linkedin</a></li><li class="mail"><a
+			href="javascript: void(0);"
+			data-share-type="mail"
+			class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/3345/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/3345.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="3345"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2015-09-14" title="14-9-2015 15:45">
+	14 minuten geleden</time></li></ul>    
+  </footer>
+  </article>
+      
+        
+    
+    
+    
+        
+
+<article class="story-item">
+    <a data-article-id="3336" class="feed-item-link" href="https://decorrespondent.nl/3336/Discussieer-mee-met-de-baas-van-de-AIVD-over-de-toekomst-van-onze-privacy/164992591896-addcc35b">
+    <div class="top">
+              <div class="image">
+              <img class="lazyload" data-src="https://dynamic.decorrespondent.nl/ff-1442223909/media/660/55f2e11fb55e29559738324.gif" alt="Beeld: Momkai">
+  <noscript><img alt="Beeld: Momkai" src="https://dynamic.decorrespondent.nl/ff-1442223909/media/660/55f2e11fb55e29559738324.gif"></noscript>
+        </div>
+      
+      <h4>Oproep</h4>
+
+        <span class="comment-count">2</span>
+
+      <div class="clear"></div>
+      <div class="heading">
+        <h2 data-field="title">Discussieer mee met de baas van de AIVD over de toekomst van onze privacy</h2>
+        <span class="glyph-right"></span>
+      </div>
+    </div>
+  </a>
+
+  <div class="text">
+    <p data-field="intro">
+      Net als op De Correspondent, is Privacy &amp; Veiligheid ook op ons Festival der Vooruitgang een belangrijk thema. In dit stuk vertel ik wat er op het programma staat.
+    </p>
+
+      
+					
+	
+							
+		<span class="reading-time">Leestijd
+			2 minuten
+		</span>
+
+	
+
+      <img width="80" height="70" class="author-avatar" src="https://dynamic.decorrespondent.nl/ff-1433404700/media/160/5570051c9aebb0414642687.png" alt="Avatar Maurits Martijn">
+
+  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow">
+        <a href="/mauritsmartijn">
+          <span>Maurits</span> Martijn
+        </a>
+      </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">9&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip"><div class="mid"><ul class="share-options"
+	data-parent="ul"
+	data-url="https://decorrespondent.nl/3336/Discussieer-mee-met-de-baas-van-de-AIVD-over-de-toekomst-van-onze-privacy/164992591896-addcc35b"
+	data-id="3336"
+	data-title="Discussieer mee met de baas van de AIVD over de toekomst van onze privacy"
+	data-text=""
+	data-related="mauritsmartijn"
+	data-expertise="Correspondent Technologie &amp; Surveillance"
+	data-mailto="mailto:?subject=Tip: Discussieer%20mee%20met%20de%20baas%20van%20de%20AIVD%20over%20de%20toekomst%20van%20onze%20privacy&body=Op De Correspondent zag ik een verhaal van Maurits%20Martijn dat ik graag met je wil delen:%0D%0A%0D%0ADiscussieer%20mee%20met%20de%20baas%20van%20de%20AIVD%20over%20de%20toekomst%20van%20onze%20privacy - https%3A%2F%2Fdecorrespondent.nl%2F3336%2FDiscussieer-mee-met-de-baas-van-de-AIVD-over-de-toekomst-van-onze-privacy%2F164992591896-addcc35b%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail"
+	data-object-name="publication"
+><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">Linkedin</a></li><li class="mail"><a
+			href="javascript: void(0);"
+			data-share-type="mail"
+			class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/3336/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/3336.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="3336"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2015-09-14" title="14-9-2015 11:45">
+	4 uur geleden</time></li></ul>      </footer>
+  </article>
+      
+        
+    
+    
+    
+        
+
+<article class="story-item">
+    <a data-article-id="3339" class="feed-item-link" href="https://decorrespondent.nl/3339/Dit-wil-ik-gaan-onderzoeken-als-correspondent-Medicijnen/165140966529-2e702bec">
+    <div class="top">
+              <div class="image">
+              <img class="lazyload" data-src="https://dynamic.decorrespondent.nl/ff-1442202309/media/660/55f2df87a17062148538553.jpg" alt="">
+  <noscript><img alt="" src="https://dynamic.decorrespondent.nl/ff-1442202309/media/660/55f2df87a17062148538553.jpg"></noscript>
+        </div>
+      
+      <h4>Verhaal</h4>
+
+        <span class="comment-count">68</span>
+
+      <div class="clear"></div>
+      <div class="heading">
+        <h2 data-field="title">Dit wil ik gaan onderzoeken als correspondent Medicijnen</h2>
+        <span class="glyph-right"></span>
+      </div>
+    </div>
+  </a>
+
+  <div class="text">
+    <p data-field="intro">
+      Het is het nobelste werk denkbaar: producten ontwikkelen die grote groepen mensen gezond maken of zelfs het leven redden. Toch dienen er jaarlijks grote strafzaken tegen farmaceutische bedrijven. Volledig gereguleerd, elk jaar bestraft: een sector die maar niet leert. Of leert niemand van de sector? Dat wil ik gaan onderzoeken als correspondent Medicijnen.
+    </p>
+
+      
+					
+	
+							
+		<span class="reading-time">Leestijd
+			7 - 9 minuten
+		</span>
+
+	
+
+      <img width="80" height="70" class="author-avatar" src="https://dynamic.decorrespondent.nl/ff-1441881727/media/160/55f15e7fd0cb39219360769.png" alt="Avatar Lucien Hordijk">
+
+  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow">
+        <a href="/lucienhordijk">
+          <span>Lucien</span> Hordijk
+        </a>
+      </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">78&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip"><div class="mid"><ul class="share-options"
+	data-parent="ul"
+	data-url="https://decorrespondent.nl/3339/Dit-wil-ik-gaan-onderzoeken-als-correspondent-Medicijnen/165140966529-2e702bec"
+	data-id="3339"
+	data-title="Dit wil ik gaan onderzoeken als correspondent Medicijnen"
+	data-text="Verlang je nog iets van mijn zoektocht in de wondere wereld van geneesmiddelen? Laat me dan vooral je suggesties, vragen of tips weten in de bijdragen hieronder."
+	data-related="LucienHordijk"
+	data-expertise="Correspondent Medicijnen"
+	data-mailto="mailto:?subject=Tip: Dit%20wil%20ik%20gaan%20onderzoeken%20als%20correspondent%20Medicijnen&body=Op De Correspondent zag ik een verhaal van Lucien%20Hordijk dat ik graag met je wil delen:%0D%0A%0D%0ADit%20wil%20ik%20gaan%20onderzoeken%20als%20correspondent%20Medicijnen - https%3A%2F%2Fdecorrespondent.nl%2F3339%2FDit-wil-ik-gaan-onderzoeken-als-correspondent-Medicijnen%2F165140966529-2e702bec%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail"
+	data-object-name="publication"
+><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">Linkedin</a></li><li class="mail"><a
+			href="javascript: void(0);"
+			data-share-type="mail"
+			class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/3339/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/3339.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="3339"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2015-09-14" title="14-9-2015 5:45">
+	10 uur geleden</time></li></ul>      </footer>
+  </article>
+      
+        
+    
+    
+    
+        
+  <header class="featured-item-header">
+    <figure>
+                        
+          <img class="mainimage" data-src="https://dynamic.decorrespondent.nl/ff-1442202312/media/{breakpoint-name}/55f2e7fd3fea56166707616.jpg" alt="Guatemalteken vieren het aftreden van Otto Pérez Molina, vorige week donderdag, in Guatemala-Stad. Foto: Jan-Albert Hootsen">
+          <noscript><img src="https://dynamic.decorrespondent.nl/ff-1442202312/media/1920/55f2e7fd3fea56166707616.jpg alt="Guatemalteken vieren het aftreden van Otto Pérez Molina, vorige week donderdag, in Guatemala-Stad. Foto: Jan-Albert Hootsen" }}"></noscript>
+                  </figure>
+
+    <h1><a href="https://decorrespondent.nl/3343/Deze-man-is-de-strijd-tegen-straffeloosheid-aan-het-winnen-en-heel-Guatemala-profiteert-mee/165338799373-81ac6f31" class="feed-item-link" data-article-id="3343" data-field="title">Deze man is de strijd tegen straffeloosheid aan het winnen (en heel Guatemala profiteert mee)</a></h1>
+  </header>
+
+
+<article class="featured-item">
+    <h4>Gastbijdrage</h4>
+
+    <span class="comment-count">13</span>
+
+  <div class="clear"></div>
+  <div class="text">
+    <p data-field="intro">
+      In Guatemala is een revolutie aan de gang. De president is afgetreden, talloze anderen zijn gearresteerd. Ook de strijd tegen corruptie lijkt eindelijk zijn vruchten af te werpen. De spil in dit alles? CICIG. Ik sprak de leider van dit anticorruptie-instituut en zie door zijn ogen hoe het land en de regio veranderen.
+    </p>
+
+      
+					
+	
+							
+		<span class="reading-time">Leestijd
+			10 - 13 minuten
+		</span>
+
+	
+
+
+    <a href="https://decorrespondent.nl/3343/Deze-man-is-de-strijd-tegen-straffeloosheid-aan-het-winnen-en-heel-Guatemala-profiteert-mee/165338799373-81ac6f31" data-article-id="3343" class="glyph-right-after more feed-item-link"></a>
+    <div class="clear"></div>
+
+          <img width="80" height="80" class="guest-author-avatar" src="https://dynamic.decorrespondent.nl/ff-1440447775/media/180/55db7d1f02c882548015816.png" alt="Avatar Jan-Albert Hootsen">
+  
+  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow">
+        <a href="/jan-alberthootsen">
+          <span>Jan-Albert</span> Hootsen
+        </a>
+      </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">91&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip"><div class="mid"><ul class="share-options"
+	data-parent="ul"
+	data-url="https://decorrespondent.nl/3343/Deze-man-is-de-strijd-tegen-straffeloosheid-aan-het-winnen-en-heel-Guatemala-profiteert-mee/165338799373-81ac6f31"
+	data-id="3343"
+	data-title="Deze man is de strijd tegen straffeloosheid aan het winnen (en heel Guatemala profiteert mee)"
+	data-text=""
+	data-related="jayhootsen"
+	data-expertise="Correspondent Mexico"
+	data-mailto="mailto:?subject=Tip: Deze%20man%20is%20de%20strijd%20tegen%20straffeloosheid%20aan%20het%20winnen%20%28en%20heel%20Guatemala%20profiteert%20mee%29&body=Op De Correspondent zag ik een verhaal van Jan-Albert%20Hootsen dat ik graag met je wil delen:%0D%0A%0D%0ADeze%20man%20is%20de%20strijd%20tegen%20straffeloosheid%20aan%20het%20winnen%20%28en%20heel%20Guatemala%20profiteert%20mee%29 - https%3A%2F%2Fdecorrespondent.nl%2F3343%2FDeze-man-is-de-strijd-tegen-straffeloosheid-aan-het-winnen-en-heel-Guatemala-profiteert-mee%2F165338799373-81ac6f31%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail"
+	data-object-name="publication"
+><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">Linkedin</a></li><li class="mail"><a
+			href="javascript: void(0);"
+			data-share-type="mail"
+			class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/3343/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/3343.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="3343"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2015-09-14" title="14-9-2015 5:45">
+	10 uur geleden</time></li></ul>      </footer>
+  </article>
+      
+        
+    
+    
+    
+        
+
+<article class="story-item">
+    <a data-article-id="3338" class="feed-item-link" href="https://decorrespondent.nl/3338/Zo-doorbreken-ze-in-Amerika-het-enkeltje-school-naar-gevangenis/165091508318-ac2f834e">
+    <div class="top">
+              <div class="image">
+              <img class="lazyload" data-src="https://dynamic.decorrespondent.nl/ff-1442164517/media/660/55f5aef3b7ded7357742045.jpg" alt="Gevangenen van de Maricopagevangenis in Phoenix (VS) hebben zich vrijwillig aangemeld voor het verrichten van werk in de openbare ruimte. Foto: Scott Houston / Hollandse Hoogte">
+  <noscript><img alt="Gevangenen van de Maricopagevangenis in Phoenix (VS) hebben zich vrijwillig aangemeld voor het verrichten van werk in de openbare ruimte. Foto: Scott Houston / Hollandse Hoogte" src="https://dynamic.decorrespondent.nl/ff-1442164517/media/660/55f5aef3b7ded7357742045.jpg"></noscript>
+        </div>
+      
+      <h4>Gastbijdrage</h4>
+
+        <span class="comment-count">13</span>
+
+      <div class="clear"></div>
+      <div class="heading">
+        <h2 data-field="title">Zo doorbreken ze in Amerika het enkeltje school naar gevangenis</h2>
+        <span class="glyph-right"></span>
+      </div>
+    </div>
+  </a>
+
+  <div class="text">
+    <p data-field="intro">
+      De Verenigde Staten hebben gevangenen altijd massaal opgesloten. Met mensonterende omstandigheden tot gevolg. Nu is er eindelijk weer aandacht voor herintegratie. Als docent in een Californische gevangenis merk ik hoe goed onderwijs kan helpen bij de resocialisatie van criminelen.
+    </p>
+
+      
+					
+	
+							
+		<span class="reading-time">Leestijd
+			7 - 9 minuten
+		</span>
+
+	
+
+          <img width="80" height="80" class="guest-author-avatar" src="https://dynamic.decorrespondent.nl/ff-1441964057/media/180/55f2a019299165361258020.png" alt="Avatar Femke Kaulingfreks">
+  
+  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow">
+        <a href="/femkekaulingfreks">
+          <span>Femke</span> Kaulingfreks
+        </a>
+      </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">52&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip"><div class="mid"><ul class="share-options"
+	data-parent="ul"
+	data-url="https://decorrespondent.nl/3338/Zo-doorbreken-ze-in-Amerika-het-enkeltje-school-naar-gevangenis/165091508318-ac2f834e"
+	data-id="3338"
+	data-title="Zo doorbreken ze in Amerika het enkeltje school naar gevangenis"
+	data-text=""
+	data-related=""
+	data-expertise="Correspondent Amerika"
+	data-mailto="mailto:?subject=Tip: Zo%20doorbreken%20ze%20in%20Amerika%20het%20enkeltje%20school%20naar%20gevangenis&body=Op De Correspondent zag ik een verhaal van Femke%20Kaulingfreks dat ik graag met je wil delen:%0D%0A%0D%0AZo%20doorbreken%20ze%20in%20Amerika%20het%20enkeltje%20school%20naar%20gevangenis - https%3A%2F%2Fdecorrespondent.nl%2F3338%2FZo-doorbreken-ze-in-Amerika-het-enkeltje-school-naar-gevangenis%2F165091508318-ac2f834e%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail"
+	data-object-name="publication"
+><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">Linkedin</a></li><li class="mail"><a
+			href="javascript: void(0);"
+			data-share-type="mail"
+			class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/3338/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/3338.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="3338"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2015-09-13" title="13-9-2015 12:00">
+	Gisteren</time></li></ul>      </footer>
+  </article>
+      
+        
+    
+    
+    
+        
+
+<article class="explainer-item">
+    <a data-article-id="3333" class="feed-item-link" href="https://decorrespondent.nl/3333/De-FNV-wil-vandaag-de-zorg-redden-Maar-is-dat-wel-nodig-/164844217263-35ce7b37">
+    <div class="image">
+      <img src="https://static.decorrespondent.nl/ff-gdad60bc/images/feeditems/explainer_bg.png" alt="explainer">
+        <span class="comment-count">54</span>
+        
+					
+	
+							
+		<span class="reading-time">Leestijd
+			4 minuten
+		</span>
+
+	
+
+      <h3 data-field="title">De FNV wil vandaag &#039;de zorg redden.&#039; Maar is dat wel nodig?</h3>
+      <h4>Explainer</h4>
+      <span class="glyph-right"></span>
+    </div>
+  </a>
+
+  <footer class="feed-item-footer">
+              <div class="name ">
+        <a href="/sanderheijne">
+          <span>Sander</span> Heijne
+        </a>
+      </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">101&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip"><div class="mid"><ul class="share-options"
+	data-parent="ul"
+	data-url="https://decorrespondent.nl/3333/De-FNV-wil-vandaag-de-zorg-redden-Maar-is-dat-wel-nodig-/164844217263-35ce7b37"
+	data-id="3333"
+	data-title="De FNV wil vandaag &#039;de zorg redden.&#039; Maar is dat wel nodig?"
+	data-text=""
+	data-related="sanderheijne"
+	data-expertise="Correspondent Zorg &amp; Geld"
+	data-mailto="mailto:?subject=Tip: De%20FNV%20wil%20vandaag%20%27de%20zorg%20redden.%27%20Maar%20is%20dat%20wel%20nodig%3F&body=Op De Correspondent zag ik een verhaal van Sander%20Heijne dat ik graag met je wil delen:%0D%0A%0D%0ADe%20FNV%20wil%20vandaag%20%27de%20zorg%20redden.%27%20Maar%20is%20dat%20wel%20nodig%3F - https%3A%2F%2Fdecorrespondent.nl%2F3333%2FDe-FNV-wil-vandaag-de-zorg-redden-Maar-is-dat-wel-nodig-%2F164844217263-35ce7b37%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail"
+	data-object-name="publication"
+><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">Linkedin</a></li><li class="mail"><a
+			href="javascript: void(0);"
+			data-share-type="mail"
+			class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/3333/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/3333.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="3333"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2015-09-12" title="12-9-2015 12:45">
+	Eergisteren</time></li></ul>    
+  </footer>
+  </article>
+      
+        
+    
+    
+    
+        
+
+<article class="story-item">
+    <a data-article-id="3316" class="feed-item-link" href="https://decorrespondent.nl/3316/Kijken-Hier-in-Tsjechie-worden-mannen-nog-gecastreerd/164003427676-0e7af8ad">
+    <div class="top">
+              <div class="image">
+              <img class="lazyload" data-src="https://dynamic.decorrespondent.nl/ff-1442029509/media/660/55f2bfbb766a87317335102.jpg" alt="">
+  <noscript><img alt="" src="https://dynamic.decorrespondent.nl/ff-1442029509/media/660/55f2bfbb766a87317335102.jpg"></noscript>
+        </div>
+      
+      <h4>Documentaire</h4>
+
+        <span class="comment-count">23</span>
+
+      <div class="clear"></div>
+      <div class="heading">
+        <h2 data-field="title">Kijken: Hier in Tsjechië worden mannen nog gecastreerd</h2>
+        <span class="glyph-right"></span>
+      </div>
+    </div>
+  </a>
+
+  <div class="text">
+    <p data-field="intro">
+      Filmmaakster Elizabeth Salgado viel van haar stoel toen ze hoorde dat Tsjechische mannen die een seksueel misdrijf plegen, gecastreerd kunnen worden. Kun je zo&#39;n straf wel opleggen? Ze sprak met pleitbezorgers, critici en gecastreerden over die vraag.
+    </p>
+
+      
+      <img width="80" height="70" class="author-avatar" src="https://dynamic.decorrespondent.nl/ff-1433405334/media/160/557007963a2981374556257.png" alt="Avatar Jos de Putter">
+
+  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow">
+        <a href="/josdeputter">
+          <span>Jos</span> de Putter
+        </a>
+      </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">72&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip"><div class="mid"><ul class="share-options"
+	data-parent="ul"
+	data-url="https://decorrespondent.nl/3316/Kijken-Hier-in-Tsjechie-worden-mannen-nog-gecastreerd/164003427676-0e7af8ad"
+	data-id="3316"
+	data-title="Kijken: Hier in Tsjechië worden mannen nog gecastreerd"
+	data-text=""
+	data-related="JosdePutter1959"
+	data-expertise="Correspondent Webdocumentaires"
+	data-mailto="mailto:?subject=Tip: Kijken%3A%20Hier%20in%20Tsjechi%C3%AB%20worden%20mannen%20nog%20gecastreerd&body=Op De Correspondent zag ik een verhaal van Jos%20de%20Putter dat ik graag met je wil delen:%0D%0A%0D%0AKijken%3A%20Hier%20in%20Tsjechi%C3%AB%20worden%20mannen%20nog%20gecastreerd - https%3A%2F%2Fdecorrespondent.nl%2F3316%2FKijken-Hier-in-Tsjechie-worden-mannen-nog-gecastreerd%2F164003427676-0e7af8ad%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail"
+	data-object-name="publication"
+><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">Linkedin</a></li><li class="mail"><a
+			href="javascript: void(0);"
+			data-share-type="mail"
+			class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="3316"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2015-09-12" title="12-9-2015 5:45">
+	Eergisteren</time></li></ul>      </footer>
+  </article>
+      
+        
+    
+    
+    
+        
+
+<article class="story-item">
+    <a data-article-id="3337" class="feed-item-link" href="https://decorrespondent.nl/3337/Podcast-Dit-is-het-ware-probleem-van-de-PvdA-en-de-sociaal-democratie/165042050107-422fbac7">
+    <div class="top">
+              <div class="image">
+              <img class="lazyload" data-src="https://dynamic.decorrespondent.nl/ff-1442029508/media/660/55f2edbbc01398177277446.jpg" alt="Paul de Beer. Foto: Marijn Smulders (voor De Correspondent)">
+  <noscript><img alt="Paul de Beer. Foto: Marijn Smulders (voor De Correspondent)" src="https://dynamic.decorrespondent.nl/ff-1442029508/media/660/55f2edbbc01398177277446.jpg"></noscript>
+        </div>
+      
+      <h4>Podcast</h4>
+
+        <span class="comment-count">52</span>
+
+      <div class="clear"></div>
+      <div class="heading">
+        <h2 data-field="title">Podcast: Dit is het ware probleem van de PvdA (en de sociaal-democratie)</h2>
+        <span class="glyph-right"></span>
+      </div>
+    </div>
+  </a>
+
+  <div class="text">
+    <p data-field="intro">
+      Bij de PvdA is het rumoerig aan de vooravond van Prinsjesdag. Hoogleraar arbeidsverhoudingen Paul de Beer schetst de toekomst van de sociaal-democratie.
+    </p>
+
+      
+      <img width="80" height="70" class="author-avatar" src="https://dynamic.decorrespondent.nl/ff-1433408252/media/160/557012fc8a9148155180692.png" alt="Avatar Lex Bohlmeijer">
+
+  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow">
+        <a href="/lexbohlmeijer">
+          <span>Lex</span> Bohlmeijer
+        </a>
+      </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">70&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip"><div class="mid"><ul class="share-options"
+	data-parent="ul"
+	data-url="https://decorrespondent.nl/3337/Podcast-Dit-is-het-ware-probleem-van-de-PvdA-en-de-sociaal-democratie/165042050107-422fbac7"
+	data-id="3337"
+	data-title="Podcast: Dit is het ware probleem van de PvdA (en de sociaal-democratie)"
+	data-text="Wie ziet er kansen voor de sociaal-democratie? Langs welke weg zouden de belangen van  middenklasse en onderklasse opnieuw met elkaar verbonden kunnen worden? Of moet je de zaak op zijn beloop laten?"
+	data-related="lexbohlmeijer"
+	data-expertise="Correspondent Goede gesprekken"
+	data-mailto="mailto:?subject=Tip: Podcast%3A%20Dit%20is%20het%20ware%20probleem%20van%20de%20PvdA%20%28en%20de%20sociaal-democratie%29&body=Op De Correspondent zag ik een verhaal van Lex%20Bohlmeijer dat ik graag met je wil delen:%0D%0A%0D%0APodcast%3A%20Dit%20is%20het%20ware%20probleem%20van%20de%20PvdA%20%28en%20de%20sociaal-democratie%29 - https%3A%2F%2Fdecorrespondent.nl%2F3337%2FPodcast-Dit-is-het-ware-probleem-van-de-PvdA-en-de-sociaal-democratie%2F165042050107-422fbac7%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail"
+	data-object-name="publication"
+><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">Linkedin</a></li><li class="mail"><a
+			href="javascript: void(0);"
+			data-share-type="mail"
+			class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="3337"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2015-09-12" title="12-9-2015 5:45">
+	Eergisteren</time></li></ul>      </footer>
+  </article>
+      
+        
+    
+    
+    
+        
+
+<article class="story-item">
+    <a data-article-id="3341" class="feed-item-link" href="https://decorrespondent.nl/3341/Dit-is-in-2015-nog-steeds-het-populairste-nummer-uit-de-jaren-90-en-nog-9-verhalen-om-in-te-halen/165239882951-2b3fec88">
+    <div class="top">
+              <div class="image">
+              <img class="lazyload" data-src="https://dynamic.decorrespondent.nl/ff-1441989908/media/660/55f2c74b7dd851161137912.gif" alt="">
+  <noscript><img alt="" src="https://dynamic.decorrespondent.nl/ff-1441989908/media/660/55f2c74b7dd851161137912.gif"></noscript>
+        </div>
+      
+      <h4>Aanbeveling</h4>
+
+        <span class="comment-count">1</span>
+
+      <div class="clear"></div>
+      <div class="heading">
+        <h2 data-field="title">Dit is in 2015 nog steeds het populairste nummer uit de jaren 90 (en nog 9 verhalen om in te halen)</h2>
+        <span class="glyph-right"></span>
+      </div>
+    </div>
+  </a>
+
+  <div class="text">
+    <p data-field="intro">
+      Elk weekend tippen onze correspondenten hun favoriete journalistieke producties en selecteren wij de beste stukken van De Correspondent. Deze week onder meer: het meest gedraaide nummer van de jaren negentig, wat Roger Federer zo goed maakt en het effect van toerisme op Laos.
+    </p>
+
+      
+      <img width="80" height="70" class="author-avatar" src="https://dynamic.decorrespondent.nl/ff-1433408292/media/160/55701324daf572453298192.png" alt="Avatar Rob Wijnberg">
+
+  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow">
+        <a href="/robwijnberg">
+          <span>Rob</span> Wijnberg
+        </a>
+      </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">77&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip"><div class="mid"><ul class="share-options"
+	data-parent="ul"
+	data-url="https://decorrespondent.nl/3341/Dit-is-in-2015-nog-steeds-het-populairste-nummer-uit-de-jaren-90-en-nog-9-verhalen-om-in-te-halen/165239882951-2b3fec88"
+	data-id="3341"
+	data-title="Dit is in 2015 nog steeds het populairste nummer uit de jaren 90 (en nog 9 verhalen om in te halen)"
+	data-text="Welke stukken, programma&#039;s en podcasts vielen jullie op in de afgelopen week? Deel ze hieronder!"
+	data-related="robwijnberg"
+	data-expertise="Correspondent Media, Politiek &amp; Filosofie"
+	data-mailto="mailto:?subject=Tip: Dit%20is%20in%202015%20nog%20steeds%20het%20populairste%20nummer%20uit%20de%20jaren%2090%20%28en%20nog%209%20verhalen%20om%20in%20te%20halen%29&body=Op De Correspondent zag ik een verhaal van Rob%20Wijnberg dat ik graag met je wil delen:%0D%0A%0D%0ADit%20is%20in%202015%20nog%20steeds%20het%20populairste%20nummer%20uit%20de%20jaren%2090%20%28en%20nog%209%20verhalen%20om%20in%20te%20halen%29 - https%3A%2F%2Fdecorrespondent.nl%2F3341%2FDit-is-in-2015-nog-steeds-het-populairste-nummer-uit-de-jaren-90-en-nog-9-verhalen-om-in-te-halen%2F165239882951-2b3fec88%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail"
+	data-object-name="publication"
+><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">Linkedin</a></li><li class="mail"><a
+			href="javascript: void(0);"
+			data-share-type="mail"
+			class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/3341/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/3341.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="3341"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2015-09-11" title="11-9-2015 18:45">
+	Eergisteren</time></li></ul>      </footer>
+  </article>
+  
+</section>
+
+      <div class="loadmore">
+
+				
+<svg class="preloader " viewBox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#preloader"></use>
+</svg>	
+</div>  
+</section>
+
+    </section><div id="dialogContainer" class="dialog-container glyph-spinner-after" data-error="Excuses, de verbinding is mislukt. Probeer het nog een keer."><div id="dialog" class="dialog"><div id="dialogContent" class="dialog-content"></div><div id="dialogFooter" class="dialog-footer"></div><div class="clear"></div><a id="dialogClose" class="dialog-close glyph-cross-bold" href="javascript:void(0);"></a></div></div><div class="overlay-block" id="overlayBlock"></div><div class="overlay-container" data-module="PublicationOverlay"><div id="loader" class="overlay-preloader"><div class="loadmore"><svg class="preloader preloader-red" viewBox="0 0 50 50" x="0px" y="0px" width="50px" height="50px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#preloader"></use></svg></div></div><div id="articleOverlayContent"></div></div><div id="notificationBar" class="notification-bar"><p id="notificationText">Je volgt nu deze discussie &mdash; bijdragen worden gebundeld naar je gemaild</p><a href="#" class="glyph-cross-menu notification-bar-close"></a></div><script>window.App.user = {}; window.App.messages = { keysErrorMessage: 'Er\x20gaat\x20iets\x20mis,\x20\x3Ca\x20class\x3D\x22notification\x2Dbar\x2Dlink\x22\x20href\x3D\x22\x2Flogout\x22\x3Elog\x20alstublieft\x20opnieuw\x20in\x3C\x2Fa\x3E' };      window.App.user = { id: '49458211', preferences: { commentorder : '', fontsize : 'big', typeface : 'serif', feedview : 'normal', theme: 'nightmode', readingtime: 'on' } }; </script><script async src="https://static.decorrespondent.nl/ff-gdad60bc/js/main-build.js"></script></body></html>
