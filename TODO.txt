@@ -6,7 +6,7 @@ V vervang youtube video door plaatje
 - mailen naar Kindle
 V config op file systeem (met default locatie)
 - password encrypted in config file
-- alles behalve config in GitHub zetten
+V alles behalve config in GitHub zetten
 - move ReadArticle() uit ArticleReference verplaatsen?
 - Deploy in Azure
 - html (bv &nbsp;) verwijderen uide de titel
