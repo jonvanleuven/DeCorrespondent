@@ -32,8 +32,8 @@ namespace DeCorrespondent
             foreach (var article in ebooks)
             {
                 File.WriteAllBytes(article.Name, article.Content);
-                File.WriteAllText("lastId.txt", "" + refs.First().Id);
             }
+            File.WriteAllText("lastId.txt", "" + refs.Last().Id);
         }
     }
 }
