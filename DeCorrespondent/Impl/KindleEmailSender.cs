@@ -20,9 +20,9 @@ namespace DeCorrespondent.Impl
         {
             return;
             //TODO
-            var mail = new MailMessage("jonvanleuven@hotmail.com", "jon@mailfence.com");
+            var mail = new MailMessage("junknown", "unknown");
             var client = new SmtpClient("smtp.live.com", 25);
-            client.Credentials = new System.Net.NetworkCredential("jonvanleuven@hotmail.com", "ZQyGxfaktnXnw");
+            client.Credentials = new System.Net.NetworkCredential("unknown", "unknown");
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
             client.UseDefaultCredentials = false;
             client.EnableSsl = true;
