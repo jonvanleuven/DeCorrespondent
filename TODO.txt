@@ -3,10 +3,12 @@ V leestijd en auteurnaam
 V plaatjes groter
 V "Kijk hier wat..." verwijderen/kleiner tekst : a.publication-sidenote
 V vervang youtube video door plaatje
-- mailen naar Kindle
+- mailen naar Kindle ("CONVERT" als subject?)
 V config op file systeem (met default locatie)
 - password encrypted in config file
 V alles behalve config in GitHub zetten
 - move ReadArticle() uit ArticleReference verplaatsen?
 - Deploy in Azure
 - html (bv &nbsp;) verwijderen uide de titel
+- set file modified date = publication date (File.SetLastWriteTime(path, publicactionDate))
+- uitlezen nieuw/1, nieuw/2 etc.

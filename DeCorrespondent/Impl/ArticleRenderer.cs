@@ -22,10 +22,10 @@ namespace DeCorrespondent.Impl
             return articles.Select(a =>
             {
                 log.Debug("Rendering article '" + a.Title + "' to pdf....");
-                var pdfConverter = CreatePdfConverter();
+                var pdfConverter = CreatePdfConverter(a);
                 var pdfOutputStream = new MemoryStream();
                 pdfConverter.SavePdfFromHtmlStringToStream(WrapBody(a.Html), pdfOutputStream);
-                return new ArticleEbook( FormatName( string.Format("{0} {1}-{2}", a.ReadingTime, a.AuthorSurname, a.Title) ) + ".pdf", pdfOutputStream.GetBuffer() );
+                return new ArticleEbook(FormatName(string.Format("{0} {1}-{2}", a.ReadingTime, a.AuthorSurname, a.Title)) + ".pdf", pdfOutputStream.GetBuffer());
             });
         }
 
@@ -52,12 +52,14 @@ namespace DeCorrespondent.Impl
             return string.Format(template, body);
         }
 
-        private PdfConverter CreatePdfConverter()
+        private PdfConverter CreatePdfConverter(IArticle article)
         {
             var pdfConverter = new PdfConverter();
             pdfConverter.LicenseKey = config.LicenseKey;
             pdfConverter.ExtensionsEnabled = false;
             pdfConverter.JavaScriptEnabled = false;
+            pdfConverter.PdfDocumentInfo.Title = article.Title;
+            pdfConverter.PdfDocumentInfo.AuthorName = article.AuthorSurname;
             pdfConverter.PdfDocumentOptions.PdfPageSize = PdfPageSize.Letter;
             pdfConverter.PdfDocumentOptions.PdfCompressionLevel = PdfCompressionLevel.Normal;
             pdfConverter.PdfDocumentOptions.PdfPageOrientation = PdfPageOrientation.Portrait;
