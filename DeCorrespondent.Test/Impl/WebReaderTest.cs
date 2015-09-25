@@ -14,7 +14,7 @@ namespace DeCorrespondent.Test.Impl
         {
             var reader = CreateReader();
 
-            var result = reader.ReadNewItems();
+            var result = reader.ReadNewItems(0);
 
             Assert.NotNull(result);
         }

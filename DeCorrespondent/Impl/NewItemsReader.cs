@@ -20,8 +20,19 @@ namespace DeCorrespondent.Impl
 
         public IEnumerable<IArticleReference> ReadItems(int? lastReadId)
         {
+            var result = new List<IArticleReference>();
+            for (var i = 0; i < 3; i++) //TODO werk met eigen IEnumerable implementatie ipv magic number
+            {
+                var requestNextPage = ReadItems(lastReadId, resources.ReadNewItems(i), result);
+                if (!requestNextPage) break;
+            }
+            return result;
+        }
+
+        private bool ReadItems(int? lastReadId, string html, List<IArticleReference> result)
+        {
             var doc = new HtmlDocument();
-            doc.LoadHtml(resources.ReadNewItems());
+            doc.LoadHtml(html);
             var all = doc.DocumentNode.SelectNodes("//a[string-length(@data-article-id) > 0]")
                 .Where(n => n != null)
                 .Select(n => int.Parse(n.Attributes["data-article-id"].Value))
@@ -29,10 +40,12 @@ namespace DeCorrespondent.Impl
                 .Select(id => new ArticleReference(id, resources, log))
                 .ToList();
             log.Debug("Aantal items op pagina: " + all.Count);
-            var result = all.TakeWhile(r => r.Id != lastReadId).Reverse().ToList();
+            var partial = all.TakeWhile(r => r.Id != lastReadId).Reverse().ToList();
             log.Debug("Aantal nieuw: " + result.Count());
-            return result;
+            result.AddRange(partial);
+            return partial.Count() == all.Count();
         }
+
     }
 
     public class ArticleReference : IArticleReference
@@ -153,9 +166,9 @@ namespace DeCorrespondent.Impl
             this.log = log;
         }
 
-        public string ReadNewItems()
+        public string ReadNewItems(int index)
         {
-            return Get("https://decorrespondent.nl/nieuw");
+            return Get("https://decorrespondent.nl/nieuw" + (index!=0?"/"+index:""));
         }
 
         public string ReadArticle(IArticleReference reference)
@@ -185,7 +198,7 @@ namespace DeCorrespondent.Impl
 
     public interface IResourceReader
     {
-        string ReadNewItems();
+        string ReadNewItems(int index);
         string ReadArticle(IArticleReference reference);
     }
 }

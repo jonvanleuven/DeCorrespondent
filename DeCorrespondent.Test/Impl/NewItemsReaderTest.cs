@@ -15,7 +15,7 @@ namespace DeCorrespondent.Test.Impl
 
             var result = reader.ReadItems(null);
 
-            Assert.AreEqual(10, result.Count());
+            Assert.AreEqual(30, result.Count());
             Assert.AreEqual(3341, result.First().Id);
         }
 
@@ -90,9 +90,9 @@ namespace DeCorrespondent.Test.Impl
 
         public class FileResources : IResourceReader
         {
-            public string ReadNewItems()
+            public string ReadNewItems(int index)
             {
-                using (var s = new StreamReader(GetType().Assembly.GetManifestResourceStream("DeCorrespondent.Test.Resources.nieuw")))
+                using (var s = new StreamReader(GetType().Assembly.GetManifestResourceStream("DeCorrespondent.Test.Resources.nieuw_" + index)))
                 {
                     return s.ReadToEnd();
                 }
