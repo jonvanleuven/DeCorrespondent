@@ -4,18 +4,17 @@ namespace DeCorrespondent
 {
     public interface IItemsReader
     {
-        IEnumerable<IArticleReference> ReadItems(int? lastReadId);
+        // orderer from new to old
+        IEnumerable<IArticleReference> ReadItems(string nieuwPagina);
     }
 
     public interface IArticleReference
     {
         int Id { get; }
-        IArticle ReadArticle();
     }
 
     public interface IArticle
     {
-        IArticleReference Reference { get; }
         string Html { get; }
         string Title { get; }
         string ReadingTime { get; }

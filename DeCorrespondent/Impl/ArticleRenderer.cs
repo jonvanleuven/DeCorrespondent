@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using EvoPdf;
@@ -17,16 +16,13 @@ namespace DeCorrespondent.Impl
             this.config = config;
         }
 
-        public IEnumerable<IArticleEbook> Render(IEnumerable<IArticle> articles)
+        public IArticleEbook Render(IArticle a)
         {
-            return articles.Select(a =>
-            {
-                log.Debug("Rendering article '" + a.Title + "' to pdf....");
-                var pdfConverter = CreatePdfConverter(a);
-                var pdfOutputStream = new MemoryStream();
-                pdfConverter.SavePdfFromHtmlStringToStream(WrapBody(a.Html), pdfOutputStream);
-                return new ArticleEbook(FormatName(string.Format("{0} {1}-{2}", a.ReadingTime, a.AuthorSurname, a.Title)) + ".pdf", pdfOutputStream.GetBuffer());
-            });
+            log.Debug("Rendering article '" + a.Title + "' to pdf....");
+            var pdfConverter = CreatePdfConverter(a);
+            var pdfOutputStream = new MemoryStream();
+            pdfConverter.SavePdfFromHtmlStringToStream(WrapBody(a.Html), pdfOutputStream);
+            return new ArticleEbook(FormatName(string.Format("{0} {1}-{2}", a.ReadingTime, a.AuthorSurname, a.Title)) + ".pdf", pdfOutputStream.GetBuffer());
         }
 
         public static string FormatName(string name)

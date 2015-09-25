@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using DeCorrespondent.Impl;
 
@@ -12,29 +13,74 @@ namespace DeCorrespondent
 
             var logger = new ConsoleLogger(true);
             var config = FileConfig.Load(null);
-            var reader = new NewItemsReader(logger, WebReader.Login(logger, config.CorrespondentCredentails));
+            var resources = WebReader.Login(logger, config.CorrespondentCredentails);
+            var newItemsParser = new NewItemsReader(logger);
+            var reader = new ArticleReader(logger);
             var renderer = new ArticleRenderer(logger, config.ArticleRendererConfig);
-            var sender = new KindleEmailSender(logger, config.KindleEmailSenderConfig);
-            var summarySender = new EmailSummarySender(logger, config.EmailSummarySenderConfig);
+            //var sender = new KindleEmailSender(logger, config.KindleEmailSenderConfig);
+            //var summarySender = new EmailSummarySender(logger, config.EmailSummarySenderConfig);
 
-            var refs = reader.ReadItems(lastId).ToList();
-            var ebooks = renderer.Render(refs.Select(r => r.ReadArticle()));
+            var p = new Program(logger, resources, reader, renderer, newItemsParser, config.MaxAantalArticles);
 
-            sender.Send(ebooks);
-            //TODO summarySender.Send(ebooks);
+            var newLastId = p.WritePdfs(lastId);
 
-            //temp:
-            /*foreach (var r in refs)
-            {
-                var a = r.ReadArticle();
-                File.WriteAllText(ArticleRenderer.FormatName(string.Format("{0} {1}-{2}", a.ReadingTime, a.AuthorSurname, a.Title)) + ".html", a.Html);
-            }*/
-            foreach (var article in ebooks)
-            {
-                File.WriteAllBytes(article.Name, article.Content);
-            }
-            if (refs.Any() )
-                File.WriteAllText("lastId.txt", "" + refs.Last().Id);
+            if (newLastId.HasValue )
+                File.WriteAllText("lastId.txt", "" + newLastId);
         }
+
+        private readonly IItemsReader newItemsParser;
+        private readonly IResourceReader resources;
+        private readonly IArticleReader reader;
+        private readonly IArticleRenderer renderer;
+        private readonly ILogger logger;
+        private readonly int maxAantalArticles;
+
+        public Program(ILogger logger, IResourceReader resources, IArticleReader reader, IArticleRenderer renderer, IItemsReader newItemsParser, int maxAantalArticles)
+        {
+            this.logger = logger;
+            this.resources = resources;
+            this.reader = reader;
+            this.renderer = renderer;
+            this.newItemsParser = newItemsParser;
+            this.maxAantalArticles = maxAantalArticles;
+        }
+
+        public int? WritePdfs(int? lastId)
+        {
+            return Enumerable.Range(0, int.MaxValue)
+                .SelectMany(i => NewItems(i))
+                .TakeWhile(reference => reference.Id != lastId)
+                .Take(maxAantalArticles)
+                .Reverse()
+                .Select(reference => new { Reference = reference, Article = ReadArticle(reference.Id) })
+                .Select(x => new { x.Reference, Pdf = RenderArticle(x.Article)})
+                .Select(x => new { x.Reference, FileName = WritePdf(x.Pdf, x.Reference) })
+                .Select(x => (int?)x.Reference.Id)
+                .ToList()
+                .LastOrDefault();
+        }
+
+        private int WritePdf(IArticleEbook ebook, IArticleReference reference)
+        {
+            File.WriteAllBytes(ebook.Name, ebook.Content);
+            logger.Info("File written: '{0}'", ebook.Name);
+            return reference.Id;
+        }
+
+        private IArticleEbook RenderArticle(IArticle a)
+        {
+            return renderer.Render(a);
+        }
+
+        private IArticle ReadArticle(int id)
+        {
+            return reader.Read( resources.ReadArticle(id) );
+        }
+
+        private IEnumerable<IArticleReference> NewItems(int nieuwPagina)
+        {
+            return newItemsParser.ReadItems(resources.ReadNewItems(nieuwPagina));
+        }
+
     }
 }

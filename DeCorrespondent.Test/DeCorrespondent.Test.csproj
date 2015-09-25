@@ -58,6 +58,10 @@
     <EmbeddedResource Include="Resources\nieuw_2">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\article_3352" />
+    <EmbeddedResource Include="Resources\article_3345" />
+    <EmbeddedResource Include="Resources\article_3336" />
+    <EmbeddedResource Include="Resources\article_3339" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">

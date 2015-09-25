@@ -7,10 +7,10 @@ V vervang youtube video door plaatje
 V config op file systeem (met default locatie)
 - password encrypted in config file
 V alles behalve config in GitHub zetten
-- move ReadArticle() uit ArticleReference verplaatsen?
+V move ReadArticle() uit ArticleReference verplaatsen?
 - Deploy in Azure
 - html (bv &nbsp;) verwijderen uit de de titel
 - set file modified date = publication date (File.SetLastWriteTime(path, publicactionDate))
 V uitlezen nieuw/1, nieuw/2 etc.(
-- Meer met IEnumerable werken: Enumerable.Range(0, int.MaxValue).Select(i => NewItems(i)).Select(r => Content(r)).Select(c => Render(c)).Select(pdf => WriteFile(pdf)).TakeWhile(r => r.Id != lastId).Take(40).ToList()
-- new Program(IRenderer, IResource, etc)
+V Meer met IEnumerable werken: Enumerable.Range(0, int.MaxValue).SelectMany(i => NewItems(i)).Select(r => Content(r)).Select(c => Render(c)).Select(pdf => WriteFile(pdf)).TakeWhile(r => r.Id != lastId).Take(40).ToList()
+V new Program(IRenderer, IResource, etc) (ook makkelijker te testen)

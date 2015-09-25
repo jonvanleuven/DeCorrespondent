@@ -47,8 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IArticleReader.cs" />
     <Compile Include="IArticleSummarySender.cs" />
     <Compile Include="ILogger.cs" />
+    <Compile Include="Impl\ArticleReader.cs" />
     <Compile Include="Impl\ArticleRenderer.cs" />
     <Compile Include="IArticleRenderer.cs" />
     <Compile Include="Impl\ConsoleLogger.cs" />
@@ -58,6 +60,8 @@
     <Compile Include="IArticleSender.cs" />
     <Compile Include="Impl\NewItemsReader.cs" />
     <Compile Include="IItemsReader.cs" />
+    <Compile Include="Impl\WebReader.cs" />
+    <Compile Include="IResourceReader.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -24,11 +24,10 @@ namespace DeCorrespondent.Test.Impl
         {
             var reader = CreateReader();
 
-            var items = new NewItemsReader(new ConsoleLogger(true), reader).ReadItems(null);
+            var items = new NewItemsReader(new ConsoleLogger(true)).ReadItems(reader.ReadNewItems(0));
 
             Assert.IsTrue(items.Any());
             Console.WriteLine(string.Join(",", items.Select(i => i.Id)));Console.WriteLine(string.Join(",", items.Select(i => i.Id)));
-            Console.WriteLine(string.Join(",", items.Select(i => i.Id))); Console.WriteLine(string.Join(",", items.Select(i => i.ReadArticle().Title)));
         }
 
         [Test]
@@ -45,10 +44,10 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void ReadItem()
         {
-            var id = 3366;
+            var id = 3339;
             var reader = CreateReader();
 
-            var article = reader.ReadArticle(new ArticleReference(id, reader, new ConsoleLogger(true)));
+            var article = reader.ReadArticle(id);
 
             File.WriteAllText("d:\\article_" + id, article);
         }

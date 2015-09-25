@@ -4,7 +4,7 @@ namespace DeCorrespondent
 {
     public interface IArticleRenderer
     {
-        IEnumerable<IArticleEbook> Render(IEnumerable<IArticle> articles);
+        IArticleEbook Render(IArticle article);
     }
 
     public interface IArticleEbook

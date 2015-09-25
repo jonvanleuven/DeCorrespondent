@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using NUnit.Framework;
 using DeCorrespondent.Impl;
@@ -13,28 +14,20 @@ namespace DeCorrespondent.Test.Impl
         {
             var reader = CreateReader();
 
-            var result = reader.ReadItems(null);
+            var result = reader.ReadItems(new FileResources().ReadNewItems(0));
 
-            Assert.AreEqual(30, result.Count());
-            Assert.AreEqual(3341, result.First().Id);
+            Assert.AreEqual(10, result.Count());
+            Assert.AreEqual(3352, result.First().Id);
         }
 
-        [Test]
-        public void ReadItemsSubset()
-        {
-            var reader = CreateReader();
-
-            var result = reader.ReadItems(3339);
-
-            Assert.AreEqual(3, result.Count());
-        }
+       
 
         [Test]
         public void ReadArticle()
         {
-            var reference = new ArticleReference(1, new FileResources(), new ConsoleLogger(true));
+            var reader = new ArticleReader(new ConsoleLogger(true));
 
-            var result = reference.ReadArticle();
+            var result = reader.Read(new FileResources().ReadArticle(1));
 
             Assert.NotNull(result.Html);
             File.WriteAllText("d:\\test.html", result.Html);
@@ -46,7 +39,6 @@ namespace DeCorrespondent.Test.Impl
             Assert.IsFalse(result.Html.Contains("class=\"header"));
             Assert.IsFalse(result.Html.Contains("8 uur geleden"));
             Assert.IsTrue(result.Html.Contains("16-9-2015 5:45"));
-            Assert.NotNull(result.Reference);
             Assert.AreEqual("Drie manieren waarop mobiele telefoons bijdragen aan betere data", result.Title);
             Assert.AreEqual("6-7", result.ReadingTime);
             Assert.AreEqual("Blauw", result.AuthorSurname);
@@ -55,19 +47,19 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void ReadArticle3358()
         {
-            var reference = new ArticleReference(3358, new FileResources(), new ConsoleLogger(true));
+            var reader = new ArticleReader(new ConsoleLogger(true));
 
-            var result = reference.ReadArticle();
-
+            var result = reader.Read(new FileResources().ReadArticle(3358));
+            
             Assert.NotNull(result.Html);
         }
 
         [Test]
         public void ReadArticle3364()
         {
-            var reference = new ArticleReference(3364, new FileResources(), new ConsoleLogger(true));
+            var reader = new ArticleReader(new ConsoleLogger(true));
 
-            var result = reference.ReadArticle();
+            var result = reader.Read(new FileResources().ReadArticle(3364));
 
             Assert.NotNull(result.Html);
         }
@@ -75,32 +67,38 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void ReadArticle3366()
         {
-            var reference = new ArticleReference(3366, new FileResources(), new ConsoleLogger(true));
+            var reader = new ArticleReader(new ConsoleLogger(true));
 
-            var result = reference.ReadArticle();
-
+            var result = reader.Read(new FileResources().ReadArticle(3366));
+            
             Assert.NotNull(result.Html);
             Assert.IsTrue(result.Html.Contains("een simpele telnet-hack"));
         }
 
         private static NewItemsReader CreateReader()
         {
-            return new NewItemsReader(new ConsoleLogger(true), new FileResources());
+            return new NewItemsReader(new ConsoleLogger(true));
         }
 
         public class FileResources : IResourceReader
         {
             public string ReadNewItems(int index)
             {
-                using (var s = new StreamReader(GetType().Assembly.GetManifestResourceStream("DeCorrespondent.Test.Resources.nieuw_" + index)))
+                var resource = GetType().Assembly.GetManifestResourceStream("DeCorrespondent.Test.Resources.nieuw_" + index);
+                if (resource == null)
+                    throw new Exception("New item resource not found: " + index);
+                using (var s = new StreamReader(resource))
                 {
                     return s.ReadToEnd();
                 }
             }
 
-            public string ReadArticle(IArticleReference reference)
+            public string ReadArticle(int articleId)
             {
-                using (var s = new StreamReader(GetType().Assembly.GetManifestResourceStream("DeCorrespondent.Test.Resources.article_" + reference.Id)))
+                var resource = GetType().Assembly.GetManifestResourceStream("DeCorrespondent.Test.Resources.article_" + articleId);
+                if (resource == null)
+                    throw new Exception("Article resource not found: " + articleId);
+                using (var s = new StreamReader(resource))
                 {
                     return s.ReadToEnd();
                 }
