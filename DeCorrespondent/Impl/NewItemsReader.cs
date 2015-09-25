@@ -66,7 +66,7 @@ namespace DeCorrespondent.Impl
             RemoveNodes(body, "//a", "publication-sidenote");
             (body.SelectNodes("//img[string-length(@data-src) > 0]")??EmptyNodes).Where(n => n != null).ToList().ForEach(n =>
             {
-                var isMainImage = n.Attributes["class"].Value.Contains("mainimage");
+                var isMainImage = n.GetAttributeValue("class", "").Contains("mainimage");
                 var url = n.Attributes["data-src"].Value;
                 url = url.Replace("{breakpoint-name}", !isMainImage ? "904" : "1024"); //320, 600 of 904 (of 660, 1024 of 1920 voor main image)
                 n.SetAttributeValue("src", url);
@@ -105,7 +105,9 @@ namespace DeCorrespondent.Impl
         private static void RemoveNodes(HtmlNode body, string xpath, string className)
         {
             (body.SelectNodes(xpath + "[string-length(@class) > 0]") ?? EmptyNodes).Where(n => n != null)
-                .Where( n => n.Attributes["class"].Value.Contains(className) )
+                .Where( n => n.Attributes["class"].Value.Trim() == className ||
+                             n.Attributes["class"].Value.Contains(className+" ") || 
+                             n.Attributes["class"].Value.Contains(" "+className) )
                 .ToList().ForEach(n => n.Remove());
         }
     }

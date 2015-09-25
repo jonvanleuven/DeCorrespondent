@@ -58,7 +58,7 @@ namespace DeCorrespondent.Impl
             pdfConverter.LicenseKey = config.LicenseKey;
             pdfConverter.ExtensionsEnabled = false;
             pdfConverter.JavaScriptEnabled = false;
-            pdfConverter.PdfDocumentInfo.Title = article.Title;
+            pdfConverter.PdfDocumentInfo.Title = article.ReadingTime + " " + article.Title;
             pdfConverter.PdfDocumentInfo.AuthorName = article.AuthorSurname;
             pdfConverter.PdfDocumentOptions.PdfPageSize = PdfPageSize.Letter;
             pdfConverter.PdfDocumentOptions.PdfCompressionLevel = PdfCompressionLevel.Normal;

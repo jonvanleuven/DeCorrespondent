@@ -36,6 +36,7 @@ namespace DeCorrespondent.Test.Impl
         public void LoginFailed()
         {
             var invalidCredentials = new Config();
+            invalidCredentials.Username = "jon@mailfence.com";
             invalidCredentials.Password = "p";
 
             CreateReader(invalidCredentials);
@@ -44,7 +45,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void ReadItem()
         {
-            var id = 3361;
+            var id = 3366;
             var reader = CreateReader();
 
             var article = reader.ReadArticle(new ArticleReference(id, reader, new ConsoleLogger(true)));
@@ -60,7 +61,7 @@ namespace DeCorrespondent.Test.Impl
 
         class Config : IWebReaderConfig
         {
-            public string Username { get; private set;}
+            public string Username { get; set;}
             public string Password { get; set; }
         }
     }

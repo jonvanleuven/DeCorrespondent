@@ -24,16 +24,17 @@ namespace DeCorrespondent
             //TODO summarySender.Send(ebooks);
 
             //temp:
-            foreach (var r in refs)
+            /*foreach (var r in refs)
             {
                 var a = r.ReadArticle();
                 File.WriteAllText(ArticleRenderer.FormatName(string.Format("{0} {1}-{2}", a.ReadingTime, a.AuthorSurname, a.Title)) + ".html", a.Html);
-            }
+            }*/
             foreach (var article in ebooks)
             {
                 File.WriteAllBytes(article.Name, article.Content);
             }
-            File.WriteAllText("lastId.txt", "" + refs.Last().Id);
+            if (refs.Any() )
+                File.WriteAllText("lastId.txt", "" + refs.Last().Id);
         }
     }
 }

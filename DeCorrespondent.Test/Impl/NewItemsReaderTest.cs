@@ -39,7 +39,8 @@ namespace DeCorrespondent.Test.Impl
             Assert.NotNull(result.Html);
             File.WriteAllText("d:\\test.html", result.Html);
             Assert.IsFalse(result.Html.Contains("<script"));
-            Assert.IsFalse(result.Html.Contains("publication-sidenote"));
+            Assert.IsFalse(result.Html.Contains("publication-sidenote "));
+            Assert.IsTrue(result.Html.Contains("publication-sidenote-link"));
             Assert.IsFalse(result.Html.Contains("share-publication-footer"));
             Assert.IsFalse(result.Html.Contains("publication-body-link"));
             Assert.IsFalse(result.Html.Contains("class=\"header"));
@@ -69,6 +70,17 @@ namespace DeCorrespondent.Test.Impl
             var result = reference.ReadArticle();
 
             Assert.NotNull(result.Html);
+        }
+
+        [Test]
+        public void ReadArticle3366()
+        {
+            var reference = new ArticleReference(3366, new FileResources(), new ConsoleLogger(true));
+
+            var result = reference.ReadArticle();
+
+            Assert.NotNull(result.Html);
+            Assert.IsTrue(result.Html.Contains("een simpele telnet-hack"));
         }
 
         private static NewItemsReader CreateReader()
