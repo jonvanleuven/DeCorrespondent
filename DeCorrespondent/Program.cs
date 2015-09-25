@@ -9,23 +9,19 @@ namespace DeCorrespondent
     {
         public static void Main(string[] args)
         {
-            var lastId = File.Exists("lastId.txt") ? int.Parse(File.ReadAllText("lastId.txt")) : (int?) null;
-
             var logger = new ConsoleLogger(true);
             var config = FileConfig.Load(null);
             var resources = WebReader.Login(logger, config.CorrespondentCredentails);
             var newItemsParser = new NewItemsReader(logger);
             var reader = new ArticleReader(logger);
             var renderer = new ArticleRenderer(logger, config.ArticleRendererConfig);
+            var lastIdDs = new FileLastIdDatasource();
             //var sender = new KindleEmailSender(logger, config.KindleEmailSenderConfig);
             //var summarySender = new EmailSummarySender(logger, config.EmailSummarySenderConfig);
 
-            var p = new Program(logger, resources, reader, renderer, newItemsParser, config.MaxAantalArticles);
+            var p = new Program(logger, resources, reader, renderer, newItemsParser, lastIdDs, config.MaxAantalArticles);
 
-            var newLastId = p.WritePdfs(lastId);
-
-            if (newLastId.HasValue )
-                File.WriteAllText("lastId.txt", "" + newLastId);
+            p.WritePdfs();
         }
 
         private readonly IItemsReader newItemsParser;
@@ -34,20 +30,23 @@ namespace DeCorrespondent
         private readonly IArticleRenderer renderer;
         private readonly ILogger logger;
         private readonly int maxAantalArticles;
+        private readonly ILastIdDatasource lastIdDS;
 
-        public Program(ILogger logger, IResourceReader resources, IArticleReader reader, IArticleRenderer renderer, IItemsReader newItemsParser, int maxAantalArticles)
+        public Program(ILogger logger, IResourceReader resources, IArticleReader reader, IArticleRenderer renderer, IItemsReader newItemsParser, ILastIdDatasource lastIdDS, int maxAantalArticles)
         {
             this.logger = logger;
             this.resources = resources;
             this.reader = reader;
             this.renderer = renderer;
             this.newItemsParser = newItemsParser;
+            this.lastIdDS = lastIdDS;
             this.maxAantalArticles = maxAantalArticles;
         }
 
-        public int? WritePdfs(int? lastId)
+        public void WritePdfs()
         {
-            return Enumerable.Range(0, int.MaxValue)
+            var lastId = lastIdDS.ReadLastId();
+            Enumerable.Range(0, int.MaxValue)
                 .SelectMany(i => NewItems(i))
                 .TakeWhile(reference => reference.Id != lastId)
                 .Take(maxAantalArticles)
@@ -55,15 +54,14 @@ namespace DeCorrespondent
                 .Select(reference => new { Reference = reference, Article = ReadArticle(reference.Id) })
                 .Select(x => new { x.Reference, Pdf = RenderArticle(x.Article)})
                 .Select(x => new { x.Reference, FileName = WritePdf(x.Pdf, x.Reference) })
-                .Select(x => (int?)x.Reference.Id)
-                .ToList()
-                .LastOrDefault();
+                .ToList();
         }
 
         private int WritePdf(IArticleEbook ebook, IArticleReference reference)
         {
             File.WriteAllBytes(ebook.Name, ebook.Content);
             logger.Info("File written: '{0}'", ebook.Name);
+            lastIdDS.UpdateLastId(reference.Id);
             return reference.Id;
         }
 

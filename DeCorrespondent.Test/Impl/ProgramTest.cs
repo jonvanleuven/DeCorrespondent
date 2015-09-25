@@ -11,20 +11,21 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void GetItemsFromWebAndRenderPdf()
         {
-            var program = CreateProgram(WebReaderTest.CreateReader()).Program;
+            var program = CreateProgram(WebReader.Login(new ConsoleLogger(true), FileConfig.Load(null)));
 
-            var result = program.WritePdfs(null);
+            program.Program.WritePdfs();
 
-            Assert.IsTrue(result.HasValue);
+            Assert.IsTrue(program.LastIdDs.ReadLastId().HasValue);
         }
 
         [Test]
         public void ReadItemsSubset()
         {
-            var program = CreateProgram(new NewItemsReaderTest.FileResources());
+            var program = CreateProgram(new NewItemsReaderTest.FileResources(), 3339);
 
-            var result = program.Program.WritePdfs(3339);
+            program.Program.WritePdfs();
 
+            Assert.AreEqual(3352, program.LastIdDs.ReadLastId());
             Assert.AreEqual(1, program.NumberNieuwRequests);
             Assert.AreEqual(3, program.NumberArticleRequests);
             Assert.AreEqual(3336, program.ArticlesRequested.First(), "volgorde is niet juist, moet van oud naar nieuw gesorteerd zijn");
@@ -41,26 +42,47 @@ namespace DeCorrespondent.Test.Impl
             config.Save("d:\\config.xml");
         }
 
-        private ProgramWrapper CreateProgram(IResourceReader resources)
+        private static ProgramWrapper CreateProgram(IResourceReader resources, int? lastId = null)
         {
             var logger = new ConsoleLogger(true);
             var config = FileConfig.Load(null);
-            return new ProgramWrapper(logger, resources, new ArticleReader(logger), new ArticleRenderer(logger, config), new NewItemsReader(logger));
+            return new ProgramWrapper(logger, resources, new ArticleReader(logger), new ArticleRenderer(logger, config), new NewItemsReader(logger), lastId);
         }
 
         class ProgramWrapper
         {
             private readonly WrappedResources wrappedResources;
-            public ProgramWrapper(ILogger logger, IResourceReader resources, IArticleReader articleReader, IArticleRenderer articleRenderer, IItemsReader newItemsReader)
+            public ProgramWrapper(ILogger logger, IResourceReader resources, IArticleReader articleReader, IArticleRenderer articleRenderer, IItemsReader newItemsReader, int? lastId)
             {
                 wrappedResources = new WrappedResources(resources);
-                Program = new DeCorrespondent.Program(logger, wrappedResources, articleReader, articleRenderer, newItemsReader, 20);
+                LastIdDs = new MemoryLastIdDatasource(lastId);
+                Program = new DeCorrespondent.Program(logger, wrappedResources, articleReader, articleRenderer, newItemsReader, LastIdDs, 20);
             }
 
             public DeCorrespondent.Program Program{ get; private set; }
             public int NumberArticleRequests { get { return wrappedResources.ArticlesRequested.Count; } }
             public int NumberNieuwRequests { get { return wrappedResources.NieuwpaginaRequested.Count; } }
             public IList<int> ArticlesRequested { get { return wrappedResources.ArticlesRequested; } }
+            public ILastIdDatasource LastIdDs { get; private set; }
+        }
+
+        class MemoryLastIdDatasource : ILastIdDatasource
+        {
+            private int? id;
+            internal MemoryLastIdDatasource(int? id)
+            {
+                this.id = id;
+            }
+
+            public int? ReadLastId()
+            {
+                return id;
+            }
+
+            public void UpdateLastId(int id)
+            {
+                this.id = id;
+            }
         }
 
         class WrappedResources : IResourceReader

@@ -52,8 +52,7 @@ namespace DeCorrespondent.Test.Impl
             File.WriteAllText("d:\\article_" + id, article);
         }
 
-
-        public static WebReader CreateReader(IWebReaderConfig config = null)
+        private static WebReader CreateReader(IWebReaderConfig config = null)
         {
             return WebReader.Login(new ConsoleLogger(true), config ?? FileConfig.Load(null) );
         }
