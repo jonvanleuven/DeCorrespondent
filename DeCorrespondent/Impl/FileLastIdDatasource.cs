@@ -4,14 +4,19 @@ namespace DeCorrespondent.Impl
 {
     public class FileLastIdDatasource : ILastIdDatasource
     {
+        private readonly string filename;
+        public FileLastIdDatasource()
+        {
+            filename = "lastId.txt";
+        }
         public int? ReadLastId()
         {
-            return File.Exists("lastId.txt") ? int.Parse(File.ReadAllText("lastId.txt")) : (int?)null;
+            return File.Exists(filename) ? int.Parse(File.ReadAllText(filename)) : (int?)null;
         }
 
         public void UpdateLastId(int id)
         {
-            File.WriteAllText("lastId.txt", "" + id);
+            File.WriteAllText(filename, "" + id);
         }
     }
 }

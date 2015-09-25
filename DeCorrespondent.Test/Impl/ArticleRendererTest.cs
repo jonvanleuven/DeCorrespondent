@@ -11,7 +11,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void Render()
         {
-            var article = new ArticleReader(new ConsoleLogger(true)).Read(new NewItemsReaderTest.FileResources().ReadArticle(3358));
+            var article = new ArticleReader().Read(new NewItemsReaderTest.FileResources().ReadArticle(3358));
             var renderer = CreateRenderer();
 
             var pdf = renderer.Render(article);
@@ -24,7 +24,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void Render3361()
         {
-            var article = new ArticleReader(new ConsoleLogger(true)).Read(new NewItemsReaderTest.FileResources().ReadArticle(3361));
+            var article = new ArticleReader().Read(new NewItemsReaderTest.FileResources().ReadArticle(3361));
             var renderer = CreateRenderer();
 
             var pdf = renderer.Render(article);

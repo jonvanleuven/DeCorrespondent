@@ -25,7 +25,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void ReadArticle()
         {
-            var reader = new ArticleReader(new ConsoleLogger(true));
+            var reader = new ArticleReader();
 
             var result = reader.Read(new FileResources().ReadArticle(1));
 
@@ -47,7 +47,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void ReadArticle3358()
         {
-            var reader = new ArticleReader(new ConsoleLogger(true));
+            var reader = new ArticleReader();
 
             var result = reader.Read(new FileResources().ReadArticle(3358));
             
@@ -57,7 +57,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void ReadArticle3364()
         {
-            var reader = new ArticleReader(new ConsoleLogger(true));
+            var reader = new ArticleReader();
 
             var result = reader.Read(new FileResources().ReadArticle(3364));
 
@@ -67,7 +67,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void ReadArticle3366()
         {
-            var reader = new ArticleReader(new ConsoleLogger(true));
+            var reader = new ArticleReader();
 
             var result = reader.Read(new FileResources().ReadArticle(3366));
             

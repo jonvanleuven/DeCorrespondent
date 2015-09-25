@@ -7,16 +7,9 @@ namespace DeCorrespondent.Impl
     public class ArticleReader : IArticleReader
     {
         private static readonly HtmlNodeCollection EmptyNodes = new HtmlNodeCollection(null);
-        private readonly ILogger log;
-
-        public ArticleReader(ILogger log)
-        {
-            this.log = log;
-        }
 
         public IArticle Read(string article)
         {
-            //log.Debug("Reading article: " + id);
             var doc = new HtmlDocument();
             doc.LoadHtml(article);
             var body = doc.DocumentNode.SelectSingleNode("//body");

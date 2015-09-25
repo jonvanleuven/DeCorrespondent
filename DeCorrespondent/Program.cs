@@ -13,7 +13,7 @@ namespace DeCorrespondent
             var config = FileConfig.Load(null);
             var resources = WebReader.Login(logger, config.CorrespondentCredentails);
             var newItemsParser = new NewItemsReader(logger);
-            var reader = new ArticleReader(logger);
+            var reader = new ArticleReader();
             var renderer = new ArticleRenderer(logger, config.ArticleRendererConfig);
             var lastIdDs = new FileLastIdDatasource();
             //var sender = new KindleEmailSender(logger, config.KindleEmailSenderConfig);
@@ -46,27 +46,30 @@ namespace DeCorrespondent
         public void WritePdfs()
         {
             var lastId = lastIdDS.ReadLastId();
-            Enumerable.Range(0, int.MaxValue)
+            var references = Enumerable.Range(0, int.MaxValue)
                 .SelectMany(i => NewItems(i))
                 .TakeWhile(reference => reference.Id != lastId)
                 .Take(maxAantalArticles)
                 .Reverse()
-                .Select(reference => new { Reference = reference, Article = ReadArticle(reference.Id) })
-                .Select(x => new { x.Reference, Pdf = RenderArticle(x.Article)})
-                .Select(x => new { x.Reference, FileName = WritePdf(x.Pdf, x.Reference) })
                 .ToList();
+            foreach (var reference in references)
+            {
+                var article = ReadArticle(reference.Id);
+                var pdf = RenderArticle(article, reference.Id);
+                WritePdf(pdf, reference);
+                lastIdDS.UpdateLastId(reference.Id);
+            }
         }
 
-        private int WritePdf(IArticleEbook ebook, IArticleReference reference)
+        private void WritePdf(IArticleEbook ebook, IArticleReference reference)
         {
             File.WriteAllBytes(ebook.Name, ebook.Content);
             logger.Info("File written: '{0}'", ebook.Name);
-            lastIdDS.UpdateLastId(reference.Id);
-            return reference.Id;
         }
 
-        private IArticleEbook RenderArticle(IArticle a)
+        private IArticleEbook RenderArticle(IArticle a, int id)
         {
+            logger.Debug("Reading article: " + id);
             return renderer.Render(a);
         }
 

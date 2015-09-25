@@ -46,7 +46,7 @@ namespace DeCorrespondent.Test.Impl
         {
             var logger = new ConsoleLogger(true);
             var config = FileConfig.Load(null);
-            return new ProgramWrapper(logger, resources, new ArticleReader(logger), new ArticleRenderer(logger, config), new NewItemsReader(logger), lastId);
+            return new ProgramWrapper(logger, resources, new ArticleReader(), new ArticleRenderer(logger, config), new NewItemsReader(logger), lastId);
         }
 
         class ProgramWrapper
