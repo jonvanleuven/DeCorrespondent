@@ -14,3 +14,4 @@ V move ReadArticle() uit ArticleReference verplaatsen?
 V uitlezen nieuw/1, nieuw/2 etc.(
 V Meer met IEnumerable werken: Enumerable.Range(0, int.MaxValue).SelectMany(i => NewItems(i)).Select(r => Content(r)).Select(c => Render(c)).Select(pdf => WriteFile(pdf)).TakeWhile(r => r.Id != lastId).Take(40).ToList()
 V new Program(IRenderer, IResource, etc) (ook makkelijker te testen)
+- Testcase delayed execution in Program.WritePdfs

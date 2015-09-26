@@ -47,21 +47,20 @@ namespace DeCorrespondent
         {
             var lastId = lastIdDS.ReadLastId();
             var references = Enumerable.Range(0, int.MaxValue)
-                .SelectMany(i => NewItems(i))
+                .SelectMany(NewItems)
                 .TakeWhile(reference => reference.Id != lastId)
                 .Take(maxAantalArticles)
-                .Reverse()
-                .ToList();
+                .Reverse();
             foreach (var reference in references)
             {
                 var article = ReadArticle(reference.Id);
                 var pdf = RenderArticle(article, reference.Id);
-                WritePdf(pdf, reference);
+                WritePdf(pdf);
                 lastIdDS.UpdateLastId(reference.Id);
             }
         }
 
-        private void WritePdf(IArticleEbook ebook, IArticleReference reference)
+        private void WritePdf(IArticleEbook ebook)
         {
             File.WriteAllBytes(ebook.Name, ebook.Content);
             logger.Info("File written: '{0}'", ebook.Name);
