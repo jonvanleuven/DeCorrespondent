@@ -103,6 +103,10 @@ namespace DeCorrespondent.Test.Impl
                     return s.ReadToEnd();
                 }
             }
+
+            public void Dispose()
+            {
+            }
         }
 
     }

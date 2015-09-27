@@ -15,6 +15,12 @@ namespace DeCorrespondent.Impl
             var web = new HtmlWeb();
             web.UseCookies = true;
             CookieCollection cookies = null;
+//            web.PreRequest += r =>
+//            {
+//                var data = Encoding.UTF8.GetBytes(string.Format("email={0}&password={1}", config.Username, config.Password));
+//                r.GetRequestStream().Write(data, 0, data.Length);
+//                return true;
+//            };
             web.PostResponse += ((req, resp) => cookies = resp.Cookies);
             var doc = web.Load(string.Format("https://decorrespondent.nl/login?email={0}&password={1}", config.Username, config.Password), "POST");
             if (!doc.DocumentNode.OuterHtml.Contains("Je bent nu ingelogd"))
@@ -31,15 +37,15 @@ namespace DeCorrespondent.Impl
 
         public string ReadNewItems(int index)
         {
-            return Get("https://decorrespondent.nl/nieuw" + (index != 0 ? "/" + index : ""));
+            return Request("https://decorrespondent.nl/nieuw" + (index != 0 ? "/" + index : ""));
         }
 
         public string ReadArticle(int articleId)
         {
-            return Get("https://decorrespondent.nl/" + articleId);
+            return Request("https://decorrespondent.nl/" + articleId);
         }
 
-        private string Get(string url)
+        private string Request(string url, string method = null)
         {
             log.Debug("Requesting url '" + url + "'");
             var web = new HtmlWeb();
@@ -49,7 +55,16 @@ namespace DeCorrespondent.Impl
                 req.CookieContainer.Add(sessionCookies);
                 return true;
             });
-            return web.Load(url).DocumentNode.OuterHtml;
+            return web.Load(url, method??"GET").DocumentNode.OuterHtml;
+        }
+
+        public void Dispose()
+        {
+            var doc = Request("https://decorrespondent.nl/logout", "POST");
+            if (doc.Contains("Je bent nu uitgelogd") )
+                log.Info("Logged out");
+            else 
+                throw new Exception("Uitloggen is mislukt");
         }
     }
 

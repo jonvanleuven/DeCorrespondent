@@ -20,6 +20,17 @@ namespace DeCorrespondent.Test.Impl
         }
 
         [Test]
+        public void Logout()
+        {
+            var reader = CreateReader();
+            reader.Dispose();
+
+            var result = reader.ReadNewItems(0);
+
+            Assert.IsTrue(result.Contains("Log dan nu in"));
+        }
+
+        [Test]
         public void ReadItems()
         {
             var reader = CreateReader();

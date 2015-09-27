@@ -1,7 +1,9 @@
 ﻿
+using System;
+
 namespace DeCorrespondent
 {
-    public interface IResourceReader
+    public interface IResourceReader : IDisposable
     {
         string ReadNewItems(int index);
         string ReadArticle(int articleId);
