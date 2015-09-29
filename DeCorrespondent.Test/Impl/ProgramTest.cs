@@ -11,11 +11,14 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void GetItemsFromWebAndRenderPdf()
         {
-            var program = CreateProgram(WebReader.Login(new ConsoleLogger(true), FileConfig.Load(null)));
+            using (var webresources = WebReader.Login(new ConsoleLogger(true), FileConfig.Load(null)))
+            {
+                var program = CreateProgram(webresources);
 
-            program.Program.WritePdfs();
+                program.Program.WritePdfs();
 
-            Assert.IsTrue(program.LastIdDs.ReadLastId().HasValue);
+                Assert.IsTrue(program.LastIdDs.ReadLastId().HasValue);
+            }
         }
 
         [Test]
@@ -51,11 +54,11 @@ namespace DeCorrespondent.Test.Impl
 
             Assert.IsTrue(program.DebugLog[0].StartsWith("Reading article"));
             Assert.IsTrue(program.DebugLog[1].StartsWith("Rendering article"));
-            Assert.IsTrue(program.DebugLog[2].StartsWith("File written"));
+            Assert.IsTrue(program.DebugLog[2].StartsWith("Writing article"));
 
             Assert.IsTrue(program.DebugLog[3].StartsWith("Reading article"));
             Assert.IsTrue(program.DebugLog[4].StartsWith("Rendering article"));
-            Assert.IsTrue(program.DebugLog[5].StartsWith("File written"));
+            Assert.IsTrue(program.DebugLog[5].StartsWith("Writing article"));
         }
 
         private static ProgramWrapper CreateProgram(IResourceReader resources, int? lastId = null)

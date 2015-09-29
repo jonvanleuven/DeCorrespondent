@@ -12,11 +12,12 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void LoginAndReadNewItems()
         {
-            var reader = CreateReader();
+            using (var reader = CreateReader())
+            {
+                var result = reader.ReadNewItems(0);
 
-            var result = reader.ReadNewItems(0);
-
-            Assert.NotNull(result);
+                Assert.NotNull(result);
+            }
         }
 
         [Test]
@@ -33,12 +34,14 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void ReadItems()
         {
-            var reader = CreateReader();
+            using (var reader = CreateReader())
+            {
+                var items = new NewItemsReader(new ConsoleLogger(true)).ReadItems(reader.ReadNewItems(0));
 
-            var items = new NewItemsReader(new ConsoleLogger(true)).ReadItems(reader.ReadNewItems(0));
-
-            Assert.IsTrue(items.Any());
-            Console.WriteLine(string.Join(",", items.Select(i => i.Id)));Console.WriteLine(string.Join(",", items.Select(i => i.Id)));
+                Assert.IsTrue(items.Any());
+                Console.WriteLine(string.Join(",", items.Select(i => i.Id)));
+                Console.WriteLine(string.Join(",", items.Select(i => i.Id)));
+            }
         }
 
         [Test]
@@ -56,11 +59,12 @@ namespace DeCorrespondent.Test.Impl
         public void ReadItem()
         {
             var id = 3339;
-            var reader = CreateReader();
+            using (var reader = CreateReader())
+            {
+                var article = reader.ReadArticle(id);
 
-            var article = reader.ReadArticle(id);
-
-            File.WriteAllText("d:\\article_" + id, article);
+                File.WriteAllText("d:\\article_" + id, article);
+            }
         }
 
         private static WebReader CreateReader(IWebReaderConfig config = null)

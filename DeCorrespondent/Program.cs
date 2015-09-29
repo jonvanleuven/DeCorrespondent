@@ -65,7 +65,7 @@ namespace DeCorrespondent
         private void WritePdf(IArticleEbook ebook)
         {
             File.WriteAllBytes(ebook.Name, ebook.Content);
-            logger.Debug("File written: '{0}'", ebook.Name);
+            logger.Debug("Writing article file: '{0}'", ebook.Name);
         }
 
         private IArticleEbook RenderArticle(IArticle a, int id)
