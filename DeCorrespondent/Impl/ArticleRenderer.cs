@@ -22,7 +22,7 @@ namespace DeCorrespondent.Impl
             var pdfConverter = CreatePdfConverter(a);
             var pdfOutputStream = new MemoryStream();
             pdfConverter.SavePdfFromHtmlStringToStream(WrapBody(a.Html), pdfOutputStream);
-            return new ArticleEbook(FormatName(string.Format("{0} {1}-{2}", a.ReadingTime, a.AuthorSurname, a.Title)) + ".pdf", pdfOutputStream.GetBuffer());
+            return new ArticleEbook(FormatName(string.Format("{0} {1}", a.ReadingTime, a.Title)) + ".pdf", pdfOutputStream.GetBuffer());
         }
 
         public static string FormatName(string name)
@@ -39,6 +39,7 @@ namespace DeCorrespondent.Impl
         .publication-main-image-description, figcaption {{ font-size: 0.5em; }}
         .infocard-description {{ font-size: 0.7em; font-style: italic}} 
         img {{ max-width:800; }}
+        blockquote {{ color: gray; }}
     </style>
     </head>
     <body>
