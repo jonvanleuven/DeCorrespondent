@@ -9,7 +9,7 @@ V config op file systeem (met default locatie)
 V alles behalve config in GitHub zetten
 V move ReadArticle() uit ArticleReference verplaatsen?
 - Deploy in Azure
-- html (bv &nbsp;) verwijderen uit de de titel
+V html (bv &nbsp;) verwijderen uit de de titel
 - set file modified date = publication date (File.SetLastWriteTime(path, publicactionDate))
 V uitlezen nieuw/1, nieuw/2 etc.(
 V Meer met IEnumerable werken: Enumerable.Range(0, int.MaxValue).SelectMany(i => NewItems(i)).Select(r => Content(r)).Select(c => Render(c)).Select(pdf => WriteFile(pdf)).TakeWhile(r => r.Id != lastId).Take(40).ToList()
