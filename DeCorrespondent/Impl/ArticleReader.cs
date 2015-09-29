@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using HtmlAgilityPack;
 
 namespace DeCorrespondent.Impl
@@ -44,10 +45,15 @@ namespace DeCorrespondent.Impl
                 n.ParentNode.PrependChild(HtmlNode.CreateNode("<span>"  + n.Attributes["title"].Value + "&nbsp;</span>"));
                 n.Remove();
             });
-            var title = body.SelectSingleNode("//h1[@data-field='title']").InnerText;
+            var title = RemoveHtmlSpecialCharacters( body.SelectSingleNode("//h1[@data-field='title']").InnerText );
             var readingTime = ReadingTime(body);
             var authorSurname = body.SelectSingleNode("//span[@class='author-surname']").InnerText;
             return new Article(title, readingTime, authorSurname, body.InnerHtml);
+        }
+
+        private static string RemoveHtmlSpecialCharacters(string text)
+        {
+            return Regex.Replace(text, "&[a-zA-Z0-9]+;", "");
         }
 
         private static string ReadingTime(HtmlNode body)
