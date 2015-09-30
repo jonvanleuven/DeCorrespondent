@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using DeCorrespondent.Impl;
@@ -16,7 +17,7 @@ namespace DeCorrespondent
                 var newItemsParser = new NewItemsReader(logger);
                 var reader = new ArticleReader();
                 var renderer = new ArticleRenderer(logger, config.ArticleRendererConfig);
-                var lastIdDs = new FileLastIdDatasource();
+                var lastIdDs = new FileLastDatasource();
                 //var sender = new KindleEmailSender(logger, config.KindleEmailSenderConfig);
                 //var summarySender = new EmailSummarySender(logger, config.EmailSummarySenderConfig);
 
@@ -32,33 +33,32 @@ namespace DeCorrespondent
         private readonly IArticleRenderer renderer;
         private readonly ILogger logger;
         private readonly int maxAantalArticles;
-        private readonly ILastIdDatasource lastIdDS;
+        private readonly ILastDatasource lastDs;
 
-        public Program(ILogger logger, IResourceReader resources, IArticleReader reader, IArticleRenderer renderer, IItemsReader newItemsParser, ILastIdDatasource lastIdDS, int maxAantalArticles)
+        public Program(ILogger logger, IResourceReader resources, IArticleReader reader, IArticleRenderer renderer, IItemsReader newItemsParser, ILastDatasource lastDs, int maxAantalArticles)
         {
             this.logger = logger;
             this.resources = resources;
             this.reader = reader;
             this.renderer = renderer;
             this.newItemsParser = newItemsParser;
-            this.lastIdDS = lastIdDS;
+            this.lastDs = lastDs;
             this.maxAantalArticles = maxAantalArticles;
         }
 
         public void WritePdfs()
         {
-            var lastId = lastIdDS.ReadLastId();
-            var references = Enumerable.Range(0, int.MaxValue)
+            var last = lastDs.ReadLast() ?? DateTime.Today.AddDays(-1);
+            var regels = Enumerable.Range(0, int.MaxValue)
                 .SelectMany(NewItems)
-                .TakeWhile(reference => reference.Id != lastId)
-                .Take(maxAantalArticles)
-                .Reverse();
-            foreach (var reference in references)
+                .Select(reference => new { Article = ReadArticle(reference.Id), Reference = reference })
+                .TakeWhile(x => x.Article.Publicationdate > last)
+                .Take(maxAantalArticles);
+            foreach (var r in regels)
             {
-                var article = ReadArticle(reference.Id);
-                var pdf = RenderArticle(article, reference.Id);
-                WritePdf(pdf, article);
-                lastIdDS.UpdateLastId(reference.Id);
+                var pdf = RenderArticle(r.Article, r.Reference.Id);
+                WritePdf(pdf, r.Article);
+                lastDs.UpdateLast(DateTime.Now);
             }
         }
 

@@ -49,7 +49,7 @@
   <ItemGroup>
     <Compile Include="IArticleReader.cs" />
     <Compile Include="IArticleSummarySender.cs" />
-    <Compile Include="ILastIdDatasource.cs" />
+    <Compile Include="ILastDatasource.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="Impl\ArticleReader.cs" />
     <Compile Include="Impl\ArticleRenderer.cs" />
@@ -57,7 +57,7 @@
     <Compile Include="Impl\ConsoleLogger.cs" />
     <Compile Include="Impl\EmailSummarySender.cs" />
     <Compile Include="Impl\FileConfig.cs" />
-    <Compile Include="Impl\FileLastIdDatasource.cs" />
+    <Compile Include="Impl\FileLastDatasource.cs" />
     <Compile Include="Impl\KindleEmailSender.cs" />
     <Compile Include="IArticleSender.cs" />
     <Compile Include="Impl\NewItemsReader.cs" />

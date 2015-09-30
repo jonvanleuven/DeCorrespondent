@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using DeCorrespondent.Impl;
 using NUnit.Framework;
@@ -17,21 +18,21 @@ namespace DeCorrespondent.Test.Impl
 
                 program.Program.WritePdfs();
 
-                Assert.IsTrue(program.LastIdDs.ReadLastId().HasValue);
+                Assert.IsTrue(program.LastDs.ReadLast().HasValue);
             }
         }
 
         [Test]
         public void ReadItemsSubset()
         {
-            var program = CreateProgram(new NewItemsReaderTest.FileResources(), 3339);
+            var program = CreateProgram(new NewItemsReaderTest.FileResources(), new DateTime(2015, 9, 14, 12, 0, 0));
 
             program.Program.WritePdfs();
 
-            Assert.AreEqual(3352, program.LastIdDs.ReadLastId());
+            Assert.IsNotNull(program.LastDs.ReadLast());
             Assert.AreEqual(1, program.NumberNieuwRequests);
             Assert.AreEqual(3, program.NumberArticleRequests);
-            Assert.AreEqual(3336, program.ArticlesRequested.First(), "volgorde is niet juist, moet van oud naar nieuw gesorteerd zijn");
+            Assert.AreEqual(3352, program.ArticlesRequested.First(), "volgorde is niet juist, moet van oud naar nieuw gesorteerd zijn");
         }
 
         [Test]
@@ -46,9 +47,30 @@ namespace DeCorrespondent.Test.Impl
         }
 
         [Test]
+        public void ReadPublicationDates()
+        {
+            var logger = new ConsoleLogger(true);
+            var newItemsReader = new NewItemsReader(logger);
+            var reader = new ArticleReader();
+            using (var webresources = WebReader.Login(new ConsoleLogger(true), FileConfig.Load(null)))
+            {
+                var regels = Enumerable.Range(0, int.MaxValue)
+                    .SelectMany(index => newItemsReader.ReadItems(webresources.ReadNewItems(index)))
+                    .Select(r => new {reader.Read(webresources.ReadArticle(r.Id)).Publicationdate, Reference = r})
+                    .TakeWhile(x => x.Publicationdate > new DateTime(2015, 9, 30))
+                    .Take(10) //max 10
+                    .ToList();
+                foreach (var regel in regels)
+                {
+                    Console.WriteLine(regel.Reference.Id + ": " + regel.Publicationdate);
+                }
+            }
+        }
+
+        [Test]
         public void AssertDeferredExecution()
         {
-            var program = CreateProgram(new NewItemsReaderTest.FileResources(), 3339);
+            var program = CreateProgram(new NewItemsReaderTest.FileResources(), new DateTime(2015, 9, 14, 12, 0, 0));
 
             program.Program.WritePdfs();
 
@@ -61,7 +83,7 @@ namespace DeCorrespondent.Test.Impl
             Assert.IsTrue(program.DebugLog[5].StartsWith("Writing article"));
         }
 
-        private static ProgramWrapper CreateProgram(IResourceReader resources, int? lastId = null)
+        private static ProgramWrapper CreateProgram(IResourceReader resources, DateTime? lastId = null)
         {
             var logger = new LogWrapper(new ConsoleLogger(true));
             var config = FileConfig.Load(null);
@@ -99,12 +121,12 @@ namespace DeCorrespondent.Test.Impl
             private readonly WrappedResources wrappedResources;
             private readonly LogWrapper logger;
 
-            public ProgramWrapper(LogWrapper logger, IResourceReader resources, IArticleReader articleReader, IArticleRenderer articleRenderer, IItemsReader newItemsReader, int? lastId)
+            public ProgramWrapper(LogWrapper logger, IResourceReader resources, IArticleReader articleReader, IArticleRenderer articleRenderer, IItemsReader newItemsReader, DateTime? last)
             {
                 this.logger = logger;
                 wrappedResources = new WrappedResources(resources);
-                LastIdDs = new MemoryLastIdDatasource(lastId);
-                Program = new DeCorrespondent.Program(logger, wrappedResources, articleReader, articleRenderer, newItemsReader, LastIdDs, 20);
+                LastDs = new MemoryLastDatasource(last);
+                Program = new DeCorrespondent.Program(logger, wrappedResources, articleReader, articleRenderer, newItemsReader, LastDs, 20);
             }
 
             public IList<string> InfoLog { get { return logger.Infos; } }
@@ -113,25 +135,25 @@ namespace DeCorrespondent.Test.Impl
             public int NumberArticleRequests { get { return wrappedResources.ArticlesRequested.Count; } }
             public int NumberNieuwRequests { get { return wrappedResources.NieuwpaginaRequested.Count; } }
             public IList<int> ArticlesRequested { get { return wrappedResources.ArticlesRequested; } }
-            public ILastIdDatasource LastIdDs { get; private set; }
+            public ILastDatasource LastDs { get; private set; }
         }
 
-        class MemoryLastIdDatasource : ILastIdDatasource
+        class MemoryLastDatasource : ILastDatasource
         {
-            private int? id;
-            internal MemoryLastIdDatasource(int? id)
+            private DateTime? d;
+            internal MemoryLastDatasource(DateTime? d)
             {
-                this.id = id;
+                this.d = d;
             }
 
-            public int? ReadLastId()
+            public DateTime? ReadLast()
             {
-                return id;
+                return d;
             }
 
-            public void UpdateLastId(int id)
+            public void UpdateLast(DateTime id)
             {
-                this.id = id;
+                this.d = id;
             }
         }
 
