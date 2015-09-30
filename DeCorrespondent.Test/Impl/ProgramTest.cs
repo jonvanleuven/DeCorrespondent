@@ -32,7 +32,7 @@ namespace DeCorrespondent.Test.Impl
             Assert.IsNotNull(program.LastDs.ReadLast());
             Assert.AreEqual(1, program.NumberNieuwRequests);
             Assert.AreEqual(3, program.NumberArticleRequests);
-            Assert.AreEqual(3352, program.ArticlesRequested.First(), "volgorde is niet juist, moet van oud naar nieuw gesorteerd zijn");
+            Assert.AreEqual(3352, program.ArticlesRequested.First(), "volgorde is niet juist, moet van nieuw naar oud gesorteerd zijn");
         }
 
         [Test]
