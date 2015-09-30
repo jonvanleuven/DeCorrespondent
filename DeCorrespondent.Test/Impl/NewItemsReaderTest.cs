@@ -29,19 +29,20 @@ namespace DeCorrespondent.Test.Impl
 
             var result = reader.Read(new FileResources().ReadArticle(1));
 
-            Assert.NotNull(result.Html);
-            File.WriteAllText("d:\\test.html", result.Html);
-            Assert.IsFalse(result.Html.Contains("<script"));
-            Assert.IsFalse(result.Html.Contains("publication-sidenote "));
-            Assert.IsTrue(result.Html.Contains("publication-sidenote-link"));
-            Assert.IsFalse(result.Html.Contains("share-publication-footer"));
-            Assert.IsFalse(result.Html.Contains("publication-body-link"));
-            Assert.IsFalse(result.Html.Contains("class=\"header"));
-            Assert.IsFalse(result.Html.Contains("8 uur geleden"));
-            Assert.IsTrue(result.Html.Contains("16-9-2015 5:45"));
+            Assert.NotNull(result.BodyHtml);
+            File.WriteAllText("d:\\test.BodyHtml", result.BodyHtml);
+            Assert.IsFalse(result.BodyHtml.Contains("<script"));
+            Assert.IsFalse(result.BodyHtml.Contains("publication-sidenote "));
+            Assert.IsTrue(result.BodyHtml.Contains("publication-sidenote-link"));
+            Assert.IsFalse(result.BodyHtml.Contains("share-publication-footer"));
+            Assert.IsFalse(result.BodyHtml.Contains("publication-body-link"));
+            Assert.IsFalse(result.BodyHtml.Contains("class=\"header"));
+            Assert.IsFalse(result.BodyHtml.Contains("8 uur geleden"));
+            Assert.IsTrue(result.BodyHtml.Contains("16-9-2015 5:45"));
             Assert.AreEqual("Drie manieren waarop mobiele telefoons bijdragen aan betere data", result.Title);
             Assert.AreEqual("6-7", result.ReadingTime);
             Assert.AreEqual("Blauw", result.AuthorSurname);
+            Assert.AreEqual(new DateTime(2015, 9, 16, 5, 45, 0), result.Publicationdate);
         }
 
         [Test]
@@ -51,7 +52,7 @@ namespace DeCorrespondent.Test.Impl
 
             var result = reader.Read(new FileResources().ReadArticle(3358));
             
-            Assert.NotNull(result.Html);
+            Assert.NotNull(result.BodyHtml);
         }
 
         [Test]
@@ -61,7 +62,7 @@ namespace DeCorrespondent.Test.Impl
 
             var result = reader.Read(new FileResources().ReadArticle(3364));
 
-            Assert.NotNull(result.Html);
+            Assert.NotNull(result.BodyHtml);
         }
 
         [Test]
@@ -71,8 +72,8 @@ namespace DeCorrespondent.Test.Impl
 
             var result = reader.Read(new FileResources().ReadArticle(3366));
             
-            Assert.NotNull(result.Html);
-            Assert.IsTrue(result.Html.Contains("een simpele telnet-hack"));
+            Assert.NotNull(result.BodyHtml);
+            Assert.IsTrue(result.BodyHtml.Contains("een simpele telnet-hack"));
         }
 
         private static NewItemsReader CreateReader()

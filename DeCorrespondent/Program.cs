@@ -57,14 +57,15 @@ namespace DeCorrespondent
             {
                 var article = ReadArticle(reference.Id);
                 var pdf = RenderArticle(article, reference.Id);
-                WritePdf(pdf);
+                WritePdf(pdf, article);
                 lastIdDS.UpdateLastId(reference.Id);
             }
         }
 
-        private void WritePdf(IArticleEbook ebook)
+        private void WritePdf(IArticleEbook ebook, IArticle article)
         {
             File.WriteAllBytes(ebook.Name, ebook.Content);
+            File.SetLastWriteTime(ebook.Name, article.Publicationdate);
             logger.Debug("Writing article file: '{0}'", ebook.Name);
         }
 

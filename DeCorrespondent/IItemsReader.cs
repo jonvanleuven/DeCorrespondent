@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DeCorrespondent
 {
@@ -15,9 +16,10 @@ namespace DeCorrespondent
 
     public interface IArticle
     {
-        string Html { get; }
+        string BodyHtml { get; }
         string Title { get; }
         string ReadingTime { get; }
         string AuthorSurname { get; }
+        DateTime Publicationdate { get; }
     }
 }

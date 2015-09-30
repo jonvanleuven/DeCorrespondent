@@ -17,3 +17,4 @@ V new Program(IRenderer, IResource, etc) (ook makkelijker te testen)
 V Testcase deferred execution in Program.WritePdfs
 V Logout
 - POST login niet op query string
+- lastid checken werkt niet altijd goed. Wat is hier aan de hand of publication date gaan gebruiken?

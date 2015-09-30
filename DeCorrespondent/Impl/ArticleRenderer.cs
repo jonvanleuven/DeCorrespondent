@@ -21,7 +21,7 @@ namespace DeCorrespondent.Impl
             log.Debug("Rendering article '" + a.Title + "' to pdf....");
             var pdfConverter = CreatePdfConverter(a);
             var pdfOutputStream = new MemoryStream();
-            pdfConverter.SavePdfFromHtmlStringToStream(WrapBody(a.Html), pdfOutputStream);
+            pdfConverter.SavePdfFromHtmlStringToStream(WrapBody(a.BodyHtml), pdfOutputStream);
             return new ArticleEbook(FormatName(string.Format("{0} {1}", a.ReadingTime, a.Title)) + ".pdf", pdfOutputStream.GetBuffer());
         }
 

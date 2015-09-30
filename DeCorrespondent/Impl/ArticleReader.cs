@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using HtmlAgilityPack;
@@ -40,15 +41,22 @@ namespace DeCorrespondent.Impl
                 n.SetAttributeValue("src", url);
                 n.SetAttributeValue("data-src", "");
             });
+            DateTime? publicationdate = null;
             (body.SelectNodes("//time[string-length(@title) > 0]") ?? EmptyNodes).ToList().ForEach(n =>
             {
-                n.ParentNode.PrependChild(HtmlNode.CreateNode("<span>"  + n.Attributes["title"].Value + "&nbsp;</span>"));
+                publicationdate = ParseDateTime(n.Attributes["title"].Value);
+                n.ParentNode.PrependChild(HtmlNode.CreateNode(string.Format("<span>{0:d-M-yyyy H:mm}&nbsp;</span>", publicationdate)));
                 n.Remove();
             });
             var title = RemoveHtmlSpecialCharacters( body.SelectSingleNode("//h1[@data-field='title']").InnerText );
             var readingTime = ReadingTime(body);
             var authorSurname = body.SelectSingleNode("//span[@class='author-surname']").InnerText;
-            return new Article(title, readingTime, authorSurname, body.InnerHtml);
+            return new Article(title, readingTime, authorSurname, publicationdate, body.InnerHtml);
+        }
+
+        private static DateTime ParseDateTime(string value)
+        {
+            return DateTime.ParseExact(value, new[] { "dd-MM-yyyy HH:mm", "d-M-yyyy H:mm" }, CultureInfo.InvariantCulture, DateTimeStyles.None);
         }
 
         private static string RemoveHtmlSpecialCharacters(string text)
@@ -80,17 +88,21 @@ namespace DeCorrespondent.Impl
 
     public class Article : IArticle
     {
-        internal Article(string title, string readingTime, string authorSurname, string html)
+        internal Article(string title, string readingTime, string authorSurname, DateTime? publicationdate, string html)
         {
-            Html = html;
+            if (!publicationdate.HasValue)
+                throw new Exception("publicationdate cannot be null");
+            BodyHtml = html;
             Title = title;
             ReadingTime = readingTime;
             AuthorSurname = authorSurname;
+            Publicationdate = publicationdate.Value;
         }
         public IArticleReference Reference { get; private set; }
-        public string Html { get; private set; }
+        public string BodyHtml { get; private set; }
         public string Title { get; private set; }
         public string ReadingTime { get; private set; }
         public string AuthorSurname { get; private set; }
+        public DateTime Publicationdate { get; private set; }
     }
 }
