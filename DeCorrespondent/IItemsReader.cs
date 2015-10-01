@@ -28,5 +28,7 @@ namespace DeCorrespondent
         string AuthorLastname { get; }
         DateTime Published { get; }
         DateTime Modified { get; }
+        string AuthorImgUrl { get; }
+        string MainImgUrl { get; }
     }
 }

@@ -42,7 +42,9 @@ namespace DeCorrespondent.Test.Impl
             Assert.AreEqual("Drie manieren waarop mobiele telefoons bijdragen aan betere data", result.Metadata.Title);
             Assert.AreEqual("6-7", result.Metadata.ReadingTime);
             Assert.AreEqual("Sanne", result.Metadata.AuthorFirstname);
-            Assert.AreEqual("Blauw", result.Metadata.AuthorLastname); 
+            Assert.AreEqual("Blauw", result.Metadata.AuthorLastname);
+            Assert.AreEqual("https://dynamic.decorrespondent.nl/ff-1442375110/media/1024/55f8734d4e0455501740378.jpg", result.Metadata.MainImgUrl);
+            Assert.AreEqual("https://dynamic.decorrespondent.nl/ff-1441719053/media/190/55eee30dc2bdd5475014700.png", result.Metadata.AuthorImgUrl);
             Assert.AreEqual(new DateTime(2015, 9, 16, 5, 45, 0), result.Metadata.Published);
             Assert.AreEqual(new DateTime(2015, 9, 16, 5, 45, 10), result.Metadata.Modified);
         }

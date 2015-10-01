@@ -22,7 +22,7 @@ namespace DeCorrespondent.Impl
             var pdfConverter = CreatePdfConverter(a);
             var pdfOutputStream = new MemoryStream();
             //File.WriteAllText("d:\\temp.html", WrapBody(a.BodyHtml));
-            pdfConverter.SavePdfFromHtmlStringToStream(WrapBody(a.BodyHtml), pdfOutputStream);
+            pdfConverter.SavePdfFromHtmlStringToStream(CreateHtml(a), pdfOutputStream);
             return new ArticleEbook(FormatName(string.Format("{0} {1}", a.Metadata.ReadingTime, a.Metadata.Title)) + ".pdf", pdfOutputStream.GetBuffer());
         }
 
@@ -31,7 +31,7 @@ namespace DeCorrespondent.Impl
             return string.Join("", name.ToArray().TakeWhile(l => l != '(' && l != '.').Where(l => Char.IsLetter(l) || Char.IsNumber(l) || l == ' ' || l == '-')).Trim();
         }
 
-        private static string WrapBody(string body)
+        private static string CreateHtml(IArticle a)
         {
             const string template = @"<html>
     <head>
@@ -42,13 +42,25 @@ namespace DeCorrespondent.Impl
         img {{ max-width:800; }}
         blockquote {{ color: gray; }}
         div.author img {{ align: right; }} 
+        div.voorpagina {{ height:1200px; text-align:center; }}
+        div.voorpagina img.logo {{ height:90px; width:378px; }} 
+        div.voorpagina img.author {{ float: right; margin-top:110px; }} 
+        div.voorpagina h3 {{ text-align:left; }}
+        div.voorpagina p {{ font-size: 0.5em; }} 
     </style>
     </head>
     <body>
+    <div class=""voorpagina"">
+        <img class=""logo"" src=""https://static.decorrespondent.nl/images/nl/logo/logo_nl.svg""><br/>
+        <img class=""author"" src=""{7}"">
+        <h3>{1}</h3>
+        <img class=""main"" src=""{6}"">
+        <p>{2:dd-MM-yyyy H:mm} - Leestijd: {5} minuten<br/>{3} {4}</p>
+    </div>
     {0}
     </body>
 </html>";
-            return string.Format(template, body);
+            return string.Format(template, a.BodyHtml, a.Metadata.Title, a.Metadata.Published, a.Metadata.AuthorFirstname, a.Metadata.AuthorLastname, a.Metadata.ReadingTime, a.Metadata.MainImgUrl, a.Metadata.AuthorImgUrl );
         }
 
         private PdfConverter CreatePdfConverter(IArticle article)

@@ -38,6 +38,11 @@ namespace DeCorrespondent.Impl
                 url = url.Replace("{breakpoint-name}", !isMainImage ? "904" : "1024"); //320, 600 of 904 (of 660, 1024 of 1920 voor main image)
                 n.SetAttributeValue("src", url);
                 n.SetAttributeValue("data-src", "");
+                if (isMainImage)
+                {
+                    metadata.MainImgUrl = url;
+                    n.Remove();
+                }
             });
             (body.SelectNodes("//iframe[string-length(@data-src) > 0]") ?? EmptyNodes).Where(n => n != null).ToList().ForEach(n =>
             {
@@ -112,6 +117,9 @@ namespace DeCorrespondent.Impl
         public string AuthorLastname { get { return GetValue("article:author:last_name"); } }
         public DateTime Published { get { return ParseDate(GetValue("article:published_time")); } }
         public DateTime Modified { get { return ParseDate(GetValue("article:modified_time")); } }
+        public string MainImgUrl { get; set; }
+        public string AuthorImgUrl { get { return GetValue("article:author:image"); } }
+        
 
         private static DateTime ParseDate(string str)
         {
