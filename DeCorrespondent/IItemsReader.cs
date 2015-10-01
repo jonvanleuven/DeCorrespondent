@@ -24,7 +24,8 @@ namespace DeCorrespondent
     {
         string Title { get; }
         string ReadingTime { get; }
-        string AuthorSurname { get; }
+        string AuthorFirstname { get; }
+        string AuthorLastname { get; }
         DateTime Published { get; }
         DateTime Modified { get; }
     }

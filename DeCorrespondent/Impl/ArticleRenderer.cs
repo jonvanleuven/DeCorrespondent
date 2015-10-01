@@ -54,11 +54,12 @@ namespace DeCorrespondent.Impl
         private PdfConverter CreatePdfConverter(IArticle article)
         {
             var pdfConverter = new PdfConverter();
-            pdfConverter.LicenseKey = config.LicenseKey;
+            if (!string.IsNullOrEmpty(config.LicenseKey))
+                pdfConverter.LicenseKey = config.LicenseKey;
             pdfConverter.ExtensionsEnabled = false;
             pdfConverter.JavaScriptEnabled = false;
-            pdfConverter.PdfDocumentInfo.Title = article.Metadata.ReadingTime + " " + article.Metadata.Title;
-            pdfConverter.PdfDocumentInfo.AuthorName = article.Metadata.AuthorSurname;
+            pdfConverter.PdfDocumentInfo.Title = string.Format("{0} {1}", article.Metadata.ReadingTime, article.Metadata.Title);
+            pdfConverter.PdfDocumentInfo.AuthorName = string.Format("{0} {1}", article.Metadata.AuthorFirstname, article.Metadata.AuthorLastname);
             pdfConverter.PdfDocumentOptions.PdfPageSize = PdfPageSize.Letter;
             pdfConverter.PdfDocumentOptions.PdfCompressionLevel = PdfCompressionLevel.Normal;
             pdfConverter.PdfDocumentOptions.PdfPageOrientation = PdfPageOrientation.Portrait;

@@ -41,7 +41,8 @@ namespace DeCorrespondent.Test.Impl
             Assert.IsTrue(result.BodyHtml.Contains("16-9-2015 5:45"));
             Assert.AreEqual("Drie manieren waarop mobiele telefoons bijdragen aan betere data", result.Metadata.Title);
             Assert.AreEqual("6-7", result.Metadata.ReadingTime);
-            Assert.AreEqual("Blauw", result.Metadata.AuthorSurname);
+            Assert.AreEqual("Sanne", result.Metadata.AuthorFirstname);
+            Assert.AreEqual("Blauw", result.Metadata.AuthorLastname); 
             Assert.AreEqual(new DateTime(2015, 9, 16, 5, 45, 0), result.Metadata.Published);
             Assert.AreEqual(new DateTime(2015, 9, 16, 5, 45, 10), result.Metadata.Modified);
         }

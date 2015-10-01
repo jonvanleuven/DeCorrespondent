@@ -108,7 +108,8 @@ namespace DeCorrespondent.Impl
 
         public string Title { get { return GetValue("og:title"); } }
         public string ReadingTime { get; private set; }
-        public string AuthorSurname { get { return GetValue("article:author:last_name"); } }
+        public string AuthorFirstname { get { return GetValue("article:author:first_name"); } }
+        public string AuthorLastname { get { return GetValue("article:author:last_name"); } }
         public DateTime Published { get { return ParseDate(GetValue("article:published_time")); } }
         public DateTime Modified { get { return ParseDate(GetValue("article:modified_time")); } }
 
