@@ -19,7 +19,8 @@ namespace DeCorrespondent.Impl
                 .Where(n => n.Attributes.Contains("name") || n.Attributes.Contains("property"))
                 .ToDictionary(n => n.Attributes.Contains("name") ? n.Attributes["name"].Value : n.Attributes["property"].Value, n => n.Attributes["content"].Value);
             var body = doc.DocumentNode.SelectSingleNode("//body");
-            var metadata = new ArticleMetadata(metadataValues, ReadingTime(body));
+            var metadata = new ArticleMetadata(metadataValues);
+            metadata.ReadingTime = ReadingTime(body);
             RemoveNodes(body, "//script");
             RemoveNodes(body, "//noscript");
             RemoveNodes(body, "//div", "share-publication-footer");
@@ -69,11 +70,13 @@ namespace DeCorrespondent.Impl
             return Regex.Replace(text, "&[a-zA-Z0-9]+;", "");
         }
 
-        private static string ReadingTime(HtmlNode body)
+        private static IList<int> ReadingTime(HtmlNode body)
         {
             var node = body.SelectSingleNode("//span[@class='reading-time']");
-            if (node == null) return "";
-            return string.Join("", node.InnerText.Where(l => Char.IsDigit(l) || l == '-'));
+            if (node == null) return new int[0];
+            return string.Join("", node.InnerText.Where(l => Char.IsDigit(l) || l == '-')).Split('-')
+                .Select(int.Parse)
+                .ToList();
         }
 
         private static void RemoveNodes(HtmlNode body, string xpath)
@@ -105,19 +108,18 @@ namespace DeCorrespondent.Impl
     public class ArticleMetadata : IArticleMetadata
     {
         private readonly IDictionary<string, string> metadata;
-        internal ArticleMetadata(IDictionary<string, string> metadata, string readingTime)
+        internal ArticleMetadata(IDictionary<string, string> metadata)
         {
             this.metadata = metadata;
-            ReadingTime = readingTime;
         }
 
         public string Title { get { return GetValue("og:title"); } }
-        public string ReadingTime { get; private set; }
+        public IList<int> ReadingTime { get; internal set; }
         public string AuthorFirstname { get { return GetValue("article:author:first_name"); } }
         public string AuthorLastname { get { return GetValue("article:author:last_name"); } }
         public DateTime Published { get { return ParseDate(GetValue("article:published_time")); } }
         public DateTime Modified { get { return ParseDate(GetValue("article:modified_time")); } }
-        public string MainImgUrl { get; set; }
+        public string MainImgUrl { get; internal set; }
         public string AuthorImgUrl { get { return GetValue("article:author:image"); } }
         
 

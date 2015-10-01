@@ -16,7 +16,7 @@ namespace DeCorrespondent.Test.Impl
             var pdf = renderer.Render(article);
 
             Assert.NotNull(pdf.Content);
-            Assert.AreEqual("12-16 Reis mee door het land dat niet bestaat.pdf", pdf.Name);
+            Assert.AreEqual("16 Reis mee door het land dat niet bestaat.pdf", pdf.Name);
             File.WriteAllBytes("d:\\" + pdf.Name, pdf.Content);
         }
 

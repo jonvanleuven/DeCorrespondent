@@ -23,7 +23,7 @@ namespace DeCorrespondent
     public interface IArticleMetadata
     {
         string Title { get; }
-        string ReadingTime { get; }
+        IList<int> ReadingTime { get; }
         string AuthorFirstname { get; }
         string AuthorLastname { get; }
         DateTime Published { get; }

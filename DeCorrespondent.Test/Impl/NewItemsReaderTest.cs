@@ -40,7 +40,7 @@ namespace DeCorrespondent.Test.Impl
             Assert.IsFalse(result.BodyHtml.Contains("8 uur geleden"));
             Assert.IsTrue(result.BodyHtml.Contains("16-9-2015 5:45"));
             Assert.AreEqual("Drie manieren waarop mobiele telefoons bijdragen aan betere data", result.Metadata.Title);
-            Assert.AreEqual("6-7", result.Metadata.ReadingTime);
+            Assert.AreEqual(new [] {6, 7}, result.Metadata.ReadingTime.ToArray());
             Assert.AreEqual("Sanne", result.Metadata.AuthorFirstname);
             Assert.AreEqual("Blauw", result.Metadata.AuthorLastname);
             Assert.AreEqual("https://dynamic.decorrespondent.nl/ff-1442375110/media/1024/55f8734d4e0455501740378.jpg", result.Metadata.MainImgUrl);

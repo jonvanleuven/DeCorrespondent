@@ -23,7 +23,7 @@ namespace DeCorrespondent.Impl
             var pdfOutputStream = new MemoryStream();
             //File.WriteAllText("d:\\temp.html", WrapBody(a.BodyHtml));
             pdfConverter.SavePdfFromHtmlStringToStream(CreateHtml(a), pdfOutputStream);
-            return new ArticleEbook(FormatName(string.Format("{0} {1}", a.Metadata.ReadingTime, a.Metadata.Title)) + ".pdf", pdfOutputStream.GetBuffer());
+            return new ArticleEbook(FormatName(string.Format("{0} {1}", a.Metadata.ReadingTime.LastOrDefault(), a.Metadata.Title)) + ".pdf", pdfOutputStream.GetBuffer());
         }
 
         public static string FormatName(string name)
@@ -42,11 +42,11 @@ namespace DeCorrespondent.Impl
         img {{ max-width:800; }}
         blockquote {{ color: gray; }}
         div.author img {{ align: right; }} 
-        div.voorpagina {{ height:1200px; text-align:center; }}
+        div.voorpagina {{ height:1300px; text-align:center; border: 1px solid gray; }}
         div.voorpagina img.logo {{ height:90px; width:378px; }} 
         div.voorpagina img.author {{ float: right; margin-top:110px; }} 
         div.voorpagina h3 {{ text-align:left; }}
-        div.voorpagina p {{ font-size: 0.5em; }} 
+        div.voorpagina p {{ font-size: 0.5em; }}
     </style>
     </head>
     <body>
@@ -60,7 +60,15 @@ namespace DeCorrespondent.Impl
     {0}
     </body>
 </html>";
-            return string.Format(template, a.BodyHtml, a.Metadata.Title, a.Metadata.Published, a.Metadata.AuthorFirstname, a.Metadata.AuthorLastname, a.Metadata.ReadingTime, a.Metadata.MainImgUrl, a.Metadata.AuthorImgUrl );
+            return string.Format(template, 
+                a.BodyHtml, 
+                a.Metadata.Title, 
+                a.Metadata.Published, 
+                a.Metadata.AuthorFirstname, 
+                a.Metadata.AuthorLastname, 
+                string.Join("-", a.Metadata.ReadingTime), 
+                a.Metadata.MainImgUrl, 
+                a.Metadata.AuthorImgUrl );
         }
 
         private PdfConverter CreatePdfConverter(IArticle article)
@@ -70,7 +78,7 @@ namespace DeCorrespondent.Impl
                 pdfConverter.LicenseKey = config.LicenseKey;
             pdfConverter.ExtensionsEnabled = false;
             pdfConverter.JavaScriptEnabled = false;
-            pdfConverter.PdfDocumentInfo.Title = string.Format("{0} {1}", article.Metadata.ReadingTime, article.Metadata.Title);
+            pdfConverter.PdfDocumentInfo.Title = string.Format("{0} {1}", article.Metadata.ReadingTime.LastOrDefault(), article.Metadata.Title);
             pdfConverter.PdfDocumentInfo.AuthorName = string.Format("{0} {1}", article.Metadata.AuthorFirstname, article.Metadata.AuthorLastname);
             pdfConverter.PdfDocumentOptions.PdfPageSize = PdfPageSize.Letter;
             pdfConverter.PdfDocumentOptions.PdfCompressionLevel = PdfCompressionLevel.Normal;
