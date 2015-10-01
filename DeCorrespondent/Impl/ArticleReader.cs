@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -14,7 +15,11 @@ namespace DeCorrespondent.Impl
         {
             var doc = new HtmlDocument();
             doc.LoadHtml(article);
+            var metadataValues = doc.DocumentNode.SelectNodes("//meta")
+                .Where(n => n.Attributes.Contains("name") || n.Attributes.Contains("property"))
+                .ToDictionary(n => n.Attributes.Contains("name") ? n.Attributes["name"].Value : n.Attributes["property"].Value, n => n.Attributes["content"].Value);
             var body = doc.DocumentNode.SelectSingleNode("//body");
+            var metadata = new ArticleMetadata(metadataValues, ReadingTime(body));
             RemoveNodes(body, "//script");
             RemoveNodes(body, "//noscript");
             RemoveNodes(body, "//div", "share-publication-footer");
@@ -41,17 +46,12 @@ namespace DeCorrespondent.Impl
                 n.SetAttributeValue("src", url);
                 n.SetAttributeValue("data-src", "");
             });
-            DateTime? publicationdate = null;
             (body.SelectNodes("//time[string-length(@title) > 0]") ?? EmptyNodes).ToList().ForEach(n =>
             {
-                publicationdate = ParseDateTime(n.Attributes["title"].Value);
-                n.ParentNode.PrependChild(HtmlNode.CreateNode(string.Format("<span>{0:d-M-yyyy H:mm}&nbsp;</span>", publicationdate)));
+                n.ParentNode.PrependChild(HtmlNode.CreateNode(string.Format("<span>{0:d-M-yyyy H:mm}&nbsp;</span>", metadata.Published)));
                 n.Remove();
             });
-            var title = RemoveHtmlSpecialCharacters( body.SelectSingleNode("//h1[@data-field='title']").InnerText );
-            var readingTime = ReadingTime(body);
-            var authorSurname = body.SelectSingleNode("//span[@class='author-surname']").InnerText;
-            return new Article(title, readingTime, authorSurname, publicationdate, body.InnerHtml);
+            return new Article(body.InnerHtml, metadata);
         }
 
         private static DateTime ParseDateTime(string value)
@@ -88,21 +88,40 @@ namespace DeCorrespondent.Impl
 
     public class Article : IArticle
     {
-        internal Article(string title, string readingTime, string authorSurname, DateTime? publicationdate, string html)
+        internal Article(string bodyHtml, IArticleMetadata metadata)
         {
-            if (!publicationdate.HasValue)
-                throw new Exception("publicationdate cannot be null");
-            BodyHtml = html;
-            Title = title;
-            ReadingTime = readingTime;
-            AuthorSurname = authorSurname;
-            Publicationdate = publicationdate.Value;
+            BodyHtml = bodyHtml;
+            Metadata = metadata;
         }
-        public IArticleReference Reference { get; private set; }
         public string BodyHtml { get; private set; }
-        public string Title { get; private set; }
+        public IArticleMetadata Metadata { get; private set; }
+    }
+
+    public class ArticleMetadata : IArticleMetadata
+    {
+        private readonly IDictionary<string, string> metadata;
+        internal ArticleMetadata(IDictionary<string, string> metadata, string readingTime)
+        {
+            this.metadata = metadata;
+            ReadingTime = readingTime;
+        }
+
+        public string Title { get { return GetValue("og:title"); } }
         public string ReadingTime { get; private set; }
-        public string AuthorSurname { get; private set; }
-        public DateTime Publicationdate { get; private set; }
+        public string AuthorSurname { get { return GetValue("article:author:last_name"); } }
+        public DateTime Published { get { return ParseDate(GetValue("article:published_time")); } }
+        public DateTime Modified { get { return ParseDate(GetValue("article:modified_time")); } }
+
+        private static DateTime ParseDate(string str)
+        {
+            return DateTime.Parse(str);
+        }
+
+        private string GetValue(string key)
+        {
+            string result = null;
+            metadata.TryGetValue(key, out result);
+            return result;
+        }
     }
 }

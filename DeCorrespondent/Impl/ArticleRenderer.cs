@@ -18,11 +18,12 @@ namespace DeCorrespondent.Impl
 
         public IArticleEbook Render(IArticle a)
         {
-            log.Debug("Rendering article '" + a.Title + "' to pdf....");
+            log.Debug("Rendering article '" + a.Metadata.Title + "' to pdf....");
             var pdfConverter = CreatePdfConverter(a);
             var pdfOutputStream = new MemoryStream();
+            //File.WriteAllText("d:\\temp.html", WrapBody(a.BodyHtml));
             pdfConverter.SavePdfFromHtmlStringToStream(WrapBody(a.BodyHtml), pdfOutputStream);
-            return new ArticleEbook(FormatName(string.Format("{0} {1}", a.ReadingTime, a.Title)) + ".pdf", pdfOutputStream.GetBuffer());
+            return new ArticleEbook(FormatName(string.Format("{0} {1}", a.Metadata.ReadingTime, a.Metadata.Title)) + ".pdf", pdfOutputStream.GetBuffer());
         }
 
         public static string FormatName(string name)
@@ -40,6 +41,7 @@ namespace DeCorrespondent.Impl
         .infocard-description {{ font-size: 0.7em; font-style: italic}} 
         img {{ max-width:800; }}
         blockquote {{ color: gray; }}
+        div.author img {{ align: right; }} 
     </style>
     </head>
     <body>
@@ -55,8 +57,8 @@ namespace DeCorrespondent.Impl
             pdfConverter.LicenseKey = config.LicenseKey;
             pdfConverter.ExtensionsEnabled = false;
             pdfConverter.JavaScriptEnabled = false;
-            pdfConverter.PdfDocumentInfo.Title = article.ReadingTime + " " + article.Title;
-            pdfConverter.PdfDocumentInfo.AuthorName = article.AuthorSurname;
+            pdfConverter.PdfDocumentInfo.Title = article.Metadata.ReadingTime + " " + article.Metadata.Title;
+            pdfConverter.PdfDocumentInfo.AuthorName = article.Metadata.AuthorSurname;
             pdfConverter.PdfDocumentOptions.PdfPageSize = PdfPageSize.Letter;
             pdfConverter.PdfDocumentOptions.PdfCompressionLevel = PdfCompressionLevel.Normal;
             pdfConverter.PdfDocumentOptions.PdfPageOrientation = PdfPageOrientation.Portrait;

@@ -52,7 +52,7 @@ namespace DeCorrespondent
             var regels = Enumerable.Range(0, int.MaxValue)
                 .SelectMany(NewItems)
                 .Select(reference => new { Article = ReadArticle(reference.Id), Reference = reference })
-                .TakeWhile(x => x.Article.Publicationdate > last)
+                .TakeWhile(x => x.Article.Metadata.Published > last)
                 .Take(maxAantalArticles);
             foreach (var r in regels)
             {
@@ -65,7 +65,7 @@ namespace DeCorrespondent
         private void WritePdf(IArticleEbook ebook, IArticle article)
         {
             File.WriteAllBytes(ebook.Name, ebook.Content);
-            File.SetLastWriteTime(ebook.Name, article.Publicationdate);
+            File.SetLastWriteTime(ebook.Name, article.Metadata.Published);
             logger.Debug("Writing article file: '{0}'", ebook.Name);
         }
 

@@ -17,9 +17,15 @@ namespace DeCorrespondent
     public interface IArticle
     {
         string BodyHtml { get; }
+        IArticleMetadata Metadata { get; }
+    }
+
+    public interface IArticleMetadata
+    {
         string Title { get; }
         string ReadingTime { get; }
         string AuthorSurname { get; }
-        DateTime Publicationdate { get; }
+        DateTime Published { get; }
+        DateTime Modified { get; }
     }
 }

@@ -32,6 +32,18 @@ namespace DeCorrespondent.Test.Impl
             File.WriteAllBytes("d:\\" + pdf.Name, pdf.Content);
         }
 
+        [Test]
+        public void Render3430()
+        {
+            var article = new ArticleReader().Read(new NewItemsReaderTest.FileResources().ReadArticle(3430));
+            var renderer = CreateRenderer();
+
+            var pdf = renderer.Render(article);
+
+            Assert.NotNull(pdf.Content);
+            File.WriteAllBytes("d:\\" + pdf.Name, pdf.Content);
+        }
+
         private static IArticleRenderer CreateRenderer()
         {
             return new ArticleRenderer(new ConsoleLogger(true), FileConfig.Load(null));

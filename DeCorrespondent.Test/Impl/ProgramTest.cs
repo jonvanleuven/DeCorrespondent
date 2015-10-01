@@ -56,7 +56,7 @@ namespace DeCorrespondent.Test.Impl
             {
                 var regels = Enumerable.Range(0, int.MaxValue)
                     .SelectMany(index => newItemsReader.ReadItems(webresources.ReadNewItems(index)))
-                    .Select(r => new {reader.Read(webresources.ReadArticle(r.Id)).Publicationdate, Reference = r})
+                    .Select(r => new { Publicationdate = reader.Read(webresources.ReadArticle(r.Id)).Metadata.Published, Reference = r })
                     .TakeWhile(x => x.Publicationdate > new DateTime(2015, 9, 30))
                     .Take(10) //max 10
                     .ToList();

@@ -10,11 +10,13 @@ V alles behalve config in GitHub zetten
 V move ReadArticle() uit ArticleReference verplaatsen?
 - Deploy in Azure
 V html (bv &nbsp;) verwijderen uit de de titel
-- set file modified date = publication date (File.SetLastWriteTime(path, publicactionDate))
+V set file modified date = publication date (File.SetLastWriteTime(path, publicactionDate))
 V uitlezen nieuw/1, nieuw/2 etc.(
 V Meer met IEnumerable werken: Enumerable.Range(0, int.MaxValue).SelectMany(i => NewItems(i)).Select(r => Content(r)).Select(c => Render(c)).Select(pdf => WriteFile(pdf)).TakeWhile(r => r.Id != lastId).Take(40).ToList()
 V new Program(IRenderer, IResource, etc) (ook makkelijker te testen)
 V Testcase deferred execution in Program.WritePdfs
 V Logout
 - POST login niet op query string
-- lastid checken werkt niet altijd goed. Wat is hier aan de hand of publication date gaan gebruiken?
+V lastid checken werkt niet altijd goed. Wat is hier aan de hand of publication date gaan gebruiken?
+- "15-20 Zet je schrap voor het gevaarlijkste idee ooit de meeste mensen deugen" pagina 2 leeg op Kindle
+V uitlezen meta tags (article eigenschappen, zie article_3430)
