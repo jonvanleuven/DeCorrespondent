@@ -21,7 +21,7 @@ namespace DeCorrespondent.Impl
             log.Debug("Rendering article '" + a.Metadata.Title + "' to pdf....");
             var pdfConverter = CreatePdfConverter(a);
             var pdfOutputStream = new MemoryStream();
-            //File.WriteAllText("d:\\temp.html", WrapBody(a.BodyHtml));
+            File.WriteAllText("d:\\temp.html", CreateHtml(a));
             pdfConverter.SavePdfFromHtmlStringToStream(CreateHtml(a), pdfOutputStream);
             return new ArticleEbook(FormatName(string.Format("{0} {1}", a.Metadata.ReadingTime.LastOrDefault(), a.Metadata.Title)) + ".pdf", pdfOutputStream.GetBuffer());
         }
@@ -42,11 +42,13 @@ namespace DeCorrespondent.Impl
         img {{ max-width:800; }}
         blockquote {{ color: gray; }}
         div.author img {{ align: right; }} 
-        div.voorpagina {{ height:1300px; text-align:center; border: 1px solid gray; }}
+        div.voorpagina {{ height:1300px; text-align:center; }}
         div.voorpagina img.logo {{ height:90px; width:378px; }} 
+        div.voorpagina img.main {{ min-width:100%; }} 
         div.voorpagina img.author {{ float: right; margin-top:110px; }} 
         div.voorpagina h3 {{ text-align:left; }}
-        div.voorpagina p {{ font-size: 0.5em; }}
+        div.voorpagina p {{ font-size: 0.7em; }}
+        div.descriptionpagina {{ height:1300px; }}
     </style>
     </head>
     <body>
@@ -55,8 +57,11 @@ namespace DeCorrespondent.Impl
         <img class=""author"" src=""{7}"">
         <h3>{1}</h3>
         <img class=""main"" src=""{6}"">
-        <p>{2:dd-MM-yyyy H:mm} - Leestijd: {5} minuten<br/>{3} {4}</p>
+        <p>{2:dd-MM-yyyy H:mm} - Leestijd: {5} minuten</p>
+        <p>{3} {4}</p>
+        <p> {8}</p>
     </div>
+    <div class=""descriptionpagina"">{9}</div>
     {0}
     </body>
 </html>";
@@ -68,7 +73,9 @@ namespace DeCorrespondent.Impl
                 a.Metadata.AuthorLastname, 
                 string.Join("-", a.Metadata.ReadingTime), 
                 a.Metadata.MainImgUrl, 
-                a.Metadata.AuthorImgUrl );
+                a.Metadata.AuthorImgUrl,
+                a.Metadata.Section,
+                a.Metadata.Description);
         }
 
         private PdfConverter CreatePdfConverter(IArticle article)
@@ -87,10 +94,10 @@ namespace DeCorrespondent.Impl
             pdfConverter.PdfDocumentOptions.AvoidImageBreak = true;
             pdfConverter.PdfDocumentOptions.InternalLinksEnabled = false;
             pdfConverter.PdfDocumentOptions.EmbedFonts = true;
-            pdfConverter.PdfDocumentOptions.TopMargin = 10;
-            pdfConverter.PdfDocumentOptions.BottomMargin = 10;
-            pdfConverter.PdfDocumentOptions.LeftMargin = 10;
-            pdfConverter.PdfDocumentOptions.RightMargin = 10;
+            pdfConverter.PdfDocumentOptions.TopMargin = 0;
+            pdfConverter.PdfDocumentOptions.BottomMargin = 0;
+            pdfConverter.PdfDocumentOptions.LeftMargin = 0;
+            pdfConverter.PdfDocumentOptions.RightMargin = 0;
             pdfConverter.PdfSecurityOptions.CanEditContent = false;
             pdfConverter.PdfSecurityOptions.CanEditAnnotations = false;
             pdfConverter.PdfSecurityOptions.CanAssembleDocument = false;

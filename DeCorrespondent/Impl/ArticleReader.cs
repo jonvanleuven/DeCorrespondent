@@ -32,6 +32,8 @@ namespace DeCorrespondent.Impl
             RemoveNodes(body, "//section[@id='comments']");
             RemoveNodes(body, "//article", "campaign-article garden");
             RemoveNodes(body, "//a", "publication-sidenote");
+            RemoveNodes(body, "//header");
+            RemoveNodes(body, "//p", "publication-main-image-description");
             (body.SelectNodes("//img[string-length(@data-src) > 0]")??EmptyNodes).Where(n => n != null).ToList().ForEach(n =>
             {
                 var isMainImage = n.GetAttributeValue("class", "").Contains("mainimage");
@@ -51,11 +53,6 @@ namespace DeCorrespondent.Impl
                 url = url.StartsWith("//") ? "http:" + url : url;
                 n.SetAttributeValue("src", url);
                 n.SetAttributeValue("data-src", "");
-            });
-            (body.SelectNodes("//time[string-length(@title) > 0]") ?? EmptyNodes).ToList().ForEach(n =>
-            {
-                n.ParentNode.PrependChild(HtmlNode.CreateNode(string.Format("<span>{0:d-M-yyyy H:mm}&nbsp;</span>", metadata.Published)));
-                n.Remove();
             });
             return new Article(body.InnerHtml, metadata);
         }
@@ -121,6 +118,8 @@ namespace DeCorrespondent.Impl
         public DateTime Modified { get { return ParseDate(GetValue("article:modified_time")); } }
         public string MainImgUrl { get; internal set; }
         public string AuthorImgUrl { get { return GetValue("article:author:image"); } }
+        public string Section { get { return GetValue("article:section"); } }
+        public string Description { get { return GetValue("og:description"); } }
         
 
         private static DateTime ParseDate(string str)

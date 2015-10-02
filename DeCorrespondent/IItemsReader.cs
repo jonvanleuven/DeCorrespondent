@@ -30,5 +30,7 @@ namespace DeCorrespondent
         DateTime Modified { get; }
         string AuthorImgUrl { get; }
         string MainImgUrl { get; }
+        string Section { get; }
+        string Description { get; }
     }
 }
