@@ -23,7 +23,7 @@ namespace DeCorrespondent.Impl
             var pdfOutputStream = new MemoryStream();
             File.WriteAllText("d:\\temp.html", CreateHtml(a));
             pdfConverter.SavePdfFromHtmlStringToStream(CreateHtml(a), pdfOutputStream);
-            return new ArticleEbook(FormatName(string.Format("{0} {1}", a.Metadata.ReadingTime.LastOrDefault(), a.Metadata.Title)) + ".pdf", pdfOutputStream.GetBuffer());
+            return new ArticleEbook(FormatName(string.Format("{0} {1}", a.Metadata.ReadingTime.Select(i => (int?)i).LastOrDefault(), a.Metadata.Title)).Trim() + ".pdf", pdfOutputStream.GetBuffer());
         }
 
         public static string FormatName(string name)
@@ -49,6 +49,7 @@ namespace DeCorrespondent.Impl
         div.voorpagina h3 {{ text-align:left; }}
         div.voorpagina p {{ font-size: 0.7em; }}
         div.descriptionpagina {{ height:1300px; }}
+        a {{ color:#000000; }}
     </style>
     </head>
     <body>
@@ -56,10 +57,9 @@ namespace DeCorrespondent.Impl
         <img class=""logo"" src=""https://static.decorrespondent.nl/images/nl/logo/logo_nl.svg""><br/>
         <img class=""author"" src=""{7}"">
         <h3>{1}</h3>
+        <p>{3} {4} - {8}</p>
         <img class=""main"" src=""{6}"">
         <p>{2:dd-MM-yyyy H:mm} - Leestijd: {5} minuten</p>
-        <p>{3} {4}</p>
-        <p> {8}</p>
     </div>
     <div class=""descriptionpagina"">{9}</div>
     {0}
@@ -85,7 +85,7 @@ namespace DeCorrespondent.Impl
                 pdfConverter.LicenseKey = config.LicenseKey;
             pdfConverter.ExtensionsEnabled = false;
             pdfConverter.JavaScriptEnabled = false;
-            pdfConverter.PdfDocumentInfo.Title = string.Format("{0} {1}", article.Metadata.ReadingTime.LastOrDefault(), article.Metadata.Title);
+            pdfConverter.PdfDocumentInfo.Title = string.Format("{0} {1}", article.Metadata.ReadingTime.Select(i => (int?)i).LastOrDefault(), article.Metadata.Title).Trim();
             pdfConverter.PdfDocumentInfo.AuthorName = string.Format("{0} {1}", article.Metadata.AuthorFirstname, article.Metadata.AuthorLastname);
             pdfConverter.PdfDocumentOptions.PdfPageSize = PdfPageSize.Letter;
             pdfConverter.PdfDocumentOptions.PdfCompressionLevel = PdfCompressionLevel.Normal;

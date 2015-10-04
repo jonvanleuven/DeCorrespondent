@@ -24,7 +24,7 @@ namespace DeCorrespondent.Impl
             RemoveNodes(body, "//script");
             RemoveNodes(body, "//noscript");
             RemoveNodes(body, "//div", "share-publication-footer");
-            RemoveNodes(body, "//div", "publication-body-link");
+            //RemoveNodes(body, "//div", "publication-body-link");
             RemoveNodes(body, "//div[@id='notificationBar']");
             RemoveNodes(body, "//aside");
             RemoveNodes(body, "//header", "header");
@@ -119,8 +119,13 @@ namespace DeCorrespondent.Impl
         public string MainImgUrl { get; internal set; }
         public string AuthorImgUrl { get { return GetValue("article:author:image"); } }
         public string Section { get { return GetValue("article:section"); } }
-        public string Description { get { return GetValue("og:description"); } }
-        
+        public string Description { get { return Unescape( GetValue("og:description") ); } }
+
+        private static string Unescape(string str)
+        {
+            if (str == null) return null;
+            return str.Replace("&amp;", "&");
+        }
 
         private static DateTime ParseDate(string str)
         {

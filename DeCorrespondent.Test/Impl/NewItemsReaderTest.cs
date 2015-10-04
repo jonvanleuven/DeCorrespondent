@@ -62,6 +62,16 @@ namespace DeCorrespondent.Test.Impl
         }
 
         [Test]
+        public void ReadArticle3450()
+        {
+            var reader = new ArticleReader();
+
+            var result = reader.Read(new FileResources().ReadArticle(3450));
+
+            Assert.AreEqual("Alle wereldleiders waren afgelopen week bij de Algemene Vergadering van de Verenigde Naties. Hoe gaat zo&rsquo;n wereldtop eraan toe? Een verslag uit New York, aan de hand van tien voorwerpen.", result.Metadata.Description);
+        }
+
+        [Test]
         public void ReadArticle3364()
         {
             var reader = new ArticleReader();
