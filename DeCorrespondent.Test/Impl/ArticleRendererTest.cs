@@ -10,7 +10,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void Render()
         {
-            var article = new ArticleReader().Read(new NewItemsReaderTest.FileResources().ReadArticle(3358));
+            var article = new ArticleReader().Read(new NewItemsReaderTest.FileResources().ReadArticle(3350));
             var renderer = CreateRenderer();
 
             var pdf = renderer.Render(article);
@@ -28,6 +28,18 @@ namespace DeCorrespondent.Test.Impl
 
             var pdf = renderer.Render(article);
             
+            Assert.NotNull(pdf.Content);
+            File.WriteAllBytes("d:\\" + pdf.Name, pdf.Content);
+        }
+
+        [Test]
+        public void Render3450()
+        {
+            var article = new ArticleReader().Read(new NewItemsReaderTest.FileResources().ReadArticle(3450));
+            var renderer = CreateRenderer();
+
+            var pdf = renderer.Render(article);
+
             Assert.NotNull(pdf.Content);
             File.WriteAllBytes("d:\\" + pdf.Name, pdf.Content);
         }

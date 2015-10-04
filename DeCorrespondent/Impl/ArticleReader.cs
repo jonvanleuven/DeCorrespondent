@@ -124,7 +124,7 @@ namespace DeCorrespondent.Impl
         private static string Unescape(string str)
         {
             if (str == null) return null;
-            return str.Replace("&amp;", "&");
+            return HtmlEntity.DeEntitize(str);
         }
 
         private static DateTime ParseDate(string str)
