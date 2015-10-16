@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace DeCorrespondent
+﻿namespace DeCorrespondent
 {
     public interface IArticleRenderer
     {

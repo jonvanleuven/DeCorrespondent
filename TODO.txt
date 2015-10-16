@@ -20,4 +20,5 @@ V Logout
 V lastid checken werkt niet altijd goed. Wat is hier aan de hand of publication date gaan gebruiken?
 - "15-20 Zet je schrap voor het gevaarlijkste idee ooit de meeste mensen deugen" pagina 2 leeg op Kindle
 V uitlezen meta tags (article eigenschappen, zie article_3430)
-- border (white) voor pagina overgang en vastzetten breedte
+X border (white) voor pagina overgang en vastzetten breedte
+V special tekenens in de filename: blacklisten ipv whitelisten

@@ -10,13 +10,13 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void Render()
         {
-            var article = new ArticleReader().Read(new NewItemsReaderTest.FileResources().ReadArticle(3350));
+            var article = new ArticleReader().Read(new NewItemsReaderTest.FileResources().ReadArticle(3358));
             var renderer = CreateRenderer();
 
             var pdf = renderer.Render(article);
 
             Assert.NotNull(pdf.Content);
-            Assert.AreEqual("16 Reis mee door het land dat niet bestaat.pdf", pdf.Name);
+            Assert.AreEqual("16 Reis mee door het land dat niet bestaat (en leer hoe belangrijk het is om erkend te worden).pdf", pdf.Name);
             File.WriteAllBytes("d:\\" + pdf.Name, pdf.Content);
         }
 

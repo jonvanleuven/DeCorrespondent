@@ -30,6 +30,9 @@ namespace DeCorrespondent.Impl
         public string KindleEmail { get; set; }
         public string SummaryEmail { get; set; }
         public string LicenseKey { get; set; }
+        public bool DisplayInfocards { get; set; }
+        public bool DisplayPublicationLinks { get; set; }
+        public bool DisplayBlockquotes { get; set; }
         public int MaxAantalArticles { get; set; }
 
         private static string SerializeXml(FileConfig model)

@@ -21,26 +21,29 @@ namespace DeCorrespondent.Impl
             log.Debug("Rendering article '" + a.Metadata.Title + "' to pdf....");
             var pdfConverter = CreatePdfConverter(a);
             var pdfOutputStream = new MemoryStream();
-            File.WriteAllText("d:\\temp.html", CreateHtml(a));
+            //File.WriteAllText("d:\\temp.html", CreateHtml(a));
             pdfConverter.SavePdfFromHtmlStringToStream(CreateHtml(a), pdfOutputStream);
             return new ArticleEbook(FormatName(string.Format("{0} {1}", a.Metadata.ReadingTime.Select(i => (int?)i).LastOrDefault(), a.Metadata.Title)).Trim() + ".pdf", pdfOutputStream.GetBuffer());
         }
 
         public static string FormatName(string name)
         {
-            return string.Join("", name.ToArray().TakeWhile(l => l != '(' && l != '.').Where(l => Char.IsLetter(l) || Char.IsNumber(l) || l == ' ' || l == '-')).Trim();
+            const string invalid = @"<>:""/\|?*";
+            return string.Join("", name.ToArray().Where(l => !invalid.Contains(l))).Trim();
         }
 
-        private static string CreateHtml(IArticle a)
+        private string CreateHtml(IArticle a)
         {
             const string template = @"<html>
     <head>
     <style>
         body {{ font-family: Georgia, serif; font-size: 55px; }}
         .publication-main-image-description, figcaption {{ font-size: 0.5em; }}
-        .infocard-description {{ font-size: 0.7em; font-style: italic}} 
+        .infocard-description {{ font-size: 0.7em; font-style: italic; {10} }} 
+        div.publication-body-link {{ background-color: #D3D3D3; {11} }}
+        div.publication-body-link img {{ float: left; margin-right: 20px; }}
         img {{ max-width:800; }}
-        blockquote {{ color: gray; }}
+        blockquote {{ color: gray; {12} }}
         div.author img {{ align: right; }} 
         div.voorpagina {{ height:1300px; text-align:center; }}
         div.voorpagina img.logo {{ height:90px; width:378px; }} 
@@ -66,16 +69,20 @@ namespace DeCorrespondent.Impl
     </body>
 </html>";
             return string.Format(template, 
-                a.BodyHtml, 
-                a.Metadata.Title, 
-                a.Metadata.Published, 
-                a.Metadata.AuthorFirstname, 
-                a.Metadata.AuthorLastname, 
-                string.Join("-", a.Metadata.ReadingTime), 
-                a.Metadata.MainImgUrl, 
-                a.Metadata.AuthorImgUrl,
-                a.Metadata.Section,
-                a.Metadata.Description);
+                a.BodyHtml, //0
+                a.Metadata.Title, //1
+                a.Metadata.Published, //2 
+                a.Metadata.AuthorFirstname, //3
+                a.Metadata.AuthorLastname,  //4
+                string.Join("-", a.Metadata.ReadingTime), //5
+                a.Metadata.MainImgUrl, //6
+                a.Metadata.AuthorImgUrl, //7
+                a.Metadata.Section, //8
+                a.Metadata.Description, //9
+                config.DisplayInfocards ? "" : "display:none;", //10
+                config.DisplayPublicationLinks ? "" : "display:none;", //11
+                config.DisplayBlockquotes ? "" : "display:none;" //12
+                ); 
         }
 
         private PdfConverter CreatePdfConverter(IArticle article)
@@ -124,5 +131,8 @@ namespace DeCorrespondent.Impl
     public interface IArticleRendererConfig
     {
         string LicenseKey { get; }
+        bool DisplayInfocards { get; }
+        bool DisplayPublicationLinks { get; }
+        bool DisplayBlockquotes { get; }
     }
 }
