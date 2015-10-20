@@ -3,7 +3,7 @@ V leestijd en auteurnaam
 V plaatjes groter
 V "Kijk hier wat..." verwijderen/kleiner tekst : a.publication-sidenote
 V vervang youtube video door plaatje
-- mailen naar Kindle ("CONVERT" als subject?)
+V mailen naar Kindle ("CONVERT" als subject?)
 V config op file systeem (met default locatie)
 - password encrypted in config file
 V alles behalve config in GitHub zetten
@@ -22,3 +22,4 @@ V lastid checken werkt niet altijd goed. Wat is hier aan de hand of publication 
 V uitlezen meta tags (article eigenschappen, zie article_3430)
 X border (white) voor pagina overgang en vastzetten breedte
 V special tekenens in de filename: blacklisten ipv whitelisten
+- koppeling met dropbox (lezen van pdf's in ibooks) (dropbox app kan niet voolezen/verplaatsen naar ibooks ?!?)

@@ -12,13 +12,13 @@ namespace DeCorrespondent.Impl
 
         public void Info(string message, params object[] args)
         {
-            Console.WriteLine(message, args);
+            Console.WriteLine(string.Format( "{0:dd-MM-yyyy HH:mm:ss} {1}", DateTime.Now, message), args);
         }
 
         public void Debug(string message, params object[] args)
         {
             if (!debugEnabled) return;
-            Console.WriteLine(message, args);
+            Console.WriteLine(string.Format("{0:dd-MM-yyyy HH:mm:ss} {1}", DateTime.Now, message), args);
         }
     }
 }

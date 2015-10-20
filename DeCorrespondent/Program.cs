@@ -18,12 +18,12 @@ namespace DeCorrespondent
                 var reader = new ArticleReader();
                 var renderer = new ArticleRenderer(logger, config.ArticleRendererConfig);
                 var lastIdDs = new FileLastDatasource();
-                //var sender = new KindleEmailSender(logger, config.KindleEmailSenderConfig);
+                var sender = new KindleEmailSender(logger, config.KindleEmailSenderConfig);
                 //var summarySender = new EmailSummarySender(logger, config.EmailSummarySenderConfig);
 
-                var p = new Program(logger, resources, reader, renderer, newItemsParser, lastIdDs, config.MaxAantalArticles);
+                var p = new Program(logger, resources, reader, renderer, newItemsParser, lastIdDs, sender, config.MaxAantalArticles);
 
-                p.WritePdfs();
+                p.SendPdfs();
             }
         }
 
@@ -34,8 +34,9 @@ namespace DeCorrespondent
         private readonly ILogger logger;
         private readonly int maxAantalArticles;
         private readonly ILastDatasource lastDs;
+        private readonly IArticleSender sender;
 
-        public Program(ILogger logger, IResourceReader resources, IArticleReader reader, IArticleRenderer renderer, IItemsReader newItemsParser, ILastDatasource lastDs, int maxAantalArticles)
+        public Program(ILogger logger, IResourceReader resources, IArticleReader reader, IArticleRenderer renderer, IItemsReader newItemsParser, ILastDatasource lastDs, IArticleSender sender, int maxAantalArticles)
         {
             this.logger = logger;
             this.resources = resources;
@@ -43,10 +44,11 @@ namespace DeCorrespondent
             this.renderer = renderer;
             this.newItemsParser = newItemsParser;
             this.lastDs = lastDs;
+            this.sender = sender;
             this.maxAantalArticles = maxAantalArticles;
         }
 
-        public void WritePdfs()
+        public void SendPdfs()
         {
             var last = lastDs.ReadLast() ?? DateTime.Today.AddDays(-1);
             var regels = Enumerable.Range(0, int.MaxValue)
@@ -54,20 +56,24 @@ namespace DeCorrespondent
                 .Select(reference => new { Article = ReadArticle(reference.Id), Reference = reference })
                 .TakeWhile(x => x.Article.Metadata.Published > last)
                 .Take(maxAantalArticles);
+            List<string> files = new List<string>();
             foreach (var r in regels)
             {
                 var pdf = RenderArticle(r.Article, r.Reference.Id);
-                WritePdf(pdf, r.Article);
+                var file = WritePdf(pdf, r.Article);
                 lastDs.UpdateLast(DateTime.Now);
+                files.Add(file);
             }
+            sender.Send(files.Select(f => new FileStream(f, FileMode.Open)));
         }
 
-        private void WritePdf(IArticleEbook ebook, IArticle article)
+        private string WritePdf(IArticleEbook ebook, IArticle article)
         {
             File.WriteAllBytes(ebook.Name, ebook.Content);
             File.SetCreationTime(ebook.Name, article.Metadata.Published);
             File.SetLastWriteTime(ebook.Name, article.Metadata.Modified);
             logger.Debug("Writing article file: '{0}'", ebook.Name);
+            return ebook.Name;
         }
 
         private IArticleEbook RenderArticle(IArticle a, int id)

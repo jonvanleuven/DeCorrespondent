@@ -28,6 +28,8 @@ namespace DeCorrespondent.Impl
         public string Username { get; set; }
         public string Password { get; set; }
         public string KindleEmail { get; set; }
+        public string MailUsername { get; set; }
+        public string MailPassword { get; set; }
         public string SummaryEmail { get; set; }
         public string LicenseKey { get; set; }
         public bool DisplayInfocards { get; set; }

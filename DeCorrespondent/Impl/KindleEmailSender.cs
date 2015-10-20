@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.Mail;
 
 namespace DeCorrespondent.Impl
@@ -16,28 +15,31 @@ namespace DeCorrespondent.Impl
             this.config = config;
         }
 
-        public void Send(IEnumerable<IArticleEbook> ebooks)
+        public void Send(IEnumerable<FileStream> ebooks)
         {
-            return;
-            //TODO
-            var mail = new MailMessage("junknown", "unknown");
-            var client = new SmtpClient("smtp.live.com", 25);
-            client.Credentials = new System.Net.NetworkCredential("unknown", "unknown");
-            client.DeliveryMethod = SmtpDeliveryMethod.Network;
-            client.UseDefaultCredentials = false;
-            client.EnableSsl = true;
-            mail.Subject = "this is a test email.";
-            mail.Body = "this is my test email body";
-            foreach (var ebook in ebooks.Take(1))
+            var client = new SmtpClient
             {
-                mail.Attachments.Add(new Attachment(new MemoryStream(ebook.Content), ebook.Name));
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                Credentials = new System.Net.NetworkCredential(config.MailUsername, config.MailPassword),
+                Timeout = 120000,
+            };
+            var mm = new MailMessage(config.MailUsername, config.KindleEmail, "", "");
+            foreach (var ebook in ebooks)
+            {
+                mm.Attachments.Add(new Attachment(ebook, Path.GetFileName(ebook.Name)));
             }
-            client.Send(mail);            
+            client.Send(mm); 
+            log.Info("Mail has been send to '" + config.KindleEmail + "'");
         }
     }
 
     public interface IKindleEmailSenderConfig
     {
         string KindleEmail { get; }
+        string MailUsername { get; set; }
+        string MailPassword { get; set; }
     }
 }

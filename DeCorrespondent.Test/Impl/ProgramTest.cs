@@ -10,13 +10,13 @@ namespace DeCorrespondent.Test.Impl
     public class ProgramTest
     {
         [Test]
-        public void GetItemsFromWebAndRenderPdf()
+        public void GetItemsFromWebAndRenderPdfAndSend()
         {
             using (var webresources = WebReader.Login(new ConsoleLogger(true), FileConfig.Load(null)))
             {
                 var program = CreateProgram(webresources);
 
-                program.Program.WritePdfs();
+                program.Program.SendPdfs();
 
                 Assert.IsTrue(program.LastDs.ReadLast().HasValue);
             }
@@ -27,7 +27,7 @@ namespace DeCorrespondent.Test.Impl
         {
             var program = CreateProgram(new NewItemsReaderTest.FileResources(), new DateTime(2015, 9, 14, 12, 0, 0));
 
-            program.Program.WritePdfs();
+            program.Program.SendPdfs();
 
             Assert.IsNotNull(program.LastDs.ReadLast());
             Assert.AreEqual(1, program.NumberNieuwRequests);
@@ -43,6 +43,9 @@ namespace DeCorrespondent.Test.Impl
             config.Password = "password";
             config.LicenseKey = "lickey";
             config.MaxAantalArticles = 20;
+            config.KindleEmail = "t";
+            config.MailUsername = "t";
+            config.MailPassword = "t";
             config.Save("d:\\config.xml");
         }
 
@@ -72,7 +75,7 @@ namespace DeCorrespondent.Test.Impl
         {
             var program = CreateProgram(new NewItemsReaderTest.FileResources(), new DateTime(2015, 9, 14, 12, 0, 0));
 
-            program.Program.WritePdfs();
+            program.Program.SendPdfs();
 
             Assert.IsTrue(program.DebugLog[0].StartsWith("Reading article"));
             Assert.IsTrue(program.DebugLog[1].StartsWith("Rendering article"));
@@ -87,7 +90,7 @@ namespace DeCorrespondent.Test.Impl
         {
             var logger = new LogWrapper(new ConsoleLogger(true));
             var config = FileConfig.Load(null);
-            return new ProgramWrapper(logger, resources, new ArticleReader(), new ArticleRenderer(logger, config), new NewItemsReader(logger), lastId);
+            return new ProgramWrapper(logger, resources, new ArticleReader(), new ArticleRenderer(logger, config), new NewItemsReader(logger), new KindleEmailSender(logger, config), lastId);
         }
 
         public class LogWrapper : ILogger
@@ -121,12 +124,12 @@ namespace DeCorrespondent.Test.Impl
             private readonly WrappedResources wrappedResources;
             private readonly LogWrapper logger;
 
-            public ProgramWrapper(LogWrapper logger, IResourceReader resources, IArticleReader articleReader, IArticleRenderer articleRenderer, IItemsReader newItemsReader, DateTime? last)
+            public ProgramWrapper(LogWrapper logger, IResourceReader resources, IArticleReader articleReader, IArticleRenderer articleRenderer, IItemsReader newItemsReader, IArticleSender sender, DateTime? last)
             {
                 this.logger = logger;
                 wrappedResources = new WrappedResources(resources);
                 LastDs = new MemoryLastDatasource(last);
-                Program = new DeCorrespondent.Program(logger, wrappedResources, articleReader, articleRenderer, newItemsReader, LastDs, 20);
+                Program = new DeCorrespondent.Program(logger, wrappedResources, articleReader, articleRenderer, newItemsReader, LastDs, sender, 1);
             }
 
             public IList<string> InfoLog { get { return logger.Infos; } }
