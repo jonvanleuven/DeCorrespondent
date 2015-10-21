@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 
 namespace DeCorrespondent.Impl
 {
-    public class FileConfig : IKindleEmailSenderConfig, IEmailSummarySenderConfig, IWebReaderConfig, IArticleRendererConfig
+    public class FileConfig : IKindleEmailSenderConfig, IEmailSummarySenderConfig, IWebReaderConfig, IArticleRendererConfig, ISmtpMailConfig
     {
         public static FileConfig Load(string path)
         {
@@ -25,6 +25,8 @@ namespace DeCorrespondent.Impl
         public IWebReaderConfig CorrespondentCredentails { get { return this; } }
         [XmlIgnore]
         public IArticleRendererConfig ArticleRendererConfig { get { return this; } }
+        [XmlIgnore]
+        public ISmtpMailConfig SmtpConfig { get { return this; } }
         public string Username { get; set; }
         public string Password { get; set; }
         public string KindleEmail { get; set; }

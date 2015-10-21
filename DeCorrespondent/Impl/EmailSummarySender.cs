@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace DeCorrespondent.Impl
 {
     public class EmailSummarySender : IArticleSummarySender
     {
-        private readonly ILogger log;
+        private readonly IMailer mailer;
         private readonly IEmailSummarySenderConfig config;
-        public EmailSummarySender(ILogger log, IEmailSummarySenderConfig config)
+        public EmailSummarySender(IMailer mailer, IEmailSummarySenderConfig config)
         {
-            this.log = log;
+            this.mailer = mailer;
             this.config = config;
         }
         public void Send(IEnumerable<IArticle> articles)
         {
-            log.Debug("Versturen van samenvatting is nog niet geimplementeerd");
+            var body = string.Join("\n-", articles.Select(a => string.Format("{0} {1}: {2}", a.Metadata.AuthorFirstname, a.Metadata.AuthorLastname, a.Metadata.Title)));
+            var subject = string.Format("{0} artikelen verstuurd naar je Kindle", articles.Count());
+            mailer.Send(config.SummaryEmail, subject, body, null);
         }
     }
 

@@ -51,6 +51,7 @@
     <Compile Include="IArticleSummarySender.cs" />
     <Compile Include="ILastDatasource.cs" />
     <Compile Include="ILogger.cs" />
+    <Compile Include="IMailer.cs" />
     <Compile Include="Impl\ArticleReader.cs" />
     <Compile Include="Impl\ArticleRenderer.cs" />
     <Compile Include="IArticleRenderer.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="IArticleSender.cs" />
     <Compile Include="Impl\NewItemsReader.cs" />
     <Compile Include="IItemsReader.cs" />
+    <Compile Include="Impl\SmtpMailer.cs" />
     <Compile Include="Impl\WebReader.cs" />
     <Compile Include="IResourceReader.cs" />
     <Compile Include="Program.cs" />

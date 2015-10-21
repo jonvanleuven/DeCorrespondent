@@ -18,12 +18,14 @@ namespace DeCorrespondent
                 var reader = new ArticleReader();
                 var renderer = new ArticleRenderer(logger, config.ArticleRendererConfig);
                 var lastIdDs = new FileLastDatasource();
-                var sender = new KindleEmailSender(logger, config.KindleEmailSenderConfig);
-                //var summarySender = new EmailSummarySender(logger, config.EmailSummarySenderConfig);
+                var mailer = new SmtpMailer(logger, config.SmtpConfig);
+                var kindle = new KindleEmailSender(config.KindleEmailSenderConfig, mailer);
+                var summarySender = new EmailSummarySender(mailer, config.EmailSummarySenderConfig);
 
-                var p = new Program(logger, resources, reader, renderer, newItemsParser, lastIdDs, sender, config.MaxAantalArticles);
+                var p = new Program(logger, resources, reader, renderer, newItemsParser, lastIdDs, kindle, summarySender, config.MaxAantalArticles);
 
-                p.SendPdfs();
+                var pdfs = p.WritePdfs();
+                p.Send(pdfs);
             }
         }
 
@@ -34,9 +36,10 @@ namespace DeCorrespondent
         private readonly ILogger logger;
         private readonly int maxAantalArticles;
         private readonly ILastDatasource lastDs;
-        private readonly IArticleSender sender;
+        private readonly IArticleSender kindle;
+        private readonly IArticleSummarySender summarySender;
 
-        public Program(ILogger logger, IResourceReader resources, IArticleReader reader, IArticleRenderer renderer, IItemsReader newItemsParser, ILastDatasource lastDs, IArticleSender sender, int maxAantalArticles)
+        public Program(ILogger logger, IResourceReader resources, IArticleReader reader, IArticleRenderer renderer, IItemsReader newItemsParser, ILastDatasource lastDs, IArticleSender kindle, IArticleSummarySender summarySender, int maxAantalArticles)
         {
             this.logger = logger;
             this.resources = resources;
@@ -44,11 +47,12 @@ namespace DeCorrespondent
             this.renderer = renderer;
             this.newItemsParser = newItemsParser;
             this.lastDs = lastDs;
-            this.sender = sender;
+            this.kindle = kindle;
+            this.summarySender = summarySender;
             this.maxAantalArticles = maxAantalArticles;
         }
 
-        public void SendPdfs()
+        public IList<ArticlePdf> WritePdfs()
         {
             var last = lastDs.ReadLast() ?? DateTime.Today.AddDays(-1);
             var regels = Enumerable.Range(0, int.MaxValue)
@@ -56,17 +60,24 @@ namespace DeCorrespondent
                 .Select(reference => new { Article = ReadArticle(reference.Id), Reference = reference })
                 .TakeWhile(x => x.Article.Metadata.Published > last)
                 .Take(maxAantalArticles);
-            List<string> files = new List<string>();
+            var result = new List<ArticlePdf>();
             foreach (var r in regels)
             {
                 var pdf = RenderArticle(r.Article, r.Reference.Id);
                 var file = WritePdf(pdf, r.Article);
                 lastDs.UpdateLast(DateTime.Now);
-                files.Add(file);
+                result.Add(new ArticlePdf(file, r.Article));
             }
-            sender.Send(files.Select(f => new FileStream(f, FileMode.Open)));
+            return result;
         }
-
+        
+        public void Send(IList<ArticlePdf> pdfs)
+        {
+            if (!pdfs.Any()) 
+                return;
+            kindle.Send(pdfs.Select(f => new FileStream(f.FileName, FileMode.Open)));
+            summarySender.Send(pdfs.Select(f => f.Article));
+        }
         private string WritePdf(IArticleEbook ebook, IArticle article)
         {
             File.WriteAllBytes(ebook.Name, ebook.Content);
@@ -92,5 +103,15 @@ namespace DeCorrespondent
             return newItemsParser.ReadItems(resources.ReadNewItems(nieuwPagina));
         }
 
+        public class ArticlePdf
+        {
+            internal ArticlePdf(string filename, IArticle article)
+            {
+                FileName = filename;
+                Article = article;
+            }
+            public string FileName { get; private set; }
+            public IArticle Article { get; private set; }
+        }
     }
 }

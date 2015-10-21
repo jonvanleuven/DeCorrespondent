@@ -5,3 +5,4 @@ Program (written in c#) that:
 - rip new articles from de correspondent (https://decorrespondent.nl)
 - create kindle compatible PDF of the article
 - send it to my kindle (via email)
+- send me an email to notify me 
