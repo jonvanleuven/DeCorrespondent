@@ -70,7 +70,7 @@ namespace DeCorrespondent.Test.Impl
 
         private static IArticleRenderer CreateRenderer()
         {
-            return new ArticleRenderer(new ConsoleLogger(true), FileConfig.Load(null));
+            return new ArticleRenderer(new ConsoleLogger(true), FileConfig.Load(@"D:\Applications\DeCorrespondent\config.xml"));
         }
     }
 }

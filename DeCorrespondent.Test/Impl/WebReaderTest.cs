@@ -69,7 +69,7 @@ namespace DeCorrespondent.Test.Impl
 
         private static WebReader CreateReader(IWebReaderConfig config = null)
         {
-            return WebReader.Login(new ConsoleLogger(true), config ?? FileConfig.Load(null) );
+            return WebReader.Login(new ConsoleLogger(true), config ?? FileConfig.Load(@"D:\Applications\DeCorrespondent\config.xml"));
         }
 
         class Config : IWebReaderConfig

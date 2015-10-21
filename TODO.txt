@@ -24,8 +24,8 @@ V special tekenens in de filename: blacklisten ipv whitelisten
 X koppeling met dropbox (lezen van pdf's in ibooks) (dropbox app kan niet voolezen/verplaatsen naar ibooks ?!?)
 V IMailer
 V testcase 20 max
-- config genereren als niet bestaat (geen abosoluut pad meer gebruiken)
-- password encrypted in config file
+- config genereren als niet bestaat
+V password encrypted in config file
 - summary mailer met links naar filmpjes/audio
 - meerdere email ontvangers
 - 1 email per 5 attachments

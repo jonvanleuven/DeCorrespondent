@@ -3,7 +3,7 @@ using System.IO;
 
 namespace DeCorrespondent
 {
-    public interface IArticleSender
+    public interface IEReaderSender
     {
         void Send(IEnumerable<FileStream> ebooks);
     }

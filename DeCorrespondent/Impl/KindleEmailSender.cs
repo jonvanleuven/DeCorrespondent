@@ -3,7 +3,7 @@ using System.IO;
 
 namespace DeCorrespondent.Impl
 {
-    public class KindleEmailSender : IArticleSender
+    public class KindleEmailSender : IEReaderSender
     {
         private readonly IKindleEmailSenderConfig config;
         private readonly IMailer mailer;

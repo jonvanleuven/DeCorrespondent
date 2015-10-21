@@ -12,7 +12,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void GetItemsFromWebAndRenderPdf()
         {
-            using (var webresources = WebReader.Login(new ConsoleLogger(true), FileConfig.Load(null)))
+            using (var webresources = WebReader.Login(new ConsoleLogger(true), FileConfig.Load(@"D:\Applications\DeCorrespondent\config.xml")))
             {
                 var program = CreateProgram(webresources);
 
@@ -41,6 +41,7 @@ namespace DeCorrespondent.Test.Impl
             var config = new FileConfig();
             config.Username = "username";
             config.Password = "password";
+            config.MailPassword = @"password";
             config.LicenseKey = "lickey";
             config.MaxAantalArticles = 20;
             config.KindleEmail = "t";
@@ -55,7 +56,7 @@ namespace DeCorrespondent.Test.Impl
             var logger = new ConsoleLogger(true);
             var newItemsReader = new NewItemsReader(logger);
             var reader = new ArticleReader();
-            using (var webresources = WebReader.Login(new ConsoleLogger(true), FileConfig.Load(null)))
+            using (var webresources = WebReader.Login(new ConsoleLogger(true), FileConfig.Load(@"D:\Applications\DeCorrespondent\config.xml")))
             {
                 var regels = Enumerable.Range(0, int.MaxValue)
                     .SelectMany(index => newItemsReader.ReadItems(webresources.ReadNewItems(index)))
@@ -89,7 +90,7 @@ namespace DeCorrespondent.Test.Impl
         private static ProgramWrapper CreateProgram(IResourceReader resources, DateTime? lastId = null)
         {
             var logger = new LogWrapper(new ConsoleLogger(true));
-            var config = FileConfig.Load(null);
+            var config = FileConfig.Load(@"D:\Applications\DeCorrespondent\config.xml");
             var mailer = new SmtpMailer(logger, config.SmtpConfig);
             return new ProgramWrapper(logger, 
                 resources, 
@@ -132,7 +133,7 @@ namespace DeCorrespondent.Test.Impl
             private readonly WrappedResources wrappedResources;
             private readonly LogWrapper logger;
 
-            public ProgramWrapper(LogWrapper logger, IResourceReader resources, IArticleReader articleReader, IArticleRenderer articleRenderer, IItemsReader newItemsReader, IArticleSender sender, IArticleSummarySender summarySender, DateTime? last)
+            public ProgramWrapper(LogWrapper logger, IResourceReader resources, IArticleReader articleReader, IArticleRenderer articleRenderer, IItemsReader newItemsReader, IEReaderSender sender, IArticleSummarySender summarySender, DateTime? last)
             {
                 this.logger = logger;
                 wrappedResources = new WrappedResources(resources);

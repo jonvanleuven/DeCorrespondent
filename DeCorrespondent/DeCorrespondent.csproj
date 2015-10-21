@@ -60,7 +60,7 @@
     <Compile Include="Impl\FileConfig.cs" />
     <Compile Include="Impl\FileLastDatasource.cs" />
     <Compile Include="Impl\KindleEmailSender.cs" />
-    <Compile Include="IArticleSender.cs" />
+    <Compile Include="IEReaderSender.cs" />
     <Compile Include="Impl\NewItemsReader.cs" />
     <Compile Include="IItemsReader.cs" />
     <Compile Include="Impl\SmtpMailer.cs" />

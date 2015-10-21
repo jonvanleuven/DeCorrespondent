@@ -36,10 +36,10 @@ namespace DeCorrespondent
         private readonly ILogger logger;
         private readonly int maxAantalArticles;
         private readonly ILastDatasource lastDs;
-        private readonly IArticleSender kindle;
+        private readonly IEReaderSender kindle;
         private readonly IArticleSummarySender summarySender;
 
-        public Program(ILogger logger, IResourceReader resources, IArticleReader reader, IArticleRenderer renderer, IItemsReader newItemsParser, ILastDatasource lastDs, IArticleSender kindle, IArticleSummarySender summarySender, int maxAantalArticles)
+        public Program(ILogger logger, IResourceReader resources, IArticleReader reader, IArticleRenderer renderer, IItemsReader newItemsParser, ILastDatasource lastDs, IEReaderSender kindle, IArticleSummarySender summarySender, int maxAantalArticles)
         {
             this.logger = logger;
             this.resources = resources;
