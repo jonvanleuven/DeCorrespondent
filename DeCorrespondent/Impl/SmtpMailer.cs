@@ -27,6 +27,7 @@ namespace DeCorrespondent.Impl
                 Timeout = 120000,
             };
             var mm = new MailMessage(config.MailUsername, to, subject, body);
+            mm.IsBodyHtml = true;
             if (attachments != null)
             {
                 foreach (var a in attachments)

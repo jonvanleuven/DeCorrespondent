@@ -41,12 +41,11 @@ namespace DeCorrespondent.Test.Impl
             var config = new FileConfig();
             config.Username = "username";
             config.Password = "password";
-            config.MailPassword = @"password";
             config.LicenseKey = "lickey";
             config.MaxAantalArticles = 20;
             config.KindleEmail = "t";
             config.MailUsername = "t";
-            config.MailPassword = "t";
+            config.MailPassword = @"password";
             config.Save("d:\\config.xml");
         }
 

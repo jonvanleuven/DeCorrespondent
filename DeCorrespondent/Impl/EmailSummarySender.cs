@@ -12,10 +12,12 @@ namespace DeCorrespondent.Impl
             this.mailer = mailer;
             this.config = config;
         }
-        public void Send(IEnumerable<IArticle> articles)
+        public void Send(IEnumerable<IArticle> articlesEnumerable)
         {
-            var body = string.Join("\n", articles.Select(a => string.Format("- {0} {1}: {2}", a.Metadata.AuthorFirstname, a.Metadata.AuthorLastname, a.Metadata.Title)));
-            var subject = string.Format("{0} artikelen verstuurd naar je Kindle", articles.Count());
+            var articles = articlesEnumerable.ToList();
+            var list = string.Join("\n", articles.Select(a => string.Format("<li><b>{0} {1}</b>: {2}</li>", a.Metadata.AuthorFirstname, a.Metadata.AuthorLastname, a.Metadata.Title)));
+            var body = string.Format("<p><ul>{0}</ul></p>", list);
+            var subject = string.Format("{0} artikel{1} verstuurd naar je Kindle", articles.Count(), articles.Count() > 1 ? "en" : "");
             mailer.Send(config.SummaryEmail, subject, body, null);
         }
     }

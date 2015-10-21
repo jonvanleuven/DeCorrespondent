@@ -6,4 +6,5 @@ namespace DeCorrespondent
     {
         void Send(IEnumerable<IArticle> articles);
     }
+
 }
