@@ -1,8 +1,3 @@
 # DeCorrespondent
 
-Program (written in c#) that:
-- log into your correspondent account
-- rip new articles from de correspondent (https://decorrespondent.nl)
-- create kindle compatible PDF of the article
-- send it to my kindle (via email)
-- send me an email to notify me 
+Programma (geschreven in C#) dat automatisch artikelen van de Correspondent in leesbaar formaat (pdf) naar een Kindle stuurt. Daarnaast wordt een notificatie email verstuurd met links naar video/audio dat niet op de kindle te lezen is.
