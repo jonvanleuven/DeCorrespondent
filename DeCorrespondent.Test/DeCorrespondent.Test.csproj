@@ -66,6 +66,9 @@
     <EmbeddedResource Include="Resources\article_3430" />
     <EmbeddedResource Include="Resources\article_3444" />
     <EmbeddedResource Include="Resources\article_3450" />
+    <EmbeddedResource Include="Resources\article_2404">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">

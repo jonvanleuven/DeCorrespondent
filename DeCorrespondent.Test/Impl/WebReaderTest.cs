@@ -58,7 +58,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void ReadItem()
         {
-            var id = 3450;
+            var id = 2404;
             using (var reader = CreateReader())
             {
                 var article = reader.ReadArticle(id);

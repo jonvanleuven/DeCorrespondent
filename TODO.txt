@@ -26,7 +26,7 @@ V IMailer
 V testcase 20 max
 - config genereren als niet bestaat
 V password encrypted in config file
-- summary mailer met links naar filmpjes/audio
+V summary mailer met links naar filmpjes/audio
 - meerdere email ontvangers
 - 1 email per 5 attachments
 V testcase email(s) versturen?

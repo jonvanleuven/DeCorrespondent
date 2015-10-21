@@ -53,6 +53,7 @@ namespace DeCorrespondent.Impl
                 url = url.StartsWith("//") ? "http:" + url : url;
                 n.SetAttributeValue("src", url);
                 n.SetAttributeValue("data-src", "");
+                metadata.ExternalMedia.Add(url);
             });
             return new Article(body.InnerHtml, metadata);
         }
@@ -108,6 +109,7 @@ namespace DeCorrespondent.Impl
         internal ArticleMetadata(IDictionary<string, string> metadata)
         {
             this.metadata = metadata;
+            ExternalMedia = new List<string>();
         }
 
         public string Title { get { return GetValue("og:title"); } }
@@ -120,6 +122,7 @@ namespace DeCorrespondent.Impl
         public string AuthorImgUrl { get { return GetValue("article:author:image"); } }
         public string Section { get { return GetValue("article:section"); } }
         public string Description { get { return Unescape( GetValue("og:description") ); } }
+        public IList<string> ExternalMedia { get; private set; }
 
         private static string Unescape(string str)
         {

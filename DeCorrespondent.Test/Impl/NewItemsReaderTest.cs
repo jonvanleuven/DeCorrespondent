@@ -62,6 +62,17 @@ namespace DeCorrespondent.Test.Impl
         }
 
         [Test]
+        public void ReadArticle2404()
+        {
+            var reader = new ArticleReader();
+
+            var result = reader.Read(new FileResources().ReadArticle(2404));
+
+            Assert.NotNull(result.BodyHtml);
+            Assert.AreEqual(1, result.Metadata.ExternalMedia.Count());
+        }
+
+        [Test]
         public void ReadArticle3450()
         {
             var reader = new ArticleReader();

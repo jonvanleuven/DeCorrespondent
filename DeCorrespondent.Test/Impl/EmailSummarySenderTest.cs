@@ -12,7 +12,7 @@ namespace DeCorrespondent.Test.Impl
         {
             var sender = CreateSender();
             var reader = new ArticleReader();
-            var articles = new IArticle[] { reader.Read(new NewItemsReaderTest.FileResources().ReadArticle(3358)) };
+            var articles = new IArticle[] { reader.Read(new NewItemsReaderTest.FileResources().ReadArticle(2404)) };
 
             sender.Send(articles.ToList());
 

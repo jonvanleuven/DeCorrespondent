@@ -15,8 +15,9 @@ namespace DeCorrespondent.Impl
         public void Send(IEnumerable<IArticle> articlesEnumerable)
         {
             var articles = articlesEnumerable.ToList();
-            var list = string.Join("\n", articles.Select(a => string.Format("<li><b>{0} {1}</b>: {2}</li>", a.Metadata.AuthorFirstname, a.Metadata.AuthorLastname, a.Metadata.Title)));
-            var body = string.Format("<p><ul>{0}</ul></p>", list);
+            var list = string.Join("\n", articles.Select(a => string.Format("<p><b>{0} {1}</b>: {2}</p>", a.Metadata.AuthorFirstname, a.Metadata.AuthorLastname, a.Metadata.Title)));
+            var externalMediaList = string.Join("\n", articles.SelectMany(a => a.Metadata.ExternalMedia.Select(url => new { a.Metadata.Title, Url = url })).Select(l => string.Format(@"<p><a href=""{0}"">{1}</a></p>", l.Url, l.Title)));
+            var body = string.Format("<h3>Artikelen:</h3>{0}<h3>Video/audio:</h3>{1}", list, externalMediaList);
             var subject = string.Format("{0} artikel{1} verstuurd naar je Kindle", articles.Count(), articles.Count() > 1 ? "en" : "");
             mailer.Send(config.SummaryEmail, subject, body, null);
         }
