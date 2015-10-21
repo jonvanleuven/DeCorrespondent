@@ -63,33 +63,27 @@ namespace DeCorrespondent.Impl
 
     public static class Encryptor
     {
-        private static readonly byte[] Key = HexString2ByteArray("7D5236D0E750D1372468A599781A60BD5C809131437F8106C89A20AAD2C2C2C2");
-        private static readonly byte[] IV = HexString2ByteArray("F54C6F1B4BF5888A2167F35D0895FAC2");
+        private static readonly byte[] Key = HexStringToByteArray("7D5236D0E750D1372468A599781A60BD5C809131437F8106C89A20AAD2C2C2C2");
+        private static readonly byte[] IV = HexStringToByteArray("F54C6F1B4BF5888A2167F35D0895FAC2");
 
-        public static string EncryptAES(string bsn)
+        public static string EncryptAES(string str)
         {
-            // argument controle.
-            // Argument controleren
-            if (string.IsNullOrEmpty(bsn)) { return null; }
+            if (string.IsNullOrEmpty(str)) 
+                return null;
             byte[] encrypted;
-
             var encryptor = KEY.CreateEncryptor(KEY.Key, KEY.IV);
-
-            // Stream aanmaken voor encryptie.
             using (var msEncrypt = new MemoryStream())
             {
                 using (var csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
                 {
                     using (var swEncrypt = new StreamWriter(csEncrypt))
                     {
-
-                        //Alle data wegschrijven naar de stream.
-                        swEncrypt.Write(bsn);
+                        swEncrypt.Write(str);
                     }
                     encrypted = msEncrypt.ToArray();
                 }
             }
-            return ConverteerNaarHex(encrypted);
+            return ConvertToHex(encrypted);
         }
 
         private static readonly RijndaelManaged KEY = new RijndaelManaged();
@@ -99,44 +93,32 @@ namespace DeCorrespondent.Impl
             KEY.KeySize = 256;
             KEY.Mode = CipherMode.CBC;
             KEY.Padding = PaddingMode.PKCS7;
-
             KEY.Key = Key;
             KEY.IV = IV;
         }
 
-        public static string DecryptAES(string encryptedBsns)
+        public static string DecryptAES(string encryptedstrs)
         {
-            // Argument controleren
-            if (string.IsNullOrEmpty(encryptedBsns)) { return null; }
+            if (string.IsNullOrEmpty(encryptedstrs)) 
+                return null;
 
-            var encryptedBsn = HexString2ByteArray(encryptedBsns);
-
-            // ontcijferde tekst.
-            string plattetekst = null;
-
-            // Aanmaken RijndaelManaged object
-            // met de gespecificeerde key and IV.
-            // Decryptor aanmaken voor stream transform
+            var encryptedstr = HexStringToByteArray(encryptedstrs);
+            string plain = null;
             var decryptor = KEY.CreateDecryptor(KEY.Key, KEY.IV);
-
-            // Stream aanmaken voor Decryptie
-            using (var msDecrypt = new MemoryStream(encryptedBsn))
+            using (var msDecrypt = new MemoryStream(encryptedstr))
             {
                 using (var csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
                 {
                     using (var srDecrypt = new StreamReader(csDecrypt))
                     {
-
-                        // lees de ontcijferfde bytes van de decryptor stream
-                        // en plaats hun in de string.
-                        plattetekst = srDecrypt.ReadToEnd();
+                        plain = srDecrypt.ReadToEnd();
                     }
                 }
             }
-            return plattetekst;
+            return plain;
         }
 
-        private static string ConverteerNaarHex(byte[] data)
+        private static string ConvertToHex(byte[] data)
         {
             var hex = new StringBuilder();
             foreach (var b in data)
@@ -146,7 +128,7 @@ namespace DeCorrespondent.Impl
             return hex.ToString();
         }
 
-        private static byte[] HexString2ByteArray(string hexString)
+        private static byte[] HexStringToByteArray(string hexString)
         {
             var output = new byte[hexString.Length / 2];
 
