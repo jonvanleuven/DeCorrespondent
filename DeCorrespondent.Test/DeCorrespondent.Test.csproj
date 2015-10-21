@@ -85,7 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Impl\ArticleRendererTest.cs" />
-    <Compile Include="Impl\EmailSummarySenderTest.cs" />
+    <Compile Include="Impl\EmailNotificationSenderTest.cs" />
     <Compile Include="Impl\SmtpMailerTest.cs" />
     <Compile Include="Impl\NewItemsReaderTest.cs" />
     <Compile Include="Impl\ProgramTest.cs" />

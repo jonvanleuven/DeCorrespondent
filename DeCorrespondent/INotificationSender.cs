@@ -2,7 +2,7 @@
 
 namespace DeCorrespondent
 {
-    public interface IArticleSummarySender
+    public interface INotificationSender
     {
         void Send(IEnumerable<IArticle> articles);
     }

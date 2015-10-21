@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace DeCorrespondent.Impl
 {
-    public class EmailSummarySender : IArticleSummarySender
+    public class EmailNotificationSender : INotificationSender
     {
         private readonly IMailer mailer;
-        private readonly IEmailSummarySenderConfig config;
-        public EmailSummarySender(IMailer mailer, IEmailSummarySenderConfig config)
+        private readonly IEmailNotificationSenderConfig config;
+        public EmailNotificationSender(IMailer mailer, IEmailNotificationSenderConfig config)
         {
             this.mailer = mailer;
             this.config = config;
@@ -17,14 +18,17 @@ namespace DeCorrespondent.Impl
             var articles = articlesEnumerable.ToList();
             var list = string.Join("\n", articles.Select(a => string.Format("<p><b>{0} {1}</b>: {2}</p>", a.Metadata.AuthorFirstname, a.Metadata.AuthorLastname, a.Metadata.Title)));
             var externalMediaList = string.Join("\n", articles.SelectMany(a => a.Metadata.ExternalMedia.Select(url => new { a.Metadata.Title, Url = url })).Select(l => string.Format(@"<p><a href=""{0}"">{1}</a></p>", l.Url, l.Title)));
-            var body = string.Format("<h3>Artikelen:</h3>{0}<h3>Video/audio:</h3>{1}", list, externalMediaList);
+            var body = new StringBuilder();
+            body.Append(string.Format("<h3>Artikelen:</h3>{0}", list));
+            if (externalMediaList.Any())
+                body.Append(string.Format("<h3>Video/audio:</h3>{0}", externalMediaList));
             var subject = string.Format("{0} artikel{1} verstuurd naar je Kindle", articles.Count(), articles.Count() > 1 ? "en" : "");
-            mailer.Send(config.SummaryEmail, subject, body, null);
+            mailer.Send(config.NotificationEmail, subject, body.ToString(), null);
         }
     }
 
-    public interface IEmailSummarySenderConfig
+    public interface IEmailNotificationSenderConfig
     {
-        string SummaryEmail { get; }
+        string NotificationEmail { get; }
     }
 }

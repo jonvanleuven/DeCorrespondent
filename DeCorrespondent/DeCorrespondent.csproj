@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IArticleReader.cs" />
-    <Compile Include="IArticleSummarySender.cs" />
+    <Compile Include="INotificationSender.cs" />
     <Compile Include="ILastDatasource.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="IMailer.cs" />
@@ -56,7 +56,7 @@
     <Compile Include="Impl\ArticleRenderer.cs" />
     <Compile Include="IArticleRenderer.cs" />
     <Compile Include="Impl\ConsoleLogger.cs" />
-    <Compile Include="Impl\EmailSummarySender.cs" />
+    <Compile Include="Impl\EmailNotificationSender.cs" />
     <Compile Include="Impl\FileConfig.cs" />
     <Compile Include="Impl\FileLastDatasource.cs" />
     <Compile Include="Impl\KindleEmailSender.cs" />

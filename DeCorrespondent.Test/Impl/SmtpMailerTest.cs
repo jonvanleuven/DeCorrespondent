@@ -11,7 +11,7 @@ namespace DeCorrespondent.Test.Impl
         {
             var mailer = CreateMailer();
 
-            mailer.Send(CreateConfig().SummaryEmail, "testcase", "Dit is een testmail verstuurd vanuit het DeCorrepondent project vanuit een nunit test", null);
+            mailer.Send(CreateConfig().NotificationEmail, "testcase", "Dit is een testmail verstuurd vanuit het DeCorrepondent project vanuit een nunit test", null);
         }
 
         private static IMailer CreateMailer()

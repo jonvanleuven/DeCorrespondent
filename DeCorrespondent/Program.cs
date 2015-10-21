@@ -20,12 +20,12 @@ namespace DeCorrespondent
                 var lastIdDs = new FileLastDatasource();
                 var mailer = new SmtpMailer(logger, config.SmtpConfig);
                 var kindle = new KindleEmailSender(config.KindleEmailSenderConfig, mailer);
-                var summarySender = new EmailSummarySender(mailer, config.EmailSummarySenderConfig);
+                var summarySender = new EmailNotificationSender(mailer, config.EmailNotificationSenderConfig);
 
                 var p = new Program(logger, resources, reader, renderer, newItemsParser, lastIdDs, kindle, summarySender, config.MaxAantalArticles);
 
-                var pdfs = p.WritePdfs();
-                p.Send(pdfs);
+                var pdfs = p.ReadDeCorrespondentAndWritePdfs();
+                p.SendToKindleAndSendNotificationMail(pdfs);
             }
         }
 
@@ -37,9 +37,9 @@ namespace DeCorrespondent
         private readonly int maxAantalArticles;
         private readonly ILastDatasource lastDs;
         private readonly IEReaderSender kindle;
-        private readonly IArticleSummarySender summarySender;
+        private readonly INotificationSender summarySender;
 
-        public Program(ILogger logger, IResourceReader resources, IArticleReader reader, IArticleRenderer renderer, IItemsReader newItemsParser, ILastDatasource lastDs, IEReaderSender kindle, IArticleSummarySender summarySender, int maxAantalArticles)
+        public Program(ILogger logger, IResourceReader resources, IArticleReader reader, IArticleRenderer renderer, IItemsReader newItemsParser, ILastDatasource lastDs, IEReaderSender kindle, INotificationSender summarySender, int maxAantalArticles)
         {
             this.logger = logger;
             this.resources = resources;
@@ -52,7 +52,7 @@ namespace DeCorrespondent
             this.maxAantalArticles = maxAantalArticles;
         }
 
-        public IList<ArticlePdf> WritePdfs()
+        public IList<ArticlePdf> ReadDeCorrespondentAndWritePdfs()
         {
             var last = lastDs.ReadLast() ?? DateTime.Today.AddDays(-1);
             var regels = Enumerable.Range(0, int.MaxValue)
@@ -71,7 +71,7 @@ namespace DeCorrespondent
             return result;
         }
         
-        public void Send(IList<ArticlePdf> pdfs)
+        public void SendToKindleAndSendNotificationMail(IList<ArticlePdf> pdfs)
         {
             if (!pdfs.Any()) 
                 return;

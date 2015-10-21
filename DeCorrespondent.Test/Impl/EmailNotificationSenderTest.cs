@@ -5,23 +5,21 @@ using NUnit.Framework;
 namespace DeCorrespondent.Test.Impl
 {
     [TestFixture]
-    public class EmailSummarySenderTest
+    public class EmailNotificationSenderTest
     {
         [Test]
-        public void SendSummary()
+        public void SendNotificationEmail()
         {
             var sender = CreateSender();
             var reader = new ArticleReader();
-            var articles = new IArticle[] { reader.Read(new NewItemsReaderTest.FileResources().ReadArticle(2404)) };
+            var articles = new [] { reader.Read(new NewItemsReaderTest.FileResources().ReadArticle(2404)) };
 
             sender.Send(articles.ToList());
-
-
         }
 
-        private static IArticleSummarySender CreateSender()
+        private static INotificationSender CreateSender()
         {
-            return new EmailSummarySender(CreateMailer(), CreateConfig());
+            return new EmailNotificationSender(CreateMailer(), CreateConfig());
         }
 
         private static IMailer CreateMailer()

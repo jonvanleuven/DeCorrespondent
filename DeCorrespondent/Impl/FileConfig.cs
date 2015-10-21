@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 
 namespace DeCorrespondent.Impl
 {
-    public class FileConfig : IKindleEmailSenderConfig, IEmailSummarySenderConfig, IWebReaderConfig, IArticleRendererConfig, ISmtpMailConfig
+    public class FileConfig : IKindleEmailSenderConfig, IEmailNotificationSenderConfig, IWebReaderConfig, IArticleRendererConfig, ISmtpMailConfig
     {
         public static FileConfig Load(string path)
         {
@@ -21,7 +21,7 @@ namespace DeCorrespondent.Impl
         [XmlIgnore]
         public IKindleEmailSenderConfig KindleEmailSenderConfig { get { return this; } }
         [XmlIgnore]
-        public IEmailSummarySenderConfig EmailSummarySenderConfig { get { return this; } }
+        public IEmailNotificationSenderConfig EmailNotificationSenderConfig { get { return this; } }
         [XmlIgnore]
         public IWebReaderConfig CorrespondentCredentails { get { return this; } }
         [XmlIgnore]
@@ -37,7 +37,7 @@ namespace DeCorrespondent.Impl
         [XmlIgnore]
         public string MailPassword { get { return Encryptor.DecryptAES(MailPasswordEncrypted); } set { MailPasswordEncrypted = Encryptor.EncryptAES(value); } }
         public string MailPasswordEncrypted { get; set; }
-        public string SummaryEmail { get; set; }
+        public string NotificationEmail { get; set; }
         public string LicenseKey { get; set; }
         public bool DisplayInfocards { get; set; }
         public bool DisplayPublicationLinks { get; set; }
