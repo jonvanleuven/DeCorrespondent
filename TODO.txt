@@ -31,3 +31,4 @@ V summary mailer met links naar filmpjes/audio
 - meerdere email ontvangers
 V 1 email per 5 attachments
 V testcase email(s) versturen?
+- log4net gebruiken

@@ -10,22 +10,29 @@ namespace DeCorrespondent
     {
         public static void Main(string[] args)
         {
-            var logger = new ConsoleLogger(true);
-            var config = FileConfig.Load(null);
-            using (var resources = WebReader.Login(logger, config.CorrespondentCredentails))
+            try
             {
-                var newItemsParser = new NewItemsReader(logger);
-                var reader = new ArticleReader();
-                var renderer = new ArticleRenderer(logger, config.ArticleRendererConfig);
-                var lastIdDs = new FileLastDatasource();
-                var mailer = new SmtpMailer(logger, config.SmtpConfig);
-                var kindle = new KindleEmailSender(config.KindleEmailSenderConfig, mailer);
-                var summarySender = new EmailNotificationSender(mailer, config.EmailNotificationSenderConfig);
+                var logger = new ConsoleLogger(true);
+                var config = FileConfig.Load(null);
+                using (var resources = WebReader.Login(logger, config.CorrespondentCredentails))
+                {
+                    var newItemsParser = new NewItemsReader(logger);
+                    var reader = new ArticleReader();
+                    var renderer = new ArticleRenderer(logger, config.ArticleRendererConfig);
+                    var lastIdDs = new FileLastDatasource();
+                    var mailer = new SmtpMailer(logger, config.SmtpConfig);
+                    var kindle = new KindleEmailSender(config.KindleEmailSenderConfig, mailer);
+                    var summarySender = new EmailNotificationSender(mailer, config.EmailNotificationSenderConfig);
 
-                var p = new Program(logger, resources, reader, renderer, newItemsParser, lastIdDs, kindle, summarySender, config.MaxAantalArticles);
+                    var p = new Program(logger, resources, reader, renderer, newItemsParser, lastIdDs, kindle, summarySender, config.MaxAantalArticles);
 
-                var pdfs = p.ReadDeCorrespondentAndWritePdfs();
-                p.SendToKindleAndSendNotificationMail(pdfs);
+                    var pdfs = p.ReadDeCorrespondentAndWritePdfs();
+                    p.SendToKindleAndSendNotificationMail(pdfs);
+                }
+            }
+            catch (Exception e)
+            {
+                HandleError(e);
             }
         }
 
@@ -113,5 +120,21 @@ namespace DeCorrespondent
             public string FileName { get; private set; }
             public IArticle Article { get; private set; }
         }
+
+        private static void HandleError(Exception e)
+        {
+            try
+            {
+                var config = FileConfig.Load(null);
+                var body = string.Format("<p>Fout: {0}</p><pre>{1}</pre>", e.Message, e.StackTrace);
+                new SmtpMailer(new ConsoleLogger(true), config).Send(config.NotificationEmail, "DeCorrespondent.exe. Fout opgetreden", body, null);
+                throw e;
+            }
+            catch (Exception)
+            {
+                throw e;
+            }
+        }
     }
+
 }

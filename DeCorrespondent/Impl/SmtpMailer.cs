@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net.Mail;
 
 namespace DeCorrespondent.Impl
@@ -26,7 +27,7 @@ namespace DeCorrespondent.Impl
                 Credentials = new System.Net.NetworkCredential(config.MailUsername, config.MailPassword),
                 Timeout = 120000,
             };
-            var mm = new MailMessage(config.MailUsername, to, subject, body);
+            var mm = new MailMessage(config.MailUsername, to, subject ?? string.Empty, body ?? string.Empty);
             mm.IsBodyHtml = true;
             if (attachments != null)
             {
@@ -36,7 +37,7 @@ namespace DeCorrespondent.Impl
                 }    
             }
             client.Send(mm);
-            log.Info("Mail has been send to '" + to + "'");
+            log.Info(string.Format("Mail has been send to '{0}' with {1} attachements", to, attachments!=null ? attachments.Count() : 0));
         }
     }
 

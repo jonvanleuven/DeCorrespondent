@@ -23,7 +23,7 @@ namespace DeCorrespondent.Impl
                 .Select(i => list.Skip(i * groupSize).Take(groupSize))
                 .Where(g => g.Any())
                 .ToList()
-                .ForEach(g => mailer.Send(config.KindleEmail, "", "", g));
+                .ForEach(g => mailer.Send(config.KindleEmail, null, null, g));
         }
     }
 
