@@ -19,8 +19,9 @@ namespace DeCorrespondent.Impl
         {
             var groupSize = 5; //verstuur 1 email per 5 attachments
             var list = ebooks.ToList();
-            Enumerable.Range(0, list.Count / groupSize)
+            Enumerable.Range(0, (list.Count / groupSize)+1)
                 .Select(i => list.Skip(i * groupSize).Take(groupSize))
+                .Where(g => g.Any())
                 .ToList()
                 .ForEach(g => mailer.Send(config.KindleEmail, "", "", g));
         }
