@@ -4,4 +4,5 @@ Programma (geschreven in C#) dat automatisch artikelen van de Correspondent in l
 
 Een betaald abonnement op de correspondent is hiervoor vereist, zie https://decorrespondent.nl
 
-Zie voorbeeld pdf: "16 Reis mee door het land dat niet bestaat (en leer hoe belangrijk het is om erkend te worden).pdf"
+Zie voorbeeld pdf: 
+[16 Reis mee door het land dat niet bestaat (en leer hoe belangrijk het is om erkend te worden).pdf](16 Reis mee door het land dat niet bestaat (en leer hoe belangrijk het is om erkend te worden).pdf)
