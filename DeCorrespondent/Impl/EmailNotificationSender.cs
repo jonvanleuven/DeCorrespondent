@@ -16,7 +16,7 @@ namespace DeCorrespondent.Impl
         public void Send(IEnumerable<IArticle> articlesEnumerable)
         {
             var articles = articlesEnumerable.ToList();
-            var list = string.Join("\n", articles.Select(a => string.Format("<p><b>{0} {1}</b>: {2}</p>", a.Metadata.AuthorFirstname, a.Metadata.AuthorLastname, a.Metadata.Title)));
+            var list = string.Join("\n", articles.Select(a => string.Format("<p><b>{2}</b> {0} {1}</p>", a.Metadata.AuthorFirstname, a.Metadata.AuthorLastname, a.Metadata.Title)));
             var externalMediaList = string.Join("\n", articles.SelectMany(a => a.Metadata.ExternalMedia.Select(url => new { a.Metadata.Title, Url = url })).Select(l => string.Format(@"<p><a href=""{0}"">{1}</a></p>", l.Url, l.Title)));
             var body = new StringBuilder();
             body.Append(string.Format("<h3>Artikelen:</h3>{0}", list));
