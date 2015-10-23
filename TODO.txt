@@ -24,11 +24,11 @@ V special tekenens in de filename: blacklisten ipv whitelisten
 X koppeling met dropbox (lezen van pdf's in ibooks) (dropbox app kan niet voolezen/verplaatsen naar ibooks ?!?)
 V IMailer
 V testcase 20 max
-- config genereren als niet bestaat
-- encrypt password/set config via command line
+V config genereren als niet bestaat
+V encrypt password/set config via command line
 V password encrypted in config file
 V summary mailer met links naar filmpjes/audio
 - meerdere email ontvangers
 V 1 email per 5 attachments
 V testcase email(s) versturen?
-- log4net gebruiken
+V log4net gebruiken

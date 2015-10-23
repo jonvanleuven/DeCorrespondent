@@ -10,12 +10,14 @@ namespace DeCorrespondent.Impl
     {
         public static FileConfig Load(string path)
         {
+            if (!File.Exists(path ?? @"config.xml") )
+                new FileConfig().Save(path ?? @"config.xml");
             return DeserializeXml(File.ReadAllText(path ?? @"config.xml"));
         }
 
         public void Save(string path)
         {
-            File.WriteAllText(path, SerializeXml(this));
+            File.WriteAllText(path ?? @"config.xml", SerializeXml(this));
         }
 
         [XmlIgnore]
@@ -28,15 +30,21 @@ namespace DeCorrespondent.Impl
         public IArticleRendererConfig ArticleRendererConfig { get { return this; } }
         [XmlIgnore]
         public ISmtpMailConfig SmtpConfig { get { return this; } }
+        [ConfigurableViaCommandLine("Gebruikersnaam van je DeCorrespondent account")]
         public string Username { get; set; }
         [XmlIgnore]
+        [ConfigurableViaCommandLine("Wachtwoord van je DeCorrespondent account (wordt encrypted opgeslagen)")]
         public string Password { get { return Encryptor.DecryptAES(PasswordEncrypted); } set { PasswordEncrypted = Encryptor.EncryptAES(value); } }
         public string PasswordEncrypted { get; set; }
+        [ConfigurableViaCommandLine("Email adres van je kindle")]
         public string KindleEmail { get; set; }
+        [ConfigurableViaCommandLine("Gebruikersnaam van je gmail account")]
         public string MailUsername { get; set; }
         [XmlIgnore]
+        [ConfigurableViaCommandLine("Wachtwoord van je gmail account (wordt encrypted opgeslagen)")]
         public string MailPassword { get { return Encryptor.DecryptAES(MailPasswordEncrypted); } set { MailPasswordEncrypted = Encryptor.EncryptAES(value); } }
         public string MailPasswordEncrypted { get; set; }
+        [ConfigurableViaCommandLine("Email adres waar notificaties naartoe moeten worden gestuurd")]
         public string NotificationEmail { get; set; }
         public string LicenseKey { get; set; }
         public bool DisplayInfocards { get; set; }
@@ -59,6 +67,15 @@ namespace DeCorrespondent.Impl
             return (FileConfig)serializer.Deserialize(new StringReader(xml));
         }
 
+        public class ConfigurableViaCommandLine : Attribute
+        {
+            public ConfigurableViaCommandLine(string description)
+            {
+                Description = description;
+            }
+
+            public string Description { get; private set; }
+        }
     }
 
     public static class Encryptor

@@ -20,5 +20,10 @@ namespace DeCorrespondent.Impl
             if (!debugEnabled) return;
             Console.WriteLine(string.Format("{0:dd-MM-yyyy HH:mm:ss} {1}", DateTime.Now, message), args);
         }
+
+        public void Error(Exception e)
+        {
+            Console.WriteLine("{0:dd-MM-yyyy HH:mm:ss} {1}\n{2}", DateTime.Now, e.Message, e.StackTrace);
+        }
     }
 }

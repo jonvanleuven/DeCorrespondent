@@ -125,6 +125,11 @@ namespace DeCorrespondent.Test.Impl
                 logDelegate.Debug(message, args);
                 Debugs.Add(string.Format(message, args));
             }
+
+            public void Error(Exception e)
+            {
+                throw e;
+            }
         }
 
         class ProgramWrapper

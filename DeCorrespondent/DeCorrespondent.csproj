@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IArticleReader.cs" />
+    <Compile Include="Impl\CompositeLogger.cs" />
+    <Compile Include="Impl\EmailErrorLogger.cs" />
     <Compile Include="Impl\Log4NetLogger.cs" />
     <Compile Include="INotificationSender.cs" />
     <Compile Include="ILastDatasource.cs" />

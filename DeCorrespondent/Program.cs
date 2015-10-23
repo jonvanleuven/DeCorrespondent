@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Xml.Serialization;
 using DeCorrespondent.Impl;
 
 namespace DeCorrespondent
@@ -10,10 +11,13 @@ namespace DeCorrespondent
     {
         public static void Main(string[] args)
         {
-            var logger = new Log4NetLogger();
+            var config = FileConfig.Load(null);
+            if (HandleArguments(args, config))
+                return;
+            ILogger logger = new Log4NetLogger();
             try
             {
-                var config = FileConfig.Load(null);
+                logger = new CompositeLogger(logger, new EmailErrorLogger(config.NotificationEmail, config.SmtpConfig));
                 using (var resources = WebReader.Login(logger, config.CorrespondentCredentails))
                 {
                     var newItemsParser = new NewItemsReader(logger);
@@ -32,7 +36,7 @@ namespace DeCorrespondent
             }
             catch (Exception e)
             {
-                HandleError(e, logger);
+                logger.Error(e);
             }
         }
 
@@ -121,20 +125,31 @@ namespace DeCorrespondent
             public IArticle Article { get; private set; }
         }
 
-        private static void HandleError(Exception e, ILogger logger)
+        private static bool HandleArguments(string[] args, FileConfig config)
         {
-            try
+            if (args.Length == 0)
+                return false;
+            if (args[0] == @"/?" ||  args[0] == @"\?" || args[0] == @"-help" || args[0] == @"-h")
             {
-                var config = FileConfig.Load(null);
-                var body = string.Format("<p>Fout: {0}</p><pre>{1}</pre>", e.Message, e.StackTrace);
-                new SmtpMailer(logger, config).Send(config.NotificationEmail, "DeCorrespondent.exe. Fout opgetreden", body, null);
-                throw e;
+                Console.WriteLine("Commandline parameters om je configuratie aan te passen:");
+                typeof (FileConfig).GetProperties()
+                    .Where(p => p.GetCustomAttributes(typeof(FileConfig.ConfigurableViaCommandLine), true).Any())
+                    .Select(p => new { Property = p, Attribute = p.GetCustomAttributes(typeof(FileConfig.ConfigurableViaCommandLine), true).OfType<FileConfig.ConfigurableViaCommandLine>().First() })
+                    .ToList()
+                    .ForEach(x => Console.WriteLine("\n  {0}=waarde\n           {1} (type={2})", x.Property.Name, x.Attribute.Description, x.Property.PropertyType));
             }
-            catch (Exception)
+            else
             {
-                throw e;
+                args.Select(a => a.Split('='))
+                    .Where(s => s.Length == 2)
+                    .Select(s => new { Key = s[0], Value = s[1], Property = typeof(FileConfig).GetProperties().FirstOrDefault(p => p.Name == s[0]) })
+                    .Where(x => x.Property != null)
+                    .ToList()
+                    .ForEach(x => x.Property.GetSetMethod().Invoke(config, new object[] {x.Value}));
+                config.Save(null);
             }
+            return true;
         }
-    }
 
+    }
 }

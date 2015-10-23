@@ -28,5 +28,10 @@ namespace DeCorrespondent.Impl
                 return;
             Log.DebugFormat(message, args);
         }
+
+        public void Error(Exception e)
+        {
+            Log.Error(e);
+        }
     }
 }
