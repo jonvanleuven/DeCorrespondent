@@ -10,9 +10,9 @@ namespace DeCorrespondent
     {
         public static void Main(string[] args)
         {
+            var logger = new Log4NetLogger();
             try
             {
-                var logger = new ConsoleLogger(true);
                 var config = FileConfig.Load(null);
                 using (var resources = WebReader.Login(logger, config.CorrespondentCredentails))
                 {
@@ -32,7 +32,7 @@ namespace DeCorrespondent
             }
             catch (Exception e)
             {
-                HandleError(e);
+                HandleError(e, logger);
             }
         }
 
@@ -121,13 +121,13 @@ namespace DeCorrespondent
             public IArticle Article { get; private set; }
         }
 
-        private static void HandleError(Exception e)
+        private static void HandleError(Exception e, ILogger logger)
         {
             try
             {
                 var config = FileConfig.Load(null);
                 var body = string.Format("<p>Fout: {0}</p><pre>{1}</pre>", e.Message, e.StackTrace);
-                new SmtpMailer(new ConsoleLogger(true), config).Send(config.NotificationEmail, "DeCorrespondent.exe. Fout opgetreden", body, null);
+                new SmtpMailer(logger, config).Send(config.NotificationEmail, "DeCorrespondent.exe. Fout opgetreden", body, null);
                 throw e;
             }
             catch (Exception)
