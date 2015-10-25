@@ -32,3 +32,8 @@ V summary mailer met links naar filmpjes/audio
 V 1 email per 5 attachments
 V testcase email(s) versturen?
 V log4net gebruiken
+- Command line opties tonen: in blok en huidige waarde (let op wachtwoorden)
+- Smtp settings in config file (nu alleen gmail ondersteuning, smtp server van mailfence gebruiken)
+- 1 log file per week/maand
+V de externe media link: beschrijving toevoegen html element: ifame.closest('publication-embed-container').find(p.publication-body-description)
+- de externe media link: type content

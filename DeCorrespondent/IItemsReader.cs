@@ -32,6 +32,12 @@ namespace DeCorrespondent
         string MainImgUrl { get; }
         string Section { get; }
         string Description { get; }
-        IList<string> ExternalMedia { get; }
+        IList<IExternalMedia> ExternalMedia { get; }
+    }
+
+    public interface IExternalMedia
+    {
+        string Url { get; }
+        string Description { get; }
     }
 }

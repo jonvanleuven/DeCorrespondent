@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Xml.Serialization;
+using System.Text;
 using DeCorrespondent.Impl;
 
 namespace DeCorrespondent
@@ -129,14 +129,14 @@ namespace DeCorrespondent
         {
             if (args.Length == 0)
                 return false;
-            if (args[0] == @"/?" ||  args[0] == @"\?" || args[0] == @"-help" || args[0] == @"-h")
+            if (args[0] == @"?" || args[0] == @"/?" || args[0] == @"\?" || args[0] == @"-help" || args[0] == @"-h")
             {
                 Console.WriteLine("Commandline parameters om je configuratie aan te passen:");
                 typeof (FileConfig).GetProperties()
                     .Where(p => p.GetCustomAttributes(typeof(FileConfig.ConfigurableViaCommandLine), true).Any())
                     .Select(p => new { Property = p, Attribute = p.GetCustomAttributes(typeof(FileConfig.ConfigurableViaCommandLine), true).OfType<FileConfig.ConfigurableViaCommandLine>().First() })
                     .ToList()
-                    .ForEach(x => Console.WriteLine("\n  {0}=waarde\n           {1} (type={2})", x.Property.Name, x.Attribute.Description, x.Property.PropertyType));
+                    .ForEach(x => Console.WriteLine("\n{0}=waarde\n {1}", x.Property.Name, x.Attribute.Description));
             }
             else
             {
@@ -147,9 +147,28 @@ namespace DeCorrespondent
                     .ToList()
                     .ForEach(x => x.Property.GetSetMethod().Invoke(config, new object[] {x.Value}));
                 config.Save(null);
+                Console.WriteLine("Configuration saved.");
             }
             return true;
         }
-
+        /*
+        private static string TextBlock(string text, int width, int indentation = 0)
+        {
+            var indentationStr = string.Join("", Enumerable.Range(0, indentation).Select(i => " ").ToList());
+            var nettoWidth = width - indentation;
+            var words = text.Split(' ').ToList();
+            var result = new StringBuilder();
+            var line = new StringBuilder(indentationStr);
+            foreach (var w in words)
+            {
+                if (line.Length > nettoWidth)
+                {
+                    result.AppendLine(line.ToString().TrimEnd());
+                    line = new StringBuilder(indentationStr);
+                }
+                line.Append(w + " ");
+            }
+            return result.ToString();
+        }*/
     }
 }

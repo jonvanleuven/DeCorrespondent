@@ -70,6 +70,20 @@ namespace DeCorrespondent.Test.Impl
 
             Assert.NotNull(result.BodyHtml);
             Assert.AreEqual(1, result.Metadata.ExternalMedia.Count());
+            Assert.AreEqual("https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/188622180?secret_token=s-OBgTL&amp;color=df5b57&amp;auto_play=false&amp;show_artwork=true", result.Metadata.ExternalMedia.First().Url);
+            Assert.AreEqual("Interview", result.Metadata.ExternalMedia.First().Description);
+        }
+
+        [Test]
+        public void ReadArticle3530()
+        {
+            var reader = new ArticleReader();
+
+            var result = reader.Read(new FileResources().ReadArticle(3530));
+
+            Assert.NotNull(result.BodyHtml);
+            Assert.AreEqual(6, result.Metadata.ExternalMedia.Count());
+            Assert.AreEqual("Klimaatactivist Marjan Minnesma schetst de toekomst van een duurzaam Nederland", result.Metadata.ExternalMedia.First().Description);
         }
 
         [Test]

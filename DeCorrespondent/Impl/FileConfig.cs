@@ -20,6 +20,21 @@ namespace DeCorrespondent.Impl
             File.WriteAllText(path ?? @"config.xml", SerializeXml(this));
         }
 
+        public FileConfig()
+        {
+            Username = "";
+            Password = "";
+            DisplayBlockquotes = false;
+            DisplayInfocards = false;
+            DisplayPublicationLinks = true;
+            MailUsername = "";
+            MailPassword = "";
+            LicenseKey = "";
+            KindleEmail = "";
+            MaxAantalArticles = 20;
+            NotificationEmail = "";
+        }
+
         [XmlIgnore]
         public IKindleEmailSenderConfig KindleEmailSenderConfig { get { return this; } }
         [XmlIgnore]
