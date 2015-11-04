@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using DeCorrespondent.Impl;
 
 namespace DeCorrespondent
@@ -20,24 +19,28 @@ namespace DeCorrespondent
                 logger = new CompositeLogger(logger, new EmailErrorLogger(config.NotificationEmail, config.SmtpConfig));
                 using (var resources = WebReader.Login(logger, config.CorrespondentCredentails))
                 {
-                    var newItemsParser = new NewItemsReader(logger);
-                    var reader = new ArticleReader();
-                    var renderer = new ArticleRenderer(logger, config.ArticleRendererConfig);
-                    var lastIdDs = new FileLastDatasource();
-                    var mailer = new SmtpMailer(logger, config.SmtpConfig);
-                    var kindle = new KindleEmailSender(config.KindleEmailSenderConfig, mailer);
-                    var summarySender = new EmailNotificationSender(mailer, config.EmailNotificationSenderConfig);
-
-                    var p = new Program(logger, resources, reader, renderer, newItemsParser, lastIdDs, kindle, summarySender, config.MaxAantalArticles);
-
+                    var p = Program.Instance(logger, resources, config);
                     var pdfs = p.ReadDeCorrespondentAndWritePdfs();
                     p.SendToKindleAndSendNotificationMail(pdfs);
+                    pdfs.Select(pdf => pdf.FileName).ToList().ForEach(p.DeleteFile);
                 }
             }
             catch (Exception e)
             {
                 logger.Error(e);
             }
+        }
+
+        private static Program Instance(ILogger logger, IResourceReader resources, FileConfig config)
+        {
+            var newItemsParser = new NewItemsReader(logger);
+            var reader = new ArticleReader();
+            var renderer = new ArticleRenderer(logger, config.ArticleRendererConfig);
+            var lastIdDs = new FileLastDatasource();
+            var mailer = new SmtpMailer(logger, config.SmtpConfig);
+            var kindle = new KindleEmailSender(config.KindleEmailSenderConfig, mailer);
+            var summarySender = new EmailNotificationSender(mailer, config.EmailNotificationSenderConfig, resources);
+            return new Program(logger, resources, reader, renderer, newItemsParser, lastIdDs, kindle, summarySender, config.MaxAantalArticles);
         }
 
         private readonly IItemsReader newItemsParser;
@@ -81,12 +84,20 @@ namespace DeCorrespondent
             }
             return result;
         }
+
+        public void DeleteFile(string filename)
+        {
+            logger.Info("Deleting file '{0}'", filename);
+            File.Delete(filename);
+        }
         
         public void SendToKindleAndSendNotificationMail(IList<ArticlePdf> pdfs)
         {
             if (!pdfs.Any()) 
                 return;
-            kindle.Send(pdfs.Select(f => new FileStream(f.FileName, FileMode.Open)));
+            var streams = pdfs.Select(f => new FileStream(f.FileName, FileMode.Open)).ToList();
+            kindle.Send(streams);
+            streams.ForEach(s => s.Close());
             summarySender.Send(pdfs.Select(f => f.Article));
         }
         private string WritePdf(IArticleEbook ebook, IArticle article)
@@ -134,9 +145,14 @@ namespace DeCorrespondent
                 Console.WriteLine("Commandline parameters om je configuratie aan te passen:");
                 typeof (FileConfig).GetProperties()
                     .Where(p => p.GetCustomAttributes(typeof(FileConfig.ConfigurableViaCommandLine), true).Any())
-                    .Select(p => new { Property = p, Attribute = p.GetCustomAttributes(typeof(FileConfig.ConfigurableViaCommandLine), true).OfType<FileConfig.ConfigurableViaCommandLine>().First() })
+                    .Select(p => new
+                    {
+                        Property = p, 
+                        Attribute = p.GetCustomAttributes(typeof(FileConfig.ConfigurableViaCommandLine), true).OfType<FileConfig.ConfigurableViaCommandLine>().First(),
+                        Value = p.GetGetMethod().Invoke(config, new object[0]) as string
+                    })
                     .ToList()
-                    .ForEach(x => Console.WriteLine("\n{0}=waarde\n {1}", x.Property.Name, x.Attribute.Description));
+                    .ForEach(x => Console.WriteLine("\n{0}=waarde (huidige waarde: '{2}')\n {1}", x.Property.Name, x.Attribute.Description, x.Attribute.Display(x.Value)));
             }
             else
             {
@@ -151,24 +167,5 @@ namespace DeCorrespondent
             }
             return true;
         }
-        /*
-        private static string TextBlock(string text, int width, int indentation = 0)
-        {
-            var indentationStr = string.Join("", Enumerable.Range(0, indentation).Select(i => " ").ToList());
-            var nettoWidth = width - indentation;
-            var words = text.Split(' ').ToList();
-            var result = new StringBuilder();
-            var line = new StringBuilder(indentationStr);
-            foreach (var w in words)
-            {
-                if (line.Length > nettoWidth)
-                {
-                    result.AppendLine(line.ToString().TrimEnd());
-                    line = new StringBuilder(indentationStr);
-                }
-                line.Append(w + " ");
-            }
-            return result.ToString();
-        }*/
     }
 }

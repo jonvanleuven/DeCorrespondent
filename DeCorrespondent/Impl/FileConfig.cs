@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Xml.Serialization;
@@ -25,7 +26,7 @@ namespace DeCorrespondent.Impl
             Username = "";
             Password = "";
             DisplayBlockquotes = false;
-            DisplayInfocards = false;
+            DisplayInfocards = true;
             DisplayPublicationLinks = true;
             MailUsername = "";
             MailPassword = "";
@@ -45,21 +46,21 @@ namespace DeCorrespondent.Impl
         public IArticleRendererConfig ArticleRendererConfig { get { return this; } }
         [XmlIgnore]
         public ISmtpMailConfig SmtpConfig { get { return this; } }
-        [ConfigurableViaCommandLine("Gebruikersnaam van je DeCorrespondent account")]
+        [ConfigurableViaCommandLine("Gebruikersnaam van je DeCorrespondent account", false)]
         public string Username { get; set; }
         [XmlIgnore]
-        [ConfigurableViaCommandLine("Wachtwoord van je DeCorrespondent account (wordt encrypted opgeslagen)")]
+        [ConfigurableViaCommandLine("Wachtwoord van je DeCorrespondent account (wordt encrypted opgeslagen)", true)]
         public string Password { get { return Encryptor.DecryptAES(PasswordEncrypted); } set { PasswordEncrypted = Encryptor.EncryptAES(value); } }
         public string PasswordEncrypted { get; set; }
-        [ConfigurableViaCommandLine("Email adres van je kindle")]
+        [ConfigurableViaCommandLine("Email adres van je kindle", false)]
         public string KindleEmail { get; set; }
-        [ConfigurableViaCommandLine("Gebruikersnaam van je gmail account")]
+        [ConfigurableViaCommandLine("Gebruikersnaam van je gmail account", false)]
         public string MailUsername { get; set; }
         [XmlIgnore]
-        [ConfigurableViaCommandLine("Wachtwoord van je gmail account (wordt encrypted opgeslagen)")]
+        [ConfigurableViaCommandLine("Wachtwoord van je gmail account (wordt encrypted opgeslagen)", true)]
         public string MailPassword { get { return Encryptor.DecryptAES(MailPasswordEncrypted); } set { MailPasswordEncrypted = Encryptor.EncryptAES(value); } }
         public string MailPasswordEncrypted { get; set; }
-        [ConfigurableViaCommandLine("Email adres waar notificaties naartoe moeten worden gestuurd")]
+        [ConfigurableViaCommandLine("Email adres waar notificaties naartoe moeten worden gestuurd", false)]
         public string NotificationEmail { get; set; }
         public string LicenseKey { get; set; }
         public bool DisplayInfocards { get; set; }
@@ -84,11 +85,22 @@ namespace DeCorrespondent.Impl
 
         public class ConfigurableViaCommandLine : Attribute
         {
-            public ConfigurableViaCommandLine(string description)
+            private readonly bool isPassword;
+
+            public ConfigurableViaCommandLine(string description, bool isPassword)
             {
                 Description = description;
+                this.isPassword = isPassword;
             }
 
+            public string Display(string val)
+            {
+                if (string.IsNullOrEmpty(val))
+                    return "";
+                if(isPassword)
+                    return string.Join("", val.ToCharArray().Select(v => "*"));
+                return val;
+            }
             public string Description { get; private set; }
         }
     }

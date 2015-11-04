@@ -67,6 +67,18 @@ namespace DeCorrespondent.Test.Impl
             }
         }
 
+        [Test]
+        public void ReadBinary()
+        {
+            using (var reader = CreateReader())
+            {
+                var data = reader.ReadBinary("https://dynamic.decorrespondent.nl/ff-1445921139/media/660/562a36b4969f44427492345.jpg");
+
+                Assert.NotNull(data);
+                File.WriteAllBytes("d:\\img_.jpg", data);
+            }
+        }
+
         private static WebReader CreateReader(IWebReaderConfig config = null)
         {
             return WebReader.Login(new ConsoleLogger(true), config ?? FileConfig.Load(@"D:\Applications\DeCorrespondent\config.xml"));

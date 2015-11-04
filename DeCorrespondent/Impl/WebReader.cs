@@ -1,6 +1,8 @@
 ﻿using System;
+using System.IO;
 using System.Net;
 using HtmlAgilityPack;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace DeCorrespondent.Impl
 {
@@ -43,6 +45,19 @@ namespace DeCorrespondent.Impl
         public string ReadArticle(int articleId)
         {
             return Request("https://decorrespondent.nl/" + articleId);
+        }
+
+        public byte[] ReadBinary(string url)
+        {
+            log.Debug("Requesting url '" + url + "'");
+            var req = WebRequest.Create(url);
+            var response = req.GetResponse();
+            var stream = response.GetResponseStream();
+            using (var memoryStream = new MemoryStream())
+            {
+                stream.CopyTo(memoryStream);
+                return memoryStream.ToArray();
+            }
         }
 
         private string Request(string url, string method = null)

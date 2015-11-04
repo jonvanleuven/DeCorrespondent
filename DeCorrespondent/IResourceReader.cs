@@ -7,5 +7,6 @@ namespace DeCorrespondent
     {
         string ReadNewItems(int index);
         string ReadArticle(int articleId);
+        byte[] ReadBinary(string url);
     }
 }

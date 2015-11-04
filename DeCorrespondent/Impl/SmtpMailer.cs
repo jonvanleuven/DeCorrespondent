@@ -18,6 +18,12 @@ namespace DeCorrespondent.Impl
 
         public void Send(string to, string subject, string body, IEnumerable<FileStream> attachments)
         {
+            if (string.IsNullOrEmpty(to))
+            {
+                log.Info("Er zal geen mail verstuurd worden: email adres van de ontvanger is leeg");
+                return;
+            }
+
             var client = new SmtpClient
             {
                 Host = "smtp.gmail.com", //TODO move to config

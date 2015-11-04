@@ -97,7 +97,7 @@ namespace DeCorrespondent.Test.Impl
                 new ArticleRenderer(logger, config), 
                 new NewItemsReader(logger), 
                 new KindleEmailSender(config, mailer),
-                new EmailNotificationSender(mailer, config), 
+                new EmailNotificationSender(mailer, config, resources), 
                 lastId );
         }
 
@@ -198,6 +198,11 @@ namespace DeCorrespondent.Test.Impl
             {
                 ArticlesRequested.Add(articleId);
                 return delegateReader.ReadArticle(articleId);
+            }
+
+            public byte[] ReadBinary(string url)
+            {
+                return delegateReader.ReadBinary(url);
             }
 
             public void Dispose()

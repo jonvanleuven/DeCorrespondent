@@ -37,13 +37,14 @@ namespace DeCorrespondent.Impl
             (body.SelectNodes("//img[string-length(@data-src) > 0]")??EmptyNodes).Where(n => n != null).ToList().ForEach(n =>
             {
                 var isMainImage = n.GetAttributeValue("class", "").Contains("mainimage");
-                var url = n.Attributes["data-src"].Value;
-                url = url.Replace("{breakpoint-name}", !isMainImage ? "904" : "1024"); //320, 600 of 904 (of 660, 1024 of 1920 voor main image)
+                var urlPlain = n.Attributes["data-src"].Value;
+                var url = urlPlain.Replace("{breakpoint-name}", !isMainImage ? "904" : "1024"); //320, 600 of 904 (of 660, 1024 of 1920 voor main image)
                 n.SetAttributeValue("src", url);
                 n.SetAttributeValue("data-src", "");
                 if (isMainImage)
                 {
                     metadata.MainImgUrl = url;
+                    metadata.MainImgUrlSmall = urlPlain.Replace("{breakpoint-name}", "660"); ;
                     n.Remove();
                 }
             });
@@ -110,6 +111,7 @@ namespace DeCorrespondent.Impl
         public DateTime Published { get { return ParseDate(GetValue("article:published_time")); } }
         public DateTime Modified { get { return ParseDate(GetValue("article:modified_time")); } }
         public string MainImgUrl { get; internal set; }
+        public string MainImgUrlSmall { get; set; }
         public string AuthorImgUrl { get { return GetValue("article:author:image"); } }
         public string Section { get { return GetValue("article:section"); } }
         public string Description { get { return Unescape( GetValue("og:description") ); } }

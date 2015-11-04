@@ -30,6 +30,7 @@ namespace DeCorrespondent
         DateTime Modified { get; }
         string AuthorImgUrl { get; }
         string MainImgUrl { get; }
+        string MainImgUrlSmall { get; }
         string Section { get; }
         string Description { get; }
         IList<IExternalMedia> ExternalMedia { get; }
