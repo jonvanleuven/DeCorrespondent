@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Mail;
@@ -16,7 +17,7 @@ namespace DeCorrespondent.Impl
             this.config = config;
         }
 
-        public void Send(string to, string subject, string body, IEnumerable<FileStream> attachments)
+        public void Send(string to, string subject, string body, IEnumerable<Func<FileStream>> attachments)
         {
             if (string.IsNullOrEmpty(to))
             {
@@ -35,14 +36,14 @@ namespace DeCorrespondent.Impl
             };
             var mm = new MailMessage(config.MailUsername, to, subject ?? string.Empty, body ?? string.Empty);
             mm.IsBodyHtml = true;
-            if (attachments != null)
-            {
-                foreach (var a in attachments)
-                {
-                    mm.Attachments.Add(new Attachment(a, Path.GetFileName(a.Name)));
-                }    
-            }
+            var streams = (attachments != null)
+                ? attachments.Select(a => a()).ToList()
+                : null;
+            if( streams != null )
+                streams.Select(s => new Attachment(s, Path.GetFileName(s.Name))).ToList().ForEach(s => mm.Attachments.Add(s));
             client.Send(mm);
+            if (streams != null)
+                streams.ForEach(s => s.Close());
             log.Info(string.Format("Mail has been send to '{0}' with {1} attachements", to, attachments!=null ? attachments.Count() : 0));
         }
     }

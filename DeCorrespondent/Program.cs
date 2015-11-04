@@ -95,9 +95,7 @@ namespace DeCorrespondent
         {
             if (!pdfs.Any()) 
                 return;
-            var streams = pdfs.Select(f => new FileStream(f.FileName, FileMode.Open)).ToList();
-            kindle.Send(streams);
-            streams.ForEach(s => s.Close());
+            kindle.Send(pdfs.Select(f => (Func<FileStream>)(() => new FileStream(f.FileName, FileMode.Open))));
             summarySender.Send(pdfs.Select(f => f.Article));
         }
         private string WritePdf(IArticleEbook ebook, IArticle article)

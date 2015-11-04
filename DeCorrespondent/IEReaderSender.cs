@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace DeCorrespondent
 {
     public interface IEReaderSender
     {
-        void Send(IEnumerable<FileStream> ebooks);
+        void Send(IEnumerable<Func<FileStream>> ebooks);
     }
 }
