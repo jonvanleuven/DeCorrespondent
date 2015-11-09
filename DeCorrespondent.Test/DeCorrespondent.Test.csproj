@@ -91,6 +91,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Impl\ArticleReaderTest.cs" />
     <Compile Include="Impl\ArticleRendererTest.cs" />
     <Compile Include="Impl\EmailErrorLoggerTest.cs" />
     <Compile Include="Impl\EmailNotificationSenderTest.cs" />

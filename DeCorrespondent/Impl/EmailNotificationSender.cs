@@ -20,7 +20,14 @@ namespace DeCorrespondent.Impl
         public void Send(IEnumerable<IArticle> articlesEnumerable)
         {
             var articles = articlesEnumerable.ToList();
-            var list = string.Join("\n", articles.Select(a => string.Format("<p><b>{2}</b> {0} {1}<br/>{5}<br/><i>{3}</i></p>{4}<hr/>", a.Metadata.AuthorFirstname, a.Metadata.AuthorLastname, a.Metadata.Title, a.Metadata.Description, ExternalMediaList(a.Metadata.ExternalMedia), ImageHtml(a))));
+            var list = string.Join("\n", articles.Select(a => string.Format(@"<p><b><a href=""{6}"" style=""color:black;"">{2}</a></b> {0} {1}<br/>{5}<br/><i>{3}</i></p>{4}<hr/>", 
+                a.Metadata.AuthorFirstname, 
+                a.Metadata.AuthorLastname, 
+                a.Metadata.Title, 
+                a.Metadata.Description, 
+                ExternalMediaList(a), 
+                ImageHtml(a), 
+                a.Metadata.Url)));
             var body = new StringBuilder();
             body.Append(string.Format("<h3>Artikelen:</h3>{0}", list));
             var subject = string.Format("{0} artikel{1} verstuurd naar je Kindle", articles.Count(), articles.Count() > 1 ? "en" : "");
@@ -38,28 +45,31 @@ namespace DeCorrespondent.Impl
             //return string.Format(@"<img src=""data:image/jpg;base64,{0}"">", Convert.ToBase64String(image));
         }
 
-        private static string ExternalMediaList(IList<IExternalMedia> externalMedia)
+        private static string ExternalMediaList(IArticle article)
         {
-            if (!externalMedia.Any())
+            if (!article.Metadata.ExternalMedia.Any())
                 return string.Empty;
             return string.Format("<ul>{0}</ul>",
-                string.Join("", externalMedia.Select(l => string.Format(@"<li><a href=""{0}"">{1}</a></li>", l.Url, AnchorText(l))))
+                string.Join("", article.Metadata.ExternalMedia.Select(l => string.Format(@"<li>{0}</li>", ExternalMediaHtml(l, article))))
                 );
         }
 
-        private static string AnchorText(IExternalMedia l)
+        private static string ExternalMediaHtml(IExternalMedia l, IArticle article)
         {
+            var url = l.Url.StartsWith("http://player.vimeo.com")
+                ? article.Metadata.Url //rechtstreeks naar Vimeo linken werkt niet: link naar artikel
+                : l.Url;
+            var description = l.Description;
             if (string.IsNullOrEmpty(l.Description))
             {
                 if (l.Url.StartsWith("http://www.youtube.com"))
-                    return "video";
+                    description = "video";
                 if (l.Url.StartsWith("http://player.vimeo.com"))
-                    return "video";
+                    description = "video";
                 if (l.Url.StartsWith("https://w.soundcloud.com"))
-                    return "audio";
-                return "audio/video";
-            } 
-            return l.Description;
+                    description = "audio";
+            }
+            return string.Format(@"<a href=""{0}"">{1}</a>", url, description);
         }
     }
 

@@ -22,6 +22,8 @@ namespace DeCorrespondent
 
     public interface IArticleMetadata
     {
+        int Id { get; }
+        string Url { get; }
         string Title { get; }
         IList<int> ReadingTime { get; }
         string AuthorFirstname { get; }

@@ -104,6 +104,7 @@ namespace DeCorrespondent.Impl
             ExternalMedia = new List<IExternalMedia>();
         }
 
+        public int Id { get { return int.Parse(Url.Split('/').Last()); } }
         public string Title { get { return GetValue("og:title"); } }
         public IList<int> ReadingTime { get; internal set; }
         public string AuthorFirstname { get { return GetValue("article:author:first_name"); } }
@@ -116,6 +117,15 @@ namespace DeCorrespondent.Impl
         public string Section { get { return GetValue("article:section"); } }
         public string Description { get { return Unescape( GetValue("og:description") ); } }
         public IList<IExternalMedia> ExternalMedia { get; private set; }
+
+        public string Url
+        {
+            get
+            {
+                var url = GetValue("og:url");
+                return string.IsNullOrEmpty(url) ? url : string.Join("/", url.Split('/').Take(4));
+            }
+        }
 
         private static string Unescape(string str)
         {
