@@ -12,7 +12,7 @@ namespace DeCorrespondent.Test.Impl
         {
             var mailer = CreateMailer();
 
-            mailer.Send(CreateConfig().NotificationEmail, "testcase", "Dit is een testmail verstuurd vanuit het DeCorrepondent project vanuit een nunit test", null);
+            mailer.Send(CreateConfig().NotificationEmail.Split(','), "testcase", "Dit is een testmail verstuurd vanuit het DeCorrepondent project vanuit een nunit test", null);
         }
 
         [Test]
@@ -21,7 +21,7 @@ namespace DeCorrespondent.Test.Impl
             var logger = new ProgramTest.LogWrapper(new ConsoleLogger(true));
             var mailer = CreateMailer(logger);
 
-            mailer.Send("", "irrevant", "", null);
+            mailer.Send("".Split(','), "irrevant", "", null);
 
             Assert.AreEqual(1, logger.Infos.Count);
             Assert.AreEqual("Er zal geen mail verstuurd worden: email adres van de ontvanger is leeg", logger.Infos.First());

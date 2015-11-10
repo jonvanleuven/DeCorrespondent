@@ -38,8 +38,8 @@ namespace DeCorrespondent
             var renderer = new ArticleRenderer(logger, config.ArticleRendererConfig);
             var lastIdDs = new FileLastDatasource();
             var mailer = new SmtpMailer(logger, config.SmtpConfig);
-            var kindle = new KindleEmailSender(config.KindleEmailSenderConfig, mailer);
-            var summarySender = new EmailNotificationSender(mailer, config.EmailNotificationSenderConfig, resources);
+            var kindle = new KindleEmailSender(logger, config.KindleEmailSenderConfig, mailer);
+            var summarySender = new EmailNotificationSender(logger, mailer, config.EmailNotificationSenderConfig, resources);
             return new Program(logger, resources, reader, renderer, newItemsParser, lastIdDs, kindle, summarySender, config.MaxAantalArticles);
         }
 

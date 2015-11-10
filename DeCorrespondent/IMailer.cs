@@ -6,6 +6,6 @@ namespace DeCorrespondent
 {
     public interface IMailer
     {
-        void Send(string to, string subject, string body, IEnumerable<Func<FileStream>> attachments);
+        void Send(IEnumerable<string> to, string subject, string body, IEnumerable<Func<FileStream>> attachments);
     }
 }

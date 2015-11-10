@@ -27,7 +27,7 @@ namespace DeCorrespondent.Impl
             try
             {
                 var body = string.Format("<pre>Fout: {0}\n\n{1}</pre>", error.Message, error.StackTrace);
-                new SmtpMailer(logger, config).Send(emailAddress, "DeCorrespondent.exe. Fout opgetreden", body, null);
+                new SmtpMailer(logger, config).Send(emailAddress.Split(','), "DeCorrespondent.exe. Fout opgetreden", body, null);
             }
             catch (Exception e)
             {

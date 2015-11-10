@@ -19,7 +19,7 @@ namespace DeCorrespondent.Test.Impl
 
         private static INotificationSender CreateSender()
         {
-            return new EmailNotificationSender(CreateMailer(), CreateConfig(), new NewItemsReaderTest.FileResources());
+            return new EmailNotificationSender(new ConsoleLogger(true), CreateMailer(), CreateConfig(), new NewItemsReaderTest.FileResources());
         }
 
         private static IMailer CreateMailer()

@@ -10,15 +10,22 @@ namespace DeCorrespondent.Impl
         private readonly IMailer mailer;
         private readonly IEmailNotificationSenderConfig config;
         private readonly IResourceReader resources;
+        private readonly ILogger log;
 
-        public EmailNotificationSender(IMailer mailer, IEmailNotificationSenderConfig config, IResourceReader resources)
+        public EmailNotificationSender(ILogger log, IMailer mailer, IEmailNotificationSenderConfig config, IResourceReader resources)
         {
+            this.log = log;
             this.mailer = mailer;
             this.config = config;
             this.resources = resources;
         }
         public void Send(IEnumerable<IArticle> articlesEnumerable)
         {
+            if (string.IsNullOrEmpty(config.NotificationEmail))
+            {
+                log.Info("Er zal geen notificatie email worden verstuurd, email adres van de ontvanger is leeg");
+                return;
+            }
             var articles = articlesEnumerable.ToList();
             var list = string.Join("\n", articles.Select(a => string.Format(@"<p><b><a href=""{6}"" style=""color:black;"">{2}</a></b> {0} {1}<br/>{5}<br/><i>{3}</i></p>{4}<hr/>", 
                 a.Metadata.AuthorFirstname, 
@@ -31,7 +38,7 @@ namespace DeCorrespondent.Impl
             var body = new StringBuilder();
             body.Append(string.Format("<h3>Artikelen:</h3>{0}", list));
             var subject = string.Format("{0} artikel{1} verstuurd naar je Kindle", articles.Count(), articles.Count() > 1 ? "en" : "");
-            mailer.Send(config.NotificationEmail, subject, body.ToString(), null);
+            mailer.Send(config.NotificationEmail.Split(','), subject, body.ToString(), null);
         }
 
         private string ImageHtml(IArticle article)

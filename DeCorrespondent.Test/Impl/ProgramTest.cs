@@ -95,9 +95,9 @@ namespace DeCorrespondent.Test.Impl
                 resources, 
                 new ArticleReader(), 
                 new ArticleRenderer(logger, config), 
-                new NewItemsReader(logger), 
-                new KindleEmailSender(config, mailer),
-                new EmailNotificationSender(mailer, config, resources), 
+                new NewItemsReader(logger),
+                new KindleEmailSender(logger, config, mailer),
+                new EmailNotificationSender(logger, mailer, config, resources), 
                 lastId );
         }
 

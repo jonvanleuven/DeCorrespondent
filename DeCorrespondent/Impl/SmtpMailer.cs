@@ -17,11 +17,11 @@ namespace DeCorrespondent.Impl
             this.config = config;
         }
 
-        public void Send(string to, string subject, string body, IEnumerable<Func<FileStream>> attachments)
+        public void Send(IEnumerable<string> to, string subject, string body, IEnumerable<Func<FileStream>> attachments)
         {
-            if (string.IsNullOrEmpty(to))
+            if (to == null || !to.Any())
             {
-                log.Info("Er zal geen mail verstuurd worden: email adres van de ontvanger is leeg");
+                log.Info("Er zal geen mail verstuurd worden: email adres van de ontvanger(s) is leeg");
                 return;
             }
 
@@ -34,17 +34,21 @@ namespace DeCorrespondent.Impl
                 Credentials = new System.Net.NetworkCredential(config.MailUsername, config.MailPassword),
                 Timeout = 120000,
             };
-            var mm = new MailMessage(config.MailUsername, to, subject ?? string.Empty, body ?? string.Empty);
-            mm.IsBodyHtml = true;
+            var message = new MailMessage();
+            message.From = new MailAddress(config.MailUsername);
+            to.ToList().ForEach(t => message.To.Add(new MailAddress(t)));
+            message.Subject = subject ?? string.Empty;
+            message.Body = body ?? string.Empty;
+            message.IsBodyHtml = true;
             var streams = (attachments != null)
                 ? attachments.Select(a => a()).ToList()
                 : null;
             if( streams != null )
-                streams.Select(s => new Attachment(s, Path.GetFileName(s.Name))).ToList().ForEach(s => mm.Attachments.Add(s));
-            client.Send(mm);
+                streams.Select(s => new Attachment(s, Path.GetFileName(s.Name))).ToList().ForEach(s => message.Attachments.Add(s));
+            client.Send(message);
             if (streams != null)
                 streams.ForEach(s => s.Close());
-            log.Info(string.Format("Mail has been send to '{0}' with {1} attachements", to, attachments!=null ? attachments.Count() : 0));
+            log.Info(string.Format("Mail has been send to '{0}' with {1} attachements", string.Join(", ", to), attachments!=null ? attachments.Count() : 0));
         }
     }
 
