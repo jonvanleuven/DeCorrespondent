@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using DeCorrespondent.Impl;
+using DeCorrespondent.Test.Util;
 using NUnit.Framework;
 
 namespace DeCorrespondent.Test.Impl
@@ -18,13 +19,13 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void SendNoMailOnEmptyTo()
         {
-            var logger = new ProgramTest.LogWrapper(new ConsoleLogger(true));
+            var logger = new LogWrapper(new ConsoleLogger(true));
             var mailer = CreateMailer(logger);
 
             mailer.Send("".Split(','), "irrevant", "", null);
 
             Assert.AreEqual(1, logger.Infos.Count);
-            Assert.AreEqual("Er zal geen mail verstuurd worden: email adres van de ontvanger is leeg", logger.Infos.First());
+            Assert.AreEqual("Er zal geen mail verstuurd worden: email adres van de ontvanger(s) is leeg", logger.Infos.First());
         }
 
         private static IMailer CreateMailer(ILogger logger = null)

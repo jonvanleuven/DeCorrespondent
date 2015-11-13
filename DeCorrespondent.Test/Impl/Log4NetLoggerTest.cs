@@ -1,7 +1,4 @@
-﻿using System;
-using System.IO;
-using DeCorrespondent.Impl;
-using log4net.Config;
+﻿using DeCorrespondent.Impl;
 using NUnit.Framework;
 
 namespace DeCorrespondent.Test.Impl

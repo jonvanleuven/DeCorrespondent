@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using DeCorrespondent.Impl;
+using DeCorrespondent.Test.Util;
 using NUnit.Framework;
 
 namespace DeCorrespondent.Test.Impl
@@ -25,7 +26,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void ReadItemsSubset()
         {
-            var program = CreateProgram(new NewItemsReaderTest.FileResources(), new DateTime(2015, 9, 14, 12, 0, 0));
+            var program = CreateProgram(new FileResources(), new DateTime(2015, 9, 14, 12, 0, 0));
 
             program.Program.ReadDeCorrespondentAndWritePdfs();
 
@@ -73,7 +74,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void AssertDeferredExecution()
         {
-            var program = CreateProgram(new NewItemsReaderTest.FileResources(), new DateTime(2015, 9, 14, 12, 0, 0));
+            var program = CreateProgram(new FileResources(), new DateTime(2015, 9, 14, 12, 0, 0));
 
             program.Program.ReadDeCorrespondentAndWritePdfs();
 
@@ -99,37 +100,6 @@ namespace DeCorrespondent.Test.Impl
                 new KindleEmailSender(logger, config, mailer),
                 new EmailNotificationSender(logger, mailer, config, resources), 
                 lastId );
-        }
-
-        public class LogWrapper : ILogger
-        {
-            private readonly ILogger logDelegate;
-            internal LogWrapper(ILogger logDelegate)
-            {
-                this.logDelegate = logDelegate;
-                Infos = new List<string>();
-                Debugs = new List<string>();
-            }
-
-            public List<string> Infos { get; private set; }
-            public List<string> Debugs { get; private set; }
-
-            public void Info(string message, params object[] args)
-            {
-                logDelegate.Info(message, args);
-                Infos.Add(string.Format(message, args));
-            }
-
-            public void Debug(string message, params object[] args)
-            {
-                logDelegate.Debug(message, args);
-                Debugs.Add(string.Format(message, args));
-            }
-
-            public void Error(Exception e)
-            {
-                throw e;
-            }
         }
 
         class ProgramWrapper

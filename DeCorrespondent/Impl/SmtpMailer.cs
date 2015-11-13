@@ -19,7 +19,8 @@ namespace DeCorrespondent.Impl
 
         public void Send(IEnumerable<string> to, string subject, string body, IEnumerable<Func<FileStream>> attachments)
         {
-            if (to == null || !to.Any())
+            var toList = to != null ? to.Where(i => !string.IsNullOrEmpty(i)).ToList() : null;
+            if (toList == null || !toList.Any())
             {
                 log.Info("Er zal geen mail verstuurd worden: email adres van de ontvanger(s) is leeg");
                 return;
@@ -36,7 +37,7 @@ namespace DeCorrespondent.Impl
             };
             var message = new MailMessage();
             message.From = new MailAddress(config.MailUsername);
-            to.ToList().ForEach(t => message.To.Add(new MailAddress(t)));
+            toList.ForEach(i => message.To.Add(new MailAddress(i)));
             message.Subject = subject ?? string.Empty;
             message.Body = body ?? string.Empty;
             message.IsBodyHtml = true;
@@ -48,7 +49,7 @@ namespace DeCorrespondent.Impl
             client.Send(message);
             if (streams != null)
                 streams.ForEach(s => s.Close());
-            log.Info(string.Format("Mail has been send to '{0}' with {1} attachements", string.Join(", ", to), attachments!=null ? attachments.Count() : 0));
+            log.Info(string.Format("Mail has been send to '{0}' with {1} attachements", string.Join(", ", toList), attachments!=null ? attachments.Count() : 0));
         }
     }
 

@@ -102,6 +102,8 @@
     <Compile Include="Impl\ProgramTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Impl\WebReaderTest.cs" />
+    <Compile Include="Util\FileResources.cs" />
+    <Compile Include="Util\LogWrapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="log4netconfig.xml">

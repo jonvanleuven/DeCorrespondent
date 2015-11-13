@@ -28,12 +28,21 @@ V config genereren als niet bestaat
 V encrypt password/set config via command line
 V password encrypted in config file
 V summary mailer met links naar filmpjes/audio
-- meerdere email ontvangers
+V meerdere email ontvangers
 V 1 email per 5 attachments
 V testcase email(s) versturen?
 V log4net gebruiken
-- Command line opties tonen: in blok en huidige waarde (let op wachtwoorden)
+V Command line opties tonen: in blok en huidige waarde (let op wachtwoorden)
 - Smtp settings in config file (nu alleen gmail ondersteuning, smtp server van mailfence gebruiken)
-- 1 log file per week/maand
+V 1 log file
 V de externe media link: beschrijving toevoegen html element: ifame.closest('publication-embed-container').find(p.publication-body-description)
-- de externe media link: type content
+- de externe media link: type content (nodig?)
+V geen emailadres(sen) gevuld: niet mailen, wel loggen
+V plaatje in notificatie mail (klein formaat/base64 encoded)
+V notificationsender/kindlesender: log als email adres is leeg
+X notificatiesender: plaatje meesturen met juiste type (afleiden van extensie?)
+V lege link in externe media: "Vanaf vandaag: Elke maand samen een film kijken op De Correspondent"
+- Deploy op raspberry pi
+V Fix vimeo links
+V TestUtil namespace (LogWrapper, FileResourceReader etc.)
+V RetryWebReader (retry na timeout)

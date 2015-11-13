@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using DeCorrespondent.Impl;
+using DeCorrespondent.Test.Util;
 using NUnit.Framework;
 
 namespace DeCorrespondent.Test.Impl
@@ -12,14 +13,14 @@ namespace DeCorrespondent.Test.Impl
         {
             var sender = CreateSender();
             var reader = new ArticleReader();
-            var articles = new [] { reader.Read(new NewItemsReaderTest.FileResources().ReadArticle(3530)) };
+            var articles = new [] { reader.Read(new FileResources().ReadArticle(3530)) };
 
             sender.Send(articles.ToList());
         }
 
         private static INotificationSender CreateSender()
         {
-            return new EmailNotificationSender(new ConsoleLogger(true), CreateMailer(), CreateConfig(), new NewItemsReaderTest.FileResources());
+            return new EmailNotificationSender(new ConsoleLogger(true), CreateMailer(), CreateConfig(), new FileResources());
         }
 
         private static IMailer CreateMailer()

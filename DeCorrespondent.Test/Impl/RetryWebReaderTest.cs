@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Net;
 using DeCorrespondent.Impl;
+using DeCorrespondent.Test.Util;
 using NUnit.Framework;
 
 namespace DeCorrespondent.Test.Impl
@@ -11,7 +12,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void Retry()
         {
-            var logger = new ProgramTest.LogWrapper(new ConsoleLogger(true));
+            var logger = new LogWrapper(new ConsoleLogger(true));
             var reader = RetryWebReader.Wrap(new TimeoutReader(), logger, 2);
 
             reader.ReadNewItems(0);
