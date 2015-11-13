@@ -96,6 +96,7 @@
     <Compile Include="Impl\EmailErrorLoggerTest.cs" />
     <Compile Include="Impl\EmailNotificationSenderTest.cs" />
     <Compile Include="Impl\Log4NetLoggerTest.cs" />
+    <Compile Include="Impl\RetryWebReaderTest.cs" />
     <Compile Include="Impl\SmtpMailerTest.cs" />
     <Compile Include="Impl\NewItemsReaderTest.cs" />
     <Compile Include="Impl\ProgramTest.cs" />

@@ -2,7 +2,6 @@
 using System.IO;
 using System.Net;
 using HtmlAgilityPack;
-using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace DeCorrespondent.Impl
 {

@@ -17,7 +17,7 @@ namespace DeCorrespondent
             try
             {
                 logger = new CompositeLogger(logger, new EmailErrorLogger(config.NotificationEmail, config.SmtpConfig));
-                using (var resources = WebReader.Login(logger, config.CorrespondentCredentails))
+                using (var resources = RetryWebReader.Wrap( WebReader.Login(logger, config.CorrespondentCredentails), logger))
                 {
                     var p = Program.Instance(logger, resources, config);
                     var pdfs = p.ReadDeCorrespondentAndWritePdfs();
