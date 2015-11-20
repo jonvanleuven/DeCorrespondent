@@ -16,8 +16,8 @@ namespace DeCorrespondent
             ILogger logger = new Log4NetLogger();
             try
             {
-                logger = new CompositeLogger(logger, new EmailErrorLogger(config.NotificationEmail, config.SmtpConfig));
-                using (var resources = RetryWebReader.Wrap( WebReader.Login(logger, config.CorrespondentCredentails), logger))
+                logger = new CompositeLogger(logger, new EmailErrorLogger(config.NotificationEmail, config.SmtpMailConfig));
+                using (var resources = RetryWebReader.Wrap( WebReader.Login(logger, config.WebReaderConfig), logger))
                 {
                     var p = Program.Instance(logger, resources, config);
                     var pdfs = p.ReadDeCorrespondentAndWritePdfs();
@@ -37,7 +37,7 @@ namespace DeCorrespondent
             var reader = new ArticleReader();
             var renderer = new ArticleRenderer(logger, config.ArticleRendererConfig);
             var lastIdDs = new FileLastDatasource();
-            var mailer = new SmtpMailer(logger, config.SmtpConfig);
+            var mailer = new SmtpMailer(logger, config.SmtpMailConfig);
             var kindle = new KindleEmailSender(logger, config.KindleEmailSenderConfig, mailer);
             var summarySender = new EmailNotificationSender(logger, mailer, config.EmailNotificationSenderConfig, resources);
             return new Program(logger, resources, reader, renderer, newItemsParser, lastIdDs, kindle, summarySender, config.MaxAantalArticles);
@@ -156,10 +156,18 @@ namespace DeCorrespondent
             {
                 args.Select(a => a.Split('='))
                     .Where(s => s.Length == 2)
-                    .Select(s => new { Key = s[0], Value = s[1], Property = typeof(FileConfig).GetProperties().FirstOrDefault(p => p.Name == s[0]) })
+                    .Select(s => new { Key = s[0], Value = s[1], Property = typeof(FileConfig).GetProperties().FirstOrDefault(p => p.Name == s[0])})
                     .Where(x => x.Property != null)
                     .ToList()
-                    .ForEach(x => x.Property.GetSetMethod().Invoke(config, new object[] {x.Value}));
+                    .Select(x => new
+                    {
+                        x.Key,
+                        x.Value,
+                        x.Property,
+                        IsEncrypted = x.Property.GetCustomAttributes(typeof(FileConfig.ConfigurableViaCommandLine), true).OfType<FileConfig.ConfigurableViaCommandLine>().First().IsPassword,
+                    })
+                    .ToList()
+                    .ForEach(x => x.Property.GetSetMethod().Invoke(config, new object[] {  x.IsEncrypted ? Encryptor.EncryptAES(x.Value) : x.Value }));
                 config.Save(null);
                 Console.WriteLine("Configuration saved.");
             }

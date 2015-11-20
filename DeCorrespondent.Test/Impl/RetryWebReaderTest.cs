@@ -13,42 +13,39 @@ namespace DeCorrespondent.Test.Impl
         public void Retry()
         {
             var logger = new LogWrapper(new ConsoleLogger(true));
-            var reader = RetryWebReader.Wrap(new TimeoutReader(), logger, 2);
+            var reader = RetryWebReader.Wrap(new TimeoutReader(), logger);
 
-            reader.ReadNewItems(0);
+            try
+            {
+                reader.ReadNewItems(0);
+            }
+            catch (WebException)
+            {
+            }
 
             Assert.AreEqual(1, logger.Infos.Count());
-            Assert.AreEqual("Timeout detected, retry in 2 seconds....", logger.Infos.First());
+            Assert.AreEqual("Timeout detected, retry....", logger.Infos.First());
         }
 
         internal class TimeoutReader : IResourceReader
         {
-            private bool timeoutDone = false;
-            private readonly ConsoleLogger logger = new ConsoleLogger(true);
-
             public string ReadNewItems(int index)
             {
-                return TimeoutOnce<string>();
+                return Timeout<string>();
             }
 
             public string ReadArticle(int articleId)
             {
-                return TimeoutOnce<string>();
+                return Timeout<string>();
             }
 
             public byte[] ReadBinary(string url)
             {
-                return TimeoutOnce<byte[]>();
+                return Timeout<byte[]>();
             }
 
-            private T TimeoutOnce<T>()
+            private T Timeout<T>()
             {
-                if (timeoutDone)
-                {
-                    logger.Debug("Read without timeout");
-                    return default(T);
-                }
-                timeoutDone = true;
                 throw new WebException(@"The operation has timed out.");
             }
 

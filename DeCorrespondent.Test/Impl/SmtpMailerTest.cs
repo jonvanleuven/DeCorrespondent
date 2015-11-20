@@ -30,7 +30,7 @@ namespace DeCorrespondent.Test.Impl
 
         private static IMailer CreateMailer(ILogger logger = null)
         {
-            return new SmtpMailer(logger??new ConsoleLogger(true), CreateConfig());
+            return new SmtpMailer(logger??new ConsoleLogger(true), CreateConfig().SmtpMailConfig);
         }
 
         private static FileConfig CreateConfig()

@@ -11,7 +11,7 @@ namespace DeCorrespondent.Test.Impl
         public void LogException()
         {
             var config = FileConfig.Load(@"D:\Applications\DeCorrespondent\config.xml");
-            var logger = new EmailErrorLogger(config.NotificationEmail, config.SmtpConfig);
+            var logger = new EmailErrorLogger(config.NotificationEmail, config.SmtpMailConfig);
 
             logger.Error(new Exception("dit is een test"));
         }

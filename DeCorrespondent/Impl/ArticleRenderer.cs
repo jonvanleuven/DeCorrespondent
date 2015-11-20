@@ -88,8 +88,8 @@ namespace DeCorrespondent.Impl
         private PdfConverter CreatePdfConverter(IArticle article)
         {
             var pdfConverter = new PdfConverter();
-            if (!string.IsNullOrEmpty(config.LicenseKey))
-                pdfConverter.LicenseKey = config.LicenseKey;
+            if (!string.IsNullOrEmpty(config.EvoPdfLicenseKey))
+                pdfConverter.LicenseKey = config.EvoPdfLicenseKey;
             pdfConverter.ExtensionsEnabled = false;
             pdfConverter.JavaScriptEnabled = false;
             pdfConverter.PdfDocumentInfo.Title = string.Format("{0} {1}", article.Metadata.ReadingTime.Select(i => (int?)i).LastOrDefault(), article.Metadata.Title).Trim();
@@ -130,7 +130,7 @@ namespace DeCorrespondent.Impl
 
     public interface IArticleRendererConfig
     {
-        string LicenseKey { get; }
+        string EvoPdfLicenseKey { get; }
         bool DisplayInfocards { get; }
         bool DisplayPublicationLinks { get; }
         bool DisplayBlockquotes { get; }

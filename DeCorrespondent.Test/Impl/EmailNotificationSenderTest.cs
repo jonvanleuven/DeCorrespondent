@@ -20,12 +20,12 @@ namespace DeCorrespondent.Test.Impl
 
         private static INotificationSender CreateSender()
         {
-            return new EmailNotificationSender(new ConsoleLogger(true), CreateMailer(), CreateConfig(), new FileResources());
+            return new EmailNotificationSender(new ConsoleLogger(true), CreateMailer(), CreateConfig().EmailNotificationSenderConfig, new FileResources());
         }
 
         private static IMailer CreateMailer()
         {
-            return new SmtpMailer(new ConsoleLogger(true), CreateConfig());
+            return new SmtpMailer(new ConsoleLogger(true), CreateConfig().SmtpMailConfig);
         }
 
         private static FileConfig CreateConfig()

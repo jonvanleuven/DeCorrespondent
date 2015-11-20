@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Net;
-using System.Threading;
 
 namespace DeCorrespondent.Impl
 {
@@ -8,18 +7,16 @@ namespace DeCorrespondent.Impl
     {
         private readonly ILogger log;
         private readonly IResourceReader delegateReader;
-        private readonly int retryDelayInSeconds;
 
-        public static IResourceReader Wrap(IResourceReader delegateReader, ILogger log, int? retryDelayInSeconds = null)
+        public static IResourceReader Wrap(IResourceReader delegateReader, ILogger log)
         {
-            return new RetryWebReader(delegateReader, log, retryDelayInSeconds??60);
+            return new RetryWebReader(delegateReader, log);
         }
 
-        private RetryWebReader(IResourceReader delegateReader, ILogger log, int retryDelayInSeconds)
+        private RetryWebReader(IResourceReader delegateReader, ILogger log)
         {
             this.delegateReader = delegateReader;
             this.log = log;
-            this.retryDelayInSeconds = retryDelayInSeconds;
         }
 
         public string ReadNewItems(int index)
@@ -47,8 +44,7 @@ namespace DeCorrespondent.Impl
             {
                 if (e.Message != @"The operation has timed out.") 
                     throw;
-                log.Info("Timeout detected, retry in {0} seconds....", retryDelayInSeconds);
-                Thread.Sleep(1000 * retryDelayInSeconds);
+                log.Info("Timeout detected, retry....");
                 return func(delegateReader);
             }
         }

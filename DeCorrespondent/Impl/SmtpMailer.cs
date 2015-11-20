@@ -28,15 +28,15 @@ namespace DeCorrespondent.Impl
 
             var client = new SmtpClient
             {
-                Host = "smtp.gmail.com", //TODO move to config
-                Port = 587,
-                EnableSsl = true,
+                Host = config.Server,
+                Port = config.Port,
+                EnableSsl = config.EnableSsl,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
-                Credentials = new System.Net.NetworkCredential(config.MailUsername, config.MailPassword),
+                Credentials = new System.Net.NetworkCredential(config.Username, config.Password),
                 Timeout = 120000,
             };
             var message = new MailMessage();
-            message.From = new MailAddress(config.MailUsername);
+            message.From = new MailAddress(config.Username);
             toList.ForEach(i => message.To.Add(new MailAddress(i)));
             message.Subject = subject ?? string.Empty;
             message.Body = body ?? string.Empty;
@@ -55,7 +55,10 @@ namespace DeCorrespondent.Impl
 
     public interface ISmtpMailConfig
     {
-        string MailUsername { get; set; }
-        string MailPassword { get; set; }
+        string Username { get; }
+        string Password { get; }
+        string Server { get; }
+        int Port { get; }
+        bool EnableSsl { get; }
     }
 }
