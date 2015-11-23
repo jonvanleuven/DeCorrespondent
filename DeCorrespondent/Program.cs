@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,7 +12,8 @@ namespace DeCorrespondent
         public static void Main(string[] args)
         {
             var config = FileConfig.Load(null);
-            if (HandleArguments(args, config))
+            var arguments = HandleArguments(args, config);
+            if (!arguments.RunProgram)
                 return;
             ILogger logger = new Log4NetLogger();
             try
@@ -19,7 +21,7 @@ namespace DeCorrespondent
                 logger = new CompositeLogger(logger, new EmailErrorLogger(config.NotificationEmail, config.SmtpMailConfig));
                 using (var resources = RetryWebReader.Wrap( WebReader.Login(logger, config.WebReaderConfig), logger))
                 {
-                    var p = Program.Instance(logger, resources, config);
+                    var p = Program.Instance(arguments, logger, resources, config);
                     var pdfs = p.ReadDeCorrespondentAndWritePdfs();
                     p.SendToKindleAndSendNotificationMail(pdfs);
                     pdfs.Select(pdf => pdf.FileName).ToList().ForEach(p.DeleteFile);
@@ -31,7 +33,7 @@ namespace DeCorrespondent
             }
         }
 
-        private static Program Instance(ILogger logger, IResourceReader resources, FileConfig config)
+        private static Program Instance(ProgramArguments args, ILogger logger, IResourceReader resources, FileConfig config)
         {
             var newItemsParser = new NewItemsReader(logger);
             var reader = new ArticleReader();
@@ -40,7 +42,7 @@ namespace DeCorrespondent
             var mailer = new SmtpMailer(logger, config.SmtpMailConfig);
             var kindle = new KindleEmailSender(logger, config.KindleEmailSenderConfig, mailer);
             var summarySender = new EmailNotificationSender(logger, mailer, config.EmailNotificationSenderConfig, resources);
-            return new Program(logger, resources, reader, renderer, newItemsParser, lastIdDs, kindle, summarySender, config.MaxAantalArticles);
+            return new Program(args, logger, resources, reader, renderer, newItemsParser, lastIdDs, kindle, summarySender, config.MaxAantalArticles);
         }
 
         private readonly IItemsReader newItemsParser;
@@ -52,9 +54,11 @@ namespace DeCorrespondent
         private readonly ILastDatasource lastDs;
         private readonly IEReaderSender kindle;
         private readonly INotificationSender summarySender;
+        private readonly ProgramArguments args;
 
-        public Program(ILogger logger, IResourceReader resources, IArticleReader reader, IArticleRenderer renderer, IItemsReader newItemsParser, ILastDatasource lastDs, IEReaderSender kindle, INotificationSender summarySender, int maxAantalArticles)
+        public Program(ProgramArguments args, ILogger logger, IResourceReader resources, IArticleReader reader, IArticleRenderer renderer, IItemsReader newItemsParser, ILastDatasource lastDs, IEReaderSender kindle, INotificationSender summarySender, int maxAantalArticles)
         {
+            this.args = args;
             this.logger = logger;
             this.resources = resources;
             this.reader = reader;
@@ -69,20 +73,28 @@ namespace DeCorrespondent
         public IList<ArticlePdf> ReadDeCorrespondentAndWritePdfs()
         {
             var last = lastDs.ReadLast() ?? DateTime.Today.AddDays(-1);
-            var regels = Enumerable.Range(0, int.MaxValue)
-                .SelectMany(NewItems)
-                .Select(reference => new { Article = ReadArticle(reference.Id), Reference = reference })
-                .TakeWhile(x => x.Article.Metadata.Published > last)
-                .Take(maxAantalArticles);
+            var regels = args.ArticleId.HasValue
+                ? new[] { new ArticleToRender { Article = ReadArticle(args.ArticleId.Value), Id = args.ArticleId.Value } }.AsEnumerable()
+                : Enumerable.Range(0, int.MaxValue)
+                    .SelectMany(NewItems)
+                    .Select(reference => new ArticleToRender { Article = ReadArticle(reference.Id), Id = reference.Id })
+                    .TakeWhile(x => x.Article.Metadata.Published > last)
+                    .Take(maxAantalArticles);
             var result = new List<ArticlePdf>();
             foreach (var r in regels)
             {
-                var pdf = RenderArticle(r.Article, r.Reference.Id);
+                var pdf = RenderArticle(r.Article, r.Id);
                 var file = WritePdf(pdf, r.Article);
                 lastDs.UpdateLast(DateTime.Now);
                 result.Add(new ArticlePdf(file, r.Article));
             }
             return result;
+        }
+
+        class ArticleToRender
+        {
+            public IArticle Article { get; set; }
+            public int Id { get; set; }
         }
 
         public void DeleteFile(string filename)
@@ -134,10 +146,10 @@ namespace DeCorrespondent
             public IArticle Article { get; private set; }
         }
 
-        private static bool HandleArguments(string[] args, FileConfig config)
+        private static ProgramArguments HandleArguments(string[] args, FileConfig config)
         {
             if (args.Length == 0 && !string.IsNullOrEmpty(config.WebReaderConfig.Username))
-                return false;
+                return new ProgramArguments(true);
             if (args.Length > 0 && args[0] == "/config")
             {
                 typeof (FileConfig).GetProperties()
@@ -159,12 +171,30 @@ namespace DeCorrespondent
                     });
                 config.Save(null);
                 Console.WriteLine("Configuratie opgeslagen.");
+                return new ProgramArguments(false);
+            }
+            else if (args.Length > 0 && args[0].StartsWith("/id="))
+            {
+                var result = new ProgramArguments(true);
+                result.ArticleId = int.Parse(args[0].Split('=')[1]);
+                return result;
             }
             else
             {
                 Console.WriteLine("/config : Pas de configuratie aan (config.xml)");
+                Console.WriteLine("/id={articleId} : Run voor 1 specifiek artikel (id)");
+                return new ProgramArguments(false);
             }
-            return true;
+        }
+
+        public class ProgramArguments
+        {
+            public ProgramArguments(bool run)
+            {
+                RunProgram = run;
+            }
+            public bool RunProgram { get; private set; }
+            public int? ArticleId { get; set; }
         }
     }
 }
