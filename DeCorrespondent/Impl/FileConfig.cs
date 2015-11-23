@@ -104,7 +104,7 @@ namespace DeCorrespondent.Impl
                 if (string.IsNullOrEmpty(val))
                     return "";
                 if (IsPassword)
-                    return string.Join("", val.ToCharArray().Select(v => "*"));
+                    return string.Join("", Encryptor.DecryptAES(val).ToCharArray().Select(v => "*"));
                 return val;
             }
             public string Description { get; private set; }

@@ -136,40 +136,33 @@ namespace DeCorrespondent
 
         private static bool HandleArguments(string[] args, FileConfig config)
         {
-            if (args.Length == 0)
+            if (args.Length == 0 && !string.IsNullOrEmpty(config.WebReaderConfig.Username))
                 return false;
-            if (args[0] == @"?" || args[0] == @"/?" || args[0] == @"\?" || args[0] == @"-help" || args[0] == @"-h")
+            if (args.Length > 0 && args[0] == "/config")
             {
-                Console.WriteLine("Commandline parameters om je configuratie aan te passen:");
                 typeof (FileConfig).GetProperties()
-                    .Where(p => p.GetCustomAttributes(typeof(FileConfig.ConfigurableViaCommandLine), true).Any())
+                    .Where(p => p.GetCustomAttributes(typeof (FileConfig.ConfigurableViaCommandLine), true).Any())
                     .Select(p => new
                     {
-                        Property = p, 
-                        Attribute = p.GetCustomAttributes(typeof(FileConfig.ConfigurableViaCommandLine), true).OfType<FileConfig.ConfigurableViaCommandLine>().First(),
+                        Property = p,
+                        Attribute = p.GetCustomAttributes(typeof (FileConfig.ConfigurableViaCommandLine), true).OfType<FileConfig.ConfigurableViaCommandLine>().First(),
                         Value = p.GetGetMethod().Invoke(config, new object[0]) as string
                     })
+                    .Select(x => new { x.Property, x.Attribute, x.Value, IsEncrypted = x.Attribute.IsPassword })
                     .ToList()
-                    .ForEach(x => Console.WriteLine("\n{0}=waarde (huidige waarde: '{2}')\n {1}", x.Property.Name, x.Attribute.Description, x.Attribute.Display(x.Value)));
+                    .ForEach(x =>
+                    {
+                        Console.WriteLine("{0}:\n [enter]='{1}'", x.Attribute.Description, x.Attribute.Display(x.Value));
+                        var newValue = Console.ReadLine();
+                        if (!string.IsNullOrEmpty(newValue))
+                            x.Property.GetSetMethod().Invoke(config, new object[] { x.IsEncrypted ? Encryptor.EncryptAES(newValue) : newValue });
+                    });
+                config.Save(null);
+                Console.WriteLine("Configuratie opgeslagen.");
             }
             else
             {
-                args.Select(a => a.Split('='))
-                    .Where(s => s.Length == 2)
-                    .Select(s => new { Key = s[0], Value = s[1], Property = typeof(FileConfig).GetProperties().FirstOrDefault(p => p.Name == s[0])})
-                    .Where(x => x.Property != null)
-                    .ToList()
-                    .Select(x => new
-                    {
-                        x.Key,
-                        x.Value,
-                        x.Property,
-                        IsEncrypted = x.Property.GetCustomAttributes(typeof(FileConfig.ConfigurableViaCommandLine), true).OfType<FileConfig.ConfigurableViaCommandLine>().First().IsPassword,
-                    })
-                    .ToList()
-                    .ForEach(x => x.Property.GetSetMethod().Invoke(config, new object[] {  x.IsEncrypted ? Encryptor.EncryptAES(x.Value) : x.Value }));
-                config.Save(null);
-                Console.WriteLine("Configuration saved.");
+                Console.WriteLine("/config : Pas de configuratie aan (config.xml)");
             }
             return true;
         }
