@@ -112,7 +112,7 @@ namespace DeCorrespondent.Test.Impl
                 this.logger = logger;
                 wrappedResources = new WrappedResources(resources);
                 LastDs = new MemoryLastDatasource(last);
-                Program = new DeCorrespondent.Program(logger, wrappedResources, articleReader, articleRenderer, newItemsReader, LastDs, sender, summarySender, 20);
+                Program = new DeCorrespondent.Program(new DeCorrespondent.Program.ProgramArguments(true), logger, wrappedResources, articleReader, articleRenderer, newItemsReader, LastDs, sender, summarySender, 20);
             }
 
             public IList<string> InfoLog { get { return logger.Infos; } }

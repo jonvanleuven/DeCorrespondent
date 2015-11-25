@@ -20,6 +20,7 @@ namespace DeCorrespondent.Impl
                 .ToDictionary(n => n.Attributes.Contains("name") ? n.Attributes["name"].Value : n.Attributes["property"].Value, n => n.Attributes["content"].Value);
             var body = doc.DocumentNode.SelectSingleNode("//body");
             var metadata = new ArticleMetadata(metadataValues);
+            metadata.Description = body.SelectSingleNode("//p[@class='intro']").InnerText;
             metadata.ReadingTime = ReadingTime(body);
             RemoveNodes(body, "//script");
             RemoveNodes(body, "//noscript");
@@ -115,7 +116,7 @@ namespace DeCorrespondent.Impl
         public string MainImgUrlSmall { get; set; }
         public string AuthorImgUrl { get { return GetValue("article:author:image"); } }
         public string Section { get { return GetValue("article:section"); } }
-        public string Description { get { return Unescape( GetValue("og:description") ); } }
+        public string Description { get; internal set; }
         public IList<IExternalMedia> ExternalMedia { get; private set; }
 
         public string Url

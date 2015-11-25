@@ -74,10 +74,10 @@ namespace DeCorrespondent
         {
             var last = lastDs.ReadLast() ?? DateTime.Today.AddDays(-1);
             var regels = args.ArticleId.HasValue
-                ? new[] { new ArticleToRender { Article = ReadArticle(args.ArticleId.Value), Id = args.ArticleId.Value } }.AsEnumerable()
+                ? new[] { new { Article = ReadArticle(args.ArticleId.Value), Id = args.ArticleId.Value } }.AsEnumerable()
                 : Enumerable.Range(0, int.MaxValue)
                     .SelectMany(NewItems)
-                    .Select(reference => new ArticleToRender { Article = ReadArticle(reference.Id), Id = reference.Id })
+                    .Select(reference => new { Article = ReadArticle(reference.Id), reference.Id })
                     .TakeWhile(x => x.Article.Metadata.Published > last)
                     .Take(maxAantalArticles);
             var result = new List<ArticlePdf>();
@@ -89,12 +89,6 @@ namespace DeCorrespondent
                 result.Add(new ArticlePdf(file, r.Article));
             }
             return result;
-        }
-
-        class ArticleToRender
-        {
-            public IArticle Article { get; set; }
-            public int Id { get; set; }
         }
 
         public void DeleteFile(string filename)
