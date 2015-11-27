@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using EvoPdf;
@@ -63,7 +64,7 @@ namespace DeCorrespondent.Impl
         <h3>{1}</h3>
         <p>{3} {4} - {8}</p>
         <img class=""main"" src=""{6}"">
-        <p>{2:dd-MM-yyyy H:mm} - Leestijd: {5} minuten</p>
+        <p>{2:dd-MM-yyyy H:mm} - Leestijd: {5}</p>
     </div>
     <div class=""descriptionpagina"">{9}</div>
     {0}
@@ -75,7 +76,7 @@ namespace DeCorrespondent.Impl
                 a.Metadata.Published, //2 
                 HtmlEntity.Entitize(a.Metadata.AuthorFirstname), //3
                 HtmlEntity.Entitize(a.Metadata.AuthorLastname),  //4
-                string.Join("-", a.Metadata.ReadingTime), //5
+                DisplayReadingTime(a.Metadata.ReadingTime), //5
                 a.Metadata.MainImgUrl, //6
                 a.Metadata.AuthorImgUrl, //7
                 HtmlEntity.Entitize(a.Metadata.Section), //8
@@ -84,6 +85,13 @@ namespace DeCorrespondent.Impl
                 config.DisplayPublicationLinks ? "" : "display:none;", //11
                 config.DisplayBlockquotes ? "" : "display:none;" //12
                 ); 
+        }
+
+        private static string DisplayReadingTime(IList<int> readingTimes)
+        {
+            if (readingTimes == null || !readingTimes.Any() || (readingTimes.Count() == 1 && readingTimes.First() == 1) )
+                return "1 minuut";
+            return string.Format("{0} minuten", string.Join("-", readingTimes));
         }
 
         private PdfConverter CreatePdfConverter(IArticle article)
