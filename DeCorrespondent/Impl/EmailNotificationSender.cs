@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using HtmlAgilityPack;
 
 namespace DeCorrespondent.Impl
 {
@@ -28,10 +29,10 @@ namespace DeCorrespondent.Impl
             }
             var articles = articlesEnumerable.ToList();
             var list = string.Join("\n", articles.Select(a => string.Format(@"<p><b><a href=""{6}"" style=""color:black;"">{2}</a></b> {0} {1}<br/>{5}<br/><i>{3}</i></p>{4}<hr/>", 
-                a.Metadata.AuthorFirstname, 
-                a.Metadata.AuthorLastname, 
-                a.Metadata.Title, 
-                a.Metadata.Description, 
+                HtmlEntity.Entitize(a.Metadata.AuthorFirstname), 
+                HtmlEntity.Entitize(a.Metadata.AuthorLastname),
+                HtmlEntity.Entitize(a.Metadata.Title), 
+                HtmlEntity.Entitize(a.Metadata.Description), 
                 ExternalMediaList(a), 
                 ImageHtml(a), 
                 a.Metadata.Url)));
@@ -76,7 +77,7 @@ namespace DeCorrespondent.Impl
                 if (l.Url.StartsWith("https://w.soundcloud.com"))
                     description = "audio";
             }
-            return string.Format(@"<a href=""{0}"">{1}</a>", url, description);
+            return string.Format(@"<a href=""{0}"">{1}</a>", url, HtmlEntity.Entitize(description));
         }
     }
 

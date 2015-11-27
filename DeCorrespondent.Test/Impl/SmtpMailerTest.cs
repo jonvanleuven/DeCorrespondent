@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using DeCorrespondent.Impl;
 using DeCorrespondent.Test.Util;
 using NUnit.Framework;
@@ -35,7 +35,7 @@ namespace DeCorrespondent.Test.Impl
 
         private static FileConfig CreateConfig()
         {
-            return FileConfig.Load(@"D:\Applications\DeCorrespondent\config.xml");
+            return FileConfig.Load(@"..\..\config-test.xml");
         }
     }
 }

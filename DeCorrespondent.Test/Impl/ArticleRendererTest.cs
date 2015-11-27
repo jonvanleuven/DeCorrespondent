@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using DeCorrespondent.Impl;
 using DeCorrespondent.Test.Util;
 using NUnit.Framework;
@@ -71,7 +71,7 @@ namespace DeCorrespondent.Test.Impl
 
         private static IArticleRenderer CreateRenderer()
         {
-            return new ArticleRenderer(new ConsoleLogger(true), FileConfig.Load(@"D:\Applications\DeCorrespondent\config.xml"));
+            return new ArticleRenderer(new ConsoleLogger(true), FileConfig.Load(@"..\..\config-test.xml"));
         }
     }
 }

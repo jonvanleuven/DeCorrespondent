@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using DeCorrespondent.Impl;
@@ -81,7 +81,7 @@ namespace DeCorrespondent.Test.Impl
 
         private static WebReader CreateReader(IWebReaderConfig config = null)
         {
-            return WebReader.Login(new ConsoleLogger(true), config ?? FileConfig.Load(@"D:\Applications\DeCorrespondent\config.xml").WebReaderConfig);
+            return WebReader.Login(new ConsoleLogger(true), config ?? FileConfig.Load(@"..\..\config-test.xml").WebReaderConfig);
         }
 
         class Config : IWebReaderConfig

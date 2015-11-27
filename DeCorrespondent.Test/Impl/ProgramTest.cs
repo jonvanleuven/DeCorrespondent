@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using DeCorrespondent.Impl;
@@ -13,7 +13,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void GetItemsFromWebAndRenderPdf()
         {
-            using (var webresources = WebReader.Login(new ConsoleLogger(true), FileConfig.Load(@"D:\Applications\DeCorrespondent\config.xml").WebReaderConfig))
+            using (var webresources = WebReader.Login(new ConsoleLogger(true), FileConfig.Load(@"..\..\config-test.xml").WebReaderConfig))
             {
                 var program = CreateProgram(webresources);
 
@@ -56,7 +56,7 @@ namespace DeCorrespondent.Test.Impl
             var logger = new ConsoleLogger(true);
             var newItemsReader = new NewItemsReader(logger);
             var reader = new ArticleReader();
-            using (var webresources = WebReader.Login(new ConsoleLogger(true), FileConfig.Load(@"D:\Applications\DeCorrespondent\config.xml").WebReaderConfig))
+            using (var webresources = WebReader.Login(new ConsoleLogger(true), FileConfig.Load(@"..\..\config-test.xml").WebReaderConfig))
             {
                 var regels = Enumerable.Range(0, int.MaxValue)
                     .SelectMany(index => newItemsReader.ReadItems(webresources.ReadNewItems(index)))
@@ -90,7 +90,7 @@ namespace DeCorrespondent.Test.Impl
         private static ProgramWrapper CreateProgram(IResourceReader resources, DateTime? lastId = null)
         {
             var logger = new LogWrapper(new ConsoleLogger(true));
-            var config = FileConfig.Load(@"D:\Applications\DeCorrespondent\config.xml");
+            var config = FileConfig.Load(@"..\..\config-test.xml");
             var mailer = new SmtpMailer(logger, config.SmtpMailConfig);
             return new ProgramWrapper(logger, 
                 resources, 
