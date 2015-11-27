@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using EvoPdf;
+using HtmlAgilityPack;
 
 namespace DeCorrespondent.Impl
 {
@@ -70,15 +71,15 @@ namespace DeCorrespondent.Impl
 </html>";
             return string.Format(template, 
                 a.BodyHtml, //0
-                a.Metadata.Title, //1
+                HtmlEntity.Entitize(a.Metadata.Title), //1
                 a.Metadata.Published, //2 
-                a.Metadata.AuthorFirstname, //3
-                a.Metadata.AuthorLastname,  //4
+                HtmlEntity.Entitize(a.Metadata.AuthorFirstname), //3
+                HtmlEntity.Entitize(a.Metadata.AuthorLastname),  //4
                 string.Join("-", a.Metadata.ReadingTime), //5
                 a.Metadata.MainImgUrl, //6
                 a.Metadata.AuthorImgUrl, //7
-                a.Metadata.Section, //8
-                a.Metadata.Description, //9
+                HtmlEntity.Entitize(a.Metadata.Section), //8
+                HtmlEntity.Entitize(a.Metadata.Description), //9
                 config.DisplayInfocards ? "" : "display:none;", //10
                 config.DisplayPublicationLinks ? "" : "display:none;", //11
                 config.DisplayBlockquotes ? "" : "display:none;" //12

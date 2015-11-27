@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Text.RegularExpressions;
 using HtmlAgilityPack;
 
 namespace DeCorrespondent.Impl
@@ -106,7 +104,7 @@ namespace DeCorrespondent.Impl
         }
 
         public int Id { get { return int.Parse(Url.Split('/').Last()); } }
-        public string Title { get { return GetValue("og:title"); } }
+        public string Title { get { return Unescape( GetValue("og:title") ); } }
         public IList<int> ReadingTime { get; internal set; }
         public string AuthorFirstname { get { return GetValue("article:author:first_name"); } }
         public string AuthorLastname { get { return GetValue("article:author:last_name"); } }
