@@ -6,3 +6,5 @@ Een betaald abonnement op de correspondent is hiervoor vereist, zie https://deco
 
 Zie voorbeeld pdf: 
 [16 Reis mee door het land dat niet bestaat (en leer hoe belangrijk het is om erkend te worden).pdf](16 Reis mee door het land dat niet bestaat (en leer hoe belangrijk het is om erkend te worden).pdf)
+
+![Kindle voorbeeld](kindle.jpg?raw=true "Kindle voorbeeld")
