@@ -14,7 +14,7 @@ namespace DeCorrespondent.Test.Impl
         {
             using (var reader = CreateReader())
             {
-                var result = reader.ReadNewItems(0);
+                var result = reader.Read("https://decorrespondent.nl/nieuw/0");
 
                 Assert.NotNull(result);
             }
@@ -26,7 +26,7 @@ namespace DeCorrespondent.Test.Impl
             var reader = CreateReader();
             reader.Dispose();
 
-            var result = reader.ReadNewItems(0);
+            var result = reader.Read("https://decorrespondent.nl/nieuw/0");
 
             Assert.IsTrue(result.Contains("Log dan nu in"));
         }
@@ -34,12 +34,11 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void ReadItems()
         {
-            using (var reader = CreateReader())
+            using (var reader = new DeCorrespondentReader(CreateReader(), new ConsoleLogger(true)))
             {
-                var items = new NewItemsReader(new ConsoleLogger(true)).ReadItems(reader.ReadNewItems(0));
+                var items = reader.ReadNieuwItems().Take(10).ToList();
 
                 Assert.IsTrue(items.Any());
-                Console.WriteLine(string.Join(",", items.Select(i => i.Id)));
                 Console.WriteLine(string.Join(",", items.Select(i => i.Id)));
             }
         }
@@ -59,7 +58,7 @@ namespace DeCorrespondent.Test.Impl
         public void ReadItem()
         {
             var id = 3530;
-            using (var reader = CreateReader())
+            using (var reader = new DeCorrespondentReader(CreateReader(), new ConsoleLogger(true)))
             {
                 var article = reader.ReadArticle(id);
 
@@ -79,12 +78,13 @@ namespace DeCorrespondent.Test.Impl
             }
         }
 
-        private static WebReader CreateReader(IWebReaderConfig config = null)
+        private static WebReader CreateReader(IDeCorrespondentReaderConfig config = null)
         {
-            return WebReader.Login(new ConsoleLogger(true), config ?? FileConfig.Load(@"..\..\config-test.xml").WebReaderConfig);
+            var cfg = config ?? FileConfig.Load(@"..\..\config-test.xml").DeCorrespondentReaderConfig;
+            return WebReader.Login(new ConsoleLogger(true), cfg.Username, cfg.Password);
         }
 
-        class Config : IWebReaderConfig
+        class Config : IDeCorrespondentReaderConfig
         {
             public string Username { get; set;}
             public string Password { get; set; }

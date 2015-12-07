@@ -19,14 +19,9 @@ namespace DeCorrespondent.Impl
             this.log = log;
         }
 
-        public string ReadNewItems(int index)
+        public string Read(string url)
         {
-            return ReadOrRetryOnTimeout(r => r.ReadNewItems(index));
-        }
-
-        public string ReadArticle(int articleId)
-        {
-            return ReadOrRetryOnTimeout(r => r.ReadArticle(articleId));
+            return ReadOrRetryOnTimeout(r => r.Read(url));
         }
 
         public byte[] ReadBinary(string url)

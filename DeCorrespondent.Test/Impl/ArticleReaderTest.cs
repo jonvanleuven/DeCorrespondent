@@ -15,7 +15,7 @@ namespace DeCorrespondent.Test.Impl
         {
             var reader = new ArticleReader();
 
-            var result = reader.Read(new FileResources().ReadArticle(1));
+            var result = reader.Read(new FileResources().Read("http://t/1"));
 
             Assert.NotNull(result.BodyHtml);
             File.WriteAllText("d:\\test.BodyHtml", result.BodyHtml);
@@ -47,7 +47,7 @@ namespace DeCorrespondent.Test.Impl
         {
             var reader = new ArticleReader();
 
-            var result = reader.Read(new FileResources().ReadArticle(3358));
+            var result = reader.Read(new FileResources().Read("http://t/3358"));
 
             Assert.NotNull(result.BodyHtml);
         }
@@ -57,7 +57,7 @@ namespace DeCorrespondent.Test.Impl
         {
             var reader = new ArticleReader();
 
-            var result = reader.Read(new FileResources().ReadArticle(2404));
+            var result = reader.Read(new FileResources().Read("http://t/2404"));
 
             Assert.NotNull(result.BodyHtml);
             Assert.AreEqual(1, result.Metadata.ExternalMedia.Count());
@@ -70,7 +70,7 @@ namespace DeCorrespondent.Test.Impl
         {
             var reader = new ArticleReader();
 
-            var result = reader.Read(new FileResources().ReadArticle(3530));
+            var result = reader.Read(new FileResources().Read("http://t/3530"));
 
             Assert.NotNull(result.BodyHtml);
             Assert.AreEqual(6, result.Metadata.ExternalMedia.Count());
@@ -82,7 +82,7 @@ namespace DeCorrespondent.Test.Impl
         {
             var reader = new ArticleReader();
 
-            var result = reader.Read(new FileResources().ReadArticle(3450));
+            var result = reader.Read(new FileResources().Read("http://t/3450"));
 
             Assert.AreEqual("Alle wereldleiders waren afgelopen week bij de Algemene Vergadering van de Verenigde Naties. Hoe gaat zo&rsquo;n wereldtop eraan toe? Een verslag uit New York, aan de hand van tien voorwerpen.", result.Metadata.Description);
         }
@@ -92,7 +92,7 @@ namespace DeCorrespondent.Test.Impl
         {
             var reader = new ArticleReader();
 
-            var result = reader.Read(new FileResources().ReadArticle(3364));
+            var result = reader.Read(new FileResources().Read("http://t/3364"));
 
             Assert.NotNull(result.BodyHtml);
         }
@@ -102,7 +102,7 @@ namespace DeCorrespondent.Test.Impl
         {
             var reader = new ArticleReader();
 
-            var result = reader.Read(new FileResources().ReadArticle(3366));
+            var result = reader.Read(new FileResources().Read("http://t/3366"));
 
             Assert.NotNull(result.BodyHtml);
             Assert.IsTrue(result.BodyHtml.Contains("een simpele telnet-hack"));

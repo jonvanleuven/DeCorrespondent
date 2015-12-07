@@ -13,7 +13,8 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void GetItemsFromWebAndRenderPdf()
         {
-            using (var webresources = WebReader.Login(new ConsoleLogger(true), FileConfig.Load(@"..\..\config-test.xml").WebReaderConfig))
+            var config = FileConfig.Load(@"..\..\config-test.xml").DeCorrespondentReaderConfig;
+            using (var webresources = WebReader.Login(new ConsoleLogger(true), config.Username, config.Password))
             {
                 var program = CreateProgram(webresources);
 
@@ -32,7 +33,7 @@ namespace DeCorrespondent.Test.Impl
 
             Assert.IsNotNull(program.LastDs.ReadLast());
             Assert.AreEqual(1, program.NumberNieuwRequests);
-            Assert.AreEqual(3, program.NumberArticleRequests);
+            Assert.AreEqual(2, program.NumberArticleRequests);
             Assert.AreEqual(3352, program.ArticlesRequested.First(), "volgorde is niet juist, moet van nieuw naar oud gesorteerd zijn");
         }
 
@@ -41,16 +42,16 @@ namespace DeCorrespondent.Test.Impl
         {
             var config = new FileConfig();
             config.DeCorrespondentUsername = "username";
-            config.DeCorrespondentPassword = "password";
+            config.DeCorrespondentPassword = Encryptor.EncryptAES("password");
             config.EvoPdfLicenseKey = "lickey";
             config.MaxAantalArticles = 20;
             config.KindleEmail = "t";
             config.SmtpUsername = "t";
-            config.SmtpPassword = @"password";
+            config.SmtpPassword = Encryptor.EncryptAES(@"password");
             config.Save("d:\\config.xml");
         }
 
-        [Test]
+        /*[Test]
         public void ReadPublicationDates()
         {
             var logger = new ConsoleLogger(true);
@@ -69,7 +70,7 @@ namespace DeCorrespondent.Test.Impl
                     Console.WriteLine(regel.Reference.Id + ": " + regel.Publicationdate);
                 }
             }
-        }
+        }*/
 
         [Test]
         public void AssertDeferredExecution()
@@ -92,13 +93,14 @@ namespace DeCorrespondent.Test.Impl
             var logger = new LogWrapper(new ConsoleLogger(true));
             var config = FileConfig.Load(@"..\..\config-test.xml");
             var mailer = new SmtpMailer(logger, config.SmtpMailConfig);
+            var r = new WrappedResources(resources);
             return new ProgramWrapper(logger, 
-                resources, 
+                r, 
                 new ArticleReader(), 
                 new ArticleRenderer(logger, config), 
-                new NewItemsReader(logger),
+                new DeCorrespondentReader(r, logger), 
                 new KindleEmailSender(logger, config.KindleEmailSenderConfig, mailer),
-                new EmailNotificationSender(logger, mailer, config.EmailNotificationSenderConfig, resources), 
+                new EmailNotificationSender(logger, mailer, config.EmailNotificationSenderConfig), 
                 lastId );
         }
 
@@ -107,19 +109,19 @@ namespace DeCorrespondent.Test.Impl
             private readonly WrappedResources wrappedResources;
             private readonly LogWrapper logger;
 
-            public ProgramWrapper(LogWrapper logger, IResourceReader resources, IArticleReader articleReader, IArticleRenderer articleRenderer, IItemsReader newItemsReader, IEReaderSender sender, INotificationSender summarySender, DateTime? last)
+            public ProgramWrapper(LogWrapper logger, WrappedResources resources, IArticleReader articleReader, IArticleRenderer articleRenderer, IDeCorrespondentReader reader, IEReaderSender sender, INotificationSender summarySender, DateTime? last)
             {
                 this.logger = logger;
-                wrappedResources = new WrappedResources(resources);
+                wrappedResources = resources;
                 LastDs = new MemoryLastDatasource(last);
-                Program = new DeCorrespondent.Program(new DeCorrespondent.Program.ProgramArguments(true), logger, wrappedResources, articleReader, articleRenderer, newItemsReader, LastDs, sender, summarySender, 20);
+                Program = new DeCorrespondent.Program(new DeCorrespondent.Program.ProgramArguments(true), logger, articleReader, articleRenderer, reader, LastDs, sender, summarySender, 20);
             }
 
             public IList<string> InfoLog { get { return logger.Infos; } }
             public IList<string> DebugLog { get { return logger.Debugs; } }
             public DeCorrespondent.Program Program { get; private set; }
             public int NumberArticleRequests { get { return wrappedResources.ArticlesRequested.Count; } }
-            public int NumberNieuwRequests { get { return wrappedResources.NieuwpaginaRequested.Count; } }
+            public int NumberNieuwRequests { get { return wrappedResources.NieuwpaginaRequested; } }
             public IList<int> ArticlesRequested { get { return wrappedResources.ArticlesRequested; } }
             public ILastDatasource LastDs { get; private set; }
         }
@@ -151,23 +153,21 @@ namespace DeCorrespondent.Test.Impl
             {
                 this.delegateReader = delegateReader;
                 ArticlesRequested = new List<int>();
-                NieuwpaginaRequested = new List<int>();
+                NieuwpaginaRequested = 0;
                 
             }
 
             public List<int> ArticlesRequested { get; private set; }
-            public List<int> NieuwpaginaRequested { get; private set; }
+            public int NieuwpaginaRequested { get; private set; }
 
-            public string ReadNewItems(int index)
+            public string Read(string url)
             {
-                NieuwpaginaRequested.Add(index);
-                return delegateReader.ReadNewItems(index);
-            }
+                if (url.Contains("/nieuw"))
+                    NieuwpaginaRequested++;
+                else
+                    ArticlesRequested.Add(int.Parse(url.Split('/').Last()));
 
-            public string ReadArticle(int articleId)
-            {
-                ArticlesRequested.Add(articleId);
-                return delegateReader.ReadArticle(articleId);
+                return delegateReader.Read(url);
             }
 
             public byte[] ReadBinary(string url)

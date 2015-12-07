@@ -19,9 +19,9 @@ namespace DeCorrespondent
             try
             {
                 logger = new CompositeLogger(logger, new EmailErrorLogger(config.NotificationEmail, config.SmtpMailConfig));
-                using (var resources = RetryWebReader.Wrap( WebReader.Login(logger, config.WebReaderConfig), logger))
+                using (var session = DeCorrespondentReader.Login(config.DeCorrespondentReaderConfig, logger))
                 {
-                    var p = Program.Instance(arguments, logger, resources, config);
+                    var p = Program.Instance(arguments, logger, session, config);
                     var pdfs = p.ReadDeCorrespondentAndWritePdfs();
                     p.SendToKindleAndSendNotificationMail(pdfs);
                     pdfs.Select(pdf => pdf.FileName).ToList().ForEach(p.DeleteFile);
@@ -33,20 +33,18 @@ namespace DeCorrespondent
             }
         }
 
-        private static Program Instance(ProgramArguments args, ILogger logger, IResourceReader resources, FileConfig config)
+        private static Program Instance(ProgramArguments args, ILogger logger, IDeCorrespondentReader decorrespondent, FileConfig config)
         {
-            var newItemsParser = new NewItemsReader(logger);
             var reader = new ArticleReader();
             var renderer = new ArticleRenderer(logger, config.ArticleRendererConfig);
             var lastIdDs = new FileLastDatasource();
             var mailer = new SmtpMailer(logger, config.SmtpMailConfig);
             var kindle = new KindleEmailSender(logger, config.KindleEmailSenderConfig, mailer);
-            var summarySender = new EmailNotificationSender(logger, mailer, config.EmailNotificationSenderConfig, resources);
-            return new Program(args, logger, resources, reader, renderer, newItemsParser, lastIdDs, kindle, summarySender, config.MaxAantalArticles);
+            var summarySender = new EmailNotificationSender(logger, mailer, config.EmailNotificationSenderConfig);
+            return new Program(args, logger, reader, renderer, decorrespondent, lastIdDs, kindle, summarySender, config.MaxAantalArticles);
         }
 
-        private readonly IItemsReader newItemsParser;
-        private readonly IResourceReader resources;
+        private readonly IDeCorrespondentReader decorrespondent;
         private readonly IArticleReader reader;
         private readonly IArticleRenderer renderer;
         private readonly ILogger logger;
@@ -56,14 +54,13 @@ namespace DeCorrespondent
         private readonly INotificationSender summarySender;
         private readonly ProgramArguments args;
 
-        public Program(ProgramArguments args, ILogger logger, IResourceReader resources, IArticleReader reader, IArticleRenderer renderer, IItemsReader newItemsParser, ILastDatasource lastDs, IEReaderSender kindle, INotificationSender summarySender, int maxAantalArticles)
+        public Program(ProgramArguments args, ILogger logger, IArticleReader reader, IArticleRenderer renderer, IDeCorrespondentReader decorrespondent, ILastDatasource lastDs, IEReaderSender kindle, INotificationSender summarySender, int maxAantalArticles)
         {
             this.args = args;
             this.logger = logger;
-            this.resources = resources;
             this.reader = reader;
             this.renderer = renderer;
-            this.newItemsParser = newItemsParser;
+            this.decorrespondent = decorrespondent;
             this.lastDs = lastDs;
             this.kindle = kindle;
             this.summarySender = summarySender;
@@ -73,12 +70,12 @@ namespace DeCorrespondent
         public IList<ArticlePdf> ReadDeCorrespondentAndWritePdfs()
         {
             var last = lastDs.ReadLast() ?? DateTime.Today.AddDays(-1);
-            var regels = args.ArticleId.HasValue
-                ? new[] { new { Article = ReadArticle(args.ArticleId.Value), Id = args.ArticleId.Value } }.AsEnumerable()
-                : Enumerable.Range(0, int.MaxValue)
-                    .SelectMany(NewItems)
-                    .Select(reference => new { Article = ReadArticle(reference.Id), reference.Id })
-                    .TakeWhile(x => x.Article.Metadata.Published > last)
+            if( args.ArticleId.HasValue)
+                throw new NotImplementedException();
+
+            var regels = NewItems()
+                    .TakeWhile(i => i.Publicationdate > last)
+                    .Select(i => new { Article = ReadArticle(i.Id), i.Id })
                     .Take(maxAantalArticles);
             var result = new List<ArticlePdf>();
             foreach (var r in regels)
@@ -121,12 +118,12 @@ namespace DeCorrespondent
 
         private IArticle ReadArticle(int id)
         {
-            return reader.Read( resources.ReadArticle(id) );
+            return reader.Read(decorrespondent.ReadArticle(id));
         }
 
-        private IEnumerable<IArticleReference> NewItems(int nieuwPagina)
+        private IEnumerable<INieuwItem> NewItems()
         {
-            return newItemsParser.ReadItems(resources.ReadNewItems(nieuwPagina));
+            return decorrespondent.ReadNieuwItems();
         }
 
         public class ArticlePdf
@@ -142,7 +139,7 @@ namespace DeCorrespondent
 
         private static ProgramArguments HandleArguments(string[] args, FileConfig config)
         {
-            if (args.Length == 0 && !string.IsNullOrEmpty(config.WebReaderConfig.Username))
+            if (args.Length == 0 && !string.IsNullOrEmpty(config.DeCorrespondentReaderConfig.Username))
                 return new ProgramArguments(true);
             if (args.Length > 0 && args[0] == "/config")
             {

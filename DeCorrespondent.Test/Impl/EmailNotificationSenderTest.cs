@@ -13,14 +13,14 @@ namespace DeCorrespondent.Test.Impl
         {
             var sender = CreateSender();
             var reader = new ArticleReader();
-            var articles = new [] { reader.Read(new FileResources().ReadArticle(3530)) };
+            var articles = new[] { reader.Read(new FileResources().Read("http://t/3530")) };
 
             sender.Send(articles.ToList());
         }
 
         private static INotificationSender CreateSender()
         {
-            return new EmailNotificationSender(new ConsoleLogger(true), CreateMailer(), CreateConfig().EmailNotificationSenderConfig, new FileResources());
+            return new EmailNotificationSender(new ConsoleLogger(true), CreateMailer(), CreateConfig().EmailNotificationSenderConfig);
         }
 
         private static IMailer CreateMailer()

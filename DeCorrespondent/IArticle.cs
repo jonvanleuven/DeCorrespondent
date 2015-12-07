@@ -3,21 +3,15 @@ using System.Collections.Generic;
 
 namespace DeCorrespondent
 {
-    public interface IItemsReader
+    public interface IArticle
     {
-        // orderer from new to old
-        IEnumerable<IArticleReference> ReadItems(string nieuwPagina);
+        string BodyHtml { get; }
+        IArticleMetadata Metadata { get; }
     }
 
     public interface IArticleReference
     {
         int Id { get; }
-    }
-
-    public interface IArticle
-    {
-        string BodyHtml { get; }
-        IArticleMetadata Metadata { get; }
     }
 
     public interface IArticleMetadata

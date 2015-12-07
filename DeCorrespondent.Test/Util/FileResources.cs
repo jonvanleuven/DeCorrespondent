@@ -1,32 +1,28 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
+using System.Linq;
 
 namespace DeCorrespondent.Test.Util
 {
-
     public class FileResources : IResourceReader
     {
-        public string ReadNewItems(int index)
+        public string Read(string url)
         {
-            var resource = GetType().Assembly.GetManifestResourceStream("DeCorrespondent.Test.Resources.nieuw_" + index);
+            var name = string.Join("_", url.Split('/').Skip(3));
+            int t;
+            if (int.TryParse(name, out t))
+                name = "article_" + name;
+
+            var resource = GetType().Assembly.GetManifestResourceStream("DeCorrespondent.Test.Resources." + name);
             if (resource == null)
-                throw new Exception("New item resource not found: " + index);
+                throw new Exception("Resource not found: " + name);
             using (var s = new StreamReader(resource))
             {
                 return s.ReadToEnd();
             }
         }
 
-        public string ReadArticle(int articleId)
-        {
-            var resource = GetType().Assembly.GetManifestResourceStream("DeCorrespondent.Test.Resources.article_" + articleId);
-            if (resource == null)
-                throw new Exception("Article resource not found: " + articleId);
-            using (var s = new StreamReader(resource))
-            {
-                return s.ReadToEnd();
-            }
-        }
 
         public byte[] ReadBinary(string url)
         {

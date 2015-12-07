@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EmbeddedResource Include="Resources\nieuw_0">
+    <EmbeddedResource Include="Resources\nieuw">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\article_1">
@@ -72,8 +72,15 @@
     <EmbeddedResource Include="Resources\article_3530">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\3391_Hoe-precieze-cijfers-ons-misleiden-en-de-geschiedenis-bepalen_187354754081-10e8fcfa">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\DeCorrespondent\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DeCorrespondent\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
@@ -83,6 +90,7 @@
       <HintPath>..\DeCorrespondent\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DeCorrespondent\DeCorrespondent.csproj">
@@ -97,8 +105,9 @@
     <Compile Include="Impl\EmailNotificationSenderTest.cs" />
     <Compile Include="Impl\Log4NetLoggerTest.cs" />
     <Compile Include="Impl\RetryWebReaderTest.cs" />
+    <Compile Include="Impl\RssFeedReaderTest.cs" />
     <Compile Include="Impl\SmtpMailerTest.cs" />
-    <Compile Include="Impl\NewItemsReaderTest.cs" />
+    <Compile Include="Impl\DeCorrespondentReaderTest.cs" />
     <Compile Include="Impl\ProgramTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Impl\WebReaderTest.cs" />
@@ -109,6 +118,10 @@
     <Content Include="log4netconfig.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Resources\decorrespondent_rss.php">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\img_562a2b64dbef02309068180.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

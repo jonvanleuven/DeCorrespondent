@@ -5,8 +5,7 @@ namespace DeCorrespondent
 {
     public interface IResourceReader : IDisposable
     {
-        string ReadNewItems(int index);
-        string ReadArticle(int articleId);
+        string Read(string url);
         byte[] ReadBinary(string url);
     }
 }

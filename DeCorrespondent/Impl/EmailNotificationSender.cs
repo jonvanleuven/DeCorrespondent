@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using HtmlAgilityPack;
@@ -10,16 +9,15 @@ namespace DeCorrespondent.Impl
     {
         private readonly IMailer mailer;
         private readonly IEmailNotificationSenderConfig config;
-        private readonly IResourceReader resources;
         private readonly ILogger log;
 
-        public EmailNotificationSender(ILogger log, IMailer mailer, IEmailNotificationSenderConfig config, IResourceReader resources)
+        public EmailNotificationSender(ILogger log, IMailer mailer, IEmailNotificationSenderConfig config)
         {
             this.log = log;
             this.mailer = mailer;
             this.config = config;
-            this.resources = resources;
         }
+
         public void Send(IEnumerable<IArticle> articlesEnumerable)
         {
             if (string.IsNullOrEmpty(config.NotificationEmail))

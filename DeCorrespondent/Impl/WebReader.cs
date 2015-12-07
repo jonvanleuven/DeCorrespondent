@@ -5,30 +5,26 @@ using HtmlAgilityPack;
 
 namespace DeCorrespondent.Impl
 {
-
     public class WebReader : IResourceReader
     {
         private readonly CookieCollection sessionCookies;
         private readonly ILogger log;
 
-        public static WebReader Login(ILogger log, IWebReaderConfig config)
+        public static WebReader Login(ILogger log, string username, string password)
         {
             var web = new HtmlWeb();
             web.UseCookies = true;
             CookieCollection cookies = null;
-//            web.PreRequest += r =>
-//            {
-//                var data = Encoding.UTF8.GetBytes(string.Format("email={0}&password={1}", config.Username, config.Password));
-//                r.GetRequestStream().Write(data, 0, data.Length);
-//                return true;
-//            };
             web.PostResponse += ((req, resp) => cookies = resp.Cookies);
-            var doc = web.Load(string.Format("https://decorrespondent.nl/login?email={0}&password={1}", config.Username, config.Password), "POST");
+            var doc = web.Load(string.Format("https://decorrespondent.nl/login?email={0}&password={1}", username, password), "POST");
             if (!doc.DocumentNode.OuterHtml.Contains("Je bent nu ingelogd"))
-                throw new Exception("Unable to login, check credentials (username=" + config.Username + ")");
-            log.Debug("Logged in with username '" + config.Username + "'");
+                throw new Exception("Unable to login, check credentials (username=" + username + ")");
+            log.Debug("Logged in with username '" + username + "'");
             return new WebReader(cookies, log);
         }
+
+        public WebReader(ILogger log) : this(null, log)
+        { }
 
         private WebReader(CookieCollection sessionCookies, ILogger log)
         {
@@ -36,14 +32,9 @@ namespace DeCorrespondent.Impl
             this.log = log;
         }
 
-        public string ReadNewItems(int index)
+        public string Read(string url)
         {
-            return Request("https://decorrespondent.nl/nieuw" + (index != 0 ? "/" + index : ""));
-        }
-
-        public string ReadArticle(int articleId)
-        {
-            return Request("https://decorrespondent.nl/" + articleId);
+            return Request(url);
         }
 
         public byte[] ReadBinary(string url)
@@ -63,28 +54,27 @@ namespace DeCorrespondent.Impl
         {
             log.Debug("Requesting url '" + url + "'");
             var web = new HtmlWeb();
-            web.UseCookies = true;
-            web.PreRequest += (req =>
+            if (sessionCookies != null)
             {
-                req.CookieContainer.Add(sessionCookies);
-                return true;
-            });
+                web.UseCookies = true;
+                web.PreRequest += (req =>
+                {
+                    req.CookieContainer.Add(sessionCookies);
+                    return true;
+                });
+            }
             return web.Load(url, method??"GET").DocumentNode.OuterHtml;
         }
 
         public void Dispose()
         {
+            if (sessionCookies == null)
+                return;
             var doc = Request("https://decorrespondent.nl/logout", "POST");
             if (doc.Contains("Je bent nu uitgelogd") )
                 log.Info("Logged out");
             else 
                 throw new Exception("Uitloggen is mislukt");
         }
-    }
-
-    public interface IWebReaderConfig
-    {
-        string Username { get; }
-        string Password { get; }
     }
 }

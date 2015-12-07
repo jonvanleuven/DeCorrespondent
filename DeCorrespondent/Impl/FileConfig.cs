@@ -24,7 +24,7 @@ namespace DeCorrespondent.Impl
         public FileConfig()
         {
             SmtpMailConfig = new SmtpMailConfig();
-            WebReaderConfig = new WebReaderConfig();
+            DeCorrespondentReaderConfig = new DeCorrespondentReaderConfig();
             KindleEmailSenderConfig = new KindleEmailSenderConfig();
             EmailNotificationSenderConfig = new EmailNotificationSenderConfig();
             ArticleRendererConfig = new ArticleRendererConfig();
@@ -34,7 +34,7 @@ namespace DeCorrespondent.Impl
         [XmlIgnore]
         public SmtpMailConfig SmtpMailConfig { get; private set; }
         [XmlIgnore]
-        public WebReaderConfig WebReaderConfig { get; private set; }
+        public DeCorrespondentReaderConfig DeCorrespondentReaderConfig { get; private set; }
         [XmlIgnore]
         public KindleEmailSenderConfig KindleEmailSenderConfig { get; private set; }
         [XmlIgnore]
@@ -44,9 +44,9 @@ namespace DeCorrespondent.Impl
 
         //DeCorrespondent settings
         [ConfigurableViaCommandLine("Gebruikersnaam van je DeCorrespondent account", false)]
-        public string DeCorrespondentUsername { get { return WebReaderConfig.Username; } set { WebReaderConfig.Username = value; } }
+        public string DeCorrespondentUsername { get { return DeCorrespondentReaderConfig.Username; } set { DeCorrespondentReaderConfig.Username = value; } }
         [ConfigurableViaCommandLine("Wachtwoord van je DeCorrespondent account (wordt encrypted opgeslagen)", true)]
-        public string DeCorrespondentPassword { get { return Encryptor.EncryptAES(WebReaderConfig.Password); } set { WebReaderConfig.Password = Encryptor.DecryptAES(value); } }
+        public string DeCorrespondentPassword { get { return Encryptor.EncryptAES(DeCorrespondentReaderConfig.Password); } set { DeCorrespondentReaderConfig.Password = Encryptor.DecryptAES(value); } }
         
         //Kindle settings
         [ConfigurableViaCommandLine("Email adres van je kindle", false)]
@@ -129,9 +129,9 @@ namespace DeCorrespondent.Impl
         public bool EnableSsl { get; internal set; }
     }
 
-    public class WebReaderConfig : IWebReaderConfig
+    public class DeCorrespondentReaderConfig : IDeCorrespondentReaderConfig
     {
-        internal WebReaderConfig()
+        internal DeCorrespondentReaderConfig()
         {
             Username = "";
             Password = "";

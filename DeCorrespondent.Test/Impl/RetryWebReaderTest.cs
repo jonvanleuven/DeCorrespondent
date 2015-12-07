@@ -17,7 +17,7 @@ namespace DeCorrespondent.Test.Impl
 
             try
             {
-                reader.ReadNewItems(0);
+                reader.Read("");
             }
             catch (WebException)
             {
@@ -29,12 +29,7 @@ namespace DeCorrespondent.Test.Impl
 
         internal class TimeoutReader : IResourceReader
         {
-            public string ReadNewItems(int index)
-            {
-                return Timeout<string>();
-            }
-
-            public string ReadArticle(int articleId)
+            public string Read(string url)
             {
                 return Timeout<string>();
             }

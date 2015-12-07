@@ -11,7 +11,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void Render()
         {
-            var article = new ArticleReader().Read(new FileResources().ReadArticle(3358));
+            var article = new ArticleReader().Read(new FileResources().Read("http://t/3358"));
             var renderer = CreateRenderer();
 
             var pdf = renderer.Render(article);
@@ -24,7 +24,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void Render3361()
         {
-            var article = new ArticleReader().Read(new FileResources().ReadArticle(3361));
+            var article = new ArticleReader().Read(new FileResources().Read("http://t/3361"));
             var renderer = CreateRenderer();
 
             var pdf = renderer.Render(article);
@@ -36,7 +36,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void Render3450()
         {
-            var article = new ArticleReader().Read(new FileResources().ReadArticle(3450));
+            var article = new ArticleReader().Read(new FileResources().Read("http://t/3450"));
             var renderer = CreateRenderer();
 
             var pdf = renderer.Render(article);
@@ -48,7 +48,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void Render3444()
         {
-            var article = new ArticleReader().Read(new FileResources().ReadArticle(3444));
+            var article = new ArticleReader().Read(new FileResources().Read("http://t/3444"));
             var renderer = CreateRenderer();
 
             var pdf = renderer.Render(article);
@@ -60,7 +60,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void Render3430()
         {
-            var article = new ArticleReader().Read(new FileResources().ReadArticle(3430));
+            var article = new ArticleReader().Read(new FileResources().Read("http://t/3430"));
             var renderer = CreateRenderer();
 
             var pdf = renderer.Render(article);
