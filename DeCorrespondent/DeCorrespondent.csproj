@@ -55,13 +55,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IArticleReader.cs" />
-    <Compile Include="IDeCorrespondentReader.cs" />
+    <Compile Include="IDeCorrespondentResources.cs" />
     <Compile Include="Impl\CompositeLogger.cs" />
-    <Compile Include="Impl\DeCorrespondentReader.cs" />
+    <Compile Include="Impl\DeCorrespondentResources.cs" />
     <Compile Include="Impl\EmailErrorLogger.cs" />
     <Compile Include="Impl\Log4NetLogger.cs" />
     <Compile Include="Impl\RetryWebReader.cs" />
-    <Compile Include="Impl\RssFeedReader.cs" />
+    <Compile Include="Impl\RssFeedResources.cs" />
     <Compile Include="INotificationSender.cs" />
     <Compile Include="ILastDatasource.cs" />
     <Compile Include="ILogger.cs" />

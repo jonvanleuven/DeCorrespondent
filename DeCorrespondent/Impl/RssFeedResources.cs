@@ -9,17 +9,17 @@ using System.Xml.XPath;
 
 namespace DeCorrespondent.Impl
 {
-    public class RssFeedReader : IDeCorrespondentReader
+    public class RssFeedResources : IDeCorrespondentResources
     {
         private readonly IList<RssItem> items;
         private readonly IResourceReader resources;
 
-        public static RssFeedReader Instance(ILogger log)
+        public static RssFeedResources Instance(ILogger log)
         {
-            return new RssFeedReader(new WebReader(log));
+            return new RssFeedResources(new WebReader(log));
         }
 
-        public RssFeedReader(IResourceReader resources)
+        public RssFeedResources(IResourceReader resources)
         {
             this.resources = resources;
             var r = XmlReader.Create(new MemoryStream(new UTF8Encoding().GetBytes(resources.Read("http://molecule.nl/decorrespondent/rss.php"))));

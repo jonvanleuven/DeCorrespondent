@@ -105,9 +105,9 @@
     <Compile Include="Impl\EmailNotificationSenderTest.cs" />
     <Compile Include="Impl\Log4NetLoggerTest.cs" />
     <Compile Include="Impl\RetryWebReaderTest.cs" />
-    <Compile Include="Impl\RssFeedReaderTest.cs" />
+    <Compile Include="Impl\RssFeedResourcesTest.cs" />
     <Compile Include="Impl\SmtpMailerTest.cs" />
-    <Compile Include="Impl\DeCorrespondentReaderTest.cs" />
+    <Compile Include="Impl\DeCorrespondentResourcesTest.cs" />
     <Compile Include="Impl\ProgramTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Impl\WebReaderTest.cs" />

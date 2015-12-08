@@ -8,7 +8,7 @@ using NUnit.Framework;
 namespace DeCorrespondent.Test.Impl
 {
     [TestFixture]
-    public class RssFeedReaderTest
+    public class RssFeedResourcesTest
     {
         [Test]
         public void Items()
@@ -33,9 +33,9 @@ namespace DeCorrespondent.Test.Impl
             Assert.IsNotNull(result);
         }
 
-        private static RssFeedReader CreateReader()
+        private static RssFeedResources CreateReader()
         {
-            return new RssFeedReader(new FileResources());
+            return new RssFeedResources(new FileResources());
         }
 
         private string ReadFeedXml()

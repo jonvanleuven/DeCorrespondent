@@ -7,7 +7,7 @@ using DeCorrespondent.Test.Util;
 namespace DeCorrespondent.Test.Impl
 {
     [TestFixture]
-    public class DeCorrespondentReaderTest
+    public class DeCorrespondentResourcesTest
     {
         [Test]
         public void ReadItems()
@@ -26,21 +26,29 @@ namespace DeCorrespondent.Test.Impl
             var config = FileConfig.Load(@"..\..\config-test.xml").DeCorrespondentReaderConfig;
             using (var webresources = WebReader.Login(new ConsoleLogger(true), config.Username, config.Password))
             {
-                var reader = new DeCorrespondentReader(webresources, new ConsoleLogger(true));
+                var reader = new DeCorrespondentResources(webresources, new ConsoleLogger(true));
                 var articleReader = new ArticleReader();
 
-                var result = reader.ReadNieuwItems().Take(20).ToList();
+                var result = reader.ReadNieuwItems().Take(20);
 
                 foreach (var item in result)
                 {
-                    Assert.IsTrue(articleReader.Read(reader.ReadArticle(item.Id)).Metadata.Published - item.Publicationdate < new TimeSpan(0, 0, 60));
+                    AssertIgnoreSeconds(articleReader.Read(reader.ReadArticle(item.Id)).Metadata.Published, item.Publicationdate);
                 }
             }
         }
 
-        private static DeCorrespondentReader CreateReader()
+        private static void AssertIgnoreSeconds(DateTime expected, DateTime actual)
         {
-            return new DeCorrespondentReader(new FileResources(), new ConsoleLogger(true));
+            Assert.AreEqual(
+                new DateTime(expected.Year, expected.Month, expected.Day, expected.Hour, expected.Minute, 0), 
+                new DateTime(actual.Year, actual.Month, actual.Day, actual.Hour, actual.Minute, 0)
+                );
+        }
+
+        private static DeCorrespondentResources CreateReader()
+        {
+            return new DeCorrespondentResources(new FileResources(), new ConsoleLogger(true));
         }
     }
 }

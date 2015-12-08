@@ -98,7 +98,7 @@ namespace DeCorrespondent.Test.Impl
                 r, 
                 new ArticleReader(), 
                 new ArticleRenderer(logger, config), 
-                new DeCorrespondentReader(r, logger), 
+                new DeCorrespondentResources(r, logger), 
                 new KindleEmailSender(logger, config.KindleEmailSenderConfig, mailer),
                 new EmailNotificationSender(logger, mailer, config.EmailNotificationSenderConfig), 
                 lastId );
@@ -109,7 +109,7 @@ namespace DeCorrespondent.Test.Impl
             private readonly WrappedResources wrappedResources;
             private readonly LogWrapper logger;
 
-            public ProgramWrapper(LogWrapper logger, WrappedResources resources, IArticleReader articleReader, IArticleRenderer articleRenderer, IDeCorrespondentReader reader, IEReaderSender sender, INotificationSender summarySender, DateTime? last)
+            public ProgramWrapper(LogWrapper logger, WrappedResources resources, IArticleReader articleReader, IArticleRenderer articleRenderer, IDeCorrespondentResources reader, IEReaderSender sender, INotificationSender summarySender, DateTime? last)
             {
                 this.logger = logger;
                 wrappedResources = resources;

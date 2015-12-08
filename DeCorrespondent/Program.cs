@@ -19,7 +19,7 @@ namespace DeCorrespondent
             try
             {
                 logger = new CompositeLogger(logger, new EmailErrorLogger(config.NotificationEmail, config.SmtpMailConfig));
-                using (var session = DeCorrespondentReader.Login(config.DeCorrespondentReaderConfig, logger))
+                using (var session = DeCorrespondentResources.Login(config.DeCorrespondentReaderConfig, logger))
                 {
                     var p = Program.Instance(arguments, logger, session, config);
                     var pdfs = p.ReadDeCorrespondentAndWritePdfs();
@@ -33,7 +33,7 @@ namespace DeCorrespondent
             }
         }
 
-        private static Program Instance(ProgramArguments args, ILogger logger, IDeCorrespondentReader decorrespondent, FileConfig config)
+        private static Program Instance(ProgramArguments args, ILogger logger, IDeCorrespondentResources decorrespondent, FileConfig config)
         {
             var reader = new ArticleReader();
             var renderer = new ArticleRenderer(logger, config.ArticleRendererConfig);
@@ -44,7 +44,7 @@ namespace DeCorrespondent
             return new Program(args, logger, reader, renderer, decorrespondent, lastIdDs, kindle, summarySender, config.MaxAantalArticles);
         }
 
-        private readonly IDeCorrespondentReader decorrespondent;
+        private readonly IDeCorrespondentResources decorrespondent;
         private readonly IArticleReader reader;
         private readonly IArticleRenderer renderer;
         private readonly ILogger logger;
@@ -54,7 +54,7 @@ namespace DeCorrespondent
         private readonly INotificationSender summarySender;
         private readonly ProgramArguments args;
 
-        public Program(ProgramArguments args, ILogger logger, IArticleReader reader, IArticleRenderer renderer, IDeCorrespondentReader decorrespondent, ILastDatasource lastDs, IEReaderSender kindle, INotificationSender summarySender, int maxAantalArticles)
+        public Program(ProgramArguments args, ILogger logger, IArticleReader reader, IArticleRenderer renderer, IDeCorrespondentResources decorrespondent, ILastDatasource lastDs, IEReaderSender kindle, INotificationSender summarySender, int maxAantalArticles)
         {
             this.args = args;
             this.logger = logger;
@@ -70,12 +70,13 @@ namespace DeCorrespondent
         public IList<ArticlePdf> ReadDeCorrespondentAndWritePdfs()
         {
             var last = lastDs.ReadLast() ?? DateTime.Today.AddDays(-1);
-            if( args.ArticleId.HasValue)
-                throw new NotImplementedException();
-
-            var regels = NewItems()
+            var query = args.ArticleId.HasValue
+                ? new[] {args.ArticleId.Value}
+                : NewItems()
                     .TakeWhile(i => i.Publicationdate > last)
-                    .Select(i => new { Article = ReadArticle(i.Id), i.Id })
+                    .Select(i => i.Id);
+            var regels = query
+                    .Select(id => new { Article = ReadArticle(id), Id = id })
                     .Take(maxAantalArticles);
             var result = new List<ArticlePdf>();
             foreach (var r in regels)

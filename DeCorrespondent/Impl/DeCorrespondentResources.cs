@@ -5,17 +5,17 @@ using HtmlAgilityPack;
 
 namespace DeCorrespondent.Impl
 {
-    public class DeCorrespondentReader : IDeCorrespondentReader
+    public class DeCorrespondentResources : IDeCorrespondentResources
     {
         private readonly ILogger log;
         private readonly IResourceReader resources;
 
-        public static DeCorrespondentReader Login(IDeCorrespondentReaderConfig config, ILogger log)
+        public static DeCorrespondentResources Login(IDeCorrespondentReaderConfig config, ILogger log)
         {
-            return new DeCorrespondentReader(RetryWebReader.Wrap(WebReader.Login(log, config.Username, config.Password), log), log);
+            return new DeCorrespondentResources(RetryWebReader.Wrap(WebReader.Login(log, config.Username, config.Password), log), log);
         }
 
-        public DeCorrespondentReader(IResourceReader resources, ILogger log)
+        public DeCorrespondentResources(IResourceReader resources, ILogger log)
         {
             this.log = log;
             this.resources = resources;

@@ -34,7 +34,7 @@ namespace DeCorrespondent.Test.Impl
         [Test]
         public void ReadItems()
         {
-            using (var reader = new DeCorrespondentReader(CreateReader(), new ConsoleLogger(true)))
+            using (var reader = new DeCorrespondentResources(CreateReader(), new ConsoleLogger(true)))
             {
                 var items = reader.ReadNieuwItems().Take(10).ToList();
 
@@ -58,7 +58,7 @@ namespace DeCorrespondent.Test.Impl
         public void ReadItem()
         {
             var id = 3530;
-            using (var reader = new DeCorrespondentReader(CreateReader(), new ConsoleLogger(true)))
+            using (var reader = new DeCorrespondentResources(CreateReader(), new ConsoleLogger(true)))
             {
                 var article = reader.ReadArticle(id);
 
