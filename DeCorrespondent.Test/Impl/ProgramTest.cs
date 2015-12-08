@@ -14,7 +14,7 @@ namespace DeCorrespondent.Test.Impl
         public void GetItemsFromWebAndRenderPdf()
         {
             var config = FileConfig.Load(@"..\..\config-test.xml").DeCorrespondentReaderConfig;
-            using (var webresources = WebReader.Login(new ConsoleLogger(true), config.Username, config.Password))
+            using (var webresources = DeCorrespondentWebReader.Login(new ConsoleLogger(true), config.Username, config.Password))
             {
                 var program = CreateProgram(webresources);
 

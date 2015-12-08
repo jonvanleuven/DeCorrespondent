@@ -109,8 +109,9 @@
     <Compile Include="Impl\SmtpMailerTest.cs" />
     <Compile Include="Impl\DeCorrespondentResourcesTest.cs" />
     <Compile Include="Impl\ProgramTest.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Impl\WebReaderTest.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Impl\DeCorrespondentWebReaderTest.cs" />
     <Compile Include="Util\FileResources.cs" />
     <Compile Include="Util\LogWrapper.cs" />
   </ItemGroup>

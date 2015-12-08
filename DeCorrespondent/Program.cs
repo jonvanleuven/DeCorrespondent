@@ -19,7 +19,7 @@ namespace DeCorrespondent
             try
             {
                 logger = new CompositeLogger(logger, new EmailErrorLogger(config.NotificationEmail, config.SmtpMailConfig));
-                using (var session = DeCorrespondentResources.Login(config.DeCorrespondentReaderConfig, logger))
+                using (var session = CreateSession(config, logger))
                 {
                     var p = Program.Instance(arguments, logger, session, config);
                     var pdfs = p.ReadDeCorrespondentAndWritePdfs();
@@ -31,6 +31,13 @@ namespace DeCorrespondent
             {
                 logger.Error(e);
             }
+        }
+
+        private static IDeCorrespondentResources CreateSession(FileConfig config, ILogger logger)
+        {
+            if (string.IsNullOrEmpty(config.DeCorrespondentReaderConfig.Username))
+                return RssFeedResources.Instance(logger);
+            return DeCorrespondentResources.Login(config.DeCorrespondentReaderConfig, logger);
         }
 
         private static Program Instance(ProgramArguments args, ILogger logger, IDeCorrespondentResources decorrespondent, FileConfig config)
@@ -72,7 +79,7 @@ namespace DeCorrespondent
             var last = lastDs.ReadLast() ?? DateTime.Today.AddDays(-1);
             var query = args.ArticleId.HasValue
                 ? new[] {args.ArticleId.Value}
-                : NewItems()
+                : decorrespondent.ReadNieuwItems()
                     .TakeWhile(i => i.Publicationdate > last)
                     .Select(i => i.Id);
             var regels = query
@@ -122,11 +129,6 @@ namespace DeCorrespondent
             return reader.Read(decorrespondent.ReadArticle(id));
         }
 
-        private IEnumerable<INieuwItem> NewItems()
-        {
-            return decorrespondent.ReadNieuwItems();
-        }
-
         public class ArticlePdf
         {
             internal ArticlePdf(string filename, IArticle article)
@@ -140,7 +142,7 @@ namespace DeCorrespondent
 
         private static ProgramArguments HandleArguments(string[] args, FileConfig config)
         {
-            if (args.Length == 0 && !string.IsNullOrEmpty(config.DeCorrespondentReaderConfig.Username))
+            if (args.Length == 0)
                 return new ProgramArguments(true);
             if (args.Length > 0 && args[0] == "/config")
             {

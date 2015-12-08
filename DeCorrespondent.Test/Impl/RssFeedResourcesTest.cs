@@ -33,9 +33,19 @@ namespace DeCorrespondent.Test.Impl
             Assert.IsNotNull(result);
         }
 
-        private static RssFeedResources CreateReader()
+        [Test]
+        public void ReadAllArticles()
         {
-            return new RssFeedResources(new FileResources());
+            var reader = CreateReader(new WebReader(new ConsoleLogger(true)));
+
+            var result = reader.ReadNieuwItems().Select(i => reader.ReadArticle(i.Id)).ToList();
+
+            Assert.IsNotNull(result);
+        }
+
+        private static RssFeedResources CreateReader(IResourceReader resources = null)
+        {
+            return new RssFeedResources(resources ?? new FileResources());
         }
 
         private string ReadFeedXml()

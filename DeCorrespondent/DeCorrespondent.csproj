@@ -62,6 +62,7 @@
     <Compile Include="Impl\Log4NetLogger.cs" />
     <Compile Include="Impl\RetryWebReader.cs" />
     <Compile Include="Impl\RssFeedResources.cs" />
+    <Compile Include="Impl\WebReader.cs" />
     <Compile Include="INotificationSender.cs" />
     <Compile Include="ILastDatasource.cs" />
     <Compile Include="ILogger.cs" />
@@ -77,7 +78,7 @@
     <Compile Include="IEReaderSender.cs" />
     <Compile Include="IArticle.cs" />
     <Compile Include="Impl\SmtpMailer.cs" />
-    <Compile Include="Impl\WebReader.cs" />
+    <Compile Include="Impl\DeCorrespondentWebReader.cs" />
     <Compile Include="IResourceReader.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>

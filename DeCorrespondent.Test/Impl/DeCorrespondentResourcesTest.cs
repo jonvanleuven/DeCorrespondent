@@ -24,7 +24,7 @@ namespace DeCorrespondent.Test.Impl
         public void Publicationdate()
         {
             var config = FileConfig.Load(@"..\..\config-test.xml").DeCorrespondentReaderConfig;
-            using (var webresources = WebReader.Login(new ConsoleLogger(true), config.Username, config.Password))
+            using (var webresources = DeCorrespondentWebReader.Login(new ConsoleLogger(true), config.Username, config.Password))
             {
                 var reader = new DeCorrespondentResources(webresources, new ConsoleLogger(true));
                 var articleReader = new ArticleReader();

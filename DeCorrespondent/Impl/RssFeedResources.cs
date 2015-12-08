@@ -34,7 +34,7 @@ namespace DeCorrespondent.Impl
 
         public string ReadArticle(int id)
         {
-            return resources.Read(items.Single(i => i.Id == id).Url);
+            return resources.Read(items.OrderByDescending(i => i.Publicationdate).First(i => i.Id == id).Url);
         }
 
         public class RssItem : INieuwItem

@@ -12,7 +12,7 @@ namespace DeCorrespondent.Impl
 
         public static DeCorrespondentResources Login(IDeCorrespondentReaderConfig config, ILogger log)
         {
-            return new DeCorrespondentResources(RetryWebReader.Wrap(WebReader.Login(log, config.Username, config.Password), log), log);
+            return new DeCorrespondentResources(RetryWebReader.Wrap(DeCorrespondentWebReader.Login(log, config.Username, config.Password), log), log);
         }
 
         public DeCorrespondentResources(IResourceReader resources, ILogger log)
