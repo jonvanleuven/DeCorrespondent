@@ -22,9 +22,9 @@ namespace DeCorrespondent.Test.Impl
         }
 
         [Test]
-        public void Render3361()
+        public void Render3785()
         {
-            var article = new ArticleReader().Read(new FileResources().Read("http://t/3361"));
+            var article = new ArticleReader().Read(new FileResources().Read("http://t/3785"));
             var renderer = CreateRenderer();
 
             var Html = renderer.Render(article);
@@ -72,7 +72,7 @@ namespace DeCorrespondent.Test.Impl
         private static IArticleRenderer CreateRenderer()
         {
             var config = FileConfig.Load(@"..\..\config-test.xml");
-            return new HtmlArticleRenderer(new ConsoleLogger(true), config, new WebReader(new ConsoleLogger(true)));
+            return new HtmlArticleRenderer(new ConsoleLogger(true), config);
         }
     }
 }

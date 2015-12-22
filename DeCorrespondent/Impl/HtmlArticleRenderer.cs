@@ -13,11 +13,11 @@ namespace DeCorrespondent.Impl
         private readonly IArticleRendererConfig config;
         private readonly IResourceReader resources;
 
-        public HtmlArticleRenderer(ILogger log, IArticleRendererConfig config, IResourceReader resources)
+        public HtmlArticleRenderer(ILogger log, IArticleRendererConfig config)
         {
             this.log = log;
             this.config = config;
-            this.resources = resources;
+            this.resources = new WebReader(new ConsoleLogger(false));
         }
 
         public IArticleEbook Render(IArticle a)
@@ -38,11 +38,12 @@ namespace DeCorrespondent.Impl
                 else
                 {
                     var image = resources.ReadBinary(src);
-                    n.Attributes["src"].Value = string.Format("data:image/jpg;base64,{0}", Convert.ToBase64String(image));
+                    var extension = src.Split('.').LastOrDefault();
+                    n.Attributes["src"].Value = string.Format("data:image/{1};base64,{0}", Convert.ToBase64String(image), extension);
                 }
-
             });
-            return new ArticleEbook(FormatName(string.Format("{0} {1}", a.Metadata.ReadingTime.Select(i => (int?)i).LastOrDefault(), a.Metadata.Title)).Trim() + ".html", Encoding.UTF8.GetBytes(doc.DocumentNode.OuterHtml));
+            (body.SelectNodes("//iframe") ?? EmptyNodes).Where(n => n != null).ToList().ForEach(n => n.ParentNode.ReplaceChild(HtmlNode.CreateNode(@"<img src=""""/>"), n));
+            return new ArticleEbook(FormatName(string.Format("{0} {1}", a.Metadata.ReadingTime.Select(i => (int?)i).LastOrDefault(), a.Metadata.Title)).Trim() + ".html", doc.Encoding.GetBytes(doc.DocumentNode.OuterHtml));
         }
 
         public static string FormatName(string name)
@@ -63,10 +64,12 @@ namespace DeCorrespondent.Impl
         div.publication-body-link {{ background-color: #D3D3D3; {11} }}
         img {{ max-width:200; }}
         svg {{ max-width:50; }}
+        h1, h2, h3, h4 {{ font-weight:bold; text-align: left; }}
         img.author {{ max-height:50; }}
         blockquote {{ color: gray; {12} }}
         div.voorpagina img.author {{ align: right; }} 
         div.voorpagina {{ text-align:center; }}
+        div.voorpagina p {{ font-size: 0.7em; }}
         a {{ color:#000000; }}
         div.voorpagina img.author {{ float: right; margin-top:10px; }} 
         /*
@@ -84,8 +87,8 @@ namespace DeCorrespondent.Impl
     <body>
     <div class=""voorpagina"">
         <img class=""logo"" src=""https://static.decorrespondent.nl/images/nl/logo/logo_nl.svg""><br/>
-        <img class=""author"" src=""{7}"">
-        <h3>{1}</h3>
+        {7}
+        <h2>{1}</h2>
         <p>{3} {4} - {8}</p>
         <img class=""main"" src=""{6}"">
         <p>{2:dd-MM-yyyy H:mm} - Leestijd: {5}</p>
@@ -102,7 +105,7 @@ namespace DeCorrespondent.Impl
                 HtmlEntity.Entitize(a.Metadata.AuthorLastname),  //4
                 DisplayReadingTime(a.Metadata.ReadingTime), //5
                 a.Metadata.MainImgUrl, //6
-                a.Metadata.AuthorImgUrl, //7
+                string.IsNullOrEmpty(a.Metadata.AuthorImgUrl)?"":string.Format(@"<img class=""author"" src=""{0}"">", a.Metadata.AuthorImgUrl), //7
                 HtmlEntity.Entitize(a.Metadata.Section), //8
                 HtmlEntity.Entitize(a.Metadata.Description), //9
                 config.DisplayInfocards ? "" : "display:none;", //10

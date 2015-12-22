@@ -75,6 +75,9 @@
     <EmbeddedResource Include="Resources\3391_Hoe-precieze-cijfers-ons-misleiden-en-de-geschiedenis-bepalen_187354754081-10e8fcfa">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\article_3785">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">

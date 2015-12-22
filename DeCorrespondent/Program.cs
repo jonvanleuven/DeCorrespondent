@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -37,7 +36,9 @@ namespace DeCorrespondent
         private static Program Instance(ProgramArguments args, ILogger logger, IDeCorrespondentResources decorrespondent, FileConfig config)
         {
             var reader = new ArticleReader();
-            var renderer = new PdfArticleRenderer(logger, config.ArticleRendererConfig, config.EvoPdfLicenseKey);
+            var renderer = string.IsNullOrEmpty(config.EvoPdfLicenseKey) 
+                ? new HtmlArticleRenderer(logger, config.ArticleRendererConfig)
+                : new PdfArticleRenderer(logger, config.ArticleRendererConfig, config.EvoPdfLicenseKey) as IArticleRenderer;
             var lastIdDs = new FileLastDatasource();
             var mailer = new SmtpMailer(logger, config.SmtpMailConfig);
             var kindle = new KindleEmailSender(logger, config.KindleEmailSenderConfig, mailer);
