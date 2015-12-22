@@ -100,7 +100,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Impl\ArticleReaderTest.cs" />
-    <Compile Include="Impl\ArticleRendererTest.cs" />
+    <Compile Include="Impl\HtmlArticleRendererTest.cs" />
+    <Compile Include="Impl\PdfArticleRendererTest.cs" />
     <Compile Include="Impl\EmailErrorLoggerTest.cs" />
     <Compile Include="Impl\EmailNotificationSenderTest.cs" />
     <Compile Include="Impl\Log4NetLoggerTest.cs" />

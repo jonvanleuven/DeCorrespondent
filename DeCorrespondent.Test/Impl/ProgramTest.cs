@@ -97,7 +97,7 @@ namespace DeCorrespondent.Test.Impl
             return new ProgramWrapper(logger, 
                 r, 
                 new ArticleReader(), 
-                new ArticleRenderer(logger, config), 
+                new PdfArticleRenderer(logger, config, config.EvoPdfLicenseKey), 
                 new DeCorrespondentResources(r, logger), 
                 new KindleEmailSender(logger, config.KindleEmailSenderConfig, mailer),
                 new EmailNotificationSender(logger, mailer, config.EmailNotificationSenderConfig), 

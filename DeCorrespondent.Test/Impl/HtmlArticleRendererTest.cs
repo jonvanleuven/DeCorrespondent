@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace DeCorrespondent.Test.Impl
 {
     [TestFixture]
-    public class ArticleRendererTest
+    public class HtmlArticleRendererTest
     {
         [Test]
         public void Render()
@@ -14,11 +14,11 @@ namespace DeCorrespondent.Test.Impl
             var article = new ArticleReader().Read(new FileResources().Read("http://t/3358"));
             var renderer = CreateRenderer();
 
-            var pdf = renderer.Render(article);
+            var Html = renderer.Render(article);
 
-            Assert.NotNull(pdf.Content);
-            Assert.AreEqual("16 Reis mee door het land dat niet bestaat (en leer hoe belangrijk het is om erkend te worden).pdf", pdf.Name);
-            File.WriteAllBytes("d:\\" + pdf.Name, pdf.Content);
+            Assert.NotNull(Html.Content);
+            Assert.AreEqual("16 Reis mee door het land dat niet bestaat (en leer hoe belangrijk het is om erkend te worden).html", Html.Name);
+            File.WriteAllBytes("d:\\" + Html.Name, Html.Content);
         }
 
         [Test]
@@ -27,10 +27,10 @@ namespace DeCorrespondent.Test.Impl
             var article = new ArticleReader().Read(new FileResources().Read("http://t/3361"));
             var renderer = CreateRenderer();
 
-            var pdf = renderer.Render(article);
+            var Html = renderer.Render(article);
             
-            Assert.NotNull(pdf.Content);
-            File.WriteAllBytes("d:\\" + pdf.Name, pdf.Content);
+            Assert.NotNull(Html.Content);
+            File.WriteAllBytes("d:\\" + Html.Name, Html.Content);
         }
 
         [Test]
@@ -39,10 +39,10 @@ namespace DeCorrespondent.Test.Impl
             var article = new ArticleReader().Read(new FileResources().Read("http://t/3450"));
             var renderer = CreateRenderer();
 
-            var pdf = renderer.Render(article);
+            var Html = renderer.Render(article);
 
-            Assert.NotNull(pdf.Content);
-            File.WriteAllBytes("d:\\" + pdf.Name, pdf.Content);
+            Assert.NotNull(Html.Content);
+            File.WriteAllBytes("d:\\" + Html.Name, Html.Content);
         }
 
         [Test]
@@ -51,10 +51,10 @@ namespace DeCorrespondent.Test.Impl
             var article = new ArticleReader().Read(new FileResources().Read("http://t/3444"));
             var renderer = CreateRenderer();
 
-            var pdf = renderer.Render(article);
+            var Html = renderer.Render(article);
 
-            Assert.NotNull(pdf.Content);
-            File.WriteAllBytes("d:\\" + pdf.Name, pdf.Content);
+            Assert.NotNull(Html.Content);
+            File.WriteAllBytes("d:\\" + Html.Name, Html.Content);
         }
 
         [Test]
@@ -63,15 +63,16 @@ namespace DeCorrespondent.Test.Impl
             var article = new ArticleReader().Read(new FileResources().Read("http://t/3430"));
             var renderer = CreateRenderer();
 
-            var pdf = renderer.Render(article);
+            var Html = renderer.Render(article);
 
-            Assert.NotNull(pdf.Content);
-            File.WriteAllBytes("d:\\" + pdf.Name, pdf.Content);
+            Assert.NotNull(Html.Content);
+            File.WriteAllBytes("d:\\" + Html.Name, Html.Content);
         }
 
         private static IArticleRenderer CreateRenderer()
         {
-            return new ArticleRenderer(new ConsoleLogger(true), FileConfig.Load(@"..\..\config-test.xml"));
+            var config = FileConfig.Load(@"..\..\config-test.xml");
+            return new HtmlArticleRenderer(new ConsoleLogger(true), config, new WebReader(new ConsoleLogger(true)));
         }
     }
 }

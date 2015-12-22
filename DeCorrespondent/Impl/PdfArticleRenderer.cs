@@ -7,15 +7,17 @@ using HtmlAgilityPack;
 
 namespace DeCorrespondent.Impl
 {
-    public class ArticleRenderer : IArticleRenderer
+    public class PdfArticleRenderer : IArticleRenderer
     {
         private readonly ILogger log;
         private readonly IArticleRendererConfig config;
+        private readonly string evoPdfLicenseKey;
 
-        public ArticleRenderer(ILogger log, IArticleRendererConfig config)
+        public PdfArticleRenderer(ILogger log, IArticleRendererConfig config, string evoPdfLicenseKey )
         {
             this.log = log;
             this.config = config;
+            this.evoPdfLicenseKey = evoPdfLicenseKey;
         }
 
         public IArticleEbook Render(IArticle a)
@@ -97,8 +99,8 @@ namespace DeCorrespondent.Impl
         private PdfConverter CreatePdfConverter(IArticle article)
         {
             var pdfConverter = new PdfConverter();
-            if (!string.IsNullOrEmpty(config.EvoPdfLicenseKey))
-                pdfConverter.LicenseKey = config.EvoPdfLicenseKey;
+            if (!string.IsNullOrEmpty(evoPdfLicenseKey))
+                pdfConverter.LicenseKey = evoPdfLicenseKey;
             pdfConverter.ExtensionsEnabled = false;
             pdfConverter.JavaScriptEnabled = false;
             pdfConverter.PdfDocumentInfo.Title = string.Format("{0} {1}", article.Metadata.ReadingTime.Select(i => (int?)i).LastOrDefault(), article.Metadata.Title).Trim();
@@ -139,7 +141,6 @@ namespace DeCorrespondent.Impl
 
     public interface IArticleRendererConfig
     {
-        string EvoPdfLicenseKey { get; }
         bool DisplayInfocards { get; }
         bool DisplayPublicationLinks { get; }
         bool DisplayBlockquotes { get; }

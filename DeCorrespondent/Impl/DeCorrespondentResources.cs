@@ -10,7 +10,7 @@ namespace DeCorrespondent.Impl
         private readonly ILogger log;
         private readonly IResourceReader resources;
 
-        public static DeCorrespondentResources Login(IDeCorrespondentReaderConfig config, ILogger log)
+        public static IDeCorrespondentResources Login(IDeCorrespondentReaderConfig config, ILogger log)
         {
             return new DeCorrespondentResources(RetryWebReader.Wrap(DeCorrespondentWebReader.Login(log, config.Username, config.Password), log), log);
         }

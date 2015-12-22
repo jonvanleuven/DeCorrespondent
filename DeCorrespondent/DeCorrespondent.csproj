@@ -60,6 +60,7 @@
     <Compile Include="Impl\DeCorrespondentResources.cs" />
     <Compile Include="Impl\EmailErrorLogger.cs" />
     <Compile Include="Impl\Log4NetLogger.cs" />
+    <Compile Include="Impl\HtmlArticleRenderer.cs" />
     <Compile Include="Impl\RetryWebReader.cs" />
     <Compile Include="Impl\RssFeedResources.cs" />
     <Compile Include="Impl\WebReader.cs" />
@@ -68,7 +69,7 @@
     <Compile Include="ILogger.cs" />
     <Compile Include="IMailer.cs" />
     <Compile Include="Impl\ArticleReader.cs" />
-    <Compile Include="Impl\ArticleRenderer.cs" />
+    <Compile Include="Impl\PdfArticleRenderer.cs" />
     <Compile Include="IArticleRenderer.cs" />
     <Compile Include="Impl\ConsoleLogger.cs" />
     <Compile Include="Impl\EmailNotificationSender.cs" />

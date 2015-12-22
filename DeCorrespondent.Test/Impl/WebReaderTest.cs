@@ -1,5 +1,4 @@
-﻿using System;
-using DeCorrespondent.Impl;
+﻿using DeCorrespondent.Impl;
 using NUnit.Framework;
 
 namespace DeCorrespondent.Test.Impl
@@ -18,7 +17,7 @@ namespace DeCorrespondent.Test.Impl
             Assert.NotNull(result);
         }
 
-        private WebReader CreateReader()
+        private static WebReader CreateReader()
         {
             return new WebReader(new ConsoleLogger(true));
         }

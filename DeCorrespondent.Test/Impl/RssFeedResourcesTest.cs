@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Linq;
 using DeCorrespondent.Impl;
 using DeCorrespondent.Test.Util;
@@ -34,31 +33,30 @@ namespace DeCorrespondent.Test.Impl
         }
 
         [Test]
-        public void ReadAllArticles()
+        public void ReadAndRenderAllFromWebResource() //TODO fix testcase
         {
             var reader = CreateReader(new WebReader(new ConsoleLogger(true)));
+            var articleReader = new ArticleReader();
+            var config = CreateConfig();
+            var renderer = new PdfArticleRenderer(new ConsoleLogger(true), config.ArticleRendererConfig, config.EvoPdfLicenseKey);
 
-            var result = reader.ReadNieuwItems().Select(i => reader.ReadArticle(i.Id)).ToList();
+            var result = reader.ReadNieuwItems()
+                .Select(i => reader.ReadArticle(i.Id))
+                .Select(a => articleReader.Read(a))
+                .Select(a => renderer.Render(a))
+                .ToList();
 
             Assert.IsNotNull(result);
+        }
+
+        private static FileConfig CreateConfig()
+        {
+            return FileConfig.Load(@"..\..\config-test.xml");
         }
 
         private static RssFeedResources CreateReader(IResourceReader resources = null)
         {
             return new RssFeedResources(resources ?? new FileResources());
-        }
-
-        private string ReadFeedXml()
-        {
-            var name = "DeCorrespondent.Test.Resources.rss.xml";
-            var resource = GetType().Assembly.GetManifestResourceStream(name);
-            if (resource == null)
-                throw new Exception("Article resource not found: " + name);
-            using (var s = new StreamReader(resource))
-            {
-                return s.ReadToEnd();
-            }
-
         }
     }
 }

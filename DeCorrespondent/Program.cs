@@ -19,7 +19,8 @@ namespace DeCorrespondent
             try
             {
                 logger = new CompositeLogger(logger, new EmailErrorLogger(config.NotificationEmail, config.SmtpMailConfig));
-                using (var session = CreateSession(config, logger))
+                var login = !string.IsNullOrEmpty(config.DeCorrespondentReaderConfig.Username);
+                using (var session = (login ? DeCorrespondentResources.Login(config.DeCorrespondentReaderConfig, logger) : RssFeedResources.Instance(logger)))
                 {
                     var p = Program.Instance(arguments, logger, session, config);
                     var pdfs = p.ReadDeCorrespondentAndWritePdfs();
@@ -33,17 +34,10 @@ namespace DeCorrespondent
             }
         }
 
-        private static IDeCorrespondentResources CreateSession(FileConfig config, ILogger logger)
-        {
-            if (string.IsNullOrEmpty(config.DeCorrespondentReaderConfig.Username))
-                return RssFeedResources.Instance(logger);
-            return DeCorrespondentResources.Login(config.DeCorrespondentReaderConfig, logger);
-        }
-
         private static Program Instance(ProgramArguments args, ILogger logger, IDeCorrespondentResources decorrespondent, FileConfig config)
         {
             var reader = new ArticleReader();
-            var renderer = new ArticleRenderer(logger, config.ArticleRendererConfig);
+            var renderer = new PdfArticleRenderer(logger, config.ArticleRendererConfig, config.EvoPdfLicenseKey);
             var lastIdDs = new FileLastDatasource();
             var mailer = new SmtpMailer(logger, config.SmtpMailConfig);
             var kindle = new KindleEmailSender(logger, config.KindleEmailSenderConfig, mailer);

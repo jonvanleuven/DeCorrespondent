@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Net;
 using System.Text;
 
@@ -16,15 +15,7 @@ namespace DeCorrespondent.Impl
 
         public string Read(string url)
         {
-            log.Debug("Requesting url '" + url + "'");
-            var req = WebRequest.Create(url);
-            var response = req.GetResponse();
-            var stream = response.GetResponseStream();
-            using (var memoryStream = new MemoryStream())
-            {
-                stream.CopyTo(memoryStream);
-                return new UTF8Encoding().GetString(memoryStream.ToArray());
-            }
+            return new UTF8Encoding().GetString(ReadBinary(url));
         }
 
         public byte[] ReadBinary(string url)

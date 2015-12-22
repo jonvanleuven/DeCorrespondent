@@ -6,6 +6,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.XPath;
+using HtmlAgilityPack;
 
 namespace DeCorrespondent.Impl
 {
@@ -14,7 +15,7 @@ namespace DeCorrespondent.Impl
         private readonly IList<RssItem> items;
         private readonly IResourceReader resources;
 
-        public static RssFeedResources Instance(ILogger log)
+        public static IDeCorrespondentResources Instance(ILogger log)
         {
             return new RssFeedResources(new WebReader(log));
         }
@@ -34,7 +35,12 @@ namespace DeCorrespondent.Impl
 
         public string ReadArticle(int id)
         {
-            return resources.Read(items.OrderByDescending(i => i.Publicationdate).First(i => i.Id == id).Url);
+            var html = resources.Read(items.OrderByDescending(i => i.Publicationdate).First(i => i.Id == id).Url);
+            var doc = new HtmlDocument();
+            doc.OptionAutoCloseOnEnd = false;
+            doc.OptionFixNestedTags = true;
+            doc.Load(new MemoryStream(new UTF8Encoding().GetBytes(html)));
+            return doc.DocumentNode.OuterHtml;
         }
 
         public class RssItem : INieuwItem
