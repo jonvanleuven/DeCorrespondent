@@ -62,19 +62,19 @@ namespace DeCorrespondent.Impl
 
         private static string ExternalMediaHtml(IExternalMedia l, IArticle article)
         {
-            var url = l.Url.StartsWith("http://player.vimeo.com")
-                ? article.Metadata.Url //rechtstreeks naar Vimeo linken werkt niet: link naar artikel
-                : l.Url;
             var description = l.Description;
             if (string.IsNullOrEmpty(l.Description))
             {
-                if (l.Url.StartsWith("http://www.youtube.com"))
+                if (l.Type == ExternalMediaType.YouTube)
                     description = "video";
-                if (l.Url.StartsWith("http://player.vimeo.com"))
+                if (l.Type == ExternalMediaType.Vimeo)
                     description = "video";
-                if (l.Url.StartsWith("https://w.soundcloud.com"))
+                if (l.Type == ExternalMediaType.Soundcloud)
                     description = "audio";
             }
+            var url = l.Type == ExternalMediaType.Vimeo
+                ? article.Metadata.Url //rechtstreeks naar Vimeo linken werkt niet: link naar artikel
+                : l.Url;
             return string.Format(@"<a href=""{0}"">{1}</a>", url, HtmlEntity.Entitize(description));
         }
     }

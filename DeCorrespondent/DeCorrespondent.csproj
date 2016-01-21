@@ -61,6 +61,7 @@
     <Compile Include="Impl\EmailErrorLogger.cs" />
     <Compile Include="Impl\Log4NetLogger.cs" />
     <Compile Include="Impl\HtmlArticleRenderer.cs" />
+    <Compile Include="Impl\MemoryLogger.cs" />
     <Compile Include="Impl\RetryWebReader.cs" />
     <Compile Include="Impl\RssFeedResources.cs" />
     <Compile Include="Impl\WebReader.cs" />

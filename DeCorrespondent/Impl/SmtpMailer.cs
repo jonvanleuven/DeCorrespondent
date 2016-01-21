@@ -26,6 +26,7 @@ namespace DeCorrespondent.Impl
                 return;
             }
 
+            log.Info("Sending mail to '{0}' with {1} attachements...", string.Join(", ", toList), attachments != null ? attachments.Count() : 0);
             var client = new SmtpClient
             {
                 Host = config.Server,
@@ -49,7 +50,7 @@ namespace DeCorrespondent.Impl
             client.Send(message);
             if (streams != null)
                 streams.ForEach(s => s.Close());
-            log.Info(string.Format("Mail has been send to '{0}' with {1} attachements", string.Join(", ", toList), attachments!=null ? attachments.Count() : 0));
+            log.Debug("Mail send");
         }
     }
 

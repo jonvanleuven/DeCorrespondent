@@ -36,5 +36,13 @@ namespace DeCorrespondent
     {
         string Url { get; }
         string Description { get; }
+        ExternalMediaType? Type { get; }
+    }
+
+    public enum ExternalMediaType
+    {
+        YouTube,
+        Vimeo,
+        Soundcloud
     }
 }

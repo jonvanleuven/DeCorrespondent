@@ -14,7 +14,7 @@ namespace DeCorrespondent.Impl
             var doc = new HtmlDocument();
             doc.LoadHtml(article);
             var metadataValues = doc.DocumentNode.SelectNodes("//meta")
-                .Where(n => n.Attributes.Contains("name") || n.Attributes.Contains("property"))
+                .Where(n => n.Attributes.Contains("content") && (n.Attributes.Contains("name") || n.Attributes.Contains("property")))
                 .ToDictionary(n => n.Attributes.Contains("name") ? n.Attributes["name"].Value : n.Attributes["property"].Value, n => n.Attributes["content"].Value);
             var body = doc.DocumentNode.SelectSingleNode("//body");
             var metadata = new ArticleMetadata(metadataValues);
@@ -153,6 +153,20 @@ namespace DeCorrespondent.Impl
             Description = description;
         }
         public string Url { get; private set; }
-        public string Description { get; private set; } 
+        public string Description { get; private set; }
+
+        public ExternalMediaType? Type
+        {
+            get
+            {
+                if (Url.StartsWith("http://www.youtube.com"))
+                    return ExternalMediaType.YouTube;
+                if (Url.StartsWith("http://player.vimeo.com"))
+                    return ExternalMediaType.Vimeo;
+                if (Url.StartsWith("https://w.soundcloud.com"))
+                    return ExternalMediaType.Soundcloud;
+                return null;
+            }
+        }
     }
 }

@@ -12,8 +12,11 @@ namespace DeCorrespondent.Test.Impl
         {
             var config = FileConfig.Load(@"..\..\config-test.xml");
             var logger = new EmailErrorLogger(config.NotificationEmail, config.SmtpMailConfig);
+            logger.Debug("een debug regel");
+            logger.Info("een info regel met '{0}'", "een argument");
 
             logger.Error(new Exception("dit is een test"));
         }
     }
 }
+
