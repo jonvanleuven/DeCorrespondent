@@ -20,6 +20,7 @@ namespace DeCorrespondent
         string Url { get; }
         string Title { get; }
         IList<int> ReadingTime { get; }
+        string ReadingTimeDisplay { get; }
         string AuthorFirstname { get; }
         string AuthorLastname { get; }
         DateTime Published { get; }

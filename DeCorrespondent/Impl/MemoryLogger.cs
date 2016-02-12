@@ -11,17 +11,22 @@ namespace DeCorrespondent.Impl
         }
         public void Info(string message, params object[] args)
         {
-            Lines.Add(string.Format("{0:dd-MM-yyyy HH:mm:ss} INFO  {1}", DateTime.Now, string.Format(message, args)));
+            Lines.Add(string.Format("{0}  INFO - {1}", Timestamp(), string.Format(message, args)));
         }
 
         public void Debug(string message, params object[] args)
         {
-            Lines.Add(string.Format("{0:dd-MM-yyyy HH:mm:ss} DEBUG {1}", DateTime.Now, string.Format(message, args)));
+            Lines.Add(string.Format("{0} DEBUG - {1}", Timestamp(), string.Format(message, args)));
         }
 
         public void Error(Exception e)
         {
-            Lines.Add(string.Format("{0:dd-MM-yyyy HH:mm:ss} ERROR {1}\n{2}", DateTime.Now, e.Message, e.StackTrace));
+            Lines.Add(string.Format("{0} ERROR - {1}", Timestamp(), e));
+        }
+
+        private static string Timestamp()
+        {
+            return string.Format("{0:yyyy-MM-dd HH:mm:ss,ffff}", DateTime.Now);
         }
 
         public List<string> Lines { get; private set; }

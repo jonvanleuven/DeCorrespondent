@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using DeCorrespondent.Impl;
+using HtmlAgilityPack;
 
 namespace DeCorrespondent
 {
@@ -77,6 +78,10 @@ namespace DeCorrespondent
                 : decorrespondent.ReadNieuwItems()
                     .TakeWhile(i => i.Publicationdate > last)
                     .Select(i => i.Id);
+
+            if (args.RunInteractiveMode)
+                query = query.Where(AskIncludeArticle).ToList();
+
             var regels = query
                     .Select(id => new { Article = ReadArticle(id), Id = id })
                     .Take(maxAantalArticles);
@@ -88,7 +93,37 @@ namespace DeCorrespondent
                 lastDs.UpdateLast(DateTime.Now);
                 result.Add(new ArticlePdf(file, r.Article));
             }
+            lastDs.UpdateLast(DateTime.Now);
             return result;
+        }
+
+        private bool AskIncludeArticle(int id)
+        {
+            var article = reader.Read(decorrespondent.ReadArticle(id));
+            Console.WriteLine(string.Empty);
+            Console.WriteLine("** {0} {1} **", article.Metadata.AuthorFirstname, article.Metadata.AuthorLastname);
+            Console.WriteLine("** {0} **", article.Metadata.Title);
+            Console.WriteLine("** Leestijd: {0} **", article.Metadata.ReadingTimeDisplay);
+            Console.WriteLine(ToTextBlock(70, article.Metadata.Description, "  "));
+            Console.Write("Ja of Nee (J/N)? ");
+            var key = Console.ReadKey();
+            Console.WriteLine(string.Empty);
+            return key.KeyChar.ToString().ToLower() == "j" ||
+                   key.KeyChar.ToString().ToLower() == "y";
+        }
+
+        private static string ToTextBlock(int width, string text, string linePrefix = null)
+        {
+            var words = text.Split(' ');
+            var line = 1;
+            return (linePrefix??string.Empty) + words.Aggregate(string.Empty, (left, right) => {
+                if (line * width < left.Length)
+                {
+                    line++;
+                    return left + "\n" + (linePrefix ?? string.Empty) + right;
+                }
+                return left + " " + right;
+            }).Trim();
         }
 
         public void DeleteFile(string filename)
@@ -168,10 +203,17 @@ namespace DeCorrespondent
                 result.ArticleId = int.Parse(args[0].Split('=')[1]);
                 return result;
             }
+            else if (args.Length > 0 && args[0].StartsWith("/i"))
+            {
+                var result = new ProgramArguments(true);
+                result.RunInteractiveMode = true;
+                return result;
+            }
             else
             {
                 Console.WriteLine("/config : Pas de configuratie aan (config.xml)");
                 Console.WriteLine("/id={articleId} : Run voor 1 specifiek artikel (id)");
+                Console.WriteLine("/i : Interactieve modus: vraag welke artikelen te versturen");
                 return new ProgramArguments(false);
             }
         }
@@ -184,6 +226,7 @@ namespace DeCorrespondent
             }
             public bool RunProgram { get; private set; }
             public int? ArticleId { get; set; }
+            public bool RunInteractiveMode { get; set; }
         }
     }
 }

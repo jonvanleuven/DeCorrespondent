@@ -106,6 +106,17 @@ namespace DeCorrespondent.Impl
         public int Id { get { return int.Parse(Url.Split('/').Last()); } }
         public string Title { get { return Unescape( GetValue("og:title") ); } }
         public IList<int> ReadingTime { get; internal set; }
+
+        public string ReadingTimeDisplay
+        {
+            get
+            {
+                if (ReadingTime == null || !ReadingTime.Any() || (ReadingTime.Count() == 1 && ReadingTime.First() == 1))
+                    return "1 minuut";
+                return string.Format("{0} minuten", string.Join("-", ReadingTime));
+            }
+        }
+
         public string AuthorFirstname { get { return GetValue("article:author:first_name"); } }
         public string AuthorLastname { get { return GetValue("article:author:last_name"); } }
         public DateTime Published { get { return ParseDate(GetValue("article:published_time")); } }

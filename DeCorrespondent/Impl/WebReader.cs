@@ -20,14 +20,22 @@ namespace DeCorrespondent.Impl
 
         public byte[] ReadBinary(string url)
         {
-            log.Debug("Requesting url '" + url + "'");
-            var req = WebRequest.Create(url);
-            var response = req.GetResponse();
-            var stream = response.GetResponseStream();
-            using (var memoryStream = new MemoryStream())
+            try
             {
-                stream.CopyTo(memoryStream);
-                return memoryStream.ToArray();
+                log.Debug("Requesting url '" + url + "'");
+                var req = WebRequest.Create(url);
+                var response = req.GetResponse();
+                var stream = response.GetResponseStream();
+                using (var memoryStream = new MemoryStream())
+                {
+                    stream.CopyTo(memoryStream);
+                    return memoryStream.ToArray();
+                }
+            }
+            catch (WebException)
+            {
+                log.Info("Error requesting url '" + url + "'");
+                throw;
             }
         }
 
