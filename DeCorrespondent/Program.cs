@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using DeCorrespondent.Impl;
-using HtmlAgilityPack;
 
 namespace DeCorrespondent
 {
@@ -101,7 +100,7 @@ namespace DeCorrespondent
         {
             var article = reader.Read(decorrespondent.ReadArticle(id));
             Console.WriteLine(string.Empty);
-            Console.WriteLine("** {0} {1} **", article.Metadata.AuthorFirstname, article.Metadata.AuthorLastname);
+            Console.WriteLine("** {0} {1} - {2} **", article.Metadata.AuthorFirstname, article.Metadata.AuthorLastname, article.Metadata.Section);
             Console.WriteLine("** {0} **", article.Metadata.Title);
             Console.WriteLine("** Leestijd: {0} **", article.Metadata.ReadingTimeDisplay);
             Console.WriteLine(ToTextBlock(70, article.Metadata.Description, "  "));
@@ -117,7 +116,7 @@ namespace DeCorrespondent
             var words = text.Split(' ');
             var line = 1;
             return (linePrefix??string.Empty) + words.Aggregate(string.Empty, (left, right) => {
-                if (line * width < left.Length)
+                if (line * width < (left.Length+right.Length))
                 {
                     line++;
                     return left + "\n" + (linePrefix ?? string.Empty) + right;

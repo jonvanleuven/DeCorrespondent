@@ -70,7 +70,7 @@ namespace DeCorrespondent.Impl
         body {{ text-align: left;}}
         .publication-main-image-description, figcaption {{ font-size: 0.5em; }}
         .infocard-description {{ font-size: 0.7em; font-style: italic; {10} }} 
-        div.publication-body-link {{ background-color: #D3D3D3; {11} }}
+        div.publication-body-link, div.publication-insertion-link {{ background-color: #D3D3D3; {11} }}
         img {{ max-width:200; }}
         svg {{ max-width:50; }}
         h1, h2, h3, h4 {{ font-weight:bold; text-align: left; }}
