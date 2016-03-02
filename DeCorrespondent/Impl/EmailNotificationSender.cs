@@ -27,10 +27,10 @@ namespace DeCorrespondent.Impl
             }
             var articles = articlesEnumerable.ToList();
             var list = string.Join("\n", articles.Select(a => string.Format(@"<p><b><a href=""{6}"" style=""color:black;"">{2}</a></b> {0} {1}<br/>{5}<br/><i>{3}</i></p>{4}<hr/>", 
-                HtmlEntity.Entitize(a.Metadata.AuthorFirstname), 
-                HtmlEntity.Entitize(a.Metadata.AuthorLastname),
-                HtmlEntity.Entitize(a.Metadata.Title), 
-                HtmlEntity.Entitize(a.Metadata.Description), 
+                a.Metadata.AuthorFirstname.EscapeHtml(), 
+                a.Metadata.AuthorLastname.EscapeHtml(),
+                a.Metadata.Title.EscapeHtml(), 
+                a.Metadata.Description.EscapeHtml(), 
                 ExternalMediaList(a), 
                 ImageHtml(a), 
                 a.Metadata.Url)));
@@ -75,7 +75,7 @@ namespace DeCorrespondent.Impl
             var url = l.Type == ExternalMediaType.Vimeo
                 ? article.Metadata.Url //rechtstreeks naar Vimeo linken werkt niet: link naar artikel
                 : l.Url;
-            return string.Format(@"<a href=""{0}"">{1}</a>", url, HtmlEntity.Entitize(description));
+            return string.Format(@"<a href=""{0}"">{1}</a>", url, description.EscapeHtml());
         }
     }
 

@@ -104,6 +104,7 @@
   <ItemGroup>
     <Compile Include="Impl\ArticleReaderTest.cs" />
     <Compile Include="Impl\HtmlArticleRendererTest.cs" />
+    <Compile Include="Impl\HtmlExtensionsTest.cs" />
     <Compile Include="Impl\MemoryLoggerTest.cs" />
     <Compile Include="Impl\PdfArticleRendererTest.cs" />
     <Compile Include="Impl\EmailErrorLoggerTest.cs" />

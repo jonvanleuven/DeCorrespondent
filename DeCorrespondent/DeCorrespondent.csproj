@@ -59,6 +59,7 @@
     <Compile Include="Impl\CompositeLogger.cs" />
     <Compile Include="Impl\DeCorrespondentResources.cs" />
     <Compile Include="Impl\EmailErrorLogger.cs" />
+    <Compile Include="Impl\HtmlExtensions.cs" />
     <Compile Include="Impl\Log4NetLogger.cs" />
     <Compile Include="Impl\HtmlArticleRenderer.cs" />
     <Compile Include="Impl\MemoryLogger.cs" />

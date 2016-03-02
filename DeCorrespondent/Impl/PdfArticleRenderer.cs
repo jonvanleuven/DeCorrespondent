@@ -74,15 +74,15 @@ namespace DeCorrespondent.Impl
 </html>";
             return string.Format(template, 
                 a.BodyHtml, //0
-                HtmlEntity.Entitize(a.Metadata.Title), //1
+                a.Metadata.Title.EscapeHtml(), //1
                 a.Metadata.Published, //2 
-                HtmlEntity.Entitize(a.Metadata.AuthorFirstname), //3
-                HtmlEntity.Entitize(a.Metadata.AuthorLastname),  //4
+                a.Metadata.AuthorFirstname.EscapeHtml(), //3
+                a.Metadata.AuthorLastname.EscapeHtml(),  //4
                 DisplayReadingTime(a.Metadata.ReadingTime), //5
                 a.Metadata.MainImgUrl, //6
                 a.Metadata.AuthorImgUrl, //7
-                HtmlEntity.Entitize(a.Metadata.Section), //8
-                HtmlEntity.Entitize(a.Metadata.Description), //9
+                a.Metadata.Section.EscapeHtml(), //8
+                a.Metadata.Description.EscapeHtml(), //9
                 config.DisplayInfocards ? "" : "display:none;", //10
                 config.DisplayPublicationLinks ? "" : "display:none;", //11
                 config.DisplayBlockquotes ? "" : "display:none;" //12

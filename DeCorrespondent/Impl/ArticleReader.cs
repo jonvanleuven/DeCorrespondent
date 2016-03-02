@@ -104,7 +104,7 @@ namespace DeCorrespondent.Impl
         }
 
         public int Id { get { return int.Parse(Url.Split('/').Last()); } }
-        public string Title { get { return Unescape( GetValue("og:title") ); } }
+        public string Title { get { return GetValue("og:title").UnescapeHtml(); } }
         public IList<int> ReadingTime { get; internal set; }
 
         public string ReadingTimeDisplay
@@ -137,12 +137,6 @@ namespace DeCorrespondent.Impl
             }
         }
 
-        private static string Unescape(string str)
-        {
-            if (str == null) return null;
-            return HtmlEntity.DeEntitize(str);
-        }
-
         private static DateTime ParseDate(string str)
         {
             return DateTime.Parse(str);
@@ -154,6 +148,33 @@ namespace DeCorrespondent.Impl
             metadata.TryGetValue(key, out result);
             return result;
         }
+    }
+
+    //Tijdelijke: eigenlijk moet Metadata altijd al plain text (escaped html) bevatten
+    public class PlainTextMetaData : IArticleMetadata
+    {
+        private readonly IArticleMetadata metadata;
+
+        public PlainTextMetaData(IArticleMetadata metadata)
+        {
+            this.metadata = metadata;
+        }
+
+        public int Id { get { return metadata.Id; } }
+        public string Url { get { return metadata.Url; } }
+        public string Title { get { return metadata.Title.UnescapeHtml(); } }
+        public IList<int> ReadingTime { get { return metadata.ReadingTime; } }
+        public string ReadingTimeDisplay { get { return metadata.ReadingTimeDisplay; } }
+        public string AuthorFirstname { get { return metadata.AuthorFirstname.UnescapeHtml(); } }
+        public string AuthorLastname { get { return metadata.AuthorLastname.UnescapeHtml(); } }
+        public DateTime Published { get { return metadata.Published; } }
+        public DateTime Modified { get { return metadata.Published; } }
+        public string AuthorImgUrl { get { return metadata.AuthorImgUrl; } }
+        public string MainImgUrl { get { return metadata.MainImgUrl; } }
+        public string MainImgUrlSmall { get { return metadata.MainImgUrlSmall; } }
+        public string Section { get { return metadata.Section.UnescapeHtml(); } }
+        public string Description { get { return metadata.Description.UnescapeHtml(); } }
+        public IList<IExternalMedia> ExternalMedia { get { return metadata.ExternalMedia; } }
     }
 
     public class ExternalMedia : IExternalMedia

@@ -76,14 +76,14 @@ namespace DeCorrespondent
                 ? new[] {args.ArticleId.Value}
                 : decorrespondent.ReadNieuwItems()
                     .TakeWhile(i => i.Publicationdate > last)
-                    .Select(i => i.Id);
+                    .Select(i => i.Id)
+                    .Take(maxAantalArticles);
 
             if (args.RunInteractiveMode)
                 query = query.Where(AskIncludeArticle).ToList();
 
             var regels = query
-                    .Select(id => new { Article = ReadArticle(id), Id = id })
-                    .Take(maxAantalArticles);
+                    .Select(id => new { Article = ReadArticle(id), Id = id });
             var result = new List<ArticlePdf>();
             foreach (var r in regels)
             {
@@ -98,12 +98,12 @@ namespace DeCorrespondent
 
         private bool AskIncludeArticle(int id)
         {
-            var article = reader.Read(decorrespondent.ReadArticle(id));
+            var metadata = new PlainTextMetaData( reader.Read(decorrespondent.ReadArticle(id)).Metadata );
             Console.WriteLine(string.Empty);
-            Console.WriteLine("** {0} {1} - {2} **", article.Metadata.AuthorFirstname, article.Metadata.AuthorLastname, article.Metadata.Section);
-            Console.WriteLine("** {0} **", article.Metadata.Title);
-            Console.WriteLine("** Leestijd: {0} **", article.Metadata.ReadingTimeDisplay);
-            Console.WriteLine(ToTextBlock(70, article.Metadata.Description, "  "));
+            Console.WriteLine("** {0} {1} - {2} **", metadata.AuthorFirstname, metadata.AuthorLastname, metadata.Section);
+            Console.WriteLine("** {0} **", metadata.Title);
+            Console.WriteLine("** Leestijd: {0} **", metadata.ReadingTimeDisplay);
+            Console.WriteLine(ToTextBlock(70, metadata.Description, "  "));
             Console.Write("Ja of Nee (J/N)? ");
             var key = Console.ReadKey();
             Console.WriteLine(string.Empty);
@@ -111,15 +111,17 @@ namespace DeCorrespondent
                    key.KeyChar.ToString().ToLower() == "y";
         }
 
-        private static string ToTextBlock(int width, string text, string linePrefix = null)
+        private static string ToTextBlock(int width, string text, string linePrefix = "")
         {
             var words = text.Split(' ');
             var line = 1;
-            return (linePrefix??string.Empty) + words.Aggregate(string.Empty, (left, right) => {
-                if (line * width < (left.Length+right.Length))
+            if ( linePrefix.Length >= width )
+                throw new Exception("Line prefix mag niet langer zijn de de breedte van het blok");
+            return linePrefix + words.Aggregate(string.Empty, (left, right) => {
+                if (line * (width- linePrefix.Length) < (left.Length+right.Length))
                 {
                     line++;
-                    return left + "\n" + (linePrefix ?? string.Empty) + right;
+                    return left + "\n" + linePrefix + right;
                 }
                 return left + " " + right;
             }).Trim();
