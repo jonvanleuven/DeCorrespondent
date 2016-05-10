@@ -18,7 +18,8 @@ namespace DeCorrespondent.Impl
                 .ToDictionary(n => n.Attributes.Contains("name") ? n.Attributes["name"].Value : n.Attributes["property"].Value, n => n.Attributes["content"].Value);
             var body = doc.DocumentNode.SelectSingleNode("//body");
             var metadata = new ArticleMetadata(metadataValues);
-            metadata.Description = body.SelectSingleNode("//p[@class='intro']").InnerText;
+            var introNode = body.SelectSingleNode("//p[@class='intro']");
+            metadata.Description = introNode != null ? introNode.InnerText : string.Empty;
             metadata.ReadingTime = ReadingTime(body);
             RemoveNodes(body, "//script");
             RemoveNodes(body, "//noscript");
