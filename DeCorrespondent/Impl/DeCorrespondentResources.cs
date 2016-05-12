@@ -24,7 +24,7 @@ namespace DeCorrespondent.Impl
         public IEnumerable<INieuwItem> ReadNieuwItems()
         {
             return Enumerable.Range(0, int.MaxValue)
-                .SelectMany(index => ReadItems(resources.Read("https://decorrespondent.nl/nieuw" + (index != 0 ? "/" + index : ""))));
+                .SelectMany(index => ReadItems(resources.Read("https://decorrespondent.nl/home" + (index != 0 ? "/" + index : ""))));
         }
 
         public void Dispose()

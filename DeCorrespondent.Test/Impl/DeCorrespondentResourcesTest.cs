@@ -35,6 +35,9 @@ namespace DeCorrespondent.Test.Impl
                 {
                     AssertIgnoreSeconds(articleReader.Read(reader.ReadArticle(item.Id)).Metadata.Published, item.Publicationdate);
                 }
+
+                var ids = result.Select(a => a.Id).ToList();
+                Assert.AreEqual(ids.Count(), ids.Distinct().Count(), "Unieke ids verwacht");
             }
         }
 
