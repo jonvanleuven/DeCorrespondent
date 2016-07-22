@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Web;
+using System.Net;
 
 namespace DeCorrespondent.Impl
 {
@@ -11,7 +11,7 @@ namespace DeCorrespondent.Impl
                 return null;
             try
             {
-                return HttpUtility.HtmlEncode(s);
+                return WebUtility.HtmlEncode(s);
             }
             catch (Exception e)
             {
@@ -23,7 +23,7 @@ namespace DeCorrespondent.Impl
         {
             try
             {
-                return HttpUtility.HtmlDecode(s);
+                return WebUtility.HtmlDecode(s);
             }
             catch (Exception e)
             {
