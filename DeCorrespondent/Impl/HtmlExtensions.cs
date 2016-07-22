@@ -1,5 +1,5 @@
 ﻿using System;
-using HtmlAgilityPack;
+using System.Web;
 
 namespace DeCorrespondent.Impl
 {
@@ -11,7 +11,7 @@ namespace DeCorrespondent.Impl
                 return null;
             try
             {
-                return HtmlEntity.Entitize(s.Replace("​", string.Empty));
+                return HttpUtility.HtmlEncode(s);
             }
             catch (Exception e)
             {
@@ -23,7 +23,7 @@ namespace DeCorrespondent.Impl
         {
             try
             {
-                return HtmlEntity.DeEntitize(s);
+                return HttpUtility.HtmlDecode(s);
             }
             catch (Exception e)
             {

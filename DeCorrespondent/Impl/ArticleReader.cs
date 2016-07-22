@@ -15,7 +15,8 @@ namespace DeCorrespondent.Impl
             doc.LoadHtml(article);
             var metadataValues = doc.DocumentNode.SelectNodes("//meta")
                 .Where(n => n.Attributes.Contains("content") && (n.Attributes.Contains("name") || n.Attributes.Contains("property")))
-                .ToDictionary(n => n.Attributes.Contains("name") ? n.Attributes["name"].Value : n.Attributes["property"].Value, n => n.Attributes["content"].Value);
+                .GroupBy(n => n.Attributes.Contains("name") ? n.Attributes["name"].Value : n.Attributes["property"].Value, n => n.Attributes["content"].Value)
+                .ToDictionary(x => x.Key, x => x.FirstOrDefault());
             var body = doc.DocumentNode.SelectSingleNode("//body");
             var metadata = new ArticleMetadata(metadataValues);
             var introNode = body.SelectSingleNode("//p[@class='intro']");

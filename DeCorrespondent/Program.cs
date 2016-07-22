@@ -100,10 +100,22 @@ namespace DeCorrespondent
         {
             var metadata = new PlainTextMetaData( reader.Read(decorrespondent.ReadArticle(id)).Metadata );
             Console.WriteLine(string.Empty);
-            Console.WriteLine("** {0} {1} - {2} **", metadata.AuthorFirstname, metadata.AuthorLastname, metadata.Section);
-            Console.WriteLine("** {0} **", metadata.Title);
-            Console.WriteLine("** Leestijd: {0} **", metadata.ReadingTimeDisplay);
-            Console.WriteLine(ToTextBlock(70, metadata.Description, "  "));
+            using (new ColoredConsole(ConsoleColor.Magenta))//.Highlight("**", ConsoleColor.Green))
+            {
+                Console.WriteLine("** {0} {1} - {2} **", metadata.AuthorFirstname, metadata.AuthorLastname, metadata.Section);
+            }
+            using (new ColoredConsole(ConsoleColor.Cyan))
+            {
+                Console.WriteLine("** {0} **", metadata.Title);
+            }
+            using (new ColoredConsole(ConsoleColor.White))
+            {
+                Console.WriteLine("** Leestijd: {0} **", metadata.ReadingTimeDisplay);
+            }
+            using (new ColoredConsole(ConsoleColor.Yellow))
+            {
+                Console.WriteLine(ToTextBlock(70, metadata.Description, "  "));
+            }
             Console.Write("Ja of Nee (J/N)? ");
             var key = Console.ReadKey();
             Console.WriteLine(string.Empty);
