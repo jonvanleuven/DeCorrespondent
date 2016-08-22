@@ -20,7 +20,7 @@ namespace DeCorrespondent.Impl
             var body = doc.DocumentNode.SelectSingleNode("//body");
             var metadata = new ArticleMetadata(metadataValues);
             var introNode = body.SelectSingleNode("//p[@class='intro']");
-            metadata.Description = introNode != null ? introNode.InnerText : string.Empty;
+            metadata.Description = (introNode != null ? introNode.InnerText : string.Empty).UnescapeHtml();
             metadata.ReadingTime = ReadingTime(body);
             RemoveNodes(body, "//script");
             RemoveNodes(body, "//noscript");

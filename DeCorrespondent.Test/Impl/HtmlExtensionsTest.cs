@@ -20,6 +20,12 @@ namespace DeCorrespondent.Test.Impl
         }
 
         [Test]
+        public void UnEscape2()
+        {
+            Assert.AreEqual("é", "&eacute;".UnescapeHtml());
+        }
+
+        [Test]
         public void DoNotCrash()
         {
             var input = "​"; //welk character is dit?

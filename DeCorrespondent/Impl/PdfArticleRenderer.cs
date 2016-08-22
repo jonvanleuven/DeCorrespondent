@@ -32,7 +32,7 @@ namespace DeCorrespondent.Impl
 
         public static string FormatName(string name)
         {
-            const string invalid = @"<>:""/\|?*";
+            const string invalid = @"<>:""/\|?*" + "\n\r";
             return string.Join("", name.ToArray().Where(l => !invalid.Contains(l))).Trim();
         }
 
