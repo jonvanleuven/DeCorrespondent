@@ -17,7 +17,7 @@ namespace DeCorrespondent.Test.Impl
             var Html = renderer.Render(article);
 
             Assert.NotNull(Html.Content);
-            Assert.AreEqual("16 Reis mee door het land dat niet bestaat (en leer hoe belangrijk het is om erkend te worden).html", Html.Name);
+            Assert.AreEqual("16 Reis mee door het land dat niet bestaat (en leer hoe belangrijk het is om erkend te worden) (Vermeulen).html", Html.Name);
             File.WriteAllBytes("d:\\" + Html.Name, Html.Content);
         }
 

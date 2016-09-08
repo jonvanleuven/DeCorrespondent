@@ -24,7 +24,7 @@ namespace DeCorrespondent.Impl
         public IEnumerable<INieuwItem> ReadNieuwItems()
         {
             return Enumerable.Range(0, int.MaxValue)
-                .SelectMany(index => ReadItems(resources.Read("https://decorrespondent.nl/home" + (index != 0 ? "/" + index : ""))));
+                .SelectMany(index => ReadItems(resources.Read("https://decorrespondent.nl/home/" + index)));
         }
 
         public void Dispose()
@@ -44,6 +44,7 @@ namespace DeCorrespondent.Impl
                 .ToList();
             t.ForEach(Console.WriteLine);*/
 
+            //TODO: dit moet netter kunnen met ".//" selector constructies
             var ids = doc.DocumentNode.SelectNodes("//a[string-length(@data-article-id) > 0]")
                 .Where(n => n != null)
                 .Select(n => int.Parse(n.Attributes["data-article-id"].Value))

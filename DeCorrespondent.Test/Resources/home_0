@@ -1,0 +1,725 @@
+
+<!DOCTYPE html>
+    <!--[if IE]><script type="text/javascript">window.location = "/notsupported";</script><![endif]--><!--[if !(IE)]><!--><html lang="nl" class="no-js"><!--<![endif]--><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="description" content=""><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><meta name="generator" content="Momkai|Respondens"><link rel="search" href="https://decorrespondent.nl/opensearchdescription.xml" type="application/opensearchdescription+xml" title="De Correspondent"><title>De Correspondent</title><script type="application/ld+json">
+	{ "@context" : "http://schema.org",
+		"@type" : "Organization",
+		"name" : "De Correspondent",
+		"url" : "https://decorrespondent.nl",
+		"sameAs" : [
+			"https://facebook.com/decorrespondent",
+			"https://twitter.com/decorrespondent",
+			"https://www.instagram.com/decorrespondent/",
+			"https://www.youtube.com/leesverder",
+			"http://vimeo.com/decorrespondent"
+		]
+	}
+</script><link href="https://static.decorrespondent.nl/ff-g31b4b0e/images/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"><link rel="apple-touch-icon" href="https://static.decorrespondent.nl/ff-g31b4b0e/images/favicons/icon-precomposed.png"><link rel="apple-touch-icon-precomposed" href="https://static.decorrespondent.nl/ff-g31b4b0e/images/favicons/icon-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://static.decorrespondent.nl/ff-g31b4b0e/images/favicons/icon-60x60-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://static.decorrespondent.nl/ff-g31b4b0e/images/favicons/icon-120x120-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://static.decorrespondent.nl/ff-g31b4b0e/images/favicons/icon-57x57-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://static.decorrespondent.nl/ff-g31b4b0e/images/favicons/icon-114x114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://static.decorrespondent.nl/ff-g31b4b0e/images/favicons/icon-76x76-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://static.decorrespondent.nl/ff-g31b4b0e/images/favicons/icon-152x152-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://static.decorrespondent.nl/ff-g31b4b0e/images/favicons/icon-72x72-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://static.decorrespondent.nl/ff-g31b4b0e/images/favicons/icon-144x144-precomposed.png"><meta name="msapplication-TileImage" content="https://static.decorrespondent.nl/ff-g31b4b0e/images/favicons/icon-precomposed.png"><meta name="msapplication-TileColor" content="#DF5B57"><meta name="msapplication-navbutton-color" content="#DF5B57"><meta name="msapplication-tooltip" content="Een dagelijks medicijn tegen de waan van de dag"><meta name="msapplication-starturl" content="/home"><meta name="application-name" content="De Correspondent"><script type="text/javascript">
+	window.App = window.App || {};
+	window.Correspondent = window.Correspondent || {};
+	Correspondent.isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+	document.getElementsByTagName('html')[0].className += Correspondent.isTouch ? ' touch' : ' no-touch';
+</script><script>
+	document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script><link rel="stylesheet" href="https://static.decorrespondent.nl/ff-g31b4b0e/css/styles/main.css"><script src="//use.typekit.net/gpv7zwe.js"></script><script>try{Typekit.load({ async: false });}catch(e){}</script></head><body class=" font-size-l nightmode"><script>
+        dataLayer = [];
+        	dataLayer = [{
+	'page_type': 'feed',
+	'page_public': 'no'
+	}];
+    </script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WM3BVT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WM3BVT');
+    </script><svg display="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewbox="0 0 12 12"><defs><symbol id="preloader"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.4,14.5c0.3-0.6,0.7-0.8,1.1-1.3c0.4-0.6,0.5-1.1,0.1-1.5   c-0.5-0.4-1.5,0.1-2.1,1.2c-3.1,5.8,2.5,8.8,2.5,8.8C12.1,18.9,12.4,16.5,13.4,14.5z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M33.5,31c-3.4,3-12.1,9.1-16.4,6.1c-4.3-3-0.4-10,5.6-16c6-6,12.2-8.5,15.1-7.4   c2.9,1,2.6,5.2-2.4,8.3C28.9,25.8,22,24.6,22,24.6s3.6,1.1,7.8,0.3c5-1,10.9-4.1,11.6-8.6c0.7-4.6-4.4-7.8-15.2-0.9   C15.3,22.3,6.5,35.3,14.7,39.7C22.6,44,33.5,31,33.5,31z"></path></symbol><symbol id="hamburger"><path d="M0,1 20,1"></path><path d="M0,6 20,6"></path><path d="M0,11 20,11"></path></symbol><symbol id="home"><path d="M11,4.4L6,0L1,4.4V12h10V4.4z"></path></symbol><symbol id="podcasts"><path d="M6,2v5.3C5.7,7.1,5.4,7,5,7C3.9,7,3,7.9,3,9s0.9,2,2,2c1.1,0,2-0.9,2-2V4h3V2H7H6z"></path></symbol><symbol id="dossiers"><path d="M2.587 2.587h10.826v10.826z"></path></symbol><symbol id="dossiers2"><path d="M3,1v1h7v6h1V1H3z M1,11h8V3H1V11z"></path></symbol><symbol id="videos"><path d="M6,0C2.7,0,0,2.7,0,6c0,3.3,2.7,6,6,6c3.3,0,6-2.7,6-6C12,2.7,9.3,0,6,0z M6,10.9c-2.7,0-4.9-2.2-4.9-4.9
+	c0-2.7,2.2-4.9,4.9-4.9c2.7,0,4.9,2.2,4.9,4.9C10.9,8.7,8.7,10.9,6,10.9z"></path><polygon points="8.2,6 5,4 5,8 "></polygon></symbol><symbol id="documentaries2"><path d="M3,10l6-4L3,2L3,10z"></path></symbol><symbol id="following"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.6,9.2c-1-0.2-3-0.7-3.1-1.4c0-0.2-0.1-0.8-0.1-0.8S9,6.7,9,3.5
+	C9,1.2,7.5,0,6,0S3,1.2,3,3.5c0,3.2,1.5,3.5,1.5,3.5s0,0.6-0.1,0.8C4.3,8.5,2.4,9,1.4,9.2C0.4,9.4,0,12,0,12h12
+	C12,12,11.6,9.4,10.6,9.2z"></path></symbol><symbol id="stored"><path d="M11,12L6,7.6L1,12V0h10V12z"></path></symbol><symbol id="correspondents"><path d="M7.1,8c-0.6-0.1-2-0.5-2-1c0-0.2,0-0.6,0-0.6s1-0.4,1-3C6,1.9,5,1,4,1S2,1.9,2,3.5c0,2.6,1,3,1,3S3,6.8,3,7
+		c-0.1,0.5-1.4,0.9-2,1C0.3,8.1,0,10,0,10h8C8,10,7.7,8.1,7.1,8z"></path><path d="M12,10c-0.1-0.5-0.3-1.6-0.8-1.7c-0.6-0.1-1.7-0.4-1.8-0.9c0-0.1,0-0.5,0-0.5s0.7-0.3,0.7-2C10,3.5,9.4,3,8.5,3
+		S7,3.5,7,4.9c0,1.6,0.7,2,0.7,2s0,0.2,0,0.3C8.5,7.6,8.8,9,9,10H12z"></path></symbol><symbol id="searchIcon"><path d="m12.001 10.585l-2.826-2.826c0.523-0.79 0.832-1.736 0.832-2.756 0-2.763-2.24-5.003-5.003-5.003-2.764 0-5.004 2.24-5.004 5.003s2.24 5.004 5.004 5.004c1.019 0 1.965-0.309 2.756-0.833l2.826 2.826 1.415-1.415zm-6.997-2.58c-1.656 0-3.002-1.346-3.002-3.002 0-1.655 1.346-3.002 3.002-3.002 1.655 0 3.002 1.347 3.002 3.002 0 1.656-1.347 3.002-3.002 3.002z"></path></symbol></defs></svg><aside class="panel panel-left"><nav role="navigation" class="menu-secondary scrollable"><ul><li class=""><a href="/correspondenten"><svg class="correspondents"><use xlink:href="#correspondents"></use></svg>Correspondenten</a></li><li class=""><a href="/videos"><svg class="videos"><use xlink:href="#videos"></use></svg>Video&#039;s</a></li><li class=""><a href="/podcasts"><svg class="podcasts"><use xlink:href="#podcasts"></use></svg>Podcasts</a></li></ul><ul><li class=""><a href="/contact">Contact</a></li><li class=""><a href="/kiosk">Boeken</a></li><li class=""><a href="/sprekers">Sprekers</a></li><li class=""><a href="/geef-cadeau">Cadeaulidmaatschap</a></li><li class=""><a href="/agenda">Evenementen</a></li></ul><ul class="secondary"><li class=""><a href="/over">Over ons</a></li><li class=""><a href="/vacatures">Vacatures</a></li><li class=""><a href="/veelgestelde-vragen">Veelgestelde vragen</a></li><li class=""><a href="/voorwaarden">Voorwaarden</a></li></ul></nav></aside><header class="header " data-module="Header" data-options='{"sticky": true}' data-priority="1"><div class="left-panel-toggle"><span class="menu-label">Menu</span><div class="icons"><div class="close-icon"><span></span><span></span><span></span><span></span></div><div class="open-icon"><span></span><span></span><span></span></div></div></div><nav class="menu-primary"><ul><li class="active"><a href="/home" class="home"><svg class="home"><use xlink:href="#home"></use></svg><span>Home</span></a></li><li><a href="/themas" class="dossiers"><svg class="dossiers"><use xlink:href="#dossiers"></use></svg><span>Thema&#039;s</span></a></li></ul></nav><div class="logo"><a title="naar de homepage" href="/home"></a></div><div class="search-input"><svg class="search-icon"><use xlink:href="#searchIcon"></use></svg><span><small>Zoeken</small></span></div><div data-module="AutoComplete"><form class="header-search" action="/zoek" method="get" accept-charset="UTF-8"><label>
+      Zoeken
+      <svg class="search-icon"><use xlink:href="#searchIcon"></use></svg></label><fieldset><input name="search_query" type="search" class="search-form-input js-input" placeholder="Zoek op artikelen en correspondenten" data-placeholder="Doorzoek de Correspondent" autocomplete="off"></fieldset><div class="search-close"><div class="close-icon"><span></span><span></span><span></span><span></span></div></div></form><div class="autocomplete js-container mod-header"><div class="autocomplete-list-wrapper js-wrapper"><ul class="autocomplete-list js-list"></ul></div><div class="autocomplete-footer js-footer"><div class="autocomplete-footer-label">Bekijk alle resultaten</div><div class="autocomplete-footer-arrow glyph-right-after"></div></div><div class="autocomplete-close glyph-cross-close js-close"></div></div></div><div class="personal-menu-control" title="open je persoonlijke menu"><div class="personal-menu-toggle"><div class="user-avatar"><img width="32" class="lazyload" data-src="https://static.decorrespondent.nl/ff-g31b4b0e/images/users/avatars/64/J.png" alt="Jon van Leuven"></div><div class="personal-menu-arrows"><span class="up"></span><span class="down"></span></div></div><nav class="menu-personal"><ul><li class=""><a href="/instellingen">Instellingen</a></li><li class=""><a href="/account">Account</a></li><li class=""><a href="/bewaard">Bewaard</a></li><li class=""><a href="/gelezen">Gelezen</a></li></ul><div class="secondary"><a onclick="document.getElementById('logout').submit();" href="javascript:void(0);">Uitloggen</a><form hidden="" id='logout' action='/logout' method='post' accept-charset='UTF-8'></form></div></nav></div></header><section id="container">
+    	
+  
+
+
+<section id="feed" class="feed normal " data-module="InfiniteScroll" data-options='{
+      "feedName": "home"
+      ,"offset": 1}'>
+
+  
+<section class="feed-items">
+
+          
+
+
+
+
+
+  <header class="featured-item-header">
+    <figure>
+                        
+          <img class="mainimage" data-src="https://dynamic.decorrespondent.nl/ff-1473306338/media/{breakpoint-name}/57d07043d21cc7154432592.jpg" alt="Nagelsmann na de wedstrijd tegen Hertha BSC. Foto: Michael Probst/Hollandse Hoogte">
+          <noscript><img src="https://dynamic.decorrespondent.nl/ff-1473306338/media/1920/57d07043d21cc7154432592.jpg alt=" nagelsmann="" na="" de="" wedstrijd="" tegen="" hertha="" bsc.="" foto:="" michael="" probst/hollandse="" hoogte"="" }}"=""></noscript>
+                  </figure>
+
+    
+    
+    <h1><a href="https://decorrespondent.nl/5213/Zeven-voetballessen-van-Julian-Nagelsmann-de-jongste-Duitse-trainer-ooit/257825653943-73a0e181" style="" class="feed-item-link " data-article-id="5213" data-field="title">Zeven voetballessen van Julian Nagelsmann, de jongste Duitse trainer ooit</a></h1>
+  </header>
+
+
+<article class="featured-item">
+  
+  <div class="feed-item-labels">
+    <h4>
+    
+  
+        Verhaal van de dag</h4>  </div>
+
+    <span class="comment-count">5</span>
+
+  <div class="clear"></div>
+  <div class="text">
+    <p data-field="intro">
+      Hij zou zomaar de voorbode kunnen zijn van een nieuwe generatie Duitse trainers. Julian Nagelsmann is geen ex-prof, piepjong (29), en toch coacht hij Bundesligaclub Hoffenheim. Ik sprak hem en destilleerde daaruit zeven voetballessen. &#39;One-touch-voetbal is een slecht idee.&#39;
+    </p>
+
+      
+					
+	
+							
+		<span class="reading-time">Leestijd
+			8 - 11 minuten
+		</span>
+
+	
+
+
+    <a href="https://decorrespondent.nl/5213/Zeven-voetballessen-van-Julian-Nagelsmann-de-jongste-Duitse-trainer-ooit/257825653943-73a0e181" data-article-id="5213" class="glyph-right-after more feed-item-link"></a>
+    <div class="clear"></div>
+
+    <div class="feed-item-avatars ">
+  
+        
+    
+    <a class="feed-item-avatars-avatar" href="/michieldehoog">
+            <img class="feed-item-avatars-avatar-image " src="https://dynamic.decorrespondent.nl/ff-1433405231/media/160/5570072f148e31477399266.png" alt="Michiel de Hoog">
+    </a>
+  </div>  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow ">
+                  <a href="/michieldehoog">
+            <span>Michiel</span> de Hoog
+          </a>
+              </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">140&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip "><div class="mid"><ul class="share-options" data-parent="ul" data-url="https://decorrespondent.nl/5213/Zeven-voetballessen-van-Julian-Nagelsmann-de-jongste-Duitse-trainer-ooit/257825653943-73a0e181" data-id="5213" data-title="Zeven voetballessen van Julian Nagelsmann, de jongste Duitse trainer ooit" data-text="" data-related="michieldehoog" data-expertise="Correspondent Sport" data-mailto="mailto:?subject=Tip: Zeven%20voetballessen%20van%20Julian%20Nagelsmann%2C%20de%20jongste%20Duitse%20trainer%20ooit&body=Op De Correspondent zag ik een verhaal van Michiel%20de%20Hoog dat ik graag met je wil delen:%0D%0A%0D%0AZeven%20voetballessen%20van%20Julian%20Nagelsmann%2C%20de%20jongste%20Duitse%20trainer%20ooit - https%3A%2F%2Fdecorrespondent.nl%2F5213%2FZeven-voetballessen-van-Julian-Nagelsmann-de-jongste-Duitse-trainer-ooit%2F257825653943-73a0e181%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail" data-object-name="publication"><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">LinkedIn</a></li><li class="mail"><a href="javascript: void(0);" data-share-type="mail" class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/5213/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/5213.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="5213"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2016-09-08" title="8-9-2016 5:45">
+	6 uur geleden</time></li></ul>      </footer>
+
+  </article>
+  
+        
+
+
+
+
+
+
+<article class="story-item">
+    <a data-article-id="5212" class="feed-item-link" href="https://decorrespondent.nl/5212/Beste-PVV-stemmer-dit-is-ervoor-nodig-om-uw-partijprogramma-te-realiseren/257776195732-cce4a152">
+    <div class="top">
+              <div class="image">
+              <img class="js-feed-item-image lazyload" data-src="https://dynamic.decorrespondent.nl/ff-1473324338/media/660/57d10483300200135785804.png" alt="Illustratie: Han Hoogerbrugge (voor De Correspondent)">
+  <noscript><img alt="Illustratie: Han Hoogerbrugge (voor De Correspondent)" src="https://dynamic.decorrespondent.nl/ff-1473324338/media/660/57d10483300200135785804.png"></noscript>
+
+          <div class="feed-item-labels">
+            <h4>
+    
+  
+        Analyse</h4>          </div>
+        </div>
+      
+        <span class="comment-count">6</span>
+
+      <div class="clear"></div>
+      <div class="heading">
+        <h2 data-field="title">Beste PVV-stemmer, dit is ervoor nodig om uw partijprogramma te realiseren</h2>
+        <span class="glyph-right"></span>
+      </div>
+    </div>
+  </a>
+
+  <div class="text">
+    <p data-field="intro">
+      Het verkiezingsprogramma van de PVV is makkelijk belachelijk te maken. &#39;E&eacute;n A4&#39;tje, dat had bondiger gekund.&#39; Maar wat als we de voorstellen eens volledig serieus nemen? Wat is ervoor nodig om de plannen van Geert Wilders waar te maken?
+    </p>
+
+      
+					
+	
+							
+		<span class="reading-time">Leestijd
+			5 - 6 minuten
+		</span>
+
+	
+
+    <div class="feed-item-avatars ">
+  
+        
+    
+    <a class="feed-item-avatars-avatar" href="/robwijnberg">
+            <img class="feed-item-avatars-avatar-image " src="https://dynamic.decorrespondent.nl/ff-1433408292/media/160/55701324daf572453298192.png" alt="Rob Wijnberg">
+    </a>
+  </div>  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow ">
+                  <a href="/robwijnberg">
+            <span>Rob</span> Wijnberg
+          </a>
+              </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">36&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip "><div class="mid"><ul class="share-options" data-parent="ul" data-url="https://decorrespondent.nl/5212/Beste-PVV-stemmer-dit-is-ervoor-nodig-om-uw-partijprogramma-te-realiseren/257776195732-cce4a152" data-id="5212" data-title="Beste PVV-stemmer, dit is ervoor nodig om uw partijprogramma te realiseren" data-text="Zien jullie nog &#039;verborgen&#039; kosten/opbrengsten? Die hoor ik graag." data-related="robwijnberg" data-expertise="Correspondent Mediamythen &amp; Mechanismen" data-mailto="mailto:?subject=Tip: Beste%20PVV-stemmer%2C%20dit%20is%20ervoor%20nodig%20om%20uw%20partijprogramma%20te%20realiseren&body=Op De Correspondent zag ik een verhaal van Rob%20Wijnberg dat ik graag met je wil delen:%0D%0A%0D%0ABeste%20PVV-stemmer%2C%20dit%20is%20ervoor%20nodig%20om%20uw%20partijprogramma%20te%20realiseren - https%3A%2F%2Fdecorrespondent.nl%2F5212%2FBeste-PVV-stemmer-dit-is-ervoor-nodig-om-uw-partijprogramma-te-realiseren%2F257776195732-cce4a152%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail" data-object-name="publication"><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">LinkedIn</a></li><li class="mail"><a href="javascript: void(0);" data-share-type="mail" class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/5212/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/5212.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="5212"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2016-09-08" title="8-9-2016 10:45">
+	Een uur geleden</time></li></ul>      </footer>
+
+  </article>
+      
+
+
+  
+
+
+
+<article class="note-item">
+    <div class="note-container">
+    <div class="note-text-container">
+      <a data-article-id="5198" href="https://decorrespondent.nl/5198/Deze-week-tip-ik-elke-dag-een-gratis-documentaire-Vandaag-waarom-Afrika-niet-profiteert-van-zijn-grondstoffen/257083780778-787429b3" class="feed-item-link">
+        <div class="top">
+          <div class="heading">
+            <p class="intro publication-note-intro" data-field="intro">
+              <span class="publication-note-title" data-field="title">
+                Deze week tip ik elke dag een gratis documentaire. Vandaag: waarom Afrika niet profiteert van zijn grondstoffen.
+              </span>
+              Ik zag <em>Stealing Africa </em>(2012) een paar jaar geleden al, en de documentaire is me sindsdien bijgebleven. De hoofdvraag is simpel: hoe kan het dat straatarme landen in Afrika niet profiteren van hun eigen bodemschatten? 
+              <span class="note-read-more" href="https://decorrespondent.nl/5198/Deze-week-tip-ik-elke-dag-een-gratis-documentaire-Vandaag-waarom-Afrika-niet-profiteert-van-zijn-grondstoffen/257083780778-787429b3">Lees verder <span class="glyph-right"></span></span>
+            </p>
+
+              
+					
+	
+							
+		<span class="reading-time">Leestijd
+			1 minuut
+		</span>
+
+	
+
+            <span class="glyph-right"></span>
+          </div>
+          <div class="feed-item-labels">
+            <h4>Notitie</h4>
+          </div>
+            <span class="comment-count">3</span>
+        </div>
+      </a>
+      <div class="note-author-container">         <div class="feed-item-avatars mod-note">
+  
+        
+              
+    <a class="feed-item-avatars-avatar" href="/maitevermeulen">
+            <img class="feed-item-avatars-avatar-image mod-note" src="https://dynamic.decorrespondent.nl/ff-1433250969/media/160/556dac99a68228116799384.png" alt="Maite Vermeulen">
+    </a>
+  </div>      </div>
+    </div>
+  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow ">
+                  <a href="/maitevermeulen">
+            <span>Maite</span> Vermeulen
+          </a>
+              </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">12&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip "><div class="mid"><ul class="share-options" data-parent="ul" data-url="https://decorrespondent.nl/5198/Deze-week-tip-ik-elke-dag-een-gratis-documentaire-Vandaag-waarom-Afrika-niet-profiteert-van-zijn-grondstoffen/257083780778-787429b3" data-id="5198" data-title="Deze week tip ik elke dag een gratis documentaire. Vandaag: waarom Afrika niet profiteert van zijn grondstoffen." data-text="Deze week tip ik elke dag een gratis documentaire. Vandaag: waarom Afrika niet profiteert van zijn grondstoffen. Ik zag Stealing Africa (2012) een paar jaar geleden al, en de documentaire is me sindsdien bijgebleven. De hoofdvraag is simpel: hoe kan het dat straatarme landen in Afrika niet profiteren van hun eigen bodemschatten?" data-related="maitevermeulen" data-expertise="Correspondent Conflict &amp; Ontwikkeling" data-mailto="mailto:?subject=Tip: Deze%20week%20tip%20ik%20elke%20dag%20een%20gratis%20documentaire.%20Vandaag%3A%20waarom%20Afrika%20niet%20profiteert%20van%20zijn%20grondstoffen.&body=Op De Correspondent zag ik een verhaal van Maite%20Vermeulen dat ik graag met je wil delen:%0D%0A%0D%0ADeze%20week%20tip%20ik%20elke%20dag%20een%20gratis%20documentaire.%20Vandaag%3A%20waarom%20Afrika%20niet%20profiteert%20van%20zijn%20grondstoffen. - https%3A%2F%2Fdecorrespondent.nl%2F5198%2FDeze-week-tip-ik-elke-dag-een-gratis-documentaire-Vandaag-waarom-Afrika-niet-profiteert-van-zijn-grondstoffen%2F257083780778-787429b3%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail" data-object-name="publication"><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">LinkedIn</a></li><li class="mail"><a href="javascript: void(0);" data-share-type="mail" class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="5198"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2016-09-07" title="7-9-2016 19:00">
+	17 uur geleden</time></li></ul>      </footer>
+
+  </article>
+      
+
+
+  
+
+
+
+<article class="note-item">
+    <div class="note-container">
+    <div class="note-text-container">
+      <a data-article-id="5221" href="https://decorrespondent.nl/5221/We-wachten-steeds-minder-als-we-daar-rijk-genoeg-voor-zijn/258221319631-834ac382" class="feed-item-link">
+        <div class="top">
+          <div class="heading">
+            <p class="intro publication-note-intro" data-field="intro">
+              <span class="publication-note-title" data-field="title">
+                We wachten steeds minder, als we daar rijk genoeg voor zijn
+              </span>
+              Dankzij de techniek hoeven we steeds minder te wachten. Tenminste, als we geld hebben.
+              <span class="note-read-more" href="https://decorrespondent.nl/5221/We-wachten-steeds-minder-als-we-daar-rijk-genoeg-voor-zijn/258221319631-834ac382">Lees verder <span class="glyph-right"></span></span>
+            </p>
+
+              
+					
+	
+							
+		<span class="reading-time">Leestijd
+			1 minuut
+		</span>
+
+	
+
+            <span class="glyph-right"></span>
+          </div>
+          <div class="feed-item-labels">
+            <h4>Notitie</h4>
+          </div>
+            <span class="comment-count">7</span>
+        </div>
+      </a>
+      <div class="note-author-container">         <div class="feed-item-avatars mod-note">
+  
+        
+              
+    <a class="feed-item-avatars-avatar" href="/bregjehofstede">
+            <img class="feed-item-avatars-avatar-image mod-note" src="https://dynamic.decorrespondent.nl/ff-1470748988/media/160/57a9d93c5c4078165629739.png" alt="Bregje Hofstede">
+    </a>
+  </div>      </div>
+    </div>
+  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow ">
+                  <a href="/bregjehofstede">
+            <span>Bregje</span> Hofstede
+          </a>
+              </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">17&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip "><div class="mid"><ul class="share-options" data-parent="ul" data-url="https://decorrespondent.nl/5221/We-wachten-steeds-minder-als-we-daar-rijk-genoeg-voor-zijn/258221319631-834ac382" data-id="5221" data-title="We wachten steeds minder, als we daar rijk genoeg voor zijn" data-text="We wachten steeds minder, als we daar rijk genoeg voor zijn Dankzij de techniek hoeven we steeds minder te wachten. Tenminste, als we geld hebben." data-related="bregjehofstede" data-expertise="Correspondent Keuzevrijheid" data-mailto="mailto:?subject=Tip: We%20wachten%20steeds%20minder%2C%20als%20we%20daar%20rijk%20genoeg%20voor%20zijn&body=Op De Correspondent zag ik een verhaal van Bregje%20Hofstede dat ik graag met je wil delen:%0D%0A%0D%0AWe%20wachten%20steeds%20minder%2C%20als%20we%20daar%20rijk%20genoeg%20voor%20zijn - https%3A%2F%2Fdecorrespondent.nl%2F5221%2FWe-wachten-steeds-minder-als-we-daar-rijk-genoeg-voor-zijn%2F258221319631-834ac382%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail" data-object-name="publication"><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">LinkedIn</a></li><li class="mail"><a href="javascript: void(0);" data-share-type="mail" class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="5221"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2016-09-07" title="7-9-2016 16:45">
+	19 uur geleden</time></li></ul>      </footer>
+
+  </article>
+      
+
+
+
+
+
+
+<article class="story-item">
+    <a data-article-id="5209" class="feed-item-link" href="https://decorrespondent.nl/5209/Dit-wil-ik-onderzoeken-als-jullie-correspondent-Seksisme/257627821099-df5b422c">
+    <div class="top">
+              <div class="image">
+              <img class="js-feed-item-image lazyload" data-src="https://dynamic.decorrespondent.nl/ff-1473252338/media/660/57ceb710246964366468787.jpg" alt="Illustratie: Cléa Dieudonné (voor De Correspondent)">
+  <noscript><img alt="Illustratie: Cléa Dieudonné (voor De Correspondent)" src="https://dynamic.decorrespondent.nl/ff-1473252338/media/660/57ceb710246964366468787.jpg"></noscript>
+
+          <div class="feed-item-labels">
+            <h4>
+    
+  
+        Oproep</h4>          </div>
+        </div>
+      
+        <span class="comment-count">106</span>
+
+      <div class="clear"></div>
+      <div class="heading">
+        <h2 data-field="title">Dit wil ik onderzoeken als jullie correspondent Seksisme</h2>
+        <span class="glyph-right"></span>
+      </div>
+    </div>
+  </a>
+
+  <div class="text">
+    <p data-field="intro">
+      Waarom gaat seksisme vrijwel altijd over het vrouwenlichaam? En waarom is onze samenleving zo traditioneel als het gaat over moederschap? Vanaf vandaag ben ik jullie correspondent Seksisme en ga ik op zoek naar antwoorden op dit soort vragen. Wat willen jullie weten?
+    </p>
+
+      
+					
+	
+							
+		<span class="reading-time">Leestijd
+			4 minuten
+		</span>
+
+	
+
+    <div class="feed-item-avatars ">
+  
+        
+    
+    <a class="feed-item-avatars-avatar" href="/sarahsluimer">
+            <img class="feed-item-avatars-avatar-image " src="https://dynamic.decorrespondent.nl/ff-1473256579/media/160/57d01c8352a018504183520.png" alt="Sarah Sluimer">
+    </a>
+  </div>  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow ">
+                  <a href="/sarahsluimer">
+            <span>Sarah</span> Sluimer
+          </a>
+              </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">30&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip "><div class="mid"><ul class="share-options" data-parent="ul" data-url="https://decorrespondent.nl/5209/Dit-wil-ik-onderzoeken-als-jullie-correspondent-Seksisme/257627821099-df5b422c" data-id="5209" data-title="Dit wil ik onderzoeken als jullie correspondent Seksisme" data-text="Mijn eerste onderzoeksvragen aan iedereen die zich identificeert als feminist uit de tweede of derde golf: 
+
+Welke les zouden jullie je kinderen willen geven over jullie ervaringen als feminist? 
+
+Wat zijn voor jullie de duidelijkste verschillen tussen het feminisme van de tweede, derde en huidige (vierde) golf?" data-related="https://twitter.com/sarahsluimer" data-expertise="Correspondent Seksisme" data-mailto="mailto:?subject=Tip: Dit%20wil%20ik%20onderzoeken%20als%20jullie%20correspondent%20Seksisme&body=Op De Correspondent zag ik een verhaal van Sarah%20Sluimer dat ik graag met je wil delen:%0D%0A%0D%0ADit%20wil%20ik%20onderzoeken%20als%20jullie%20correspondent%20Seksisme - https%3A%2F%2Fdecorrespondent.nl%2F5209%2FDit-wil-ik-onderzoeken-als-jullie-correspondent-Seksisme%2F257627821099-df5b422c%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail" data-object-name="publication"><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">LinkedIn</a></li><li class="mail"><a href="javascript: void(0);" data-share-type="mail" class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/5209/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/5209.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="5209"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2016-09-07" title="7-9-2016 14:45">
+	21 uur geleden</time></li></ul>      </footer>
+
+  </article>
+      
+
+
+
+
+
+
+<article class="story-item">
+    <a data-article-id="5220" class="feed-item-link" href="https://decorrespondent.nl/5220/Ook-een-gladde-betonnen-muur-van-vier-meter-houdt-de-migranten-niet-tegen-in-Calais/258171861420-0fb312c9">
+    <div class="top">
+              <div class="image">
+              <img class="js-feed-item-image lazyload" data-src="https://dynamic.decorrespondent.nl/ff-1464579950/media/660/57481c230e6ac1249792487.jpg" alt="Tenten van vluchtelingen bij de Griekse stad Idomeni op de grens met Macedonië, maart 2016. Foto: Kai Wiedenhöfer">
+  <noscript><img alt="Tenten van vluchtelingen bij de Griekse stad Idomeni op de grens met Macedonië, maart 2016. Foto: Kai Wiedenhöfer" src="https://dynamic.decorrespondent.nl/ff-1464579950/media/660/57481c230e6ac1249792487.jpg"></noscript>
+
+          <div class="feed-item-labels">
+            <h4 class="mod-relevant-again">Opnieuw relevant</h4><h4>
+    
+  
+        Analyse</h4>          </div>
+        </div>
+      
+        <span class="comment-count">2</span>
+
+      <div class="clear"></div>
+      <div class="heading">
+        <h2 data-field="title">Ook een gladde betonnen muur van vier meter houdt de migranten niet tegen in Calais</h2>
+        <span class="glyph-right"></span>
+      </div>
+    </div>
+  </a>
+
+  <div class="text">
+    <p data-field="intro">
+      Het Verenigd Koninkrijk en Frankrijk willen grensmuren bouwen bij Calais om migranten bij passerende vrachtwagens weg te houden. Terwijl grensbarri&egrave;res geen bescherming bieden. En re&euml;le dreigingen niet wegnemen. 
+    </p>
+
+      
+					
+	
+							
+		<span class="reading-time">Leestijd
+			6 - 8 minuten
+		</span>
+
+	
+
+    <div class="feed-item-avatars ">
+  
+        
+    
+    <a class="feed-item-avatars-avatar" href="/dickwittenberg">
+            <img class="feed-item-avatars-avatar-image " src="https://dynamic.decorrespondent.nl/ff-1433249163/media/160/556da58bbd2656331382762.png" alt="Dick Wittenberg">
+    </a>
+  </div>  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow ">
+                  <a href="/dickwittenberg">
+            <span>Dick</span> Wittenberg
+          </a>
+              </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">27&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip "><div class="mid"><ul class="share-options" data-parent="ul" data-url="https://decorrespondent.nl/5220/Ook-een-gladde-betonnen-muur-van-vier-meter-houdt-de-migranten-niet-tegen-in-Calais/258171861420-0fb312c9" data-id="5220" data-title="Ook een gladde betonnen muur van vier meter houdt de migranten niet tegen in Calais" data-text="" data-related="dickwittenberg" data-expertise="Correspondent Wereldverbeteraars" data-mailto="mailto:?subject=Tip: Ook%20een%20gladde%20betonnen%20muur%20van%20vier%20meter%20houdt%20de%20migranten%20niet%20tegen%20in%20Calais&body=Op De Correspondent zag ik een verhaal van Dick%20Wittenberg dat ik graag met je wil delen:%0D%0A%0D%0AOok%20een%20gladde%20betonnen%20muur%20van%20vier%20meter%20houdt%20de%20migranten%20niet%20tegen%20in%20Calais - https%3A%2F%2Fdecorrespondent.nl%2F5220%2FOok-een-gladde-betonnen-muur-van-vier-meter-houdt-de-migranten-niet-tegen-in-Calais%2F258171861420-0fb312c9%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail" data-object-name="publication"><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">LinkedIn</a></li><li class="mail"><a href="javascript: void(0);" data-share-type="mail" class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/5220/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/5220.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="5220"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2016-09-07" title="7-9-2016 13:15">
+	23 uur geleden</time></li></ul>      </footer>
+
+  </article>
+      
+
+
+
+
+
+
+<article class="story-item">
+    <a data-article-id="5204" class="feed-item-link" href="https://decorrespondent.nl/5204/Het-Westen-heeft-zijn-eigen-fastfoodjihadisten-gevoed-constateert-deze-soldatenzoon/257380530044-c1de55f3">
+    <div class="top">
+              <div class="image">
+              <img class="js-feed-item-image lazyload" data-src="https://dynamic.decorrespondent.nl/ff-1473241538/media/660/57cfd2e07ca106468779897.jpg" alt="4 september 2016: Iraakse soldaten bij verzamelde wapens in de op IS heroverde stad Fallujah. Foto: Ahmad Al-Rubaye / AFP">
+  <noscript><img alt="4 september 2016: Iraakse soldaten bij verzamelde wapens in de op IS heroverde stad Fallujah. Foto: Ahmad Al-Rubaye / AFP" src="https://dynamic.decorrespondent.nl/ff-1473241538/media/660/57cfd2e07ca106468779897.jpg"></noscript>
+
+          <div class="feed-item-labels">
+            <h4>
+    
+  
+        Interview</h4>          </div>
+        </div>
+      
+        <span class="comment-count">11</span>
+
+      <div class="clear"></div>
+      <div class="heading">
+        <h2 data-field="title">Het Westen heeft zijn eigen fastfoodjihadisten gevoed, constateert deze soldatenzoon</h2>
+        <span class="glyph-right"></span>
+      </div>
+    </div>
+  </a>
+
+  <div class="text">
+    <p data-field="intro">
+      Het terrorisme en de vluchtelingenstroom die ons nu plagen, zijn voor een belangrijk deel de vrucht van onze koloniale en militaire bemoeienis in het Midden-Oosten, betoogt Ludo De Brabander in zijn boek <em>Oorlog zonder grenzen. </em>In gesprek met een in Nederland bijna uitgestorven menssoort: de vredesactivist.
+    </p>
+
+      
+					
+	
+							
+		<span class="reading-time">Leestijd
+			10 - 13 minuten
+		</span>
+
+	
+
+    <div class="feed-item-avatars ">
+  
+        
+    
+    <a class="feed-item-avatars-avatar" href="/tomasvanheste">
+            <img class="feed-item-avatars-avatar-image " src="https://dynamic.decorrespondent.nl/ff-1433405037/media/160/5570066d9bbcf3143270140.png" alt="Tomas Vanheste">
+    </a>
+  </div>  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow ">
+                  <a href="/tomasvanheste">
+            <span>Tomas</span> Vanheste
+          </a>
+              </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">57&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip "><div class="mid"><ul class="share-options" data-parent="ul" data-url="https://decorrespondent.nl/5204/Het-Westen-heeft-zijn-eigen-fastfoodjihadisten-gevoed-constateert-deze-soldatenzoon/257380530044-c1de55f3" data-id="5204" data-title="Het Westen heeft zijn eigen fastfoodjihadisten gevoed, constateert deze soldatenzoon" data-text="" data-related="tvanheste" data-expertise="Correspondent Europa tussen macht en verbeelding" data-mailto="mailto:?subject=Tip: Het%20Westen%20heeft%20zijn%20eigen%20fastfoodjihadisten%20gevoed%2C%20constateert%20deze%20soldatenzoon&body=Op De Correspondent zag ik een verhaal van Tomas%20Vanheste dat ik graag met je wil delen:%0D%0A%0D%0AHet%20Westen%20heeft%20zijn%20eigen%20fastfoodjihadisten%20gevoed%2C%20constateert%20deze%20soldatenzoon - https%3A%2F%2Fdecorrespondent.nl%2F5204%2FHet-Westen-heeft-zijn-eigen-fastfoodjihadisten-gevoed-constateert-deze-soldatenzoon%2F257380530044-c1de55f3%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail" data-object-name="publication"><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">LinkedIn</a></li><li class="mail"><a href="javascript: void(0);" data-share-type="mail" class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/5204/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/5204.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="5204"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2016-09-07" title="7-9-2016 11:45">
+	Gisteren</time></li></ul>      </footer>
+
+  </article>
+      
+
+
+  
+
+
+
+<article class="note-item">
+    <div class="note-container">
+    <div class="note-text-container">
+      <a data-article-id="5219" href="https://decorrespondent.nl/5219/Schattiger-dan-babypandas-Schuif-aan-voor-de-eerste-baby-pilaarkoraal-die-de-mensheid-ooit-mocht-zien/258122403209-0b89246d" class="feed-item-link">
+        <div class="top">
+          <div class="heading">
+            <p class="intro publication-note-intro" data-field="intro">
+              <span class="publication-note-title" data-field="title">
+                &#039;Schattiger dan babypanda&#039;s!&#039; Schuif aan voor de eerste baby-pilaarkoraal die de mensheid ooit mocht zien.
+              </span>
+              Al helpt ze nu ruim tien jaar koraalouders aan koraalbaby&#39;s, koraalvrouw Kristen Marhaver wordt knettergek van de immer weerklinkende oproep om &#39;de koraalriffen te redden.&#39;
+              <span class="note-read-more" href="https://decorrespondent.nl/5219/Schattiger-dan-babypandas-Schuif-aan-voor-de-eerste-baby-pilaarkoraal-die-de-mensheid-ooit-mocht-zien/258122403209-0b89246d">Lees verder <span class="glyph-right"></span></span>
+            </p>
+
+              
+					
+	
+							
+		<span class="reading-time">Leestijd
+			1 minuut
+		</span>
+
+	
+
+            <span class="glyph-right"></span>
+          </div>
+          <div class="feed-item-labels">
+            <h4>Notitie</h4>
+          </div>
+            <span class="comment-count">2</span>
+        </div>
+      </a>
+      <div class="note-author-container">         <div class="feed-item-avatars mod-note">
+  
+        
+              
+    <a class="feed-item-avatars-avatar" href="/tamarstelling">
+            <img class="feed-item-avatars-avatar-image mod-note" src="https://dynamic.decorrespondent.nl/ff-1471899521/media/160/57bb67819d4312180871563.png" alt="Tamar Stelling">
+    </a>
+  </div>      </div>
+    </div>
+  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow ">
+                  <a href="/tamarstelling">
+            <span>Tamar</span> Stelling
+          </a>
+              </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">6&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip "><div class="mid"><ul class="share-options" data-parent="ul" data-url="https://decorrespondent.nl/5219/Schattiger-dan-babypandas-Schuif-aan-voor-de-eerste-baby-pilaarkoraal-die-de-mensheid-ooit-mocht-zien/258122403209-0b89246d" data-id="5219" data-title="&#039;Schattiger dan babypanda&#039;s!&#039; Schuif aan voor de eerste baby-pilaarkoraal die de mensheid ooit mocht zien." data-text="&#039;Schattiger dan babypanda&#039;s!&#039; Schuif aan voor de eerste baby-pilaarkoraal die de mensheid ooit mocht zien. Al helpt ze nu ruim tien jaar koraalouders aan koraalbaby&amp;#39;s, koraalvrouw Kristen Marhaver wordt knettergek van de immer weerklinkende oproep om &amp;#39;de koraalriffen te redden.&amp;#39;" data-related="tamarstelling" data-expertise="Correspondent Waterwereld" data-mailto="mailto:?subject=Tip: %27Schattiger%20dan%20babypanda%27s%21%27%20Schuif%20aan%20voor%20de%20eerste%20baby-pilaarkoraal%20die%20de%20mensheid%20ooit%20mocht%20zien.&body=Op De Correspondent zag ik een verhaal van Tamar%20Stelling dat ik graag met je wil delen:%0D%0A%0D%0A%27Schattiger%20dan%20babypanda%27s%21%27%20Schuif%20aan%20voor%20de%20eerste%20baby-pilaarkoraal%20die%20de%20mensheid%20ooit%20mocht%20zien. - https%3A%2F%2Fdecorrespondent.nl%2F5219%2FSchattiger-dan-babypandas-Schuif-aan-voor-de-eerste-baby-pilaarkoraal-die-de-mensheid-ooit-mocht-zien%2F258122403209-0b89246d%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail" data-object-name="publication"><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">LinkedIn</a></li><li class="mail"><a href="javascript: void(0);" data-share-type="mail" class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="5219"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2016-09-07" title="7-9-2016 10:00">
+	Gisteren</time></li></ul>      </footer>
+
+  </article>
+      
+
+
+
+
+
+  <header class="featured-item-header">
+    <figure>
+                        
+          <img class="mainimage" data-src="https://dynamic.decorrespondent.nl/ff-1473219943/media/{breakpoint-name}/57cef16f617ec8303578419.jpg" alt="Hella Masuger. Foto: Roger Cremers (voor De Correspondent)">
+          <noscript><img src="https://dynamic.decorrespondent.nl/ff-1473219943/media/1920/57cef16f617ec8303578419.jpg alt=" hella="" masuger.="" foto:="" roger="" cremers="" (voor="" de="" correspondent)"="" }}"=""></noscript>
+                  </figure>
+
+    
+    
+    <h1><a href="https://decorrespondent.nl/5216/Deze-directeur-ploetert-voor-al-die-duizenden-dakloze-jongeren-die-Nederland-is-vergeten/257974028576-033c20c1" style="" class="feed-item-link " data-article-id="5216" data-field="title">Deze directeur ploetert voor al die duizenden dakloze jongeren die Nederland is vergeten</a></h1>
+  </header>
+
+
+<article class="featured-item">
+  
+  <div class="feed-item-labels">
+    <h4>
+    
+  
+        Verhaal van de dag</h4>  </div>
+
+    <span class="comment-count">16</span>
+
+  <div class="clear"></div>
+  <div class="text">
+    <p data-field="intro">
+      Al drie jaar volg ik de Stichting Zwerfjongeren en haar directeur, Hella Masuger. Ze probeert de situatie van dak- en thuisloze jongeren te verbeteren. Maar vaak zijn de jongeren zorgmoe. En de complexe organisaties die nodig zijn voor verandering werken ook niet altijd mee. Portret van een onvermoeibare vergaderzaalvechter.
+    </p>
+
+      
+					
+	
+							
+		<span class="reading-time">Leestijd
+			9 - 12 minuten
+		</span>
+
+	
+
+
+    <a href="https://decorrespondent.nl/5216/Deze-directeur-ploetert-voor-al-die-duizenden-dakloze-jongeren-die-Nederland-is-vergeten/257974028576-033c20c1" data-article-id="5216" class="glyph-right-after more feed-item-link"></a>
+    <div class="clear"></div>
+
+    <div class="feed-item-avatars ">
+  
+        
+    
+    <a class="feed-item-avatars-avatar" href="/veramulder">
+            <img class="feed-item-avatars-avatar-image " src="https://dynamic.decorrespondent.nl/ff-1433408413/media/160/5570139d4db2e1512215656.png" alt="Vera Mulder">
+    </a>
+  </div>  </div>
+
+  <footer class="feed-item-footer">
+          <div class="name comment-arrow ">
+                  <a href="/veramulder">
+            <span>Vera</span> Mulder
+          </a>
+              </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">151&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip "><div class="mid"><ul class="share-options" data-parent="ul" data-url="https://decorrespondent.nl/5216/Deze-directeur-ploetert-voor-al-die-duizenden-dakloze-jongeren-die-Nederland-is-vergeten/257974028576-033c20c1" data-id="5216" data-title="Deze directeur ploetert voor al die duizenden dakloze jongeren die Nederland is vergeten" data-text="" data-related="VeraMulder" data-expertise="Correspondent Vooroordelen" data-mailto="mailto:?subject=Tip: Deze%20directeur%20ploetert%20voor%20al%20die%20duizenden%20dakloze%20jongeren%20die%20Nederland%20is%20vergeten&body=Op De Correspondent zag ik een verhaal van Vera%20Mulder dat ik graag met je wil delen:%0D%0A%0D%0ADeze%20directeur%20ploetert%20voor%20al%20die%20duizenden%20dakloze%20jongeren%20die%20Nederland%20is%20vergeten - https%3A%2F%2Fdecorrespondent.nl%2F5216%2FDeze-directeur-ploetert-voor-al-die-duizenden-dakloze-jongeren-die-Nederland-is-vergeten%2F257974028576-033c20c1%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail" data-object-name="publication"><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">LinkedIn</a></li><li class="mail"><a href="javascript: void(0);" data-share-type="mail" class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/5216/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/5216.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="5216"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2016-09-07" title="7-9-2016 5:45">
+	Gisteren</time></li></ul>      </footer>
+
+  </article>
+      
+
+
+
+
+
+
+<article class="column-item">
+    <a data-article-id="5214" class="feed-item-link" href="https://decorrespondent.nl/5214/De-terreur-van-links-versus-rechts-en-7-andere-achterhaalde-tegenstellingen/257875112154-adce9e0f">
+    <div class="image">
+          <img class="js-feed-item-image lazyload" data-src="https://dynamic.decorrespondent.nl/ff-1473219939/media/660/57cea7b7784af3173871292.jpg" alt="">
+  <noscript><img alt="" src="https://dynamic.decorrespondent.nl/ff-1473219939/media/660/57cea7b7784af3173871292.jpg"></noscript>
+
+        <span class="comment-count">134</span>
+        
+					
+	
+							
+		<span class="reading-time">Leestijd
+			5 - 6 minuten
+		</span>
+
+	
+
+
+      <div class="title-wrapper">
+        <h3 data-field="title">De terreur van links versus rechts (en 7 andere achterhaalde tegenstellingen)</h3>
+      </div>
+
+      <div class="feed-item-labels">
+        <h4 class="subtype-column">
+    
+  
+        Column</h4>      </div>
+
+      <span class="glyph-right"></span>
+    </div>
+  </a>
+
+  <footer class="feed-item-footer">
+              <div class="name comment-arrow ">
+                  <a href="/rutgerbregman">
+            <span>Rutger</span> Bregman
+          </a>
+              </div>
+      <ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">205&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip "><div class="mid"><ul class="share-options" data-parent="ul" data-url="https://decorrespondent.nl/5214/De-terreur-van-links-versus-rechts-en-7-andere-achterhaalde-tegenstellingen/257875112154-adce9e0f" data-id="5214" data-title="De terreur van links versus rechts (en 7 andere achterhaalde tegenstellingen)" data-text="" data-related="rcbregman" data-expertise="Correspondent Vooruitgang" data-mailto="mailto:?subject=Tip: De%20terreur%20van%20links%20versus%20rechts%20%28en%207%20andere%20achterhaalde%20tegenstellingen%29&body=Op De Correspondent zag ik een verhaal van Rutger%20Bregman dat ik graag met je wil delen:%0D%0A%0D%0ADe%20terreur%20van%20links%20versus%20rechts%20%28en%207%20andere%20achterhaalde%20tegenstellingen%29 - https%3A%2F%2Fdecorrespondent.nl%2F5214%2FDe-terreur-van-links-versus-rechts-en-7-andere-achterhaalde-tegenstellingen%2F257875112154-adce9e0f%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail" data-object-name="publication"><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">LinkedIn</a></li><li class="mail"><a href="javascript: void(0);" data-share-type="mail" class="glyph-mail">
+				E-mail
+		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/5214/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/5214.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="5214"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2016-09-07" title="7-9-2016 5:45">
+	Gisteren</time></li></ul>    
+  </footer>
+
+  </article>
+  
+</section>
+
+      <div class="loadmore">
+
+				
+<svg class="preloader " viewbox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#preloader"></use>
+</svg>	
+</div>  
+</section>
+
+    </section><div id="dialogContainer" class="dialog-container glyph-spinner-after" data-error="Excuses, de verbinding is mislukt. Probeer het nog een keer."><div id="dialog" class="dialog"><div id="dialogContent" class="dialog-content"></div><div id="dialogFooter" class="dialog-footer"></div><div class="clear"></div><a id="dialogClose" class="dialog-close glyph-cross-bold" href="javascript:void(0);"></a></div></div><div class="overlay-block" id="overlayBlock"></div><div class="overlay-container" data-module="PublicationOverlay"><div id="loader" class="overlay-preloader"><div class="loadmore"><svg class="preloader preloader-red" viewbox="0 0 50 50" x="0px" y="0px" width="50px" height="50px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#preloader"></use></svg></div></div><div id="articleOverlayContent"></div></div><div id="notificationBar" class="notification-bar "><p id="notificationText"><a href="#" class="glyph-cross-menu notification-bar-close"></a></div><script id="autocomplete-template-list" type="x-tmpl-mustache">
+  
+    {{#authors}}
+      <li class="autocomplete-list-item mod-{{roleGroup}}" data-href="{{href}}"><div class="autocomplete-list-item-thumbnail">{{#image}}<img src="{{image}}" />{{/image}}</div><div class="autocomplete-list-item-flex-wrapper"><div class="autocomplete-list-item-title">{{name}}</div><div><div class="autocomplete-list-item-subtitle">{{roleTitle}} {{department}}</div></div></div></li>
+    {{/authors}}
+    {{#articles}}
+      <li class="autocomplete-list-item" data-href="{{href}}"><div class="autocomplete-list-item-thumbnail">{{#image}}<img src="{{image}}" />{{/image}}</div><div class="autocomplete-list-item-flex-wrapper"><div class="autocomplete-list-item-title">{{title}}</div><div><div class="autocomplete-list-item-subtitle">Door {{author}}</div></div></div></li>
+    {{/articles}}
+  
+</script><script>window.App.user = {}; window.App.messages = { keysErrorMessage: 'Er\x20gaat\x20iets\x20mis,\x20\x3Ca\x20class\x3D\x22notification\x2Dbar\x2Dlink\x22\x20href\x3D\x22\x2Flogout\x22\x3Elog\x20alstublieft\x20opnieuw\x20in\x3C\x2Fa\x3E' };      window.App.user = { id: '49458211', preferences: { commentorder : '', fontsize : 'big', typeface : 'serif', feedview : 'normal', theme: 'nightmode', readingtime: 'on' } }; </script><script async="" src="https://static.decorrespondent.nl/ff-g31b4b0e/js/main-build.js"></script></body></html>

@@ -98,7 +98,7 @@ namespace DeCorrespondent
 
         private bool AskIncludeArticle(int id)
         {
-            var metadata = new PlainTextMetaData( reader.Read(decorrespondent.ReadArticle(id)).Metadata );
+            var metadata = reader.Read(decorrespondent.ReadArticle(id)).Metadata;
             Console.WriteLine(string.Empty);
             using (new ColoredConsole(ConsoleColor.Magenta))//.Highlight("**", ConsoleColor.Green))
             {

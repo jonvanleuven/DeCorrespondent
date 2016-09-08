@@ -37,9 +37,9 @@ namespace DeCorrespondent.Test.Impl
             Assert.AreEqual("https://dynamic.decorrespondent.nl/ff-1442375110/media/660/55f8734d4e0455501740378.jpg", result.Metadata.MainImgUrlSmall);
             Assert.AreEqual("https://dynamic.decorrespondent.nl/ff-1441719053/media/190/55eee30dc2bdd5475014700.png", result.Metadata.AuthorImgUrl);
             Assert.AreEqual("Ontcijferen", result.Metadata.Section);
-            Assert.AreEqual("Data uit ontwikkelingslanden zijn vaak van slechte kwaliteit. Ik ging op zoek naar nieuwe technologie&euml;n om betere data te verzamelen. In deel twee van de serie: drie manieren waarop mobiele telefoons een verschil kunnen maken.", result.Metadata.Description);
+            Assert.AreEqual("Data uit ontwikkelingslanden zijn vaak van slechte kwaliteit. Ik ging op zoek naar nieuwe technologieën om betere data te verzamelen. In deel twee van de serie: drie manieren waarop mobiele telefoons een verschil kunnen maken.", result.Metadata.Description);
             Assert.AreEqual(new DateTime(2015, 9, 16, 5, 45, 0), result.Metadata.Published);
-            Assert.AreEqual(new DateTime(2015, 9, 16, 5, 45, 10), result.Metadata.Modified);
+            Assert.AreEqual(new DateTime(2015, 12, 2, 13, 19, 23), result.Metadata.Modified);
         }
 
         [Test]
@@ -84,7 +84,7 @@ namespace DeCorrespondent.Test.Impl
 
             var result = reader.Read(new FileResources().Read("http://t/3450"));
 
-            Assert.AreEqual("Alle wereldleiders waren afgelopen week bij de Algemene Vergadering van de Verenigde Naties. Hoe gaat zo&rsquo;n wereldtop eraan toe? Een verslag uit New York, aan de hand van tien voorwerpen.", result.Metadata.Description);
+            Assert.AreEqual("Alle wereldleiders waren afgelopen week bij de Algemene Vergadering van de Verenigde Naties. Hoe gaat zo’n wereldtop eraan toe? Een verslag uit New York, aan de hand van tien voorwerpen.", result.Metadata.Description);
         }
 
         [Test]

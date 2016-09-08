@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using NUnit.Framework;
 using DeCorrespondent.Impl;
@@ -17,7 +18,7 @@ namespace DeCorrespondent.Test.Impl
             var result = reader.ReadNieuwItems().Take(10);
 
             Assert.AreEqual(10, result.Count());
-            Assert.AreEqual(3352, result.First().Id);
+            Assert.AreEqual(5213, result.First().Id);
         }
 
         [Test]
@@ -38,6 +39,19 @@ namespace DeCorrespondent.Test.Impl
 
                 var ids = result.Select(a => a.Id).ToList();
                 Assert.AreEqual(ids.Count(), ids.Distinct().Count(), "Unieke ids verwacht");
+            }
+        }
+
+        [Test]
+        public void Login()
+        {
+            var config = FileConfig.Load(@"..\..\config-test.xml").DeCorrespondentReaderConfig;
+            using (var webresources = DeCorrespondentWebReader.Login(new ConsoleLogger(true), config.Username, config.Password))
+            {
+                var content = webresources.Read("https://decorrespondent.nl/home/0");
+                if( !content.Contains("Uitloggen") )
+                    File.WriteAllText(@"d:\temp.html", content);
+                Assert.IsTrue(content.Contains("Uitloggen"));
             }
         }
 
