@@ -5,29 +5,29 @@
   <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
   <link rel="stylesheet" href="https://static.cdn-decorrespondent.nl/app.1476981973.css"  crossorigin="anonymous">
-	<title>Armoede in vijftien jaar uitroeien, het kan! (en nog 9 verhalen om in te halen)</title>
+	<title>Beste PVV-stemmer, dit is ervoor nodig om uw partijprogramma te realiseren</title>
   
   	
 
 
 
-<link rel="canonical" href="https://decorrespondent.nl/3444/armoede-in-vijftien-jaar-uitroeien-het-kan-en-nog-9-verhalen-om-in-te-halen/88269720-54f38eb4">
+<link rel="canonical" href="https://decorrespondent.nl/5212/beste-pvv-stemmer-dit-is-ervoor-nodig-om-uw-partijprogramma-te-realiseren/133583560-c08f3e01">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Armoede in vijftien jaar uitroeien, het kan! (en nog 9 verhalen om in te halen)">
-<meta property="og:description" content="Elk weekend tippen onze correspondenten hun favoriete journalistieke producties en selecteren wij de beste stukken van De Correspondent. Deze week onder meer: de gentrificatie van Rotterdam is begonnen, een portret van de man met de moeilijkste baan ter wereld en een van de mooiste infographics ooit.">
-<meta property="og:url" content="https://decorrespondent.nl/3444/armoede-in-vijftien-jaar-uitroeien-het-kan-en-nog-9-verhalen-om-in-te-halen/88269720-54f38eb4">
+<meta property="og:title" content="Beste PVV-stemmer, dit is ervoor nodig om uw partijprogramma te realiseren">
+<meta property="og:description" content="Het verkiezingsprogramma van de PVV is makkelijk belachelijk te maken. &amp;#39;E&amp;eacute;n A4&amp;#39;tje, dat had bondiger gekund.&amp;#39; Maar wat als we de voorstellen eens volledig serieus nemen? Wat is ervoor nodig om de plannen van Geert Wilders waar te maken?">
+<meta property="og:url" content="https://decorrespondent.nl/5212/beste-pvv-stemmer-dit-is-ervoor-nodig-om-uw-partijprogramma-te-realiseren/133583560-c08f3e01">
 
-	<meta property="og:image" content="https://dynamic.decorrespondent.nl/media/1920/560eac753e9051577080051.gif">
-	<meta property="og:image:secure_url" content="https://dynamic.decorrespondent.nl/media/1920/560eac753e9051577080051.gif">
+	<meta property="og:image" content="https://dynamic.decorrespondent.nl/media/1920/57d10483300200135785804.png">
+	<meta property="og:image:secure_url" content="https://dynamic.decorrespondent.nl/media/1920/57d10483300200135785804.png">
 	<meta property="og:image:type" content="">
 	<meta property="og:image:width" content="1920">
 	
-<meta property="article:published_time" content="2015-10-02T16:45:00+00:00">
-<meta name="twitter:title" content="Armoede in vijftien jaar uitroeien, het kan! (en nog 9 verhalen om in te halen)">
-<meta name="twitter:description" content="Elk weekend tippen onze correspondenten hun favoriete journalistieke producties en selecteren wij de beste stukken van De Correspondent. Deze week onder meer: de gentrificatie van Rotterdam is begonnen, een portret van de man met de moeilijkste baan ter wereld en een van de mooiste infographics ooit.">
+<meta property="article:published_time" content="2016-09-08T08:45:00+00:00">
+<meta name="twitter:title" content="Beste PVV-stemmer, dit is ervoor nodig om uw partijprogramma te realiseren">
+<meta name="twitter:description" content="Het verkiezingsprogramma van de PVV is makkelijk belachelijk te maken. &amp;#39;E&amp;eacute;n A4&amp;#39;tje, dat had bondiger gekund.&amp;#39; Maar wat als we de voorstellen eens volledig serieus nemen? Wat is ervoor nodig om de plannen van Geert Wilders waar te maken?">
 <meta name="twitter:card" content="summary_large_image">
 
-	<meta name="twitter:image" content="https://dynamic.decorrespondent.nl/media/1920/560eac753e9051577080051.gif">
+	<meta name="twitter:image" content="https://dynamic.decorrespondent.nl/media/1920/57d10483300200135785804.png">
 	<meta name="twitter:image:alt" content="">
 
 
@@ -215,10 +215,10 @@
 	<div class="publication-readingbar-options">
 
 			<div class="publication-readingbar-options-option">
-			<div class="comment-balloon mod-readingbar-options js-comments">7</div>
+			<div class="comment-balloon mod-readingbar-options js-comments">218</div>
 		</div>
 	
-					<div class="publication-readingbar-options-option js-favorite favorite-button is-not-favorited" data-publication-id="3444">
+					<div class="publication-readingbar-options-option js-favorite favorite-button is-not-favorited" data-publication-id="5212">
 			<div class="publication-readingbar-options-option-icon">
 				<span class="icon icon-save"></span>
 				<span class="icon icon-save-saved mod-red"></span>
@@ -284,7 +284,7 @@
     <div class="icon icon-close"></div>
   </div>
   				
-<div class="tooltip-sharing-options js-tooltip-sharing-options" data-title="Armoede in vijftien jaar uitroeien, het kan! (en nog 9 verhalen om in te halen)" data-description="Elk weekend tippen onze correspondenten hun favoriete journalistieke producties en selecteren wij de beste stukken van De Correspondent. Deze week onder meer: de gentrificatie van Rotterdam is begonnen, een portret van de man met de moeilijkste baan ter wereld en een van de mooiste infographics ooit." data-url="https://decorrespondent.nl/3444/armoede-in-vijftien-jaar-uitroeien-het-kan-en-nog-9-verhalen-om-in-te-halen/170334078684-16bf1c94" data-image="https://dynamic.decorrespondent.nl/media/1920/560eac753e9051577080051.gif">
+<div class="tooltip-sharing-options js-tooltip-sharing-options" data-title="Beste PVV-stemmer, dit is ervoor nodig om uw partijprogramma te realiseren" data-description="Het verkiezingsprogramma van de PVV is makkelijk belachelijk te maken. &amp;#39;E&amp;eacute;n A4&amp;#39;tje, dat had bondiger gekund.&amp;#39; Maar wat als we de voorstellen eens volledig serieus nemen? Wat is ervoor nodig om de plannen van Geert Wilders waar te maken?" data-url="https://decorrespondent.nl/5212/beste-pvv-stemmer-dit-is-ervoor-nodig-om-uw-partijprogramma-te-realiseren/257776195732-cce4a152" data-image="https://dynamic.decorrespondent.nl/media/1920/57d10483300200135785804.png">
 
 			<div class="tooltip-sharing-options-option js-facebook">
 			<div class="tooltip-sharing-options-option-icon-container">
@@ -314,7 +314,7 @@
 			<div class="tooltip-sharing-options-option-label">Whatsapp</div>
 		</div>
 	
-		<a href="mailto:?subject=Tip%3A%20Armoede%20in%20vijftien%20jaar%20uitroeien%2C%20het%20kan%21%20%28en%20nog%209%20verhalen%20om%20in%20te%20halen%29&body=Op%20De%20Correspondent%20las%20ik%20een%20artikel%20van%20Rob%20Wijnberg%20dat%20ik%20graag%20met%20je%20wil%20delen%3A%0A%0A%3Cem%3EArmoede%20in%20vijftien%20jaar%20uitroeien%2C%20het%20kan%21%20%28en%20nog%209%20verhalen%20om%20in%20te%20halen%29%3C%2Fem%3E%3A%0A%3Ca%20href%3D%22https%3A%2F%2Fdecorrespondent.nl%2F3444%2Farmoede-in-vijftien-jaar-uitroeien-het-kan-en-nog-9-verhalen-om-in-te-halen%2F170334078684-16bf1c94%22%3Ehttps%3A%2F%2Fdecorrespondent.nl%2F3444%2Farmoede-in-vijftien-jaar-uitroeien-het-kan-en-nog-9-verhalen-om-in-te-halen%2F170334078684-16bf1c94%3C%2Fa%3E%0A%0A%0AP.S.%20Overweeg%20je%20ook%20lid%20te%20worden%20van%20De%20Correspondent%3F%0AJe%20kunt%20je%20vrijblijvend%20aanmelden%20voor%20de%20proefmail.%20Dan%20ontvang%20je%20elke%20zaterdagochtend%20een%20verhaal%20in%20je%20inbox.%0ASchrijf%20je%20hier%20gratis%20in%3A%20%3Ca%20href%3D%22https%3A%2F%2Fcorr.es%2Fps-proefmail%22%3Ehttps%3A%2F%2Fcorr.es%2Fps-proefmail%3C%2Fa%3E%0A%0A%0A" class="tooltip-sharing-options-option js-email">
+		<a href="mailto:?subject=Tip%3A%20Beste%20PVV-stemmer%2C%20dit%20is%20ervoor%20nodig%20om%20uw%20partijprogramma%20te%20realiseren&body=Op%20De%20Correspondent%20las%20ik%20een%20artikel%20van%20Rob%20Wijnberg%20dat%20ik%20graag%20met%20je%20wil%20delen%3A%0A%0A%3Cem%3EBeste%20PVV-stemmer%2C%20dit%20is%20ervoor%20nodig%20om%20uw%20partijprogramma%20te%20realiseren%3C%2Fem%3E%3A%0A%3Ca%20href%3D%22https%3A%2F%2Fdecorrespondent.nl%2F5212%2Fbeste-pvv-stemmer-dit-is-ervoor-nodig-om-uw-partijprogramma-te-realiseren%2F257776195732-cce4a152%22%3Ehttps%3A%2F%2Fdecorrespondent.nl%2F5212%2Fbeste-pvv-stemmer-dit-is-ervoor-nodig-om-uw-partijprogramma-te-realiseren%2F257776195732-cce4a152%3C%2Fa%3E%0A%0A%0AP.S.%20Overweeg%20je%20ook%20lid%20te%20worden%20van%20De%20Correspondent%3F%0AJe%20kunt%20je%20vrijblijvend%20aanmelden%20voor%20de%20proefmail.%20Dan%20ontvang%20je%20elke%20zaterdagochtend%20een%20verhaal%20in%20je%20inbox.%0ASchrijf%20je%20hier%20gratis%20in%3A%20%3Ca%20href%3D%22https%3A%2F%2Fcorr.es%2Fps-proefmail%22%3Ehttps%3A%2F%2Fcorr.es%2Fps-proefmail%3C%2Fa%3E%0A%0A%0A" class="tooltip-sharing-options-option js-email">
 			<div class="tooltip-sharing-options-option-icon-container">
 				<div class="tooltip-sharing-options-option-icon icon icon-email"></div>
 			</div>
@@ -329,14 +329,14 @@
 		</div>
 	
 					
-					<a href="https://decorrespondent.nl/article/3444/print" target="_blank" class="tooltip-sharing-options-option">
+					<a href="https://decorrespondent.nl/article/5212/print" target="_blank" class="tooltip-sharing-options-option">
 				<div class="tooltip-sharing-options-option-icon-container">
 					<div class="tooltip-sharing-options-option-icon icon icon-print"></div>
 				</div>
 				<div class="tooltip-sharing-options-option-label">Print</div>
 			</a>
 			
-					<a href="https://decorrespondent.nl/article/3444.pdf" target="_blank" class="tooltip-sharing-options-option">
+					<a href="https://decorrespondent.nl/article/5212.pdf" target="_blank" class="tooltip-sharing-options-option">
 				<div class="tooltip-sharing-options-option-icon-container">
 					<div class="tooltip-sharing-options-option-icon icon icon-pdf"></div>
 				</div>
@@ -479,7 +479,7 @@
 
   <div class="content-container">
     
-	<section class="publication js-publication" data-publication-id="3444" data-readtoken="5809bd84f52e3c175c7f642e" data-publication-type="article" data-is-published="1">
+	<section class="publication js-publication" data-publication-id="5212" data-readtoken="5809bf2ef52e3c29861c4dea" data-publication-type="article" data-is-published="1">
 
 				
 		<div class="article-head-container">
@@ -492,25 +492,33 @@
 
 	
 	<div class="publication-labels-label mod-article-page">
-									Aanbeveling
+									Analyse
 						</div>
 </div>
 		</div>
 
 		<div class="article-head-metadata">
 			<div class="article-head-metadata-data mod-date">
-									<time datetime="2015-10-02T16:45" class="article-head-metadata-data mod-date">02 October 2015</time>
+									<time datetime="2016-09-08T08:45" class="article-head-metadata-data mod-date">08 September 2016</time>
 							</div>
 			
+							<div class="article-head-metadata-divider"></div>
+				<div class="article-head-metadata-data mod-readingtime">
+					
+			Leestijd
+	
+	5 - 6
+	minuten
+				</div>
 					</div>
 
 		<div class="article-head-lead" data-field="intro">
-			Elk weekend tippen onze correspondenten hun favoriete journalistieke producties en selecteren wij de beste stukken van De Correspondent. Deze week onder meer: de gentrificatie van Rotterdam is begonnen, een portret van de man met de moeilijkste baan ter wereld en een van de mooiste infographics ooit.
+			Het verkiezingsprogramma van de PVV is makkelijk belachelijk te maken. &#39;E&eacute;n A4&#39;tje, dat had bondiger gekund.&#39; Maar wat als we de voorstellen eens volledig serieus nemen? Wat is ervoor nodig om de plannen van Geert Wilders waar te maken?
 		</div>
 	</div>
 
 	<div class="article-head-title" data-field="title">
-		Armoede in vijftien jaar uitroeien, het kan! (en nog 9 verhalen om in te halen)
+		Beste PVV-stemmer, dit is ervoor nodig om uw partijprogramma te realiseren
 	</div>
 
 	<div class="publication-authors  ">
@@ -542,32 +550,226 @@
 </div>
 		<div class="article-mainvisual js-mainvisual">
 			<img class="article-mainvisual-image js-image" data-srcset="
-				https://dynamic.decorrespondent.nl/media/1920/560eac753e9051577080051.gif 1920w,
-				https://dynamic.decorrespondent.nl/media/1600/560eac753e9051577080051.gif 1600w,
-				https://dynamic.decorrespondent.nl/media/1366/560eac753e9051577080051.gif 1366w,
-				https://dynamic.decorrespondent.nl/media/1024/560eac753e9051577080051.gif 1024w,
-				https://dynamic.decorrespondent.nl/media/660/560eac753e9051577080051.gif 660w"/>
+				https://dynamic.decorrespondent.nl/media/1920/57d10483300200135785804.png 1920w,
+				https://dynamic.decorrespondent.nl/media/1600/57d10483300200135785804.png 1600w,
+				https://dynamic.decorrespondent.nl/media/1366/57d10483300200135785804.png 1366w,
+				https://dynamic.decorrespondent.nl/media/1024/57d10483300200135785804.png 1024w,
+				https://dynamic.decorrespondent.nl/media/660/57d10483300200135785804.png 660w"/>
 	</div>
 		<div class="article-body publication-body js-publication-progress-container">
 			<div class="article-body-mainvisual-caption">
-			
+			Illustratie: Han Hoogerbrugge (voor De Correspondent)
 		</div>
 	
 	<div class="article-body-text mod-dropcap" data-field="content">
-		<h2>Het beste uit andere media</h2>
+		<p>Veruit het mooiste woord in het verkiezingsprogramma van de PVV is &#39;enzovoort.&#39;</p>
 
-<p>
+<p>In de zin: &#39;Geen geld meer naar ontwikkelingshulp, windmolens, kunst, innovatie, omroep enz.&#39;</p>
+
+<p>Ja, zo krijg ik alles wel op een A4&#39;tje.</p>
+
+<p>&#39;God schiep de hemel en de aarde. Enz.&#39;</p>
+
+<h2>Het gevaar van gewenning</h2>
+
+<p>Nu is het niet moeilijk <span class="contentitem-sidenote ">
+		<a class="contentitem-sidenote-link" href="http://pvv.nl/index.php/36-fj-related/geert-wilders/9239-pvv-presenteert-conceptverkiezingsprogramma-op-facebook.html" target="_blank">dat beruchte A4&#039;tje van Geert Wilders</a>
+	
+		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="http://pvv.nl/index.php/36-fj-related/geert-wilders/9239-pvv-presenteert-conceptverkiezingsprogramma-op-facebook.html" target="_blank" aria-hidden="true">
+		<span class="contentitem-sidenote-description-icon">
+			<span class="icon icon-sidenote-externalarticle"></span>
+		</span>
+		
+		Hier vind je het verkiezingsprogramma van de PVV.
+	</a>
+	
+	<span class="contentitem-sidenote-snippet">dat beruchte A4&#039;tje van Geert Wilders</span>
+</span>
+ belachelijk te maken - er zijn zat commentaren van dat soort verschenen. Meestal in de trant van: nou, nou, had het niet wat bondiger gekund?</p>
+
+<p>De verleiding is daarom groot te denken dat dit verkiezingsprogramma <em>vintage Wilders </em>is - niks nieuws onder de zon. Ja, ja, weg met de Koran, AOW terug naar 65, <em>same old, same old. </em>Je proeft dat sentiment uit het feit dat de meeste rumoer vooral ging over de vorm en minder over de inhoud.</p>
+
+<blockquote>Wie de voorstellen van de PVV tot zich door laat dringen, realiseert zich: geen groter gevaar dan gewenning</blockquote>
+
+<p>Alles went.</p>
+
+<p>Maar wie de voorstellen van de PVV tot zich door laat dringen, realiseert zich: geen groter gevaar dan dit soort gewenning. Want het PVV-verkiezingsprogramma 2016 is allesbehalve vintage - het is <em>Wilders on steroids. </em>Mocht je je nog afvragen wat radicalisering is, lees gerust mee:<span style="display: none;"> </span></p>
+
+<ul>
+	<li>Hield de PVV het in 2012 nog op &#39;Geen enkele moskee er meer bij,&#39; in 2016 is dat: &#39;Alle moskee&euml;n dicht.&#39;</li>
+	<li>Vond de PVV in 2012 nog &#39;duizend asielzoekers&#39; acceptabel, in 2016 is dat: nul.</li>
+	<li>Was voor de PVV in 2012 een &#39;immigratiestop voor mensen uit islamitische landen&#39; genoeg, in 2016 is daaraan toegevoegd: intrekken alle tijdelijke verblijfsvergunningen.</li>
+	<li>Had de PVV in 2012 nog iets van een <span class="contentitem-infocard js-contentitem-infocard " data-id="73903">
+	
+	<span class="contentitem-infocard-toggle-container js-toggle">
+		<abbr class="contentitem-infocard-snippet" title="Het fundament van iedere rechtstaat: je bent onschuldig, totdat het tegendeel is bewezen." aria-expanded="false" aria-controls="contentitem-infocard-contents-73903">
+			onschuldassumptie,
+		</abbr>
+		
+		<span class="contentitem-infocard-toggle">
+			<span class="icon icon-chevron-down"></span>
+		</span>
+	</span>
+	
+	<span class="contentitem-infocard-contents" id="contentitem-infocard-contents-73903">
+				<span class="contentitem-infocard-contents-text">Het fundament van iedere rechtstaat: je bent onschuldig, totdat het tegendeel is bewezen.</span>
+	</span>
+	
+</span>
+ in 2016 geldt: &#39;Preventief opsluiten van radicale moslims.&#39;</li>
+	<li>Had de PVV in 2010 nog geld over voor musea, bibliotheken en erfgoed, in 2016 is dat: niets.</li>
+</ul>
+
+<p>Onveranderd zijn alleen gebleven: het verbod op de Koran en het sluiten van alle islamitische scholen. Details.</p>
+
+<p><span style="display: none;"> </span>	<div class="contentitem-imagegallery-continuous">
+			<figure class="contentitem-imagegallery-continuous-figure">
+			<img class="contentitem-imagegallery-continuous-figure-image" src="https://dynamic.decorrespondent.nl/media/452/57d105d8b27a93149699272.jpg" alt="">
+		</figure>
+			<figure class="contentitem-imagegallery-continuous-figure">
+			<img class="contentitem-imagegallery-continuous-figure-image" src="https://dynamic.decorrespondent.nl/media/452/57d105d8b4bd19225688877.jpg" alt="">
+		</figure>
+			<figure class="contentitem-imagegallery-continuous-figure">
+			<img class="contentitem-imagegallery-continuous-figure-image" src="https://dynamic.decorrespondent.nl/media/452/57d105d8b93c42314064216.jpg" alt="">
+		</figure>
+			<figure class="contentitem-imagegallery-continuous-figure">
+			<img class="contentitem-imagegallery-continuous-figure-image" src="https://dynamic.decorrespondent.nl/media/452/57d105d8b6e214391145779.jpg" alt="">
+		</figure>
+			<figure class="contentitem-imagegallery-continuous-figure">
+			<img class="contentitem-imagegallery-continuous-figure-image" src="https://dynamic.decorrespondent.nl/media/452/57d105d8bb5691352309976.jpg" alt="">
+		</figure>
+			<figure class="contentitem-imagegallery-continuous-figure">
+			<img class="contentitem-imagegallery-continuous-figure-image" src="https://dynamic.decorrespondent.nl/media/452/57d105d8bd6553407762420.jpg" alt="">
+		</figure>
+			<figure class="contentitem-imagegallery-continuous-figure">
+			<img class="contentitem-imagegallery-continuous-figure-image" src="https://dynamic.decorrespondent.nl/media/452/57d105d8c47878520478709.jpg" alt="">
+		</figure>
+			<figure class="contentitem-imagegallery-continuous-figure">
+			<img class="contentitem-imagegallery-continuous-figure-image" src="https://dynamic.decorrespondent.nl/media/452/57d105d8c27dc1216899591.jpg" alt="">
+		</figure>
+			<figure class="contentitem-imagegallery-continuous-figure">
+			<img class="contentitem-imagegallery-continuous-figure-image" src="https://dynamic.decorrespondent.nl/media/452/57d105d8c66c71434765433.jpg" alt="">
+		</figure>
+			<figure class="contentitem-imagegallery-continuous-figure">
+			<img class="contentitem-imagegallery-continuous-figure-image" src="https://dynamic.decorrespondent.nl/media/452/57d105d8c86108159856651.jpg" alt="">
+		</figure>
+	</div>
+
+<span style="display: none;"> </span></p>
+
+<h2>Ok&eacute; Geert, vertel: hoe gaan we dit doen?</h2>
+
+<p>Nu kun je hier (terecht) verontwaardigd over gaan doen, maar die morele kaart is al zo vaak gespeeld dat het effect begint weg te ebben. Het vingertje van &#39;kan niet&#39;, &#39;mag niet&#39; krijgt op den duur ook iets sleets. Met die gewenning op de loer &eacute;n een kleine 1,8 tot 2,6 miljoen virtuele kiezers die zeggen hier mogelijk op te willen stemmen, is het misschien goed het eens over een andere boeg te gooien, namelijk: <em>hoe dan?</em> Wat is ervoor nodig dit verkiezingsprogramma waar te maken? (Mijn inspiratiebron: <span class="contentitem-sidenote ">
+		<a class="contentitem-sidenote-link" href="http://www.nytimes.com/2016/05/20/us/politics/donald-trump-immigration.html" target="_blank">dit fascinerende stuk</a>
+	
+		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="http://www.nytimes.com/2016/05/20/us/politics/donald-trump-immigration.html" target="_blank" aria-hidden="true">
+		<span class="contentitem-sidenote-description-icon">
+			<span class="icon icon-sidenote-externalarticle"></span>
+		</span>
+		
+		Lees hier de &#039;doorrekening&#039; van Donald Trumps voorstellen door The New York Times.
+	</a>
+	
+	<span class="contentitem-sidenote-snippet">dit fascinerende stuk</span>
+</span>
+ over de plannen van Donald Trump in <em>The New York Times</em>.)</p>
+
+<p>Ten eerste: er moeten vier grondrechten worden geschrapt of op z&#39;n minst zo worden aangetast dat ze net zo goed hadden kunnen worden geschrapt: de vrijheid van drukpers, de vrijheid van godsdienst, de vrijheid van onderwijs en het gelijkheidsbeginsel.</p>
+
+<p>Benodigdheden: een Kamermeerderheid van honderd zetels en een leger advocaten dat dit tot in het Europees Hof voor de Rechten van de Mens zal moeten bevechten. Kansloos, ja, maar de SGP wil ook een <span class="contentitem-sidenote ">
+		<a class="contentitem-sidenote-link" href="https://www.sgp.nl/Standpunten/Standpunten?letter=T&amp;standid=228" target="_blank">theocratie</a>
+	
+		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="https://www.sgp.nl/Standpunten/Standpunten?letter=T&amp;standid=228" target="_blank" aria-hidden="true">
+		<span class="contentitem-sidenote-description-icon">
+			<span class="icon icon-sidenote-website"></span>
+		</span>
+		
+		Zie hier het standpunt van de SGP over de theocratie.
+	</a>
+	
+	<span class="contentitem-sidenote-snippet">theocratie</span>
+</span>
+ en daar kraait niemand naar. Pluspunt voor Wilders: mocht de grondwetswijziging lukken, dan verwezenlijkt hij automatisch nog een ander programmapunt - uit de EU gezet worden, zonder referendum.</p>
+
+<p>Scheelt weer campagnekosten.</p>
+
+<p>Ten tweede: Geert Wilders belooft, tot op de komma nauwkeurig, 7,2 miljard euro te besparen met het &#39;de-islamiseren van Nederland.&#39; Een cruciaal getal, want bijna de helft van zijn beloftes - AOW naar 65, afschaffing eigen risico, lagere inkomstenbelasting, halvering motorrijtuigenbelasting - dient ermee te worden gefinancierd. Doorrekenen laat hij het niet, dus zullen we zelf planbureautje moeten spelen.</p>
+
+<blockquote>Geert Wilders belooft, tot op de komma nauwkeurig, 7,2 miljard euro te besparen met de &#39;de-islamisering van Nederland&#39;</blockquote>
+
+<p>Het sluiten van alle islamitische scholen, wat levert dat op? Met de beste wil van de wereld kom ik op: een paar miljoen in gemeentelijke vastgoedverkoop. Opbrengsten die kunnen worden weggestreept tegen de kosten van de herplaatsing van een paar duizend schoolloze leerlingen die ook onder het kabinet-Wilders nog steeds leerplicht hebben. En scholen worden per leerling gefinancierd, dus de nettobesparing op het onderwijsbudget is: nul euro. De extra kosten voor vollere klassen elders, en de onvermijdelijke rechtszaken om dat te dwarsbomen, laten we voor het gemak maar achterwege. Slotsom: in de min.<span style="display: none;"> </span></p>
+
+<p>Een verbod op de Koran dan? Hoe dat precies geld oplevert, is gissen - het enige wat ik kan bedenken, zijn de boetes voor ongehoorzame moslims en boekhandelaren. De lijst met kosten daarentegen is haast eindeloos, wil het geen volstrekt gratuite symboolpolitiek zijn: zevenhonderd boekhandels periodiek controleren, 800.000 nachtkastjes (steekproefsgewijs?) met een huiszoekingsbevel doorzoeken, websites die een digitale versie aanbieden vervolgen, vliegvelden, havens en post controleren op illegale import - voor zo&#39;n operatie heb je, zonder overdrijven, duizenden ambtenaren nodig.</p>
+
+<p>Komt bij: waarschijnlijk zullen verschillende moslimlanden Nederlandse producten gaan boycotten. Laten we mild zijn en het exportverlies schatten op vijf miljard per jaar (1 procent van onze totale export) - twintig miljard als het kabinet-Wilders de rit uitzit. Reken er ook op dat de benzine duurder wordt, mocht Saoedi-Arabi&euml; daartussen zitten. En vergeet de gederfde btw op korans niet. Slotsom: zwaar in de min.</p>
+
+<p>Het sluiten van moskee&euml;n dan. Dat zijn er naar schatting zo&#39;n vijfhonderd, dus laten we in ieder geval uitgaan van minstens nog eens honderd rechtszaken tegen de Nederlandse staat. En, laten we bescheiden zijn: dertig daarvan monden uit in flinke demonstraties. Mochten er nog agenten over zijn die zich, tussen het koranzoeken door, niet hoeven bezighouden met het in toom houden van protesterende meutes, dan kunnen zij zich volledig storten op de rondgang langs gebedshuizen - twee ME&#39;ers per agent voor de veiligheid lijkt mij daarbij geen overbodige luxe. Het gros van de moskee&euml;n zal daarna waarschijnlijk <em>underground </em>gaan, dus een permanente opsporingsdienst is bovendien vereist.</p>
+
+<p>Aan besparing zie ik hier op zijn best tegenover staan: er zullen moslims gaan emigreren (minder zorgkosten, minder sociale zekerheid en, vooruit, minder files) - een plus die we grosso modo kunnen wegstrepen tegen de daling in belastinginkomsten. De overige kosten? Moeilijk te overzien, maar ik meen geenszins te overdrijven als ik gok op enkele miljarden aan extra criminaliteit door het tekort aan politie elders, openbare ordeverstoringen en sancties uit het buitenland. En, allerminst hypothetisch: meer aanslagen. IS leest ook de krant.</p>
+
+<p>Slotsom: potenti&euml;le bodemloze put.</p>
+
+<h2>Niets om aan te wennen</h2>
+
+<p>Dit moge allemaal absurd klinken - en dat is het ook. Zo absurd dat het vermoeden rondzingt dat Wilders het allemaal niet echt meent. Dat hij zich bewust &#39;buitenspel&#39; wil zetten, zoals dat heet.</p>
+
+<p>Maar het is w&eacute;l wat zwart-op-wit staat in het verkiezingsprogramma van de eenmanspartij die momenteel aan kop gaat in de vaderlandse peilingen. Een partij die oprecht door veel Nederlanders wordt geroemd om haar helderheid en klare taal. Zeven miljard meer naar de burger, zeven miljard minder naar de islam - &#39;gaan we regelen,&#39; zoals Geert dat placht te zeggen.</p>
+
+<p>Ik kom, met de meest amorele en onbevooroordeelde blik die ik mezelf kan aanmeten, uit op de grootste financi&euml;le strop sinds de watersnoodramp. Letterlijk. Niet figuurlijk, niet multiculti-links-vooringenomen, nee: letterlijk.</p>
+
+<p>Wat wel klopt: dan is er inderdaad geen geld meer voor &#39;ontwikkelingshulp, windmolens, kunst, innovatie, omroep.&#39;</p>
+
+<p>Enzovoort.</p>
+
+<h2>Meer lezen?</h2>
+
 
 	<p>
-		<a class="contentitem-linkblock  js-contentitem-linkblock" href="http://www.vn.nl/gentrificatie-nu-is-rotterdam-aan-de-beurt/" data-public="" target="_blank">
+		<a class="contentitem-linkblock  js-contentitem-linkblock" href="https://decorrespondent.nl/3743/waarom-progressieven-niet-zijn-opgewassen-tegen-de-retoriek-van-wilders-en-trump/185122083773-2cbf3f5c" data-public="" target="_blank">
 							<span class="contentitem-linkblock-image-container">
-					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/560e3a4303fde3321169338.png" alt=""/>
+					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/57cfc9de422471253095659.png" alt=""/>
 				</span>
 						<span class="contentitem-linkblock-content">
-					<span class="contentitem-linkblock-title">Gentrificatie: gaat Rotterdam de hoofdstad achterna?</span>
-					<span class="contentitem-linkblock-lead">De West-Kruiskade is een van mijn favoriete plekken in Rotterdam: een aaneenschakeling van Surinaamse goudwinkels, Chinese toko's, Indiase feestwinkels en Egyptische shoarmatenten zorgt ervoor dat er binnen en op straat altijd wat te zien, horen, ouwehoeren en beleven is. Maar de laatste tijd verschijnen er steeds meer strakke, hippe ondernemingen die een nieuw publiek zouden moeten trekken. In dit verhaal uit Vrij Nederland vertelt journalist Marcel van Engelen hoe dat komt: de gentrificatie van Rotterdam lijkt begonnen. Maar is dat een goed of een slecht ding? (Vera Mulder)</span>
+					<span class="contentitem-linkblock-title">Waarom progressieven niet zijn opgewassen tegen de retoriek van Wilders en Trump</span>
+					<span class="contentitem-linkblock-lead">Terwijl gewelddadige jihadisten angst zaaien, oogsten conservatieve populisten aandacht met hun retoriek tegen moslims. Hoe die vicieuze cirkel te doorbreken? Het antwoord: progressieve liberalen moeten een taal leren spreken waarmee je de propagandaoorlog w&eacute;l kunt winnen.</span>
 					<span class="contentitem-linkblock-button">
-						Gentrificatie: nu is Rotterdam aan de beurt (leestijd: 10 minuten)
+						Lees mijn column over de propagandaoorlog hier terug 
+						<span class="icon icon-arrow-right"></span>
+					</span>
+				</span>
+		</a>
+	</p>
+
+<span style="display: none;"> </span>
+
+	<p>
+		<a class="contentitem-linkblock  js-contentitem-linkblock" href="https://decorrespondent.nl/4989/president-trump-premier-wilders-het-wordt-tijd-om-te-wennen-aan-die-woorden/246747014679-5292fac9" data-public="" target="_blank">
+							<span class="contentitem-linkblock-image-container">
+					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/57cfc957e53196210524124.png" alt=""/>
+				</span>
+						<span class="contentitem-linkblock-content">
+					<span class="contentitem-linkblock-title">President Trump, premier Wilders - het wordt tijd om te wennen aan die woorden</span>
+					<span class="contentitem-linkblock-lead">&lsquo;Wat gebeurt er met dit land?&rsquo; vroeg een huilende journaliste zich vorige week af. &lsquo;Er is zoveel haat.&rsquo; Lange tijd leek Trump een hilarisch figuur, maar de tijd om te lachen is nu echt voorbij. Ook in Nederland.</span>
+					<span class="contentitem-linkblock-button">
+						Lees de column van Rutger hier terug 
+						<span class="icon icon-arrow-right"></span>
+					</span>
+				</span>
+		</a>
+	</p>
+
+
+
+	<p>
+		<a class="contentitem-linkblock  js-contentitem-linkblock" href="https://decorrespondent.nl/4693/wat-bullshitter-trump-ons-leert-over-een-samenleving-zonder-waarheid/232107384223-9cb41bd5" data-public="" target="_blank">
+							<span class="contentitem-linkblock-image-container">
+					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/57cfc995485338417512914.png" alt=""/>
+				</span>
+						<span class="contentitem-linkblock-content">
+					<span class="contentitem-linkblock-title">Wat bullshitter Trump ons leert over een samenleving zonder waarheid</span>
+					<span class="contentitem-linkblock-lead">Donald Trump is een prototype bullshitter: iemand die onverschillig staat tegenover waarheid. Het begrip verklaart zijn populariteit en zegt veel over politiek in een samenleving waarin waarheid geen belangrijke rol meer speelt. Mijn inschatting: ook in Nederland is een bullshitter goed voor dertig zetels.</span>
+					<span class="contentitem-linkblock-button">
+						Lees mijn column over Donald Trump hier terug 
 						<span class="icon icon-arrow-right"></span>
 					</span>
 				</span>
@@ -575,180 +777,12 @@
 	</p>
 
 <span style="display: none;"> </span><span style="display: none;"> </span>
-
-	<p>
-		<a class="contentitem-linkblock  js-contentitem-linkblock" href="https://blendle.com/i/360-magazine/waarom-de-vn-syrie-niet-kan-redden/bnl-360-20150924-82454_waarom_de_vn_syri_niet_kan_redden" data-public="" target="_blank">
-							<span class="contentitem-linkblock-image-container">
-					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/560e3aae416741270635763.png" alt=""/>
-				</span>
-						<span class="contentitem-linkblock-content">
-					<span class="contentitem-linkblock-title">Waarom vrede nog zo ver weg is in Syrië</span>
-					<span class="contentitem-linkblock-lead">In de bus naar huis las ik de nieuwskop: 'Rusland en de Verenigde Staten praten over oplossing Syrië.' Waarom niet mét de Syriërs praten? dacht ik meteen. Omdat dat vreselijk lastig is en heel weinig oplevert, blijkt uit dit schitterende portret van VN-gezant Staffan de Mistura. Die heeft misschien wel de zwaarste baan ter wereld: vrede brengen in een land dat in een ongekend complexe oorlog verkeert. Neem de gevechtsvrije zones die hij in Aleppo wilde introduceren. Had hij president Bashar al-Assad min of meer overtuigd, waren de verschillende oppositiegroepen weer tegen. De Mistura zou nu op de hand van Assad zijn. Geen hoopvol stuk, wel een stuk dat laat zien waarom vrede nog zo ver weg is in Syrië. (Andreas Jonkers)</span>
-					<span class="contentitem-linkblock-button">
-						Waarom de VN Syrië niet kan redden (leestijd: 28 minuten, verhaal achter betaalmuur)
-						<span class="icon icon-arrow-right"></span>
-					</span>
-				</span>
-		</a>
-	</p>
-
-
-
-	<p>
-		<a class="contentitem-linkblock  js-contentitem-linkblock" href="https://www.youtube.com/watch?v=PVjZjPbHrFE" data-public="" target="_blank">
-							<span class="contentitem-linkblock-image-container">
-					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/560e3aea733c94157950810.png" alt=""/>
-				</span>
-						<span class="contentitem-linkblock-content">
-					<span class="contentitem-linkblock-title">Deze Zweedse professor legt uit hoe de extreme armoede kan worden uitgeroeid</span>
-					<span class="contentitem-linkblock-lead">Ik ben al langere tijd fan van de statisticus Hans Rosling. Hij legt in eenvoudige taal uit hoe de wereld er, volgens de laatste cijfers, voor staat. En dat is heel anders dan de meeste mensen denken. Hoeveel meisjes denk je bijvoorbeeld dat er wereldwijd naar de basisschool gaan? 20 procent? Of toch 30? Het juiste antwoord is 90 procent! Kijken dus, dit vlotte college dat de BBC vorige week uitzond. (Rutger Bregman)</span>
-					<span class="contentitem-linkblock-button">
-						Don&#039;t Panic - How to End Poverty in 15 Years (kijktijd: 59 minuten)
-						<span class="icon icon-arrow-right"></span>
-					</span>
-				</span>
-		</a>
-	</p>
-
-<span style="display: none;"> </span><span style="display: none;"> </span><span style="display: none;"> </span>
-
-	<p>
-		<a class="contentitem-linkblock  js-contentitem-linkblock" href="http://ncase.me/neurons/?utm_source=Sailthru&amp;utm_medium=email&amp;utm_campaign=Vox%20Sentences%209.29.15%208pm%20send&amp;utm_term=Vox%20Newsletter%20All" data-public="" target="_blank">
-							<span class="contentitem-linkblock-image-container">
-					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/560e3b2cec4a11192701248.png" alt=""/>
-				</span>
-						<span class="contentitem-linkblock-content">
-					<span class="contentitem-linkblock-title">Dit is een van de mooiste infographics die ik ooit heb gezien</span>
-					<span class="contentitem-linkblock-lead">Nicky Case is bang. Bang om als mislukkeling gezien te worden. Bang om te dicht bij mensen te komen. Bang om bang te zijn. Om te laten zien wat er in zijn hersenen gebeurt, maakte hij deze… tja, hoe zal ik het eens noemen? Het is een autobiografisch interactief verhaal, met een vleugje TED-talk en een snufje tekenfilm. Een heel bijzondere infographic, absoluut een van de mooiste die ik ooit heb gezien. (Sanne Blauw)</span>
-					<span class="contentitem-linkblock-button">
-						Neurotic neurons: an interactive explanation (kijktijd: 15 minuten)
-						<span class="icon icon-arrow-right"></span>
-					</span>
-				</span>
-		</a>
-	</p>
-
-
-
-	<p>
-		<a class="contentitem-linkblock  js-contentitem-linkblock" href="http://www.theguardian.com/commentisfree/2015/sep/29/water-mars-intelligent-life-earth-nasa?CMP=fb_gu" data-public="" target="_blank">
-							<span class="contentitem-linkblock-image-container">
-					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/560e443c8b3a93336780266.png" alt=""/>
-				</span>
-						<span class="contentitem-linkblock-content">
-					<span class="contentitem-linkblock-title">We hebben meer interesse in Mars dan in onze eigen planeet</span>
-					<span class="contentitem-linkblock-lead">Een korte, krachtige boodschap van de uitgesproken journalist George Monbiot van The Guardian. Hij confronteert ons met een ongemakkelijke stelling: het lijkt wel alsof we meer interesse hebben in Mars dan in onze eigen planeet. Al het nieuws over de vraag of er leven op Mars is, terwijl we op aarde toestaan dat leven wordt verwoest om onze onverzadigbare consumptiebehoeftes te stillen. We verspillen en we consumeren en we overbevissen en we kappen, schrijft Montbiot. Maar waartoe eigenlijk? Om smartphones te maken waarmee honden zichzelf kunnen fotograferen? Om gepelde bananen te kunnen kopen? Zijn we echt zo bedwelmd geraakt door welvaart dat we niet zien wat er met de planeet gebeurt?  (Jelmer Mommers)</span>
-					<span class="contentitem-linkblock-button">
-						There may be flowing water on Mars. But is there intelligent life on Earth? (leestijd: 5 minuten)
-						<span class="icon icon-arrow-right"></span>
-					</span>
-				</span>
-		</a>
-	</p>
-
-<span style="display: none;"> </span></p>
-
-<h2>Het beste uit De Correspondent</h2>
-
-<p>
-
-	<p>
-		<a class="contentitem-linkblock  js-contentitem-linkblock" href="https://decorrespondent.nl/3440/wat-klopt-er-van-de-argumenten-achter-het-eu-referendum-van-geenpeil/170136245840-ce81e1af" data-public="" target="_blank">
-							<span class="contentitem-linkblock-image-container">
-					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/560e3c3f935fb0450389591.png" alt=""/>
-				</span>
-						<span class="contentitem-linkblock-content">
-					<span class="contentitem-linkblock-title">Wat klopt er van de argumenten achter het EU-referendum van #GeenPeil?</span>
-					<span class="contentitem-linkblock-lead">GeenPeil verzamelde 450.000 handtekeningen voor een referendum over Oekraïne en de EU. Een knappe prestatie. Maar hoe onderbouwd zijn de argumenten die naar voren worden gebracht? De vijf belangrijke claims uit de campagne gecheckt.</span>
-					<span class="contentitem-linkblock-button">
-						Lees hier de factcheck van Remmelt de Weerd, Joost Vormeer en Arlette van den Berg terug
-						<span class="icon icon-arrow-right"></span>
-					</span>
-				</span>
-		</a>
-	</p>
-
-
-
-	<p>
-		<a class="contentitem-linkblock  js-contentitem-linkblock" href="https://decorrespondent.nl/3286/wat-de-esten-en-de-finnen-ons-kunnen-leren-over-leren/162519681346-cfbb03ec" data-public="" target="_blank">
-							<span class="contentitem-linkblock-image-container">
-					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/560e3c7d0f0a23459796002.png" alt=""/>
-				</span>
-						<span class="contentitem-linkblock-content">
-					<span class="contentitem-linkblock-title">Wat de Esten en de Finnen ons kunnen leren over leren</span>
-					<span class="contentitem-linkblock-lead">Binnenkort gaat het curriculum in het Nederlandse onderwijs op de schop. Vanzelfsprekend reisden de hiervoor aangewezen onderzoekers ook naar Finland en Estland. Want daar zou zich het onderwijswalhalla bevinden. Ik reisde mee, at heel veel zalm en tekende de lessen die ik opdeed op. Les 1: de Finnen blijven leren.</span>
-					<span class="contentitem-linkblock-button">
-						Lees het verhaal van Johannes Visser hier terug
-						<span class="icon icon-arrow-right"></span>
-					</span>
-				</span>
-		</a>
-	</p>
-
-
-
-	<p>
-		<a class="contentitem-linkblock  js-contentitem-linkblock" href="https://decorrespondent.nl/3427/rondleiding-surf-mee-langs-de-beste-internetkunst/169493289097-972b4879" data-public="" target="_blank">
-							<span class="contentitem-linkblock-image-container">
-					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/560e3cc5c52b29252357356.png" alt=""/>
-				</span>
-						<span class="contentitem-linkblock-content">
-					<span class="contentitem-linkblock-title">Rondleiding: Surf mee langs de beste internetkunst</span>
-					<span class="contentitem-linkblock-lead">Internetkunst vind je niet in musea, boeken of artikelen. Die vind je online. Maar hoe? Kunstenaar Jan Robert Leegte leidt rond door de wondere wereld van de internetkunst.
-</span>
-					<span class="contentitem-linkblock-button">
-						Lees hier de aanbeveling van Marian Cousijn terug
-						<span class="icon icon-arrow-right"></span>
-					</span>
-				</span>
-		</a>
-	</p>
-
-
-
-	<p>
-		<a class="contentitem-linkblock  js-contentitem-linkblock" href="https://decorrespondent.nl/3402/hoe-kan-software-je-computer-gijzelen-en-hoe-kun-je-dat-voorkomen/168256833822-c2e70d01" data-public="" target="_blank">
-							<span class="contentitem-linkblock-image-container">
-					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/560e3d039e43e6586493249.png" alt=""/>
-				</span>
-						<span class="contentitem-linkblock-content">
-					<span class="contentitem-linkblock-title">Hoe kan software je computer gijzelen? (En: hoe kun je dat voorkomen?)</span>
-					<span class="contentitem-linkblock-lead">De laatste tijd verschijnen er veel berichten in de media over ransomware, software die je computer gijzelt. Wat is ransomware? En wat kun je ertegen doen?</span>
-					<span class="contentitem-linkblock-button">
-						Lees de explainer van Dimitri Tokmetzis hier terug
-						<span class="icon icon-arrow-right"></span>
-					</span>
-				</span>
-		</a>
-	</p>
-
-
-
-	<p>
-		<a class="contentitem-linkblock  js-contentitem-linkblock" href="https://decorrespondent.nl/3435/lodewijk-asscher-wil-de-babyopvang-verbeteren-deze-onderzoeken-geven-hem-gelijk/169888954785-e13358a3" data-public="" target="_blank">
-							<span class="contentitem-linkblock-image-container">
-					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/560e3d4816ba88472116549.png" alt=""/>
-				</span>
-						<span class="contentitem-linkblock-content">
-					<span class="contentitem-linkblock-title">Lodewijk Asscher wil de babyopvang verbeteren. Deze onderzoeken geven hem gelijk</span>
-					<span class="contentitem-linkblock-lead">Minister Lodewijk Asscher (PvdA, Sociale Zaken) wil de babyopvang drastisch verbeteren. Keerzijde van dit plan is dat de kinderopvangondernemers hiervoor een heel hoge prijs moeten betalen. Dus wie wordt er straks geofferd? Het kind of de ondernemer?</span>
-					<span class="contentitem-linkblock-button">
-						Lees het stuk van Marilse Eerkens hier terug
-						<span class="icon icon-arrow-right"></span>
-					</span>
-				</span>
-		</a>
-	</p>
-
-<span style="display: none;"> </span><span style="display: none;"> </span><span style="display: none;"> </span><span style="display: none;"> </span><span style="display: none;"> </span></p>
-
 	</div>
 
 		<div class="article-body-footer mod-call">
 		<div class="article-body-footer-header">
 			<div class="article-body-footer-label">Oproep</div>
-			<div class="article-body-footer-text">Welke stukken, programma&#039;s en podcasts vielen jullie op in de afgelopen week? Deel ze hieronder!</div>
+			<div class="article-body-footer-text">Zien jullie nog &#039;verborgen&#039; kosten/opbrengsten? Die hoor ik graag.</div>
 		</div>
 	</div>
 
@@ -762,7 +796,7 @@
 			</div>
 
 			<div class="publication-options-option-content-label">
-				91 x gedeeld
+				914 x gedeeld
 			</div>
 		</div>
 
@@ -772,7 +806,7 @@
     <div class="icon icon-close"></div>
   </div>
   				
-<div class="tooltip-sharing-options js-tooltip-sharing-options" data-title="Armoede in vijftien jaar uitroeien, het kan! (en nog 9 verhalen om in te halen)" data-description="Elk weekend tippen onze correspondenten hun favoriete journalistieke producties en selecteren wij de beste stukken van De Correspondent. Deze week onder meer: de gentrificatie van Rotterdam is begonnen, een portret van de man met de moeilijkste baan ter wereld en een van de mooiste infographics ooit." data-url="https://decorrespondent.nl/3444/armoede-in-vijftien-jaar-uitroeien-het-kan-en-nog-9-verhalen-om-in-te-halen/170334078684-16bf1c94" data-image="https://dynamic.decorrespondent.nl/media/1920/560eac753e9051577080051.gif">
+<div class="tooltip-sharing-options js-tooltip-sharing-options" data-title="Beste PVV-stemmer, dit is ervoor nodig om uw partijprogramma te realiseren" data-description="Het verkiezingsprogramma van de PVV is makkelijk belachelijk te maken. &amp;#39;E&amp;eacute;n A4&amp;#39;tje, dat had bondiger gekund.&amp;#39; Maar wat als we de voorstellen eens volledig serieus nemen? Wat is ervoor nodig om de plannen van Geert Wilders waar te maken?" data-url="https://decorrespondent.nl/5212/beste-pvv-stemmer-dit-is-ervoor-nodig-om-uw-partijprogramma-te-realiseren/257776195732-cce4a152" data-image="https://dynamic.decorrespondent.nl/media/1920/57d10483300200135785804.png">
 
 			<div class="tooltip-sharing-options-option js-facebook">
 			<div class="tooltip-sharing-options-option-icon-container">
@@ -802,7 +836,7 @@
 			<div class="tooltip-sharing-options-option-label">Whatsapp</div>
 		</div>
 	
-		<a href="mailto:?subject=Tip%3A%20Armoede%20in%20vijftien%20jaar%20uitroeien%2C%20het%20kan%21%20%28en%20nog%209%20verhalen%20om%20in%20te%20halen%29&body=Op%20De%20Correspondent%20las%20ik%20een%20artikel%20van%20Rob%20Wijnberg%20dat%20ik%20graag%20met%20je%20wil%20delen%3A%0A%0A%3Cem%3EArmoede%20in%20vijftien%20jaar%20uitroeien%2C%20het%20kan%21%20%28en%20nog%209%20verhalen%20om%20in%20te%20halen%29%3C%2Fem%3E%3A%0A%3Ca%20href%3D%22https%3A%2F%2Fdecorrespondent.nl%2F3444%2Farmoede-in-vijftien-jaar-uitroeien-het-kan-en-nog-9-verhalen-om-in-te-halen%2F170334078684-16bf1c94%22%3Ehttps%3A%2F%2Fdecorrespondent.nl%2F3444%2Farmoede-in-vijftien-jaar-uitroeien-het-kan-en-nog-9-verhalen-om-in-te-halen%2F170334078684-16bf1c94%3C%2Fa%3E%0A%0A%0AP.S.%20Overweeg%20je%20ook%20lid%20te%20worden%20van%20De%20Correspondent%3F%0AJe%20kunt%20je%20vrijblijvend%20aanmelden%20voor%20de%20proefmail.%20Dan%20ontvang%20je%20elke%20zaterdagochtend%20een%20verhaal%20in%20je%20inbox.%0ASchrijf%20je%20hier%20gratis%20in%3A%20%3Ca%20href%3D%22https%3A%2F%2Fcorr.es%2Fps-proefmail%22%3Ehttps%3A%2F%2Fcorr.es%2Fps-proefmail%3C%2Fa%3E%0A%0A%0A" class="tooltip-sharing-options-option js-email">
+		<a href="mailto:?subject=Tip%3A%20Beste%20PVV-stemmer%2C%20dit%20is%20ervoor%20nodig%20om%20uw%20partijprogramma%20te%20realiseren&body=Op%20De%20Correspondent%20las%20ik%20een%20artikel%20van%20Rob%20Wijnberg%20dat%20ik%20graag%20met%20je%20wil%20delen%3A%0A%0A%3Cem%3EBeste%20PVV-stemmer%2C%20dit%20is%20ervoor%20nodig%20om%20uw%20partijprogramma%20te%20realiseren%3C%2Fem%3E%3A%0A%3Ca%20href%3D%22https%3A%2F%2Fdecorrespondent.nl%2F5212%2Fbeste-pvv-stemmer-dit-is-ervoor-nodig-om-uw-partijprogramma-te-realiseren%2F257776195732-cce4a152%22%3Ehttps%3A%2F%2Fdecorrespondent.nl%2F5212%2Fbeste-pvv-stemmer-dit-is-ervoor-nodig-om-uw-partijprogramma-te-realiseren%2F257776195732-cce4a152%3C%2Fa%3E%0A%0A%0AP.S.%20Overweeg%20je%20ook%20lid%20te%20worden%20van%20De%20Correspondent%3F%0AJe%20kunt%20je%20vrijblijvend%20aanmelden%20voor%20de%20proefmail.%20Dan%20ontvang%20je%20elke%20zaterdagochtend%20een%20verhaal%20in%20je%20inbox.%0ASchrijf%20je%20hier%20gratis%20in%3A%20%3Ca%20href%3D%22https%3A%2F%2Fcorr.es%2Fps-proefmail%22%3Ehttps%3A%2F%2Fcorr.es%2Fps-proefmail%3C%2Fa%3E%0A%0A%0A" class="tooltip-sharing-options-option js-email">
 			<div class="tooltip-sharing-options-option-icon-container">
 				<div class="tooltip-sharing-options-option-icon icon icon-email"></div>
 			</div>
@@ -817,14 +851,14 @@
 		</div>
 	
 					
-					<a href="https://decorrespondent.nl/article/3444/print" target="_blank" class="tooltip-sharing-options-option">
+					<a href="https://decorrespondent.nl/article/5212/print" target="_blank" class="tooltip-sharing-options-option">
 				<div class="tooltip-sharing-options-option-icon-container">
 					<div class="tooltip-sharing-options-option-icon icon icon-print"></div>
 				</div>
 				<div class="tooltip-sharing-options-option-label">Print</div>
 			</a>
 			
-					<a href="https://decorrespondent.nl/article/3444.pdf" target="_blank" class="tooltip-sharing-options-option">
+					<a href="https://decorrespondent.nl/article/5212.pdf" target="_blank" class="tooltip-sharing-options-option">
 				<div class="tooltip-sharing-options-option-icon-container">
 					<div class="tooltip-sharing-options-option-icon icon icon-pdf"></div>
 				</div>
@@ -834,7 +868,7 @@
 			
 </div>	</div>
 
-					<div class="publication-options-option js-favorite favorite-button is-not-favorited" data-publication-id="3444">
+					<div class="publication-options-option js-favorite favorite-button is-not-favorited" data-publication-id="5212">
 			<div class="publication-options-option-content mod-clickable">
 				<div class="publication-options-option-content-icon">
 					<span class="icon icon-save"></span>
@@ -853,7 +887,7 @@
 				<span class="icon icon-reading-time"></span>
 			</div>
 			<div class="publication-options-option-content-label">
-				<time datetime="2015-10-02T16:45">October 2, 2015 16:45</time>
+				<time datetime="2016-09-08T08:45">September 8, 2016 08:45</time>
 			</div>
 		</div>
 	</div>
@@ -881,7 +915,7 @@
 </div>
 		
 					<section class="comments js-comment-section js-comments-progress-container mod-article"
-				 data-publication-id="3444"
+				 data-publication-id="5212"
 				 data-sort-order="ASC">
 
 	<div class="comments-loading js-comments-loading">
@@ -999,5 +1033,5 @@
 </div>
 
   <script type="text/javascript" src="https://static.cdn-decorrespondent.nl/app.1476976706.js"  crossorigin="anonymous"></script>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"58a9cb8fa7","applicationID":"21642978","transactionName":"ZQNSbUFWX0JSAhVbW1xJc0xAQ15cHBEUUFhbBVFNWlhfHlAOD0ZGXQpcXEFEHkFGAw1bV1MSWVZdGFBDRwgCXlE=","queueTime":0,"applicationTime":148,"atts":"SURRGwlMTEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"58a9cb8fa7","applicationID":"21642978","transactionName":"ZQNSbUFWX0JSAhVbW1xJc0xAQ15cHBEUUFhbBVFNWlhfHlAOD0ZGXQpcXEFEHkFGAw1bV1MSWVZdGFBDRwgCXlE=","queueTime":0,"applicationTime":110,"atts":"SURRGwlMTEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

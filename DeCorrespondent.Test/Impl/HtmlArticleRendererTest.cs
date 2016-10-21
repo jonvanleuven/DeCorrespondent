@@ -69,6 +69,18 @@ namespace DeCorrespondent.Test.Impl
             File.WriteAllBytes("d:\\" + Html.Name, Html.Content);
         }
 
+        [Test]
+        public void Render1()
+        {
+            var article = new ArticleReader().Read(new FileResources().Read("http://t/1"));
+            var renderer = CreateRenderer();
+
+            var Html = renderer.Render(article);
+
+            Assert.NotNull(Html.Content);
+            File.WriteAllBytes("d:\\" + Html.Name, Html.Content);
+        }
+
         private static IArticleRenderer CreateRenderer()
         {
             var config = FileConfig.Load(@"..\..\config-test.xml");

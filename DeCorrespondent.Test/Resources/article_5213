@@ -5,29 +5,29 @@
   <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
   <link rel="stylesheet" href="https://static.cdn-decorrespondent.nl/app.1476981973.css"  crossorigin="anonymous">
-	<title>In één nacht het internet scannen. Deze onderzoeker bewijst dat het kan</title>
+	<title>Zeven voetballessen van Julian Nagelsmann, de jongste Duitse trainer ooit</title>
   
   	
 
 
 
-<link rel="canonical" href="https://decorrespondent.nl/3366/in-een-nacht-het-internet-scannen-deze-onderzoeker-bewijst-dat-het-kan/163914102-91000c05">
+<link rel="canonical" href="https://decorrespondent.nl/5213/zeven-voetballessen-van-julian-nagelsmann-de-jongste-duitse-trainer-ooit/460350464145-0f8663af">
 <meta property="og:type" content="article">
-<meta property="og:title" content="In één nacht het internet scannen. Deze onderzoeker bewijst dat het kan">
-<meta property="og:description" content="Via internet kun je apparaten binnendringen en hun kwetsbaarheden misbruiken. Een onderzoeker had zo maar even het hele internet op kwetsbaarheden gecontroleerd. Wat dat opleverde lees je in dit stuk.">
-<meta property="og:url" content="https://decorrespondent.nl/3366/in-een-nacht-het-internet-scannen-deze-onderzoeker-bewijst-dat-het-kan/163914102-91000c05">
+<meta property="og:title" content="Zeven voetballessen van Julian Nagelsmann, de jongste Duitse trainer ooit">
+<meta property="og:description" content="Hij zou zomaar de voorbode kunnen zijn van een nieuwe generatie Duitse trainers. Julian Nagelsmann is geen ex-prof, piepjong (29), en toch coacht hij Bundesligaclub Hoffenheim. Ik sprak hem en destilleerde daaruit zeven voetballessen. &amp;#39;One-touch-voetbal is een slecht idee.&amp;#39;">
+<meta property="og:url" content="https://decorrespondent.nl/5213/zeven-voetballessen-van-julian-nagelsmann-de-jongste-duitse-trainer-ooit/460350464145-0f8663af">
 
-	<meta property="og:image" content="https://dynamic.decorrespondent.nl/media/1920/56011eabbea2d0525984084.png">
-	<meta property="og:image:secure_url" content="https://dynamic.decorrespondent.nl/media/1920/56011eabbea2d0525984084.png">
+	<meta property="og:image" content="https://dynamic.decorrespondent.nl/media/1920/57d07043d21cc7154432592.jpg">
+	<meta property="og:image:secure_url" content="https://dynamic.decorrespondent.nl/media/1920/57d07043d21cc7154432592.jpg">
 	<meta property="og:image:type" content="">
 	<meta property="og:image:width" content="1920">
 	
-<meta property="article:published_time" content="2015-09-25T03:45:00+00:00">
-<meta name="twitter:title" content="In één nacht het internet scannen. Deze onderzoeker bewijst dat het kan">
-<meta name="twitter:description" content="Via internet kun je apparaten binnendringen en hun kwetsbaarheden misbruiken. Een onderzoeker had zo maar even het hele internet op kwetsbaarheden gecontroleerd. Wat dat opleverde lees je in dit stuk.">
+<meta property="article:published_time" content="2016-09-08T03:45:00+00:00">
+<meta name="twitter:title" content="Zeven voetballessen van Julian Nagelsmann, de jongste Duitse trainer ooit">
+<meta name="twitter:description" content="Hij zou zomaar de voorbode kunnen zijn van een nieuwe generatie Duitse trainers. Julian Nagelsmann is geen ex-prof, piepjong (29), en toch coacht hij Bundesligaclub Hoffenheim. Ik sprak hem en destilleerde daaruit zeven voetballessen. &amp;#39;One-touch-voetbal is een slecht idee.&amp;#39;">
 <meta name="twitter:card" content="summary_large_image">
 
-	<meta name="twitter:image" content="https://dynamic.decorrespondent.nl/media/1920/56011eabbea2d0525984084.png">
+	<meta name="twitter:image" content="https://dynamic.decorrespondent.nl/media/1920/57d07043d21cc7154432592.jpg">
 	<meta name="twitter:image:alt" content="">
 
 
@@ -43,15 +43,15 @@
 
 
 
-	<meta name="author" content="Dimitri Tokmetzis">
+	<meta name="author" content="Michiel de Hoog">
 	
-			<meta name="twitter:creator" content="@tokmetzis">
-				<link rel="author" href="https://plus.google.com/+DimitriTokmetzis">
-			
-	<meta property="article:author:first_name" content="Dimitri">
-	<meta property="article:author:last_name" content="Tokmetzis">
-	<meta property="article:author:image" content="https://dynamic.decorrespondent.nl/ff-1433404646/media/50/557004e5eb8838499980000.png">
-	<meta property="article:author:image:secure_url" content="https://dynamic.decorrespondent.nl/ff-1433404646/media/50/557004e5eb8838499980000.png">
+			<meta name="twitter:creator" content="@michieldehoog">
+					<meta property="article:author" content="https://www.facebook.com/michiel.dehoog.3">
+		
+	<meta property="article:author:first_name" content="Michiel">
+	<meta property="article:author:last_name" content="de Hoog">
+	<meta property="article:author:image" content="https://dynamic.decorrespondent.nl/ff-1433405231/media/50/5570072f148e31477399266.png">
+	<meta property="article:author:image:secure_url" content="https://dynamic.decorrespondent.nl/ff-1433405231/media/50/5570072f148e31477399266.png">
 	
 	
 
@@ -197,16 +197,16 @@
 	<div class="publication-readingbar-authors">
 		<div class="publication-readingbar-authors-avatars ">
 		
-						<a class="publication-readingbar-authors-avatars-avatar" href="https://decorrespondent.nl/dimitritokmetzis">
-				<img src="https://dynamic.decorrespondent.nl/ff-1433404646/media/100/557004e5eb8838499980000.png" class="publication-readingbar-authors-avatars-avatar-image">
+						<a class="publication-readingbar-authors-avatars-avatar" href="https://decorrespondent.nl/michieldehoog">
+				<img src="https://dynamic.decorrespondent.nl/ff-1433405231/media/100/5570072f148e31477399266.png" class="publication-readingbar-authors-avatars-avatar-image">
 			</a>
 			</div>
 
 					<div class="publication-readingbar-authors-names">
 			
-							<a class="publication-readingbar-authors-names-name author-name" href="https://decorrespondent.nl/dimitritokmetzis">
-				<span>Dimitri</span>
-				<span>Tokmetzis</span>
+							<a class="publication-readingbar-authors-names-name author-name" href="https://decorrespondent.nl/michieldehoog">
+				<span>Michiel</span>
+				<span>de Hoog</span>
 			</a>
 			</div>
 			</div>
@@ -214,10 +214,10 @@
 	<div class="publication-readingbar-options">
 
 			<div class="publication-readingbar-options-option">
-			<div class="comment-balloon mod-readingbar-options js-comments">37</div>
+			<div class="comment-balloon mod-readingbar-options js-comments">15</div>
 		</div>
 	
-					<div class="publication-readingbar-options-option js-favorite favorite-button is-not-favorited" data-publication-id="3366">
+					<div class="publication-readingbar-options-option js-favorite favorite-button is-not-favorited" data-publication-id="5213">
 			<div class="publication-readingbar-options-option-icon">
 				<span class="icon icon-save"></span>
 				<span class="icon icon-save-saved mod-red"></span>
@@ -283,7 +283,7 @@
     <div class="icon icon-close"></div>
   </div>
   				
-<div class="tooltip-sharing-options js-tooltip-sharing-options" data-title="In één nacht het internet scannen. Deze onderzoeker bewijst dat het kan" data-description="Via internet kun je apparaten binnendringen en hun kwetsbaarheden misbruiken. Een onderzoeker had zo maar even het hele internet op kwetsbaarheden gecontroleerd. Wat dat opleverde lees je in dit stuk." data-url="https://decorrespondent.nl/3366/in-een-nacht-het-internet-scannen-deze-onderzoeker-bewijst-dat-het-kan/166476338226-3aaffaaf" data-image="https://dynamic.decorrespondent.nl/media/1920/56011eabbea2d0525984084.png">
+<div class="tooltip-sharing-options js-tooltip-sharing-options" data-title="Zeven voetballessen van Julian Nagelsmann, de jongste Duitse trainer ooit" data-description="Hij zou zomaar de voorbode kunnen zijn van een nieuwe generatie Duitse trainers. Julian Nagelsmann is geen ex-prof, piepjong (29), en toch coacht hij Bundesligaclub Hoffenheim. Ik sprak hem en destilleerde daaruit zeven voetballessen. &amp;#39;One-touch-voetbal is een slecht idee.&amp;#39;" data-url="https://decorrespondent.nl/5213/zeven-voetballessen-van-julian-nagelsmann-de-jongste-duitse-trainer-ooit/257825653943-73a0e181" data-image="https://dynamic.decorrespondent.nl/media/1920/57d07043d21cc7154432592.jpg">
 
 			<div class="tooltip-sharing-options-option js-facebook">
 			<div class="tooltip-sharing-options-option-icon-container">
@@ -313,7 +313,7 @@
 			<div class="tooltip-sharing-options-option-label">Whatsapp</div>
 		</div>
 	
-		<a href="mailto:?subject=Tip%3A%20In%20%C3%A9%C3%A9n%20nacht%20het%20internet%20scannen.%20Deze%20onderzoeker%20bewijst%20dat%20het%20kan&body=Op%20De%20Correspondent%20las%20ik%20een%20artikel%20van%20Dimitri%20Tokmetzis%20dat%20ik%20graag%20met%20je%20wil%20delen%3A%0A%0A%3Cem%3EIn%20%C3%A9%C3%A9n%20nacht%20het%20internet%20scannen.%20Deze%20onderzoeker%20bewijst%20dat%20het%20kan%3C%2Fem%3E%3A%0A%3Ca%20href%3D%22https%3A%2F%2Fdecorrespondent.nl%2F3366%2Fin-een-nacht-het-internet-scannen-deze-onderzoeker-bewijst-dat-het-kan%2F166476338226-3aaffaaf%22%3Ehttps%3A%2F%2Fdecorrespondent.nl%2F3366%2Fin-een-nacht-het-internet-scannen-deze-onderzoeker-bewijst-dat-het-kan%2F166476338226-3aaffaaf%3C%2Fa%3E%0A%0A%0AP.S.%20Overweeg%20je%20ook%20lid%20te%20worden%20van%20De%20Correspondent%3F%0AJe%20kunt%20je%20vrijblijvend%20aanmelden%20voor%20de%20proefmail.%20Dan%20ontvang%20je%20elke%20zaterdagochtend%20een%20verhaal%20in%20je%20inbox.%0ASchrijf%20je%20hier%20gratis%20in%3A%20%3Ca%20href%3D%22https%3A%2F%2Fcorr.es%2Fps-proefmail%22%3Ehttps%3A%2F%2Fcorr.es%2Fps-proefmail%3C%2Fa%3E%0A%0A%0A" class="tooltip-sharing-options-option js-email">
+		<a href="mailto:?subject=Tip%3A%20Zeven%20voetballessen%20van%20Julian%20Nagelsmann%2C%20de%20jongste%20Duitse%20trainer%20ooit&body=Op%20De%20Correspondent%20las%20ik%20een%20artikel%20van%20Michiel%20de%20Hoog%20dat%20ik%20graag%20met%20je%20wil%20delen%3A%0A%0A%3Cem%3EZeven%20voetballessen%20van%20Julian%20Nagelsmann%2C%20de%20jongste%20Duitse%20trainer%20ooit%3C%2Fem%3E%3A%0A%3Ca%20href%3D%22https%3A%2F%2Fdecorrespondent.nl%2F5213%2Fzeven-voetballessen-van-julian-nagelsmann-de-jongste-duitse-trainer-ooit%2F257825653943-73a0e181%22%3Ehttps%3A%2F%2Fdecorrespondent.nl%2F5213%2Fzeven-voetballessen-van-julian-nagelsmann-de-jongste-duitse-trainer-ooit%2F257825653943-73a0e181%3C%2Fa%3E%0A%0A%0AP.S.%20Overweeg%20je%20ook%20lid%20te%20worden%20van%20De%20Correspondent%3F%0AJe%20kunt%20je%20vrijblijvend%20aanmelden%20voor%20de%20proefmail.%20Dan%20ontvang%20je%20elke%20zaterdagochtend%20een%20verhaal%20in%20je%20inbox.%0ASchrijf%20je%20hier%20gratis%20in%3A%20%3Ca%20href%3D%22https%3A%2F%2Fcorr.es%2Fps-proefmail%22%3Ehttps%3A%2F%2Fcorr.es%2Fps-proefmail%3C%2Fa%3E%0A%0A%0A" class="tooltip-sharing-options-option js-email">
 			<div class="tooltip-sharing-options-option-icon-container">
 				<div class="tooltip-sharing-options-option-icon icon icon-email"></div>
 			</div>
@@ -328,14 +328,14 @@
 		</div>
 	
 					
-					<a href="https://decorrespondent.nl/article/3366/print" target="_blank" class="tooltip-sharing-options-option">
+					<a href="https://decorrespondent.nl/article/5213/print" target="_blank" class="tooltip-sharing-options-option">
 				<div class="tooltip-sharing-options-option-icon-container">
 					<div class="tooltip-sharing-options-option-icon icon icon-print"></div>
 				</div>
 				<div class="tooltip-sharing-options-option-label">Print</div>
 			</a>
 			
-					<a href="https://decorrespondent.nl/article/3366.pdf" target="_blank" class="tooltip-sharing-options-option">
+					<a href="https://decorrespondent.nl/article/5213.pdf" target="_blank" class="tooltip-sharing-options-option">
 				<div class="tooltip-sharing-options-option-icon-container">
 					<div class="tooltip-sharing-options-option-icon icon icon-pdf"></div>
 				</div>
@@ -478,7 +478,7 @@
 
   <div class="content-container">
     
-	<section class="publication js-publication" data-publication-id="3366" data-readtoken="5809bd6ef52e3c61dc71b736" data-publication-type="article" data-is-published="1">
+	<section class="publication js-publication" data-publication-id="5213" data-readtoken="5809bef8f52e3c61dc71b78e" data-publication-type="article" data-is-published="1">
 
 				
 		<div class="article-head-container">
@@ -491,14 +491,14 @@
 
 	
 	<div class="publication-labels-label mod-article-page">
-									Reconstructie
+									Verhaal van de dag
 						</div>
 </div>
 		</div>
 
 		<div class="article-head-metadata">
 			<div class="article-head-metadata-data mod-date">
-									<time datetime="2015-09-25T03:45" class="article-head-metadata-data mod-date">25 September 2015</time>
+									<time datetime="2016-09-08T03:45" class="article-head-metadata-data mod-date">08 September 2016</time>
 							</div>
 			
 							<div class="article-head-metadata-divider"></div>
@@ -506,40 +506,40 @@
 					
 			Leestijd
 	
-	3
+	8 - 11
 	minuten
 				</div>
 					</div>
 
 		<div class="article-head-lead" data-field="intro">
-			Via internet kun je apparaten binnendringen en hun kwetsbaarheden misbruiken. Een onderzoeker had zo maar even het hele internet op kwetsbaarheden gecontroleerd. Wat dat opleverde lees je in dit stuk.
+			Hij zou zomaar de voorbode kunnen zijn van een nieuwe generatie Duitse trainers. Julian Nagelsmann is geen ex-prof, piepjong (29), en toch coacht hij Bundesligaclub Hoffenheim. Ik sprak hem en destilleerde daaruit zeven voetballessen. &#39;One-touch-voetbal is een slecht idee.&#39;
 		</div>
 	</div>
 
 	<div class="article-head-title" data-field="title">
-		In één nacht het internet scannen. Deze onderzoeker bewijst dat het kan
+		Zeven voetballessen van Julian Nagelsmann, de jongste Duitse trainer ooit
 	</div>
 
 	<div class="publication-authors  ">
 			<div class="publication-authors-department">
-			Correspondent Veiligheidsindustrie
+			Correspondent Sport
 		</div>
 	
 	<div class="publication-authors-avatars">
 					<div class="publication-authors-avatars-avatar ">
-				<img class="publication-authors-avatars-avatar-image" src="https://dynamic.decorrespondent.nl/ff-1433404646/media/380/557004e5eb8838499980000.png"/>
+				<img class="publication-authors-avatars-avatar-image" src="https://dynamic.decorrespondent.nl/ff-1433405231/media/380/5570072f148e31477399266.png"/>
 			</div>
 			</div>
 
 	<div class="publication-authors-names">
-					<a class="publication-authors-names-name author-name" href="https://decorrespondent.nl/dimitritokmetzis">
+					<a class="publication-authors-names-name author-name" href="https://decorrespondent.nl/michieldehoog">
 				<div>
-					<span>Dimitri</span>
-					<span>Tokmetzis</span>
+					<span>Michiel</span>
+					<span>de Hoog</span>
 				</div>
 			</a>
 					
-								<div class="publication-authors-names-follow-button js-author-follow is-following" data-author-id="19" data-author-name="Dimitri Tokmetzis">
+								<div class="publication-authors-names-follow-button js-author-follow is-not-following" data-author-id="34455" data-author-name="Michiel de Hoog">
 				<div class="publication-authors-names-follow-button-icon"><span class="icon icon-plus"></span></div>
 				<div class="publication-authors-names-follow-button-icon"><span class="icon icon-check"></span></div>
 				<div class="publication-authors-names-follow-button-icon"><span class="icon icon-close"></span></div>
@@ -549,156 +549,234 @@
 </div>
 		<div class="article-mainvisual js-mainvisual">
 			<img class="article-mainvisual-image js-image" data-srcset="
-				https://dynamic.decorrespondent.nl/media/1920/56011eabbea2d0525984084.png 1920w,
-				https://dynamic.decorrespondent.nl/media/1600/56011eabbea2d0525984084.png 1600w,
-				https://dynamic.decorrespondent.nl/media/1366/56011eabbea2d0525984084.png 1366w,
-				https://dynamic.decorrespondent.nl/media/1024/56011eabbea2d0525984084.png 1024w,
-				https://dynamic.decorrespondent.nl/media/660/56011eabbea2d0525984084.png 660w"/>
+				https://dynamic.decorrespondent.nl/media/1920/57d07043d21cc7154432592.jpg 1920w,
+				https://dynamic.decorrespondent.nl/media/1600/57d07043d21cc7154432592.jpg 1600w,
+				https://dynamic.decorrespondent.nl/media/1366/57d07043d21cc7154432592.jpg 1366w,
+				https://dynamic.decorrespondent.nl/media/1024/57d07043d21cc7154432592.jpg 1024w,
+				https://dynamic.decorrespondent.nl/media/660/57d07043d21cc7154432592.jpg 660w"/>
 	</div>
 		<div class="article-body publication-body js-publication-progress-container">
 			<div class="article-body-mainvisual-caption">
-			Wereldkaart van gescande computers door het Internet Census 2012 Project.
+			Nagelsmann na de wedstrijd tegen Hertha BSC. Foto: Michael Probst/Hollandse Hoogte
 		</div>
 	
 	<div class="article-body-text mod-dropcap" data-field="content">
-		<p>Het begon als grap.</p>
+		<p>De carri&egrave;re van de jongste proftrainer in de geschiedenis van het Duitse voetbal begon met een ingecalculeerd gelukje.</p>
 
-<p>Een <span class="contentitem-infocard js-contentitem-infocard " data-id="42391">
+<p>In de tiende minuut van Werder Bremen-Hoffenheim vroeg Bremens spits Claudio Pizarro op het middenveld de bal. Zonder het te weten, liep hij daarmee recht in een val. Die val was opgezet door Julian Nagelsmann, die twee dagen eerder was <span class="contentitem-sidenote ">
+		<a class="contentitem-sidenote-link" href="http://www.nu.nl/voetbal/4213123/hoffenheim-stelt-28-jarige-nagelsmann-vervroegd-als-opvolger-stevens.html" target="_blank">aangesteld</a>
 	
-	<span class="contentitem-infocard-toggle-container js-toggle">
-		<abbr class="contentitem-infocard-snippet" title="Die onderzoeker bleef anoniem." aria-expanded="false" aria-controls="contentitem-infocard-contents-42391">
-			onderzoeker
-		</abbr>
-		
-		<span class="contentitem-infocard-toggle">
-			<span class="icon icon-chevron-down"></span>
-		</span>
-	</span>
-	
-	<span class="contentitem-infocard-contents" id="contentitem-infocard-contents-42391">
-				<span class="contentitem-infocard-contents-text">Die onderzoeker bleef anoniem.</span>
-	</span>
-	
-</span>
- wilde kijken hoeveel apparaten Telnet gebruikten. Dat is een programma waarmee je op afstand een computer kunt besturen. Probleem: het is erg <span class="contentitem-infocard js-contentitem-infocard " data-id="41888">
-	
-	<span class="contentitem-infocard-toggle-container js-toggle">
-		<abbr class="contentitem-infocard-snippet" title="Het verkeer wordt bijvoorbeeld niet versleuteld. Tegenwoordig wordt vooral SSH (secure shell) gebruikt om toegang tot andere computers te krijgen." aria-expanded="false" aria-controls="contentitem-infocard-contents-41888">
-			onveilig.
-		</abbr>
-		
-		<span class="contentitem-infocard-toggle">
-			<span class="icon icon-chevron-down"></span>
-		</span>
-	</span>
-	
-	<span class="contentitem-infocard-contents" id="contentitem-infocard-contents-41888">
-				<span class="contentitem-infocard-contents-text">Het verkeer wordt bijvoorbeeld niet versleuteld. Tegenwoordig wordt vooral SSH (secure shell) gebruikt om toegang tot andere computers te krijgen.</span>
-	</span>
-	
-</span>
- Daarnaast worden bij installatie een gebruikersnaam (root) en wachtwoord (root) aangemaakt, die vaak niet veranderd worden.</p>
-
-<p>Met Nmap, een opensourceprogramma waarmee je netwerken in kaart <span class="contentitem-sidenote ">
-		<a class="contentitem-sidenote-link" href="https://decorrespondent.nl/3382" target="_blank">kunt brengen,</a>
-	
-		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="https://decorrespondent.nl/3382" target="_blank" aria-hidden="true">
-		<span class="contentitem-sidenote-description-icon">
-			<span class="icon icon-sidenote-internalarticle"></span>
-		</span>
-		
-		Lees hier mijn verhaal over hoe je met Nmap ingangen kunt vinden in andermans computer.
-	</a>
-	
-	<span class="contentitem-sidenote-snippet">kunt brengen,</span>
-</span>
- vond de onderzoeker al snel duizenden computers waar je met behulp van root:root kon inloggen.</p>
-
-<p>Lachen?</p>
-
-<h2>In &eacute;&eacute;n nacht het internet overnemen</h2>
-
-<p>Nmap is snel. Afhankelijk van je internetverbinding, kun je algauw tien IP-adressen per seconde scannen. Maar als je <span class="contentitem-infocard js-contentitem-infocard " data-id="41889">
-	
-	<span class="contentitem-infocard-toggle-container js-toggle">
-		<abbr class="contentitem-infocard-snippet" title="Je hebt twee verschillende IP-adressen. Een IP-adres is een uniek adres van ieder aan internet aangesloten apparaat. IPv4 is het meest gebruikte soort adres. Dit bestaat uit vier blokken, zoals 192.168.178.129 (in dit geval een intern netwerk). Hier zijn bijna 4,3 miljard van beschikbaar. Deze IP-adressen zijn bijna op. Daarom wordt al jaren gewerkt aan de veel langere IPv6. Die zijn zo&#039;n beetje oneindig. Met IPv4 bereik je vrijwel het hele internet, maar dus niet helemaal." aria-expanded="false" aria-controls="contentitem-infocard-contents-41889">
-			enkele miljarden adressen
-		</abbr>
-		
-		<span class="contentitem-infocard-toggle">
-			<span class="icon icon-chevron-down"></span>
-		</span>
-	</span>
-	
-	<span class="contentitem-infocard-contents" id="contentitem-infocard-contents-41889">
-				<span class="contentitem-infocard-contents-text">Je hebt twee verschillende IP-adressen. Een IP-adres is een uniek adres van ieder aan internet aangesloten apparaat. IPv4 is het meest gebruikte soort adres. Dit bestaat uit vier blokken, zoals 192.168.178.129 (in dit geval een intern netwerk). Hier zijn bijna 4,3 miljard van beschikbaar. Deze IP-adressen zijn bijna op. Daarom wordt al jaren gewerkt aan de veel langere IPv6. Die zijn zo&#039;n beetje oneindig. Met IPv4 bereik je vrijwel het hele internet, maar dus niet helemaal.</span>
-	</span>
-	
-</span>
- wilt scannen is dat <span class="contentitem-sidenote ">
-		<a class="contentitem-sidenote-link" href="https://decorrespondent.nl/2975/Dit-bedrijf-beheert-het-telefoonboek-van-het-internet-maar-van-wie-is-het-internet-eigenlijk-/144873575-84146c48" target="_blank">nog veel te traag. </a>
-	
-		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="https://decorrespondent.nl/2975/Dit-bedrijf-beheert-het-telefoonboek-van-het-internet-maar-van-wie-is-het-internet-eigenlijk-/144873575-84146c48" target="_blank" aria-hidden="true">
-		<span class="contentitem-sidenote-description-icon">
-			<span class="icon icon-sidenote-internalarticle"></span>
-		</span>
-		
-		Lees hier een uitgebreid verhaal over de politiek achter IP-adressen.
-	</a>
-	
-	<span class="contentitem-sidenote-snippet">nog veel te traag. </span>
-</span>
-</p>
-
-<p>De onderzoeker bedacht daarom een list en liet een botnet het vuile werk opknappen.</p>
-
-<blockquote>De internetscan kon in &eacute;&eacute;n nacht worden afgerond</blockquote>
-
-<p>Een botnet is een groep controleerbare ge&iuml;nfecteerde computers. Dat werkt zo. Je dringt andermans computer binnen en installeert daarin software. De ge&iuml;nfecteerde computers praten met elkaar, of, zoals vaak, met een <em>command and control center</em>.</p>
-
-<p>Als de onderzoeker een computer aantrof met Telnet en daar met root:root kon inloggen, installeerde hij er een Nmap-scanner. Die ging dan weer op zoek naar andere kwetsbare computers waar ook weer een Nmap-scanner ge&iuml;nstalleerd kon worden.</p>
-
-<p>Binnen een dag waren dertigduizend computers overgenomen die Telnet draaiden en kon dit leger ingezet worden voor het scannen van het complete internet. De internetscan kon in &eacute;&eacute;n nacht worden afgerond.</p>
-
-<p>Om schade te voorkomen, nam de onderzoeker een aantal veiligheidsmaatregelen. De scanner werkte alleen als er geen andere belangrijke processen op de computer bezig waren (die kregen altijd voorrang). Als de computer opnieuw startte, werd de scanner verwijderd. En als dat niet gebeurde, werd de scanner na een paar dagen automatisch onklaar gemaakt.</p>
-
-<p>Wat de onderzoeker te weten kwam? Na miljarden scans kon hij vaststellen dat 1,3 miljard IP-adressen daadwerkelijk worden gebruikt door een computer en dat dat van 2,3 miljard adressen niet is vast te stellen. Ook bleek dat honderdduizenden van die apparaten kwetsbaar zijn voor <span class="contentitem-sidenote ">
-		<a class="contentitem-sidenote-link" href="http://internetcensus2012.bitbucket.org/paper.html" target="_blank">een simpele telnet-hack. </a>
-	
-		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="http://internetcensus2012.bitbucket.org/paper.html" target="_blank" aria-hidden="true">
-		<span class="contentitem-sidenote-description-icon">
-			<span class="icon icon-sidenote-document"></span>
-		</span>
-		
-		Lees hier het hele onderzoek van de Internet Census 2012.
-	</a>
-	
-	<span class="contentitem-sidenote-snippet">een simpele telnet-hack. </span>
-</span>
-</p>
-
-<h2>Wat moeten we met deze informatie?</h2>
-
-<p>Het lijkt een wat omslachtige manier om kwetsbaarheden op internet te vinden. De onderzoeker is naar eigen zeggen zes maanden bezig geweest om dit plan uit te vogelen en op te zetten.</p>
-
-<p>Maar hij staat niet alleen. In 2013 stond er <span class="contentitem-sidenote ">
-		<a class="contentitem-sidenote-link" href="http://www.technologyreview.com/news/514066/what-happened-when-one-man-pinged-the-whole-internet/" target="_blank">een aardig artikel</a>
-	
-		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="http://www.technologyreview.com/news/514066/what-happened-when-one-man-pinged-the-whole-internet/" target="_blank" aria-hidden="true">
+		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="http://www.nu.nl/voetbal/4213123/hoffenheim-stelt-28-jarige-nagelsmann-vervroegd-als-opvolger-stevens.html" target="_blank" aria-hidden="true">
 		<span class="contentitem-sidenote-description-icon">
 			<span class="icon icon-sidenote-externalarticle"></span>
 		</span>
 		
-		Lees hier: What Happened When One Man Pinged the Whole Internet?
+		Hij volgde de Nederlandse Huub Stevens op, die moest stoppen wegens hartklachten.
 	</a>
 	
-	<span class="contentitem-sidenote-snippet">een aardig artikel</span>
+	<span class="contentitem-sidenote-snippet">aangesteld</span>
 </span>
- in <em>Technology Review</em> over de Amerikaanse veiligheidsonderzoeker HD Moore. Vanuit zijn woonhuis scande hij zes maanden lang het hele internet . Hij toonde aan dat honderdduizenden computers kwetsbaar waren voor aanvallen op hun <span class="contentitem-infocard js-contentitem-infocard " data-id="41891">
+ als de nieuwe hoofdtrainer van Hoffenheim, 28 jaar jong.</p>
+
+<p>Zijn eerste training - en de enige training voor de wedstrijd tegen Werder - had hij gewijd aan een opvallende neiging die hij had waargenomen bij Bremen.</p>
+
+<p class="p1">&lsquo;In de opbouw speelden ze de bal van een centrale verdediger naar de linker- of rechtermiddenvelder, die de bal dan direct passte naar iemand op het centrale middenveld,&rsquo; zegt Nagelsmann. &lsquo;Het plan was om hen te verleiden precies d&aacute;t te doen. En om dan toe te slaan.&rsquo;</p>
+
+<p class="p1">Het verleiden deden Hoffenheims aanvallers: die zetten druk op de centrale verdediger van Bremen, en lieten de ruimte open naar Bremens linkshalf, die - geheel volgens plan - werd aangespeeld. De linkshalf deed ook al wat Nagelsmann had voorspeld: hij speelde Pizarro aan, die zich, zoals gehoopt, had aangeboden op het centrale middenveld.</p>
+
+<p class="p1">Het volgende moment zou je als argeloze toeschouwer kunnen waarnemen als &#39;slordig balverlies&#39; van Bremen. In werkelijkheid is het een val die dichtklapt.</p>
+
+<p class="p1">Als de bal van de voet van de linkshalf vertrekt, storten Hoffenheim-middenvelders Nadiem Amiri en Tobias Strobl zich op de weerloze Pizarro. Strobl gaat er vandoor met de bal, geeft een voorzet, die spits Andrej Kramaric via de paal en <span>keeper Wiedwald binnenkopt. </span></p>
+
+<p class="p1"><span><span class="contentitem-sidenote ">
+		<a class="contentitem-sidenote-link" href="https://www.youtube.com/watch?v=JFZiXFtx8WA" target="_blank">1-0 Hoffenheim.</a>
+	
+		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="https://www.youtube.com/watch?v=JFZiXFtx8WA" target="_blank" aria-hidden="true">
+		<span class="contentitem-sidenote-description-icon">
+			<span class="icon icon-sidenote-video"></span>
+		</span>
+		
+		Zie de laatste fase van de aanval hier.
+	</a>
+	
+	<span class="contentitem-sidenote-snippet">1-0 Hoffenheim.</span>
+</span>
+</span></p>
+
+<p class="p1">De wedstrijd eindigde 1-1. Maar belangrijker dan het punt, was de psychologische werking van de goal. De 1-0 viel <em>precies</em> zoals Nagelsmann het de spelers in de training had voorspeld.</p>
+
+<p class="p1">Het vertrouwen in de jonge nieuwe trainer <span class="contentitem-sidenote ">
+		<a class="contentitem-sidenote-link" href="http://www.sueddeutsche.de/sport/hoffenheims-coach-julian-nagelsmann-im-interview-unter-trainern-schaut-jeder-auf-sich-1.3137693" target="_blank">was een feit,</a>
+	
+		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="http://www.sueddeutsche.de/sport/hoffenheims-coach-julian-nagelsmann-im-interview-unter-trainern-schaut-jeder-auf-sich-1.3137693" target="_blank" aria-hidden="true">
+		<span class="contentitem-sidenote-description-icon">
+			<span class="icon icon-sidenote-externalarticle"></span>
+		</span>
+		
+		Zoals Nagelsmann ook de Süddeutsche Zeitung vertelde.
+	</a>
+	
+	<span class="contentitem-sidenote-snippet">was een feit,</span>
+</span>
+ het spelplezier kwam terug, evenals de punten &ndash; en al &eacute;&eacute;n speelronde voor het einde van de competitie was de dreigende degradatie afgewend.</p>
+
+<p class="p1"><aside class="contentitem-image mod-full-width ">
+
+	<figure>
+					<img alt="Nagelsmann na de wedstrijd tegen Werder Bremen, zijn eerste wedstrijd als hoofdcoach van Hoffenheim.  Foto: Lars Baron/Getty"
+					 src="https://dynamic.decorrespondent.nl/media/320/57d05fbb100229519359490.jpg"
+					 srcset="https://dynamic.decorrespondent.nl/media/320/57d05fbb100229519359490.jpg 320w, https://dynamic.decorrespondent.nl/media/600/57d05fbb100229519359490.jpg 600w, https://dynamic.decorrespondent.nl/media/904/57d05fbb100229519359490.jpg 904w"/>
+		
+					<figcaption class="contentitem-caption ">Nagelsmann na de wedstrijd tegen Werder Bremen, zijn eerste wedstrijd als hoofdcoach van Hoffenheim.  Foto: Lars Baron/Getty</figcaption>
+			</figure>
+
+</aside>
+<span style="display: none;"> </span></p>
+
+<p>Ik sprak Nagelsmann recent via Skype. Het werd vrij snel duidelijk waarom Dietmar Hopp, de multimiljardair en eigenaar van Hoffenheim, Nagelsmann de baan gaf. Nagelsmann is zelfverzekerd, welbespraakt, en deelt om de paar minuten een interessante voetbalgedachte.</p>
+
+<p>Uit ons gesprek destilleerde ik zeven voetballessen.</p>
+
+<h2 class="p1">1. Vergeet 4-3-3 of 4-4-2</h2>
+
+<p>Veel clubs - zeker Nederlandse clubs - houden er een vaste speelwijze op na. Dit draagt enerzijds bij aan de herkenbaarheid van de ploeg. Anderzijds weet elke speler en jeugdspeler hoe het systeem werkt. In Nederland &#39;ademt&#39; Ajax bijvoorbeeld 4-3-3.</p>
+
+<p>Maar Nagelsmann ziet het nut niet van een vaste speelwijze. Als je steeds op dezelfde manier speelt, zo redeneert hij, word je een makkelijk doelwit voor een creatieve tegenstander. En aan herkenbaarheid hechten supporters een stuk minder als je verliest. Nagelsmanns ploegen spelen daarom zelden twee wedstrijden op een rij hetzelfde - en wisselen zelfs tijdens de wedstrijd van systeem.</p>
+
+<p>&lsquo;Bij sommige clubs is een bepaalde opstelling zelfs onderdeel van hun identiteit geworden. Ik doe dat niet. Ik kijk naar onze speelwijze en de speelwijze van de tegenstander: waar liggen de ruimtes? Waar kunnen we de bal winnen? Dan kies ik een formatie die daar het beste bij past. Het lijkt me logisch dat dit niet steeds dezelfde opstelling is.&#39;</p>
+
+<p>Dit seizoen speelde Nagelsmann met drie, vier of vijf verdedigers, en met &eacute;&eacute;n, twee, of drie spitsen. &#39;Tegenstanders weten tegen ons nooit precies waar ze aan toe zijn.&rsquo; En de eigen spelers zijn ook alerter, omdat de opdrachten elke week net wat anders zijn.</p>
+
+<h2>2. Hanteer simpele vuistregels (of: besef dat je niet Barcelona bent)</h2>
+
+<p>Vastigheid komt bij Nagelsmann niet uit het systeem, maar uit zogenoemde &#39;spelprincipes.&#39; De meeste van die principes - een soort vuistregels - houdt hij geheim. Maar over sommige wil hij wel iets zeggen.</p>
+
+<p>Een van de principes is een klassieker: speel nooit breed. Verticaal of diagonaal is goed, breed niet. Nagelsmann: &#39;Stel, ik heb de bal op de middenlijn, en jij staat even verderop ook op de middenlijn. En ik speel jou dus breed aan. Als de tegenstander de bal dan onderschept, dan is hij zowel mij als jou kwijt. Dat is gevaarlijk. Een verbod op breed spelen voorkomt dus veel problemen.&#39;</p>
+
+<p>Een ander principe: speel geen <em>one-touch-</em>voetbal. Die speelwijze houdt in dat spelers de bal maar &eacute;&eacute;n keer raken. Het spel wordt sneller, de tegenstander jaagt vergeefs de bal achterna. Het symbool van one-touch-voetbal is het Barcelona van de afgelopen jaren.</p>
+
+<p>&lsquo;Het ziet er mooi uit,&rsquo; zegt Nagelsmann, &lsquo;maar voor de meeste ploegen werkt het eigenlijk niet. E&eacute;n keer raken is moeilijk. Het is snel, maar het leidt ook vaak tot balverlies. Zo gaan kansen verloren.&#39;</p>
+
+<p>&#39;En het is onnodig. Als je veel aanvallen op video bekijkt, is het maar zelden vertragend als je de bal eerst controleert en dan passt. Ik verbied one-touch niet. Maar twee of drie keer raken is meestal beter.&#39;</p>
+
+<p>En Barcelona dan? &#39;De meeste ploegen zijn nu eenmaal niet Barcelona.&#39;</p>
+
+<p>Een ander principe is wat in de Duitse voetbaltaal <em>Steil-Klatsch</em> heet: een harde pass naar voren (&#39;Steil&#39;) op de spits, die de bal direct teruglegt (&#39;Klatsch&#39;/&#39;kaatst&#39;) op een middenvelder, terwijl tegelijkertijd twee spelers over de zijkanten naar voren rennen, om aanspeelbaar te zijn voor de middenvelder die de bal na de Klatsch heeft ontvangen.</p>
+
+<p>In de voorbereiding op dit seizoen maakte Nagelsmann gewag van. En dit gebeurde er in de eerste minuut van de eerste wedstrijd van dit seizoen, tegen RB Leipzig:</p>
+
+<p>	<div class="contentitem-video  mod-16x9">
+		<iframe class="contentitem-video-iframe" src="https://player.vimeo.com/video/181806521?autoplay=0&amp;byline=0&amp;color=ffffff&amp;portrait=0&amp;title=0" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+	</div>
+<p class="contentitem-caption">Steil-Klatsch: diepe pass, afleggen op een middenvelder, pass op een buitenspeler, kans. (Video komt van het Twitteraccount @denkerbank)</p>
+<span style="display: none;"> </span></p>
+
+<h2>3. Schrijf brieven aan je spelers</h2>
+
+<p>De beste - en interessantste - wedstrijd van vorig seizoen speelde Hoffenheim volgens Nagelsmann tegen Dortmund, ook al ging die wedstrijd uiteindelijk verloren.</p>
+
+<p>Nagelsmann had zijn opponent Thomas Tuchel verrast met een onverwachte 3-5-2-opstelling. Hoffenheim kwam zelfs op voorsprong tegen de titelkandidaat. &lsquo;En tot de 55ste minuut schoot Dortmund maar &eacute;&eacute;n keer op onze goal,&rsquo; weet Nagelsmann.</p>
+
+<p>Het duurde even voordat Tuchel een oplossing had gevonden voor Hoffenheims speelwijze. Toen het hem was gelukt, moest Nagelsmann een tegenzet doen. De driemansverdediging moest een viermansverdediging worden, diverse spelers moesten van positie wisselen. Maar hoe doe je dat, in een luid stadion, waar je elkaar op de trainersbank al nauwelijks kan verstaan?</p>
+
+<p>Je schrijft een briefje.</p>
+
+<p>Nagelsmann scheurde briefjes van een bloc, schreef voor elke speler diens nieuwe taken op, en <span class="contentitem-sidenote ">
+		<a class="contentitem-sidenote-link" href="http://www.sport1.de/fussball/bundesliga/2016/02/trotz-zettel-trick-thomas-tuchels-bvb-besiegt-hoffenheim-mit-julian-nagelsmann" target="_blank">gaf</a>
+	
+		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="http://www.sport1.de/fussball/bundesliga/2016/02/trotz-zettel-trick-thomas-tuchels-bvb-besiegt-hoffenheim-mit-julian-nagelsmann" target="_blank" aria-hidden="true">
+		<span class="contentitem-sidenote-description-icon">
+			<span class="icon icon-sidenote-externalarticle"></span>
+		</span>
+		
+		Lees hier een stuk over de briefjes van Nagelsmann.
+	</a>
+	
+	<span class="contentitem-sidenote-snippet">gaf</span>
+</span>
+ de briefjes tijdens een spelonderbreking aan de spelers. In de verloren wedstrijd tegen Stuttgart (5-1) deed Nagelsmann het nog eens. De trainer van Stuttgart kon het niet laten te sneren: &lsquo;Als je te veel op een briefje kijkt, krijg je tegengoals.&#39;</p>
+
+<p>&lsquo;Maar het is geen gimmick,&rsquo; zegt Nagelsmann. &lsquo;Als de situatie het verlangt, doe ik het weer. Als je veel moet veranderen in het veld, en er veel lawaai is, dan is het gewoon de effici&euml;ntste manier van coachen.&rsquo;</p>
+
+<h2>4. Voer g&eacute;&eacute;n automatismen in</h2>
+
+<p>Als een ploeg goed is, heet het vaak dat de spelers elkaar &#39;automatisch&#39; vinden. Die automatismen cre&euml;er je door het inslijpen van patronen via constante herhaling.</p>
+
+<p>Maar, zo waarschuwt Nagelsmann, het inslijpen van patronen vormt een risico. Geen wedstrijd is immers hetzelfde.</p>
+
+<p>&#39;Stel, je hebt vijf of zes varianten bedacht om een aanval op te zetten. Die kun je er proberen in te slijpen. Maar als de tegenstander een halve meter anders staat dan in de training, dan heb je niks meer aan je automatisme.&#39;</p>
+
+<p>&#39;Sterker, dan is het automatisme zelfs een nadeel. Het gevaar is dat je iets gaat doen omdat je het nu eenmaal hebt getraind, en niet omdat het de passende oplossing voor een probleem is.&rsquo;</p>
+
+<p>Elke training is dan ook anders bij Nagelsmann. Een reden is het voorkomen dat je automatismen traint. Een andere reden is het voorkomen van verveling. &lsquo;Verveling staat leren in de weg,&rsquo; zegt Nagelsmann. &lsquo;Als je een oefening op routine doet, dan leer je er nauwelijks wat van.&#39;</p>
+
+<h2>5. Doe aan hersenmarteling</h2>
+
+<p>De grootste winst in het voetbal zit niet meer in het verbeteren van tactiek of techniek, denkt Nagelsmann.</p>
+
+<p>De echte winst zit hem in het vergroten van wat hij &#39;de cognitieve snelheid&#39; noemt. Hij wil dat zijn spelers sneller reageren op veranderende situaties in het veld. Anders gezegd: hij traint meer de hersenen van zijn spelers dan hun voeten en benen.</p>
+
+<p>Daarvoor heeft hij zijn eigen trainingsvormen ontwikkeld. De rode draad daarin zijn regels - veel regels. Een voorbeeld: &lsquo;We spelen twee partijen van zes tegen zes, met twee spelers die meedoen met de partij die de bal heeft. De spelers in de ploegen van zes bestaan uit drie koppeltjes, die bijvoorbeeld witte, groene, en oranje hesjes dragen.</p>
+
+<p>&#39;Bij elke kleur hoort een regel. Bijvoorbeeld dat je de bal twee keer moet raken, of dat je alleen met rechts mag passen. En telkens als een speler een fout maakt, dan schuift hij met zijn partner naar het andere veld, waar dan weer andere regels gelden.&rsquo;</p>
+
+<p>Het komt neer op een soort hersenmarteling op het trainingsveld.</p>
+
+<blockquote>Het komt neer op een soort hersenmarteling op het trainingsveld.</blockquote>
+
+<p>&#39;Het is ongelooflijk vermoeiend,&#39; zegt Alfred Schreuder, de voormalig trainer van FC Twente, die assistent-trainer van Nagelsmann is. &#39;Maar dat is precies zijn bedoeling. Als de spelers doorhebben hoe een oefening werkt, stopt hij de oefening en komt hij met nieuwe regels.&rsquo;</p>
+
+<p>Schreuder (43) kijkt zijn ogen uit bij de jonge Nagelsmann. &lsquo;Het idee is dat de spelers sneller en beter worden in het nemen van beslissingen in het veld. Hersentraining, dat is wat we hier doen.&rsquo;</p>
+
+<p>	<div class="contentitem-video  mod-16x9 js-contentitem-video">
+		<div class="contentitem-video-placeholder js-placeholder">
+			<img class="contentitem-video-placeholder-image" src="https://img.youtube.com/vi/wqapjupMd6c/hqdefault.jpg"/>
+			<div class="contentitem-video-placeholder-button">
+				<div class="contentitem-video-placeholder-button-play"></div>
+			</div>
+
+			<div class="contentitem-video-placeholder-source">Bron: YouTube</div>
+		</div>
+
+		<iframe class="contentitem-video-iframe js-iframe is-hidden" data-src="https://www.youtube.com/embed/wqapjupMd6c?autohide=0&amp;autoplay=1&amp;color=white&amp;modestbranding=1&amp;rel=0&amp;showinfo=0" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+	</div>
+<p class="contentitem-caption">Zie hier de Footbonaut en de Helix van Hoffenheim, twee apparaten waarmee spelers hun reactiesnelheid kunnen versnellen.</p>
+<span style="display: none;"> </span></p>
+
+<h2>6. Vernieuw, maar vernieuw met mate</h2>
+
+<p>Als jeugdspeler was Nagelsmann vaak geblesseerd. Als surrogaat voor het spel probeerde hij zich in zijn trainers te verplaatsen.</p>
+
+<p>Nagelsmann: &lsquo;Wat willen ze bereiken? Waarop trainen ze wel, waarop trainen ze niet? Waarom geven ze de ene speler vrijheid, waarom hameren ze bij de andere op discipline? En wat zou <em>ik</em> doen, als ik de trainer was?&rsquo;</p>
+
+<p>Vragen over voetbal stelt hij zichzelf nog steeds. Nagelsmann heeft altijd een schrijfblok op zak, voor het geval hij een ingeving krijgt. En op het bureaublad van zijn laptop staat een map met de naam VISIONEN, waarin hij de betere van die idee&euml;n opslaat.</p>
+
+<p>&lsquo;Een hoogst originele denker over voetbal,&rsquo; noemt Frank Wormuth, de baas van de trainersopleiding van de Duitse voetbalbond hem.</p>
+
+<p><aside class="contentitem-image mod-right ">
+
+	<figure>
+					<img src="https://dynamic.decorrespondent.nl/media/items/39022/450/57d05fda76a831127059613.jpg" alt="Nagelsmann na de tweede goal van zijn ploeg tegen FC Ingolstadt. Foto: Alexander Scheuber/Getty">
+		
+					<figcaption class="contentitem-caption mod-small">Nagelsmann na de tweede goal van zijn ploeg tegen FC Ingolstadt. Foto: Alexander Scheuber/Getty</figcaption>
+			</figure>
+
+</aside>
+</p>
+
+<p>Toch zit er een limiet op die vernieuwingsdrang. &#39;Niet alle goede idee&euml;n zijn ook werkbaar,&#39; zegt Nagelsmann. &#39;Je moet ook kijken wat spelers kunnen verwerken. En wat de media ervan vinden.&rsquo;</p>
+
+<p>Is dat relevant, wat de media vinden? Dat klinkt zowaar... <em>behoudend</em>.</p>
+
+<p>&lsquo;Dat snap ik,&rsquo; zegt Nagelsmann, &lsquo;maar het wel iets om rekening mee te houden. De ene dag ben je de held, de volgende dag een sukkel. Terecht of niet, het kan een groot effect hebben.&rsquo;</p>
+
+<h2>7. Zet de voetbalbond onder druk</h2>
+
+<p>In Nederland zou Nagelsmanns carri&egrave;re niet mogelijk zijn geweest. Ambitieuze, intelligente jonge trainers zoals hij zijn er genoeg - dat is het probleem niet. Ze krijgen alleen geen <span class="contentitem-infocard js-contentitem-infocard " data-id="74058">
 	
 	<span class="contentitem-infocard-toggle-container js-toggle">
-		<abbr class="contentitem-infocard-snippet" title="Plug-and-playsoftware zorgt ervoor dat wanneer je hardware aan je computer koppelt, een muis bijvoorbeeld, die meteen werkt." aria-expanded="false" aria-controls="contentitem-infocard-contents-41891">
-			plug-and-playsoftware.
+		<abbr class="contentitem-infocard-snippet" title="Een uitzondering is Pepijn Lijnders, de assistent-trainer van Liverpool. " aria-expanded="false" aria-controls="contentitem-infocard-contents-74058">
+			voorname banen
 		</abbr>
 		
 		<span class="contentitem-infocard-toggle">
@@ -706,78 +784,57 @@
 		</span>
 	</span>
 	
-	<span class="contentitem-infocard-contents" id="contentitem-infocard-contents-41891">
-				<span class="contentitem-infocard-contents-text">Plug-and-playsoftware zorgt ervoor dat wanneer je hardware aan je computer koppelt, een muis bijvoorbeeld, die meteen werkt.</span>
+	<span class="contentitem-infocard-contents" id="contentitem-infocard-contents-74058">
+				<span class="contentitem-infocard-contents-text">Een uitzondering is Pepijn Lijnders, de assistent-trainer van Liverpool. </span>
 	</span>
 	
 </span>
-</p>
+ bij grote clubs.</p>
 
-<p>Een onderzoeksgroep van de Universiteit van Michigan heeft een opensourceprogramma gebouwd waarmee het internet gescand kan worden: <span class="contentitem-sidenote ">
-		<a class="contentitem-sidenote-link" href="https://zmap.io/paper.html" target="_blank">zmap.</a>
-	
-		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="https://zmap.io/paper.html" target="_blank" aria-hidden="true">
-		<span class="contentitem-sidenote-description-icon">
-			<span class="icon icon-sidenote-website"></span>
-		</span>
+<p>Het is een Catch-22-situatie: ze krijgen die banen niet omdat ze de diploma&#39;s missen, en ze missen de diploma&#39;s omdat ze de relevante ervaring missen. In Duitsland is dat een paar jaar geleden doorbroken. De bond veranderde de toelatingseisen voor de opleiding tot profcoach, zodat je ook zonder verleden als speler kans maakte.</p>
+
+<p>In Nederland komen vooral ex-profs en ervaren amateurtrainers van middelbare leeftijd door de selectie voor de cursus Coach Betaald Voetbal.</p>
+
+<p><aside class="contentitem-image mod-right ">
+
+	<figure>
+					<img src="https://dynamic.decorrespondent.nl/media/items/39023/450/57d01ff2e6ae90171947476.jpg" alt="Julian Nagelsmann met fans na de wedstrijd tegen FC Schalke 04. Foto: Dennis Grombkowsli/Getty">
 		
-		Op de projectpagina vind je een paper, de tool, data en documentatie.
-	</a>
-	
-	<span class="contentitem-sidenote-snippet">zmap.</span>
-</span>
- In theorie kun je daarmee in 45 minuten het hele internet (IPv4) scannen en:</p>
+					<figcaption class="contentitem-caption mod-small">Julian Nagelsmann met fans na de wedstrijd tegen FC Schalke 04. Foto: Dennis Grombkowsli/Getty</figcaption>
+			</figure>
 
-<ul>
-	<li>Onderzoeken hoe bepaalde kwetsbaarheden zich over internet verspreiden of juist worden verholpen. De academici konden bijvoorbeeld bedrijven en instanties helpen die kwetsbaar waren voor de zogenoemde <span class="contentitem-sidenote ">
-		<a class="contentitem-sidenote-link" href="https://decorrespondent.nl/1007" target="_blank">Heartbleed-bug.</a>
-	
-		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="https://decorrespondent.nl/1007" target="_blank" aria-hidden="true">
-		<span class="contentitem-sidenote-description-icon">
-			<span class="icon icon-sidenote-internalarticle"></span>
-		</span>
-		
-		In deze notitie van Maurits Martijn lees je meer over Heartbleed.
-	</a>
-	
-	<span class="contentitem-sidenote-snippet">Heartbleed-bug.</span>
-</span>
-</li>
-	<li>Zien waar het internet goed werkt en waar niet. Nadat orkaan Sandy in 2012 over het noordoosten van de Verenigde Staten raasde, konden de onderzoekers in kaart brengen waar het internet was uitgevallen.</li>
-	<li>Mondiale diensten in kaart brengen. De onderzoekers hebben bijvoorbeeld onderzoek gedaan naar de uitgifte van certificaten die voor de beveiliging van webverkeer worden gebruikt. Op die manier konden ze ook malafide certificaten opsporen.</li>
-</ul>
+</aside>
+<span style="display: none;"> </span></p>
 
-<p>Het valt dus te verwachten dat dit soort grootschalig onderzoek veel vaker zal plaatsvinden. Reken er in ieder geval maar op dat je internetapparaten nog vaak gescand zullen worden.</p>
+<p>De KNVB erkent dit overigens. De voetbalbond gaat de komende maanden kijken naar de toelatingsprocedure, laat een woordvoerder weten. Lang hoeft het niet te duren, zou je denken. Een handleiding is bij de DFB te krijgen.</p>
+
+<p>Het is niet zozeer de vraag of er Nederlandse Julian Nagelsmannen zijn. De vraag is meer: is er iemand bereid om ze een kans te geven?</p>
+
+<p><span style="color: rgb(223, 91, 87); font-family: bree, sans-serif; font-size: 35px; line-height: 1.2;">Meer lezen?</span></p>
 
 <p>
 
 	<p>
-		<a class="contentitem-linkblock  js-contentitem-linkblock" href="https://decorrespondent.nl/3194/tien-ijzersterke-verhalen-die-je-hacken-beter-doen-begrijpen/157969525934-57069730" data-public="" target="_blank">
+		<a class="contentitem-linkblock  js-contentitem-linkblock" href="https://decorrespondent.nl/4847/vier-lessen-die-nederland-van-het-duitse-voetbal-kan-leren/239723948717-f1280d0f" data-public="" target="_blank">
 							<span class="contentitem-linkblock-image-container">
-					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/56040ff748bed6276717022.png" alt=""/>
+					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/57d01ecf5e0022531206755.jpg" alt=""/>
 				</span>
 						<span class="contentitem-linkblock-content">
-					<span class="contentitem-linkblock-title">Tien ijzersterke verhalen die je hacken beter doen begrijpen</span>
-					<span class="contentitem-linkblock-lead">De recente hack van vreemdgaansite Ashley Madison is er één in een lange reeks spectaculaire, recente inbraken. En achter iedere hack schuilt een interessant verhaal. Ik heb tien van die verhalen geselecteerd.</span>
+					<span class="contentitem-linkblock-title">Vier lessen die Nederland van het Duitse voetbal kan leren</span>
+					<span class="contentitem-linkblock-lead">In tijden van crisis leerde het Duitse voetbal van Nederland. Hoogste tijd dat Nederland kijkt wat de Duitsers beter doen. Om te beginnen vanavond, tijdens Duitsland-Itali&euml;.</span>
 					<span class="contentitem-linkblock-button">
-						Lees de aanbeveling hier terug
+						Lees het verhaal over het Duitse voetbal hier terug
 						<span class="icon icon-arrow-right"></span>
 					</span>
 				</span>
 		</a>
 	</p>
 
-</p>
+<span style="display: none;"> </span><span style="display: none;"> </span></p>
 
 	</div>
 
-		<div class="article-body-footer mod-call">
-		<div class="article-body-footer-header">
-			<div class="article-body-footer-label">Oproep</div>
-			<div class="article-body-footer-text">Wat vinden jullie van het idee dat iemand zomaar je computer binnendringt? Is dat gerechtvaardigd?</div>
-		</div>
-	</div>
-
+	
 
 	<div class="article-body-options">
 		<div class="publication-options mod-article-page">
@@ -788,7 +845,7 @@
 			</div>
 
 			<div class="publication-options-option-content-label">
-				139 x gedeeld
+				388 x gedeeld
 			</div>
 		</div>
 
@@ -798,7 +855,7 @@
     <div class="icon icon-close"></div>
   </div>
   				
-<div class="tooltip-sharing-options js-tooltip-sharing-options" data-title="In één nacht het internet scannen. Deze onderzoeker bewijst dat het kan" data-description="Via internet kun je apparaten binnendringen en hun kwetsbaarheden misbruiken. Een onderzoeker had zo maar even het hele internet op kwetsbaarheden gecontroleerd. Wat dat opleverde lees je in dit stuk." data-url="https://decorrespondent.nl/3366/in-een-nacht-het-internet-scannen-deze-onderzoeker-bewijst-dat-het-kan/166476338226-3aaffaaf" data-image="https://dynamic.decorrespondent.nl/media/1920/56011eabbea2d0525984084.png">
+<div class="tooltip-sharing-options js-tooltip-sharing-options" data-title="Zeven voetballessen van Julian Nagelsmann, de jongste Duitse trainer ooit" data-description="Hij zou zomaar de voorbode kunnen zijn van een nieuwe generatie Duitse trainers. Julian Nagelsmann is geen ex-prof, piepjong (29), en toch coacht hij Bundesligaclub Hoffenheim. Ik sprak hem en destilleerde daaruit zeven voetballessen. &amp;#39;One-touch-voetbal is een slecht idee.&amp;#39;" data-url="https://decorrespondent.nl/5213/zeven-voetballessen-van-julian-nagelsmann-de-jongste-duitse-trainer-ooit/257825653943-73a0e181" data-image="https://dynamic.decorrespondent.nl/media/1920/57d07043d21cc7154432592.jpg">
 
 			<div class="tooltip-sharing-options-option js-facebook">
 			<div class="tooltip-sharing-options-option-icon-container">
@@ -828,7 +885,7 @@
 			<div class="tooltip-sharing-options-option-label">Whatsapp</div>
 		</div>
 	
-		<a href="mailto:?subject=Tip%3A%20In%20%C3%A9%C3%A9n%20nacht%20het%20internet%20scannen.%20Deze%20onderzoeker%20bewijst%20dat%20het%20kan&body=Op%20De%20Correspondent%20las%20ik%20een%20artikel%20van%20Dimitri%20Tokmetzis%20dat%20ik%20graag%20met%20je%20wil%20delen%3A%0A%0A%3Cem%3EIn%20%C3%A9%C3%A9n%20nacht%20het%20internet%20scannen.%20Deze%20onderzoeker%20bewijst%20dat%20het%20kan%3C%2Fem%3E%3A%0A%3Ca%20href%3D%22https%3A%2F%2Fdecorrespondent.nl%2F3366%2Fin-een-nacht-het-internet-scannen-deze-onderzoeker-bewijst-dat-het-kan%2F166476338226-3aaffaaf%22%3Ehttps%3A%2F%2Fdecorrespondent.nl%2F3366%2Fin-een-nacht-het-internet-scannen-deze-onderzoeker-bewijst-dat-het-kan%2F166476338226-3aaffaaf%3C%2Fa%3E%0A%0A%0AP.S.%20Overweeg%20je%20ook%20lid%20te%20worden%20van%20De%20Correspondent%3F%0AJe%20kunt%20je%20vrijblijvend%20aanmelden%20voor%20de%20proefmail.%20Dan%20ontvang%20je%20elke%20zaterdagochtend%20een%20verhaal%20in%20je%20inbox.%0ASchrijf%20je%20hier%20gratis%20in%3A%20%3Ca%20href%3D%22https%3A%2F%2Fcorr.es%2Fps-proefmail%22%3Ehttps%3A%2F%2Fcorr.es%2Fps-proefmail%3C%2Fa%3E%0A%0A%0A" class="tooltip-sharing-options-option js-email">
+		<a href="mailto:?subject=Tip%3A%20Zeven%20voetballessen%20van%20Julian%20Nagelsmann%2C%20de%20jongste%20Duitse%20trainer%20ooit&body=Op%20De%20Correspondent%20las%20ik%20een%20artikel%20van%20Michiel%20de%20Hoog%20dat%20ik%20graag%20met%20je%20wil%20delen%3A%0A%0A%3Cem%3EZeven%20voetballessen%20van%20Julian%20Nagelsmann%2C%20de%20jongste%20Duitse%20trainer%20ooit%3C%2Fem%3E%3A%0A%3Ca%20href%3D%22https%3A%2F%2Fdecorrespondent.nl%2F5213%2Fzeven-voetballessen-van-julian-nagelsmann-de-jongste-duitse-trainer-ooit%2F257825653943-73a0e181%22%3Ehttps%3A%2F%2Fdecorrespondent.nl%2F5213%2Fzeven-voetballessen-van-julian-nagelsmann-de-jongste-duitse-trainer-ooit%2F257825653943-73a0e181%3C%2Fa%3E%0A%0A%0AP.S.%20Overweeg%20je%20ook%20lid%20te%20worden%20van%20De%20Correspondent%3F%0AJe%20kunt%20je%20vrijblijvend%20aanmelden%20voor%20de%20proefmail.%20Dan%20ontvang%20je%20elke%20zaterdagochtend%20een%20verhaal%20in%20je%20inbox.%0ASchrijf%20je%20hier%20gratis%20in%3A%20%3Ca%20href%3D%22https%3A%2F%2Fcorr.es%2Fps-proefmail%22%3Ehttps%3A%2F%2Fcorr.es%2Fps-proefmail%3C%2Fa%3E%0A%0A%0A" class="tooltip-sharing-options-option js-email">
 			<div class="tooltip-sharing-options-option-icon-container">
 				<div class="tooltip-sharing-options-option-icon icon icon-email"></div>
 			</div>
@@ -843,14 +900,14 @@
 		</div>
 	
 					
-					<a href="https://decorrespondent.nl/article/3366/print" target="_blank" class="tooltip-sharing-options-option">
+					<a href="https://decorrespondent.nl/article/5213/print" target="_blank" class="tooltip-sharing-options-option">
 				<div class="tooltip-sharing-options-option-icon-container">
 					<div class="tooltip-sharing-options-option-icon icon icon-print"></div>
 				</div>
 				<div class="tooltip-sharing-options-option-label">Print</div>
 			</a>
 			
-					<a href="https://decorrespondent.nl/article/3366.pdf" target="_blank" class="tooltip-sharing-options-option">
+					<a href="https://decorrespondent.nl/article/5213.pdf" target="_blank" class="tooltip-sharing-options-option">
 				<div class="tooltip-sharing-options-option-icon-container">
 					<div class="tooltip-sharing-options-option-icon icon icon-pdf"></div>
 				</div>
@@ -860,7 +917,7 @@
 			
 </div>	</div>
 
-					<div class="publication-options-option js-favorite favorite-button is-not-favorited" data-publication-id="3366">
+					<div class="publication-options-option js-favorite favorite-button is-not-favorited" data-publication-id="5213">
 			<div class="publication-options-option-content mod-clickable">
 				<div class="publication-options-option-content-icon">
 					<span class="icon icon-save"></span>
@@ -879,7 +936,7 @@
 				<span class="icon icon-reading-time"></span>
 			</div>
 			<div class="publication-options-option-content-label">
-				<time datetime="2015-09-25T03:45">September 25, 2015 03:45</time>
+				<time datetime="2016-09-08T03:45">September 8, 2016 03:45</time>
 			</div>
 		</div>
 	</div>
@@ -896,7 +953,7 @@
 		Wil je mijn andere verhalen lezen, meediscussiëren en verder onderzoek volgen?
 	</div>
 
-	<a class="article-author-feed-promo-button" href="https://decorrespondent.nl/dimitritokmetzis">
+	<a class="article-author-feed-promo-button" href="https://decorrespondent.nl/michieldehoog">
 		<div class="article-author-feed-promo-button-label">
 			Bekijk mijn artikelen
 		</div>
@@ -907,7 +964,7 @@
 </div>
 		
 					<section class="comments js-comment-section js-comments-progress-container mod-article"
-				 data-publication-id="3366"
+				 data-publication-id="5213"
 				 data-sort-order="ASC">
 
 	<div class="comments-loading js-comments-loading">
@@ -1025,5 +1082,5 @@
 </div>
 
   <script type="text/javascript" src="https://static.cdn-decorrespondent.nl/app.1476976706.js"  crossorigin="anonymous"></script>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"58a9cb8fa7","applicationID":"21642978","transactionName":"ZQNSbUFWX0JSAhVbW1xJc0xAQ15cHBEUUFhbBVFNWlhfHlAOD0ZGXQpcXEFEHkFGAw1bV1MSWVZdGFBDRwgCXlE=","queueTime":0,"applicationTime":122,"atts":"SURRGwlMTEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"58a9cb8fa7","applicationID":"21642978","transactionName":"ZQNSbUFWX0JSAhVbW1xJc0xAQ15cHBEUUFhbBVFNWlhfHlAOD0ZGXQpcXEFEHkFGAw1bV1MSWVZdGFBDRwgCXlE=","queueTime":0,"applicationTime":120,"atts":"SURRGwlMTEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>

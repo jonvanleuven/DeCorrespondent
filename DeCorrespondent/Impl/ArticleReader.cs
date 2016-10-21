@@ -55,13 +55,13 @@ namespace DeCorrespondent.Impl
             });
 
 
-            (body.SelectNodes("//iframe[string-length(@data-src) > 0]") ?? EmptyNodes).Where(n => n != null).ToList().ForEach(n =>
+            (body.SelectNodes("//iframe[string-length(@src) > 0]") ?? EmptyNodes).Where(n => n != null).ToList().ForEach(n =>
             {
-                var url = n.Attributes["data-src"].Value;
+                var url = n.Attributes["src"].Value;
                 url = url.StartsWith("//") ? "http:" + url : url;
-                n.SetAttributeValue("src", url);
-                n.SetAttributeValue("data-src", "");
-                var descriptionNode = n.ParentNode.ParentNode.SelectSingleNode("p[@class='publication-body-description']");
+                //n.SetAttributeValue("src", url);
+                //n.SetAttributeValue("data-src", "");
+                var descriptionNode = n.ParentNode.ParentNode.SelectSingleNode("p[@class='contentitem-caption']");
                 metadata.ExternalMedia.Add(new ExternalMedia(url, descriptionNode!= null ? descriptionNode.InnerText : null));
             });
             return new Article(body.InnerHtml, metadata);

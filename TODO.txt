@@ -56,6 +56,9 @@ V geen username: gebruik rss resource
 V DeCorrespondentReader -> DeCorrespondentResources, RssFeedReader -> RssResources ?
 - fix testcase ReadAndRenderAllFromWebResource
 V run in interactive mode om niet alle artikelen naar de kindle te versturen
-- html unescapen uit metadata (en correct escapen waar nodig, gaat fout met quotes) (PlainTextMetaData verwijderen)
+V html unescapen uit metadata (en correct escapen waar nodig, gaat fout met quotes) (PlainTextMetaData verwijderen)
 V DeCorrespondentResources werkt niet meer: url is aangepast naar https://decorrespondent.nl/home/1 met json response.
-
+- Aanpassingen van html in article verwerken: 
+	- auteur plaatje te klein 
+	- menuitems verwijderen
+	

@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-    <!--[if lt IE 9]><script type="text/javascript">window.location = "/notsupported";</script><![endif]--><!--[if IE 9 ]><html class="ie ie9" lang="en" class="ie ie9 no-js"><![endif]--><!--[if (gte IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]--><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="description" content=""><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><meta name="generator" content="Momkai|Respondens"><title>Life after a typhoon -- a post-disaster power struggle</title><script type="application/ld+json">
+    <!--[if IE]><script type="text/javascript">window.location = "/notsupported";</script><![endif]--><!--[if !(IE)]><!--><html lang="en" class="no-js"><!--<![endif]--><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script><meta name="description" content=""><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><meta name="generator" content="Momkai|Respondens" /><link rel="search" href="https://decorrespondent.nl/opensearchdescription.xml" type="application/opensearchdescription+xml" title="De Correspondent" /><title>Life after a typhoon – a post-disaster power struggle</title><script type="application/ld+json">
 	{ "@context" : "http://schema.org",
 		"@type" : "Organization",
 		"name" : "De Correspondent",
@@ -8,19 +8,34 @@
 		"sameAs" : [
 			"https://facebook.com/decorrespondent",
 			"https://twitter.com/decorrespondent",
-			"https://plus.google.com/+DecorrespondentNl",
+			"https://www.instagram.com/decorrespondent/",
 			"https://www.youtube.com/leesverder",
 			"http://vimeo.com/decorrespondent"
 		]
 	}
-</script><link href="https://static.decorrespondent.nl/ff-g7068a19/images/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"><link rel="apple-touch-icon" href="https://static.decorrespondent.nl/ff-g7068a19/images/favicons/icon-precomposed.png"><link rel="apple-touch-icon-precomposed" href="https://static.decorrespondent.nl/ff-g7068a19/images/favicons/icon-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://static.decorrespondent.nl/ff-g7068a19/images/favicons/icon-60x60-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://static.decorrespondent.nl/ff-g7068a19/images/favicons/icon-120x120-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://static.decorrespondent.nl/ff-g7068a19/images/favicons/icon-57x57-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://static.decorrespondent.nl/ff-g7068a19/images/favicons/icon-114x114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://static.decorrespondent.nl/ff-g7068a19/images/favicons/icon-76x76-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://static.decorrespondent.nl/ff-g7068a19/images/favicons/icon-152x152-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://static.decorrespondent.nl/ff-g7068a19/images/favicons/icon-72x72-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://static.decorrespondent.nl/ff-g7068a19/images/favicons/icon-144x144-precomposed.png"><meta name="msapplication-TileImage" content="https://static.decorrespondent.nl/ff-g7068a19/images/favicons/icon-precomposed.png"><meta name="msapplication-TileColor" content="#DF5B57"><meta name="msapplication-navbutton-color" content="#DF5B57"><meta name="msapplication-tooltip" content="Een dagelijks medicijn tegen de waan van de dag"><meta name="msapplication-starturl" content="/nieuw"><meta name="application-name" content="De Correspondent"><meta name="google-site-verification" content="TijPfOplBq7oxVgoB-Nu0ho-8hHcNov9MJ6BmE4dW_M"><meta property="og:type" content="article"><meta property="og:site_name" content="De Correspondent"><meta property="og:locale" content="en_US"><meta property="article:publisher" content="https://facebook.com/decorrespondent"><meta name="twitter:site" content="@decorrespondent"><meta name="twitter:creator" content="@maitevermeulen"><meta property="og:title" content="Life after a typhoon -- a post-disaster power struggle"><meta property="og:url" content="https://decorrespondent.nl/3352/Life-after-a-typhoon-a-post-disaster-power-struggle/165783923272-ecaf0fab"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Life after a typhoon -- a post-disaster power struggle"><meta property="og:image" content="https://dynamic.decorrespondent.nl/ff-1442262260/media/1920/55f72c4612c912573750876.jpg"><meta property="og:image:secure_url" content="https://dynamic.decorrespondent.nl/ff-1442262260/media/1920/55f72c4612c912573750876.jpg"><meta property="og:image:width" content="1920"><meta name="twitter:image:src" content="https://dynamic.decorrespondent.nl/ff-1442262260/media/1920/55f72c4612c912573750876.jpg"><meta property="og:image:type" content="image/jpg"><meta property="article:published_time" content="2015-09-14T15:50:11+02:00"><meta property="article:modified_time" content="2015-09-15T22:01:40+02:00"><meta property="article:author" content="https://decorrespondent.nl/maitevermeulen"><meta property="article:section" content="Conflict &amp; Ontwikkeling"><meta property="article:author:first_name" content="Maite"><meta property="article:author:last_name" content="Vermeulen"><meta property="article:author:username" content="maitevermeulen"><meta property="article:author:gender" content="female"><meta property="article:author:image" content="https://dynamic.decorrespondent.nl/ff-1433250969/media/190/556dac99a68228116799384.png"><meta property="article:author:image:secure_url" content="https://dynamic.decorrespondent.nl/ff-1433250969/media/190/556dac99a68228116799384.png"><meta property="article:author:type" content="image/png"><meta property="article:author:width" content="190"><meta property="article:author:height" content="220"><meta name="author" content="Maite Vermeulen"><meta property="og:description" content="A year after typhoon Haiyan hit the Philippines, leaving 6000 dead and 4 million homeless, the arranged marriage between the country and its aid workers is showing signs of strain. The main point of contention: who&amp;#39;s in charge of humanitarian relief? Photographer Pieter van den Boogert and I delved into the workings of the humanitarian aid mach"><meta name="twitter:description" content="A year after typhoon Haiyan hit the Philippines, leaving 6000 dead and 4 million homeless, the arranged marriage between the country and its aid workers is showing signs of strain. The main point of contention: who&amp;#39;s in charge of humanitarian relief? Photographer Pieter van den Boogert and I delved into the workings of the humanitarian aid mach"><link rel="publisher" href="https://plus.google.com/+DecorrespondentNl"><link rel="canonical" href="https://decorrespondent.nl/3352/Life-after-a-typhoon-a-post-disaster-power-struggle/146049992-928aed8c"><link rel="author" href="https://plus.google.com/+MaiteVermeulen"><script type="text/javascript">
+</script><link href="https://static.decorrespondent.nl/ff-g02f0c6e/images/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"><link rel="apple-touch-icon" href="https://static.decorrespondent.nl/ff-g02f0c6e/images/favicons/icon-precomposed.png" /><link rel="apple-touch-icon-precomposed" href="https://static.decorrespondent.nl/ff-g02f0c6e/images/favicons/icon-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://static.decorrespondent.nl/ff-g02f0c6e/images/favicons/icon-60x60-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://static.decorrespondent.nl/ff-g02f0c6e/images/favicons/icon-120x120-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://static.decorrespondent.nl/ff-g02f0c6e/images/favicons/icon-57x57-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://static.decorrespondent.nl/ff-g02f0c6e/images/favicons/icon-114x114-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://static.decorrespondent.nl/ff-g02f0c6e/images/favicons/icon-76x76-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://static.decorrespondent.nl/ff-g02f0c6e/images/favicons/icon-152x152-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://static.decorrespondent.nl/ff-g02f0c6e/images/favicons/icon-72x72-precomposed.png" /><link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://static.decorrespondent.nl/ff-g02f0c6e/images/favicons/icon-144x144-precomposed.png" /><meta name="msapplication-TileImage" content="https://static.decorrespondent.nl/ff-g02f0c6e/images/favicons/icon-precomposed.png"/><meta name="msapplication-TileColor" content="#DF5B57"/><meta name="msapplication-navbutton-color" content="#DF5B57" /><meta name="msapplication-tooltip" content="Een dagelijks medicijn tegen de waan van de dag" /><meta name="msapplication-starturl" content="/home" /><meta name="application-name" content="De Correspondent" /><meta name="google-site-verification" content="TijPfOplBq7oxVgoB-Nu0ho-8hHcNov9MJ6BmE4dW_M"><meta property="og:type" content="article"><meta property="og:site_name" content="De Correspondent"><meta property="og:locale" content="en_US"><meta property="article:publisher" content="https://facebook.com/decorrespondent"><meta name="twitter:site" content="@decorrespondent"><meta name="twitter:creator" content="@decorrespondent"><meta property="og:title" content="Life after a typhoon – a post-disaster power struggle"><meta property="og:url" content="https://decorrespondent.nl/3352/life-after-a-typhoon-a-post-disaster-power-struggle/165783923272-ecaf0fab"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Life after a typhoon – a post-disaster power struggle"><meta property="og:image" content="https://dynamic.decorrespondent.nl/ff-1442262260/media/1920/55f72c4612c912573750876.jpg"><meta property="og:image:secure_url" content="https://dynamic.decorrespondent.nl/ff-1442262260/media/1920/55f72c4612c912573750876.jpg"><meta property="og:image:width" content="1920"><meta name="twitter:image:src" content="https://dynamic.decorrespondent.nl/ff-1442262260/media/1920/55f72c4612c912573750876.jpg"><meta property="og:image:type" content="image/jpg"><meta property="article:published_time" content="2015-09-14T15:50:11+02:00"><meta property="article:modified_time" content="2015-12-11T13:17:44+01:00"><meta property="article:author" content="https://www.facebook.com/maite.vermeulen.1"><meta property="article:section" content="Conflict and Development"><meta property="article:author:first_name" content="Maite"><meta property="article:author:last_name" content="Vermeulen"><meta property="article:author:username" content="maitevermeulen"><meta property="article:author:gender" content="female"><meta name="twitter:creator" content="@maitevermeulen"><meta property="article:publisher" content="https://facebook.com/decorrespondent"><meta property="article:author:image" content="https://dynamic.decorrespondent.nl/ff-1433250969/media/190/556dac99a68228116799384.png"><meta property="article:author:image:secure_url" content="https://dynamic.decorrespondent.nl/ff-1433250969/media/190/556dac99a68228116799384.png"><meta property="article:author:type" content="image/png"><meta property="article:author:width" content="190"><meta property="article:author:height" content="220"><meta name="author" content="Maite Vermeulen"><meta name="twitter:label1" value="Reading time"><meta name="twitter:data1" value="12 - 16 minutes :clock12:"><meta property="og:description" content="A year after typhoon Haiyan hit the Philippines, leaving 6000 dead and 4 million homeless, the arranged marriage between the country and its aid workers is showing signs of strain. The main point of contention: who&amp;#39;s in charge of humanitarian relief? Photographer Pieter van den Boogert and I delved into the workings of the humanitarian aid mach"><meta name="twitter:description" content="A year after typhoon Haiyan hit the Philippines, leaving 6000 dead and 4 million homeless, the arranged marriage between the country and its aid workers is showing signs of strain. The main point of contention: who&amp;#39;s in charge of humanitarian relief? Photographer Pieter van den Boogert and I delved into the workings of the humanitarian aid mach"><link rel="publisher" href="https://plus.google.com/+DecorrespondentNl"/><link rel="canonical" href="https://decorrespondent.nl/3352/life-after-a-typhoon-a-post-disaster-power-struggle/146049992-928aed8c"/><link rel="author" href="https://plus.google.com/+MaiteVermeulen"/><script type="text/javascript">
 	window.App = window.App || {};
 	window.Correspondent = window.Correspondent || {};
 	Correspondent.isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
 	document.getElementsByTagName('html')[0].className += Correspondent.isTouch ? ' touch' : ' no-touch';
 </script><script>
 	document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script><link rel="stylesheet" href="https://static.decorrespondent.nl/ff-g7068a19/css/styles/main.css"><script src="//use.typekit.net/nlo7vhf.js"></script><script>try{Typekit.load();}catch(e){}</script></head><body id="publicationpage" class="publicationpage font-size-l nightmode "><script>
+</script><link rel="stylesheet" href="https://static.decorrespondent.nl/ff-g02f0c6e/css/styles/main.css"><script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function () {
+        var u = "//stats.decorrespondent.nl/piwik/";
+        _paq.push(['setTrackerUrl', u + 'piwik.php']);
+        _paq.push(['setSiteId', '2']);
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.defer = true;
+        g.src = u + 'piwik.js';
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script><noscript><p><img src="//stats.decorrespondent.nl/piwik/piwik.php?idsite=2" style="border:0;" alt=""/></p></noscript></head><body id="publicationpage" class="publicationpage font-size-l nightmode"><script>
         dataLayer = [];
         	dataLayer = [{
 		'page_type': 'artikel',
@@ -36,41 +51,62 @@
                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-WM3BVT');
-    </script><svg display="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewbox="0 0 12 12"><defs><symbol id="preloader"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.4,14.5c0.3-0.6,0.7-0.8,1.1-1.3c0.4-0.6,0.5-1.1,0.1-1.5   c-0.5-0.4-1.5,0.1-2.1,1.2c-3.1,5.8,2.5,8.8,2.5,8.8C12.1,18.9,12.4,16.5,13.4,14.5z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M33.5,31c-3.4,3-12.1,9.1-16.4,6.1c-4.3-3-0.4-10,5.6-16c6-6,12.2-8.5,15.1-7.4   c2.9,1,2.6,5.2-2.4,8.3C28.9,25.8,22,24.6,22,24.6s3.6,1.1,7.8,0.3c5-1,10.9-4.1,11.6-8.6c0.7-4.6-4.4-7.8-15.2-0.9   C15.3,22.3,6.5,35.3,14.7,39.7C22.6,44,33.5,31,33.5,31z"></path></symbol><symbol id="hamburger"><path d="M0,1 20,1"></path><path d="M0,6 20,6"></path><path d="M0,11 20,11"></path></symbol><symbol id="latest"><polygon fill-rule="evenodd" clip-rule="evenodd" points="7,5 3,5 0,12 5,7 9,7 12,0 "></polygon></symbol><symbol id="podcasts"><path d="M6,2v5.3C5.7,7.1,5.4,7,5,7C3.9,7,3,7.9,3,9s0.9,2,2,2c1.1,0,2-0.9,2-2V4h3V2H7H6z"></path></symbol><symbol id="dossiers"><path d="M3,1v1h7v6h1V1H3z M1,11h8V3H1V11z M2,4h6v6H2V4z"></path></symbol><symbol id="dossiers2"><path d="M3,1v1h7v6h1V1H3z M1,11h8V3H1V11z"></path></symbol><symbol id="documentaries"><path d="M6,0C2.7,0,0,2.7,0,6c0,3.3,2.7,6,6,6c3.3,0,6-2.7,6-6C12,2.7,9.3,0,6,0z M6,10.9c-2.7,0-4.9-2.2-4.9-4.9
-	c0-2.7,2.2-4.9,4.9-4.9c2.7,0,4.9,2.2,4.9,4.9C10.9,8.7,8.7,10.9,6,10.9z"></path><polygon points="8.2,6 5,4 5,8 "></polygon></symbol><symbol id="documentaries2"><path d="M3,10l6-4L3,2L3,10z"></path></symbol><symbol id="following"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.6,9.2c-1-0.2-3-0.7-3.1-1.4c0-0.2-0.1-0.8-0.1-0.8S9,6.7,9,3.5
+    </script><svg display="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="12" height="12" viewBox="0 0 12 12"><defs><symbol id="preloader"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.4,14.5c0.3-0.6,0.7-0.8,1.1-1.3c0.4-0.6,0.5-1.1,0.1-1.5   c-0.5-0.4-1.5,0.1-2.1,1.2c-3.1,5.8,2.5,8.8,2.5,8.8C12.1,18.9,12.4,16.5,13.4,14.5z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M33.5,31c-3.4,3-12.1,9.1-16.4,6.1c-4.3-3-0.4-10,5.6-16c6-6,12.2-8.5,15.1-7.4   c2.9,1,2.6,5.2-2.4,8.3C28.9,25.8,22,24.6,22,24.6s3.6,1.1,7.8,0.3c5-1,10.9-4.1,11.6-8.6c0.7-4.6-4.4-7.8-15.2-0.9   C15.3,22.3,6.5,35.3,14.7,39.7C22.6,44,33.5,31,33.5,31z"></path></symbol><symbol id="hamburger"><path d="M0,1 20,1" /><path d="M0,6 20,6" /><path d="M0,11 20,11" /></symbol><symbol id="home"><path d="M11,4.4L6,0L1,4.4V12h10V4.4z"/></symbol><symbol id="podcasts"><path d="M6,2v5.3C5.7,7.1,5.4,7,5,7C3.9,7,3,7.9,3,9s0.9,2,2,2c1.1,0,2-0.9,2-2V4h3V2H7H6z"/></symbol><symbol id="dossiers"><path d="M2.587 2.587h10.826v10.826z"></path></symbol><symbol id="dossiers2"><path d="M3,1v1h7v6h1V1H3z M1,11h8V3H1V11z"/></symbol><symbol id="videos"><path d="M6,0C2.7,0,0,2.7,0,6c0,3.3,2.7,6,6,6c3.3,0,6-2.7,6-6C12,2.7,9.3,0,6,0z M6,10.9c-2.7,0-4.9-2.2-4.9-4.9
+	c0-2.7,2.2-4.9,4.9-4.9c2.7,0,4.9,2.2,4.9,4.9C10.9,8.7,8.7,10.9,6,10.9z"/><polygon points="8.2,6 5,4 5,8 "/></symbol><symbol id="documentaries2"><path d="M3,10l6-4L3,2L3,10z"/></symbol><symbol id="following"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.6,9.2c-1-0.2-3-0.7-3.1-1.4c0-0.2-0.1-0.8-0.1-0.8S9,6.7,9,3.5
 	C9,1.2,7.5,0,6,0S3,1.2,3,3.5c0,3.2,1.5,3.5,1.5,3.5s0,0.6-0.1,0.8C4.3,8.5,2.4,9,1.4,9.2C0.4,9.4,0,12,0,12h12
-	C12,12,11.6,9.4,10.6,9.2z"></path></symbol><symbol id="stored"><path d="M12,12L8,9l-4,3V1h8V12z"></path></symbol><symbol id="correspondents"><path d="M7.1,8c-0.6-0.1-2-0.5-2-1c0-0.2,0-0.6,0-0.6s1-0.4,1-3C6,1.9,5,1,4,1S2,1.9,2,3.5c0,2.6,1,3,1,3S3,6.8,3,7
-		c-0.1,0.5-1.4,0.9-2,1C0.3,8.1,0,10,0,10h8C8,10,7.7,8.1,7.1,8z"></path><path d="M12,10c-0.1-0.5-0.3-1.6-0.8-1.7c-0.6-0.1-1.7-0.4-1.8-0.9c0-0.1,0-0.5,0-0.5s0.7-0.3,0.7-2C10,3.5,9.4,3,8.5,3
-		S7,3.5,7,4.9c0,1.6,0.7,2,0.7,2s0,0.2,0,0.3C8.5,7.6,8.8,9,9,10H12z"></path></symbol><symbol id="searchIcon"><path d="m12.001 10.585l-2.826-2.826c0.523-0.79 0.832-1.736 0.832-2.756 0-2.763-2.24-5.003-5.003-5.003-2.764 0-5.004 2.24-5.004 5.003s2.24 5.004 5.004 5.004c1.019 0 1.965-0.309 2.756-0.833l2.826 2.826 1.415-1.415zm-6.997-2.58c-1.656 0-3.002-1.346-3.002-3.002 0-1.655 1.346-3.002 3.002-3.002 1.655 0 3.002 1.347 3.002 3.002 0 1.656-1.347 3.002-3.002 3.002z"></path></symbol></defs></svg><aside class="panel panel-left"><nav role="navigation" class="menu-secondary scrollable"><ul><li class=""><a href="/correspondenten"><svg class="correspondents"><use xlink:href="#correspondents"></use></svg>Correspondenten</a></li><li class=""><a href="/documentaires"><svg class="documentaries"><use xlink:href="#documentaries"></use></svg>Documentaires</a></li><li class=""><a href="/podcasts"><svg class="podcasts"><use xlink:href="#podcasts"></use></svg>Podcasts</a></li></ul><ul><li class=""><a href="/contact">Contact</a></li><li class=""><a href="/kiosk">Kiosk</a></li><li class=""><a href="/geef-cadeau">Cadeaulidmaatschap</a></li><li class=""><a href="/agenda">Evenementen</a></li></ul><ul class="secondary"><li class=""><a href="/over">Over ons</a></li><li class=""><a href="/vacatures">Vacatures</a></li><li class=""><a href="/veelgestelde-vragen">Veelgestelde vragen</a></li><li class=""><a href="/voorwaarden">Voorwaarden</a></li></ul></nav></aside><header class="header" data-module="Header" data-options='{"sticky": true}' data-priority="1"><div class="left-panel-toggle"><span class="menu-label">Menu</span><div class="icons"><div class="close-icon"><span></span><span></span><span></span><span></span></div><div class="open-icon"><span></span><span></span><span></span></div></div></div><nav class="menu-primary"><ul><li><a href="/nieuw" class="latest"><svg class="latest"><use xlink:href="#latest"></use></svg>Nieuw</a></li><li><a href="/volgend" class="following"><svg class="following"><use xlink:href="#following"></use></svg>Volgend</a></li><li><a href="/bewaard" class="stored"><svg class="stored"><use xlink:href="#stored"></use></svg>Bewaard</a></li></ul></nav><div class="logo"><a title="naar de homepage" href="/nieuw"></a></div><div class="search-input"><svg class="search-icon"><use xlink:href="#searchIcon"></use></svg><small>Search</small></div><form class="header-search" action="/zoek" method="get" accept-charset="UTF-8"><label>
-        Search
-		<svg class="search-icon"><use xlink:href="#searchIcon"></use></svg></label><fieldset><input name="search_query" type="search" placeholder="" data-placeholder="" autocomplete="off"></fieldset><div class="search-close"><div class="close-icon"><span></span><span></span><span></span><span></span></div></div></form><div class="personal-menu-control" title="open je persoonlijke menu"><div class="personal-menu-toggle"><div class="user-avatar"><img width="32" class="lazyload" data-src="https://static.decorrespondent.nl/ff-g7068a19/images/users/avatars/64/J.png" alt="Jon van Leuven"></div><div class="personal-menu-arrows"><span class="up"></span><span class="down"></span></div></div><nav class="menu-personal"><ul><li class=""><a href="/instellingen">Instellingen</a></li><li class=""><a href="/account">Account</a></li><li class=""><a href="/gelezen">Gelezen</a></li></ul><div class="secondary"><a onclick="document.getElementById('logout').submit();" href="javascript:void(0);">Uitloggen</a><form hidden="" id='logout' action='/logout' method='post' accept-charset='UTF-8'></form></div></nav></div><div class="publication-header" id="publicationHeader" data-module="PublicationHeader"><div class="reading-bar"><div class="author"><a rel="author" title="Meer van Maite Vermeulen" href="/maitevermeulen" class="author-name"><div class="avatar"><img width="44" height="44" class="lazyload" alt="Avatar Maite Vermeulen" data-src="https://dynamic.decorrespondent.nl/ff-1433250969/media/100/556dac99a68228116799384.png"><noscript><img width="44" height="44" alt="Avatar Maite Vermeulen" src="https://dynamic.decorrespondent.nl/ff-1433250969/media/100/556dac99a68228116799384.png"></noscript></div>
-  
-  Maite
-
-  <span class="author-surname">Vermeulen</span></a></div><div class="overlay-close-button" id="popupCloseButton"><div class="close-icon"><span></span><span></span><span></span><span></span></div></div><div class="publication-quick-nav"><ul class="publication-options"><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="3352"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span></a></li><li class="reading-options"><a title="Pas je leesvoorkeuren aan" style="display: block;" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-text-size"></span></a><div class="corres-tooltip"><div class="mid"><ul class="preferences"><li><div class="preference"><a data-link="fontsize" href="javascript:void(0);" class="tooltip-item"><span class="glyph-readingmode-small"></span><span class="glyph-readingmode-large active"></span>
+	C12,12,11.6,9.4,10.6,9.2z"/></symbol><symbol id="stored"><path d="M11,12L6,7.6L1,12V0h10V12z"/></symbol><symbol id="correspondents"><path d="M7.1,8c-0.6-0.1-2-0.5-2-1c0-0.2,0-0.6,0-0.6s1-0.4,1-3C6,1.9,5,1,4,1S2,1.9,2,3.5c0,2.6,1,3,1,3S3,6.8,3,7
+		c-0.1,0.5-1.4,0.9-2,1C0.3,8.1,0,10,0,10h8C8,10,7.7,8.1,7.1,8z"/><path d="M12,10c-0.1-0.5-0.3-1.6-0.8-1.7c-0.6-0.1-1.7-0.4-1.8-0.9c0-0.1,0-0.5,0-0.5s0.7-0.3,0.7-2C10,3.5,9.4,3,8.5,3
+		S7,3.5,7,4.9c0,1.6,0.7,2,0.7,2s0,0.2,0,0.3C8.5,7.6,8.8,9,9,10H12z"/></symbol><symbol id="searchIcon"><path d="m12.001 10.585l-2.826-2.826c0.523-0.79 0.832-1.736 0.832-2.756 0-2.763-2.24-5.003-5.003-5.003-2.764 0-5.004 2.24-5.004 5.003s2.24 5.004 5.004 5.004c1.019 0 1.965-0.309 2.756-0.833l2.826 2.826 1.415-1.415zm-6.997-2.58c-1.656 0-3.002-1.346-3.002-3.002 0-1.655 1.346-3.002 3.002-3.002 1.655 0 3.002 1.347 3.002 3.002 0 1.656-1.347 3.002-3.002 3.002z"/></symbol></defs></svg><aside class="panel panel-left"><nav role="navigation" class="menu-secondary scrollable"><ul ><li class=""><a href="/correspondenten"><svg class="correspondents"><use xlink:href="#correspondents"></use></svg>Correspondenten</a></li><li class=""><a href="/videos"><svg class="videos"><use xlink:href="#videos"></use></svg>Video&#039;s</a></li><li class=""><a href="/podcasts"><svg class="podcasts"><use xlink:href="#podcasts"></use></svg>Podcasts</a></li></ul><ul ><li class=""><a href="/contact">Contact</a></li><li class=""><a href="/kiosk">Boeken</a></li><li class=""><a href="/sprekers">Sprekers</a></li><li class=""><a href="/geef-cadeau">Cadeaulidmaatschap</a></li><li class=""><a href="/agenda">Evenementen</a></li></ul><ul class="secondary"><li class=""><a href="/over">Over ons</a></li><li class=""><a href="/vacatures">Vacatures</a></li><li class=""><a href="/veelgestelde-vragen">Veelgestelde vragen</a></li><li class=""><a href="/voorwaarden">Voorwaarden</a></li></ul></nav></aside><header class="header " data-module="Header" data-options='{"sticky": true}' data-priority="1"><div class="left-panel-toggle"><span class="menu-label">Menu</span><div class="icons"><div class="close-icon"><span></span><span></span><span></span><span></span></div><div class="open-icon"><span></span><span></span><span></span></div></div></div><nav class="menu-primary"><ul><li ><a href="/home" class="home"><svg class="home"><use xlink:href="#home"></use></svg><span>Home</span></a></li><li ><a href="/themas" class="dossiers"><svg class="dossiers"><use xlink:href="#dossiers"></use></svg><span>Thema&#039;s</span></a></li></ul></nav><div class="logo"><a title="naar de homepage" href="/home"></a></div><div class="search-input"><svg class="search-icon"><use xlink:href="#searchIcon"></use></svg><span><small>Search</small></span></div><div data-module="AutoComplete"><form class="header-search" action="/zoek" method="get" accept-charset="UTF-8"><label>
+      Search
+      <svg class="search-icon"><use xlink:href="#searchIcon"></use></svg></label><fieldset><input name="search_query"
+             type="search"
+             class="search-form-input js-input"
+             placeholder=""
+             data-placeholder=""
+             autocomplete="off" /></fieldset><div class="search-close"><div class="close-icon"><span></span><span></span><span></span><span></span></div></div></form><div class="autocomplete js-container mod-header"><div class="autocomplete-list-wrapper js-wrapper"><ul class="autocomplete-list js-list"></ul></div><div class="autocomplete-footer js-footer"><div class="autocomplete-footer-label">Bekijk alle resultaten</div><div class="autocomplete-footer-arrow glyph-right-after"></div></div><div class="autocomplete-close glyph-cross-close js-close"></div></div></div><div class="personal-menu-control" title="open je persoonlijke menu"><div class="personal-menu-toggle"><div class="user-avatar"><img width="32" class="lazyload" data-src="https://static.decorrespondent.nl/ff-g02f0c6e/images/users/avatars/64/J.png" alt="Jon van Leuven"></div><div class="personal-menu-arrows"><span class="up"></span><span class="down"></span></div></div><nav class="menu-personal"><ul><li class=""><a href="/instellingen">Instellingen</a></li><li class=""><a href="/account">Account</a></li><li class=""><a href="/bewaard">Bewaard</a></li><li class=""><a href="/gelezen">Gelezen</a></li></ul><div class="secondary"><a onclick="document.getElementById('logout').submit();" href="javascript:void(0);">Uitloggen</a><form hidden id='logout' action='/logout' method='post' accept-charset='UTF-8'></form></div></nav></div><div class="publication-header" id="publicationHeader" data-module="PublicationHeader"><div class="reading-bar"><div class="author"><a class="" rel="author" title="Meer van Maite Vermeulen" href="/maitevermeulen"><div class="avatar"><img width="44" height="44" class="lazyload" alt="Avatar Maite Vermeulen" data-src="https://dynamic.decorrespondent.nl/ff-1433250969/media/100/556dac99a68228116799384.png"><noscript><img width="44" height="44" alt="Avatar Maite Vermeulen" src="https://dynamic.decorrespondent.nl/ff-1433250969/media/100/556dac99a68228116799384.png"></noscript></div></a><a rel="author" title="Meer van Maite Vermeulen" href="/maitevermeulen" class="author-name ">
+  Maite <span class="author-surname">Vermeulen</span></a></div><div class="overlay-close-button" id="popupCloseButton"><div class="close-icon"><span></span><span></span><span></span><span></span></div></div><div class="publication-quick-nav"><ul class="publication-options"><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="3352"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span></a></li><li class="reading-options"><a title="Pas je leesvoorkeuren aan" style="display: block;" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-text-size"></span></a><div class="corres-tooltip "><div class="mid"><ul class="preferences"><li><div class="preference"><a data-link="fontsize" href="javascript:void(0);" class="tooltip-item"><span class="glyph-readingmode-small"></span><span class="glyph-readingmode-large active"></span>
 										Lettergrootte
 				</a></div></li><li><div class="preference"><a data-link="theme" href="javascript:void(0);" class="tooltip-item"><span class="glyph-readingmode-day"></span><span class="glyph-readingmode-night active"></span>
 										Leesmodus
 				</a></div></li><li><div class="preference"><a data-link="typeface" href="javascript:void(0);" class="tooltip-item"><span class="glyph-readingmode-serif active"></span><span class="glyph-readingmode-sansserif"></span>
 										Lettertype
-				</a></div></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span></a><div class="corres-tooltip"><div class="mid"><ul class="share-options" data-parent="ul" data-url="https://decorrespondent.nl/3352/Life-after-a-typhoon-a-post-disaster-power-struggle/165783923272-ecaf0fab" data-id="3352" data-title="Life after a typhoon -- a post-disaster power struggle" data-text="" data-related="maitevermeulen" data-expertise="Correspondent Conflict &amp; Ontwikkeling" data-mailto="mailto:?subject=Tip: Life%20after%20a%20typhoon%20--%20a%20post-disaster%20power%20struggle&body=Op De Correspondent zag ik een verhaal van Maite%20Vermeulen dat ik graag met je wil delen:%0D%0A%0D%0ALife%20after%20a%20typhoon%20--%20a%20post-disaster%20power%20struggle - https%3A%2F%2Fdecorrespondent.nl%2F3352%2FLife-after-a-typhoon-a-post-disaster-power-struggle%2F165783923272-ecaf0fab%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail" data-object-name="publication"><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">Linkedin</a></li><li class="mail"><a href="javascript: void(0);" data-share-type="mail" class="glyph-mail">
+				</a></div></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span></a><div class="corres-tooltip "><div class="mid"><ul class="share-options"
+	data-parent="ul"
+	data-url="https://decorrespondent.nl/3352/life-after-a-typhoon-a-post-disaster-power-struggle/165783923272-ecaf0fab"
+	data-id="3352"
+	data-title="Life after a typhoon – a post-disaster power struggle"
+	data-text=""
+	data-related="maitevermeulen"
+	data-expertise="Correspondent Conflict &amp; Ontwikkeling"
+	data-mailto="mailto:?subject=Tip: Life%20after%20a%20typhoon%20%E2%80%93%20a%20post-disaster%20power%20struggle&body=Op De Correspondent zag ik een verhaal van Maite%20Vermeulen dat ik graag met je wil delen:%0D%0A%0D%0ALife%20after%20a%20typhoon%20%E2%80%93%20a%20post-disaster%20power%20struggle - https%3A%2F%2Fdecorrespondent.nl%2F3352%2Flife-after-a-typhoon-a-post-disaster-power-struggle%2F165783923272-ecaf0fab%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail"
+	data-object-name="publication"
+><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">LinkedIn</a></li><li class="mail"><a
+			href="javascript: void(0);"
+			data-share-type="mail"
+			class="glyph-mail">
 				E-mail
 		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/3352/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/3352.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li></ul></div></div><div class="progress-bar article"><div class="bar-container"><div id="progressBar" class="bar"></div><div id="progressBarComments" class="bar green"></div></div></div></div></header><section id="container">
     			
 
-<section class="story_of_the_day publication		publication-article" id="publication" data-articleid="3352" data-module="PublicationView" data-priority="2">
+<section class="story_of_the_day publication		publication-article"
+	id="publication"
+	data-articleId="3352"
+    data-module="PublicationView" data-priority="2">
 
 	
 	
 				
+	
 	<header>
 
 		
+						
+		
 		<div class="publication-introduction publication-center">
 
-							<h4 class="subtype-featured">Verhaal van de dag</h4>
-			
-			<div class="date-readingtime"><time data-field="date" datetime="2015-09-14" title="14-9-2015 15:50">
+			<h4 class="subtype-featured">Verhaal van de dag</h4>
+			<div class="date-readingtime">
+<time data-field="date" datetime="2015-09-14" title="14-9-2015 15:50">
 	14 september 2015</time>
 					
 	
@@ -85,12 +121,13 @@
 			<p class="intro" data-field="intro">A year after typhoon Haiyan hit the Philippines, leaving 6000 dead and 4 million homeless, the arranged marriage between the country and its aid workers is showing signs of strain. The main point of contention: who&#39;s in charge of humanitarian relief? Photographer Pieter van den Boogert and I delved into the workings of the humanitarian aid machine.</p>
 
 		</div>
-		<h1 class="publication-title publication-center" data-field="title">Life after a typhoon -- a post-disaster power struggle</h1><div class="publication-author-container"><div class="author"><p class="description">
-      Correspondent Conflict &amp; Ontwikkeling    </p><div class="image"><img width="190" class="lazyload" data-src="https://dynamic.decorrespondent.nl/ff-1433250969/media/380/556dac99a68228116799384.png" alt="Avatar Maite Vermeulen"><noscript><img width="190" src="https://dynamic.decorrespondent.nl/ff-1433250969/media/380/556dac99a68228116799384.png" alt="Avatar Maite Vermeulen"></noscript></div></div><div class="publication-author"><a rel="author" title="Meer van Maite Vermeulen" href="/maitevermeulen" class="author-name">
-  
-  Maite
+		<h1 class="publication-title publication-center" data-field="title">Life after a typhoon – a post-disaster power struggle</h1>
 
-  <span class="author-surname">Vermeulen</span></a><a href="#" id="followAuthor" title="Volg deze correspondent" class="follow-author-button-small start-following-author" data-author-id="17"><span></span></a></div></div></header>
+		    <div class="publication-author-container"><div class="author"><p class="description">
+      Correspondent Conflict &amp; Ontwikkeling
+      </p><div class="image"><img width="190" class="lazyload" data-src="https://dynamic.decorrespondent.nl/ff-1433250969/media/380/556dac99a68228116799384.png" alt="Avatar Maite Vermeulen"><noscript><img width="190" src="https://dynamic.decorrespondent.nl/ff-1433250969/media/380/556dac99a68228116799384.png" alt="Avatar Maite Vermeulen"></noscript></div></div><div class="publication-author"><a rel="author" title="Meer van Maite Vermeulen" href="/maitevermeulen" class="author-name ">
+  Maite <span class="author-surname">Vermeulen</span></a><a href="#" id="followAuthor" title="Volg deze correspondent" class="follow-author-button-small start-following-author" data-author-id="17"><span></span></a></div></div>
+	</header>
 
 	<div id="publicationMainImage" class="publication-main-image">
 
@@ -116,25 +153,25 @@
 
 <p>The traffic honking its way through the market street speaks volumes. The characteristic tricycles and pedicabs &ndash; motorbikes and bicycles with sidecars that serve as taxis &ndash; are cut off by big 4-wheel-drive vehicles bearing stickers of aid organizations. From the sidewalk, I make a list in my notebook of the army of relief organizations passing by:</p>
 
-<p>IFRC<br>
-FAO<br>
-ILO<br>
-UNDP<br>
-MSF<br>
-OCHA<br>
-Red Cross<br>
-IOM<br>
-CRS<br>
-WFP<br>
-Save The Children<br>
-Oxfam<br>
-WHO<br>
-CSFI<br>
-Unicef<br>
-ACF<br>
-UNFPA<br>
-USAID<br>
-Plan International<br>
+<p>IFRC<br />
+FAO<br />
+ILO<br />
+UNDP<br />
+MSF<br />
+OCHA<br />
+Red Cross<br />
+IOM<br />
+CRS<br />
+WFP<br />
+Save The Children<br />
+Oxfam<br />
+WHO<br />
+CSFI<br />
+Unicef<br />
+ACF<br />
+UNFPA<br />
+USAID<br />
+Plan International<br />
 UNHCR</p>
 
 <p>Precisely one year ago, one of the strongest typhoons ever hit the Eastern Visayas, a region of the Philippines with Tacloban as its capital. Typhoon Haiyan &ndash; or Yolanda as it is called in the Philippines &ndash; destroyed the homes of 4 million Filipinos and killed some 6000 people.</p>
@@ -153,7 +190,7 @@ UNHCR</p>
 
 	
 			
-<svg class="preloader preloader-gray" viewbox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
+<svg class="preloader preloader-gray" viewBox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
 	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#preloader"></use>
 </svg>
 		<img class="publicationcontentimage loading" data-src="https://dynamic.decorrespondent.nl/ff-1442238611/media/{breakpoint-name}/55f6c7a5a8fa15144926235.png" alt="Left: Kasper Engborg, Head of the United Nations Office for the Coordination of Humanitarian Affairs in Tacloban. Right: Geovani Lapina of the World Food Programme, which is now pulling out of the region.  Pieter van den Boogert for The Correspondent">
@@ -171,7 +208,7 @@ UNHCR</p>
 <h2>Source of tension #1: Who makes the plan?</h2>
 
 <p>The press conference in early December 2013, in which the international community presented its <a class="publication-sidenote-link" href="http://www.unocha.org/cap/appeals/philippines-strategic-response-plan-typhoon-haiyan-november-2013-november-2014" target="_blank">emergency relief plan</a>
-<a href="http://www.unocha.org/cap/appeals/philippines-strategic-response-plan-typhoon-haiyan-november-2013-november-2014" class="publication-sidenote entry-unrelated instapaper_ignore" title="Find the U.N.&#039;s Strategic Response Plan here." target="_blank">
+<a href="http://www.unocha.org/cap/appeals/philippines-strategic-response-plan-typhoon-haiyan-november-2013-november-2014" class="publication-sidenote entry-unrelated instapaper_ignore" title="Find the U.N.&#039;s Strategic Response Plan here." target="_blank" aria-hidden="true">
 	<span class="glyph-sidenote-dot-large"></span>
 	<span class="glyph-sidenote-dot-small"></span>
 	<span class="glyph-sidenote glyph-sidenote-document"></span>
@@ -181,7 +218,7 @@ UNHCR</p>
 <blockquote>The Philippine government may be officially in charge, but the U.N. is not going to wait until the government takes charge.</blockquote>
 
 <p>Then came the first question: Great, but what is the Philippine government&#39;s plan, then? The Humanitarian Coordinator was silent for a moment, then conceded she had not yet seen <a class="publication-sidenote-link" href="http://www.neda.gov.ph/wp-content/uploads/2013/12/RAY-DOC-FINAL.pdf" target="_blank">the plan. </a>
-<a href="http://www.neda.gov.ph/wp-content/uploads/2013/12/RAY-DOC-FINAL.pdf" class="publication-sidenote entry-unrelated instapaper_ignore" title="Read the Philippine government&#039;s plan here." target="_blank">
+<a href="http://www.neda.gov.ph/wp-content/uploads/2013/12/RAY-DOC-FINAL.pdf" class="publication-sidenote entry-unrelated instapaper_ignore" title="Read the Philippine government&#039;s plan here." target="_blank" aria-hidden="true">
 	<span class="glyph-sidenote-dot-large"></span>
 	<span class="glyph-sidenote-dot-small"></span>
 	<span class="glyph-sidenote glyph-sidenote-document"></span>
@@ -196,7 +233,7 @@ UNHCR</p>
 
 	
 			
-<svg class="preloader preloader-gray" viewbox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
+<svg class="preloader preloader-gray" viewBox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
 	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#preloader"></use>
 </svg>
 		<img class="publicationcontentimage loading" data-src="https://dynamic.decorrespondent.nl/ff-1442238611/media/{breakpoint-name}/55f6c8c70174e2340832784.png" alt="Western volunteers help build new, temporary housing close to Tacloban. Pieter van den Boogert for The Correspondent">
@@ -215,9 +252,9 @@ UNHCR</p>
 
 <p>But there is one crucial problem: Politics in the Philippines is dominated by centuries-old family clans. At the local level, it is often the candidate with the biggest family who wins elections. And yes, there are also rumors of <em>barangay</em> leaders bumping members of their own clans up the lists provided to aid organizations.</p>
 
-<p>Furthermore, the family clan issues go beyond the local level. The two largest families often pitted against each other in the Philippines are the Marcos family (descendants of the former dictator Ferdinand Marcos) and the Aquino family. The President of the Philippines, Benigno Aquino III, belongs to the latter clan, while Tacloban&#39;s Mayor Alfred Romualdez belongs to the <abbr title="Romualdez is the nephew of Imelda Marcos, widow of the former dictator. Mayor Romualdez&#039;s uncle is said to have murdered President Benigno Aquino&#039;s father." data-id="41324">Marcos clan.<span></span></abbr>
-<span class="publication-body-infocard-content entry-unrelated instapaper_ignore">
-		<span class="infocard-description">Romualdez is the nephew of Imelda Marcos, widow of the former dictator. Mayor Romualdez&#039;s uncle is said to have murdered President Benigno Aquino&#039;s father.</span>
+<p>Furthermore, the family clan issues go beyond the local level. The two largest families often pitted against each other in the Philippines are the Marcos family (descendants of the former dictator Ferdinand Marcos) and the Aquino family. The President of the Philippines, Benigno Aquino III, belongs to the latter clan, while Tacloban&#39;s Mayor Alfred Romualdez belongs to the <abbr title="Romualdez is the nephew of Imelda Marcos, widow of the former dictator. Mayor Romualdez&#039;s uncle is said to have murdered President Benigno Aquino&#039;s father." data-id="41324" aria-expanded="false" aria-controls="insertion-infocard-contents-41324">Marcos clan.<span></span></abbr>
+<span class="publication-body-infocard-content entry-unrelated instapaper_ignore" id="insertion-infocard-contents-41324">
+    <span class="infocard-description">Romualdez is the nephew of Imelda Marcos, widow of the former dictator. Mayor Romualdez&#039;s uncle is said to have murdered President Benigno Aquino&#039;s father.</span>
 </span> </p>
 
 <p>Aid organizations coming into the Philippines have inherited this delicate political situation. In Tacloban, everyone complains that the government has left them in the lurch. The president refused, for instance, to swiftly transfer funds to the mayor. Other cities, with Aquinos in power, received additional funds much more quickly.</p>
@@ -226,11 +263,11 @@ UNHCR</p>
 
 	
 			
-<svg class="preloader preloader-gray" viewbox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
+<svg class="preloader preloader-gray" viewBox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
 	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#preloader"></use>
 </svg>
-		<img class="publicationcontentimage loading" data-src="https://dynamic.decorrespondent.nl/ff-1442238611/media/{breakpoint-name}/55f6c9a8dd5cd6548410027.png" alt="Above: The mildewed tent where a family still lives in Tacloban.  Below:  The remains of a church in the fishing village of Sulangan.  Pieter van den Boogert for The Correspondent">
-		<noscript><img src="https://dynamic.decorrespondent.nl/ff-1442238611/media/904/55f6c9a8dd5cd6548410027.png" alt="Above: The mildewed tent where a family still lives in Tacloban.  Below:  The remains of a church in the fishing village of Sulangan.  Pieter van den Boogert for The Correspondent"></noscript>
+		<img class="publicationcontentimage loading" data-src="https://dynamic.decorrespondent.nl/ff-1449834819/media/{breakpoint-name}/" alt="Above: The mildewed tent where a family still lives in Tacloban.  Below:  The remains of a church in the fishing village of Sulangan.  Pieter van den Boogert for The Correspondent">
+		<noscript><img src="https://dynamic.decorrespondent.nl/ff-1449834819/media/904/" alt="Above: The mildewed tent where a family still lives in Tacloban.  Below:  The remains of a church in the fishing village of Sulangan.  Pieter van den Boogert for The Correspondent"></noscript>
 	
 	<figcaption class="publication-body-description">Above: The mildewed tent where a family still lives in Tacloban.  Below:  The remains of a church in the fishing village of Sulangan.  Pieter van den Boogert for The Correspondent</figcaption>
 
@@ -239,11 +276,11 @@ UNHCR</p>
 
 <h2>Source of tension #3: Who are all those foreigners?</h2>
 
-<p><em>Barangay</em> 88 is one of the areas hardest hit in Tacloban. Situated on a cape protruding into the sea, it was battered from both sides by the <abbr title="A storm surge resembles a tsunami, but while a tsunami is caused by an earthquake, a storm surge is the result of a low pressure system, such as a tropical cyclone. (Wikipedia)" data-id="41326">storm surge.<span></span></abbr>
-<span class="publication-body-infocard-content entry-unrelated instapaper_ignore">
-		<span class="infocard-description">A storm surge resembles a tsunami, but while a tsunami is caused by an earthquake, a storm surge is the result of a low pressure system, such as a tropical cyclone. (Wikipedia)</span>
-</span> <br>
-<br>
+<p><em>Barangay</em> 88 is one of the areas hardest hit in Tacloban. Situated on a cape protruding into the sea, it was battered from both sides by the <abbr title="A storm surge resembles a tsunami, but while a tsunami is caused by an earthquake, a storm surge is the result of a low pressure system, such as a tropical cyclone. (Wikipedia)" data-id="41326" aria-expanded="false" aria-controls="insertion-infocard-contents-41326">storm surge.<span></span></abbr>
+<span class="publication-body-infocard-content entry-unrelated instapaper_ignore" id="insertion-infocard-contents-41326">
+    <span class="infocard-description">A storm surge resembles a tsunami, but while a tsunami is caused by an earthquake, a storm surge is the result of a low pressure system, such as a tropical cyclone. (Wikipedia)</span>
+</span> <br />
+<br />
 When asked how many people live there, district leader Emelita Montalban gives a wan smile. &quot;Do you mean before or after Yolanda?&quot; Before the typhoon, the district&#39;s population was 11,500. Since the storm, that number has dropped to between 8000 and 9000. Many people died, still more fled, leaving the destruction behind.</p>
 
 <p>Montalban shows us around her neighborhood. There are concrete walls spanned by tarps instead of roofs. Some 300 families live in tents, spread out over eight small camps. The tents are mildewed and worn, and they flood on a regular basis. &quot;So many NGOs have come to help,&quot; says Montalban, as she ducks under a clothesline between two tents. &quot;I try to coordinate their efforts, but many don&#39;t even come to me. They just start handing out boats or money. That&#39;s why I don&#39;t have a clear overview of who&#39;s getting what.&quot;</p>
@@ -262,7 +299,7 @@ When asked how many people live there, district leader Emelita Montalban gives a
 
 	
 			
-<svg class="preloader preloader-gray" viewbox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
+<svg class="preloader preloader-gray" viewBox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
 	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#preloader"></use>
 </svg>
 		<img class="publicationcontentimage loading" data-src="https://dynamic.decorrespondent.nl/ff-1442238611/media/{breakpoint-name}/55f6ca4e564c33496074536.png" alt="Above: Barangay 88 in Tacloban. Below: New construction in the hills north of Tacloban, where it is safer.  Pieter van den Boogert for The Correspondent">
@@ -277,12 +314,12 @@ When asked how many people live there, district leader Emelita Montalban gives a
 
 <p>In the middle of <em>Barangay</em> 88, on the San Pedro Bay, some 1200 people live in tents. The ground is muddy. A long line of blue, green, and white jerry cans stand ready by the water pump. The women wait their turn in the shade, next to a painted concrete post, yellow with black letters that read &quot;no-build zone.&quot;</p>
 
-<p>You can see these posts all over Tacloban &ndash; at the side of a busy road, on a basketball court, in the middle of the slums. No one seems to pay them any mind, but the yellow posts are of great importance for humanitarian assistance. They mark off a distance of 40 meters from the coast (approximately 44 yards, or 130 feet), the zone determined to be fundamentally <abbr title="There is more than one definition in circulation of &quot;safe zone&quot;.  The 40-meter no-build zone originates from environmental legislation, now enforced more strictly.  But there are other plans to designate much larger areas as unsafe for building.  Which zoning will ultimately prevail is not yet clear. " data-id="41330">unsafe for housing.<span></span></abbr>
-<span class="publication-body-infocard-content entry-unrelated instapaper_ignore">
-		<span class="infocard-description">There is more than one definition in circulation of &quot;safe zone&quot;.  The 40-meter no-build zone originates from environmental legislation, now enforced more strictly.  But there are other plans to designate much larger areas as unsafe for building.  Which zoning will ultimately prevail is not yet clear. </span>
+<p>You can see these posts all over Tacloban &ndash; at the side of a busy road, on a basketball court, in the middle of the slums. No one seems to pay them any mind, but the yellow posts are of great importance for humanitarian assistance. They mark off a distance of 40 meters from the coast (approximately 44 yards, or 130 feet), the zone determined to be fundamentally <abbr title="There is more than one definition in circulation of &quot;safe zone&quot;.  The 40-meter no-build zone originates from environmental legislation, now enforced more strictly.  But there are other plans to designate much larger areas as unsafe for building.  Which zoning will ultimately prevail is not yet clear. " data-id="41330" aria-expanded="false" aria-controls="insertion-infocard-contents-41330">unsafe for housing.<span></span></abbr>
+<span class="publication-body-infocard-content entry-unrelated instapaper_ignore" id="insertion-infocard-contents-41330">
+    <span class="infocard-description">There is more than one definition in circulation of &quot;safe zone&quot;.  The 40-meter no-build zone originates from environmental legislation, now enforced more strictly.  But there are other plans to designate much larger areas as unsafe for building.  Which zoning will ultimately prevail is not yet clear. </span>
 </span> </p>
 
-<p>The fact that most people in the area make their living fishing and live close to the coast, make this rule somewhat complicated. It means that 60% of the population of the islands has to move. But Mayor Romualdez thinks it is worth it. Sitting at his L-shaped desk, in a black leather desk chair that is far too big, he says, &quot;People have to realize that you cannot live in those danger zones. You will die there. We simply cannot manage to evacuate everyone.&quot;</p>
+<p>The fact that most people in the area make their living fishing, and live close to the coast, makes this rule somewhat complicated. It means that 60% of the population of the islands has to move. But Mayor Romualdez thinks it is worth it. Sitting at his L-shaped desk, in a black leather desk chair that is far too big, he says, &quot;People have to realize that you cannot live in those danger zones. You will die there. We simply cannot manage to evacuate everyone.&quot;</p>
 
 <p>Romualdez does not grant aid organizations permits to build new houses within this coastal zone, not even to replace the homes destroyed by the typhoon. And that turns out to be a troublesome prenuptial agreement. Where are the aid organizations supposed to build then? Land is hard to come by in the Philippines. It is often unclear who the landowner is, and aid organizations operate under tremendous time pressure, as their allotted budgets must often be disbursed within one year.</p>
 
@@ -290,7 +327,7 @@ When asked how many people live there, district leader Emelita Montalban gives a
 
 	
 			
-<svg class="preloader preloader-gray" viewbox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
+<svg class="preloader preloader-gray" viewBox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
 	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#preloader"></use>
 </svg>
 		<img class="publicationcontentimage loading" data-src="https://dynamic.decorrespondent.nl/ff-1442238611/media/{breakpoint-name}/55f6cab368df89486053913.png" alt="Left: Alfred Romualdez, the Mayor of Tacloban. Right: Emelita Montalban, Barangay Leader of neighborhood 88.  Pieter van den Boogert for The Correspondent">
@@ -303,7 +340,7 @@ When asked how many people live there, district leader Emelita Montalban gives a
 
 	
 			
-<svg class="preloader preloader-gray" viewbox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
+<svg class="preloader preloader-gray" viewBox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
 	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#preloader"></use>
 </svg>
 		<img class="publicationcontentimage loading" data-src="https://dynamic.decorrespondent.nl/ff-1442347300/media/{breakpoint-name}/55f878c5a40227250453415.png" alt="Left: Jerry Yaokasin, Vice Mayor of Tacloban. Right: Amel Amosco, who lives in the Anibong district of Tacloban. The district now calls itself &quot;Yolanda Village.&quot;  Amosco works dismantling a freighter the storm washed ashore.  Pieter van den Boogert">
@@ -326,7 +363,7 @@ When asked how many people live there, district leader Emelita Montalban gives a
 
 	
 			
-<svg class="preloader preloader-gray" viewbox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
+<svg class="preloader preloader-gray" viewBox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
 	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#preloader"></use>
 </svg>
 		<img class="publicationcontentimage loading" data-src="https://dynamic.decorrespondent.nl/ff-1442238611/media/{breakpoint-name}/55f6cb1f6c9168141400495.png" alt="Above: What is left of the surf resort in Sulangan.  Middle: A freighter stranded during the storm is scrapped in the Anibong district.  Below: A sign alerts the public to the no-build zone.  Pieter van den Boogert for The Correspondent">
@@ -339,9 +376,9 @@ When asked how many people live there, district leader Emelita Montalban gives a
 
 <h2>Source of tension #5: When is it over?</h2>
 
-<p>Last July, what should have been regular <abbr title="A cluster meeting is a gathering of aid organizations working in a certain field, such as health, housing, or water and sanitation, to coordinate their activities.  Cluster meetings are organized by the United Nations." data-id="41335">cluster meeting<span></span></abbr>
-<span class="publication-body-infocard-content entry-unrelated instapaper_ignore">
-		<span class="infocard-description">A cluster meeting is a gathering of aid organizations working in a certain field, such as health, housing, or water and sanitation, to coordinate their activities.  Cluster meetings are organized by the United Nations.</span>
+<p>Last July, what should have been regular <abbr title="A cluster meeting is a gathering of aid organizations working in a certain field, such as health, housing, or water and sanitation, to coordinate their activities.  Cluster meetings are organized by the United Nations." data-id="41335" aria-expanded="false" aria-controls="insertion-infocard-contents-41335">cluster meeting<span></span></abbr>
+<span class="publication-body-infocard-content entry-unrelated instapaper_ignore" id="insertion-infocard-contents-41335">
+    <span class="infocard-description">A cluster meeting is a gathering of aid organizations working in a certain field, such as health, housing, or water and sanitation, to coordinate their activities.  Cluster meetings are organized by the United Nations.</span>
 </span>  ended extremely unpleasantly for aid organizations. Government officials let aid workers know in passing that as far as the government was concerned, the humanitarian phase was over. &quot;It was a complete shock,&quot; says a source inside the U.N. &quot;The government gave us no warning. They just said, &#39;You don&#39;t have to come to us anymore to discuss humanitarian needs; we no longer recognize them.&#39;&quot;</p>
 
 <blockquote>Of course officially, we go out and praise the government for its strong leadership and great support.</blockquote>
@@ -354,7 +391,7 @@ When asked how many people live there, district leader Emelita Montalban gives a
 
 	
 			
-<svg class="preloader preloader-gray" viewbox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
+<svg class="preloader preloader-gray" viewBox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
 	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#preloader"></use>
 </svg>
 		<img class="publicationcontentimage loading" data-src="https://dynamic.decorrespondent.nl/ff-1442238611/media/{breakpoint-name}/55f6cb8769bf87355055595.png" alt="Above: &quot;Yolanda Village&quot; in Tacloban, where freighters washed ashore during the typhoon.  Below: Downtown Tacloban.  Pieter van den Boogert for The Correspondent">
@@ -379,7 +416,7 @@ When asked how many people live there, district leader Emelita Montalban gives a
 
 	
 			
-<svg class="preloader preloader-gray" viewbox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
+<svg class="preloader preloader-gray" viewBox="0 0 50 50" x="0px" y="0px" width="50px" height="50px">
 	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#preloader"></use>
 </svg>
 		<img class="publicationcontentimage loading" data-src="https://dynamic.decorrespondent.nl/ff-1442238611/media/{breakpoint-name}/55f6cbb9b695d9120120415.png" alt="Above:  The World Food Program offices in Tacloban are all packed; the humanitarian phase is over.  Below:  The public bathroom facilities in the tent camp in neighborhood 88.  Pieter van den Boogert for The Correspondent">
@@ -390,14 +427,20 @@ When asked how many people live there, district leader Emelita Montalban gives a
 </figure>
 <span style="display: none;"> </span></p>
 
-<p><div class="publication-body-link"><a href="https://decorrespondent.nl/2395" target="_blank"><img width="141" class="link-insertion" data-src="https://dynamic.decorrespondent.nl/ff-1442238611/media/141/55f6cf91b6f602494151399.jpg" alt=""><noscript><img width="141" src="https://dynamic.decorrespondent.nl/ff-1442238611/media/141/55f6cf91b6f602494151399.jpg" alt=""></noscript><div><h3>The emergency aid machine</h3><p><em>This piece is part of a larger series on emergency aid, published by The Correspondent in Dutch. For the series I travelled to nine countries, to report on how humanitarian aid works -- and doesn&#039;t work -- around the world. </em></p><p class="label glyph-right-after">Here is an overview of the entire project. </p></div></a></div></p>
+<p><div class="publication-insertion-link"><a href="https://decorrespondent.nl/2395" target="_blank" class="publication-insertion-link-a" data-bypass-dialog="1"><div class="publication-insertion-link-image"><div><img class="link-insertion" data-src="https://dynamic.decorrespondent.nl/ff-1449839163/media/141/566aca2f493805406660592.jpg" alt=""><noscript><img width="141" src="https://dynamic.decorrespondent.nl/ff-1449839163/media/141/566aca2f493805406660592.jpg" alt=""></noscript></div></div><div class="publication-insertion-link-content"><h3 class="publication-insertion-link-title">The emergency aid machine</h3><div class="publication-insertion-link-description">
+          This piece is part of a larger series on emergency aid, published by The Correspondent in Dutch. For the series I traveled to nine countries, to report on how humanitarian aid works – and doesn't work – around the world. 
+        </div><div class="publication-insertion-link-label glyph-right-after">Here is an overview of the entire project (in Dutch only) </div></div></a></div></p>
 
-<p><div class="publication-body-link"><a href="https://decorrespondent.nl/3350" target="_blank"><img width="141" class="link-insertion" data-src="https://dynamic.decorrespondent.nl/ff-1442238611/media/141/55f6d07f8ac823524393772.jpg" alt=""><noscript><img width="141" src="https://dynamic.decorrespondent.nl/ff-1442238611/media/141/55f6d07f8ac823524393772.jpg" alt=""></noscript><div><h3>Nearly all the world&#039;s relief supplies pass through this desert</h3><p><em>In an unlikely spot in the middle of the desert lies the world’s largest stockpile of humanitarian relief supplies. Blankets, tents, buckets, and bodybags await the next big disaster. But why here, in Dubai? And what are conditions like for the city&#039;s migrant workers? A travel log from a surreal place.</em></p><p class="label glyph-right-after">Read my article about Dubai here.</p></div></a></div><span style="display: none;"> </span></p>
+<p><div class="publication-insertion-link"><a href="https://decorrespondent.nl/3350" target="_blank" class="publication-insertion-link-a" data-bypass-dialog="1"><div class="publication-insertion-link-image"><div><img class="link-insertion" data-src="https://dynamic.decorrespondent.nl/ff-1442238611/media/141/55f6d07f8ac823524393772.jpg" alt=""><noscript><img width="141" src="https://dynamic.decorrespondent.nl/ff-1442238611/media/141/55f6d07f8ac823524393772.jpg" alt=""></noscript></div></div><div class="publication-insertion-link-content"><h3 class="publication-insertion-link-title">Nearly all the world&#039;s relief supplies pass through this desert</h3><div class="publication-insertion-link-description">
+          In an unlikely spot in the middle of the desert lies the world’s largest stockpile of humanitarian relief supplies. Blankets, tents, buckets, and bodybags await the next big disaster. But why here, in Dubai? And what are conditions like for the city's migrant workers? A travel log from a surreal place.
+        </div><div class="publication-insertion-link-label glyph-right-after">Read my article about Dubai here.</div></div></a></div><span style="display: none;"> </span></p>
 
-<p><div class="publication-body-link"><a href="http://www.pietervandenboogert.com/" target="_blank"><img width="141" class="link-insertion" data-src="https://dynamic.decorrespondent.nl/ff-1442238611/media/141/55f6b26688e9c8477336832.jpg" alt=""><noscript><img width="141" src="https://dynamic.decorrespondent.nl/ff-1442238611/media/141/55f6b26688e9c8477336832.jpg" alt=""></noscript><div><h3>About the photographer</h3><p><em>Photographer Pieter van den Boogert worked with me on a series of articles on the humanitarian aid sector.  His previous work includes the prizewinning book What We Wear, the clothing industry in photographs.</em></p><p class="label glyph-right-after">View other work by Pieter here</p></div></a></div></p>
+<p><div class="publication-insertion-link"><a href="http://www.pietervandenboogert.com/" target="_blank" class="publication-insertion-link-a" data-bypass-dialog="1"><div class="publication-insertion-link-image"><div><img class="link-insertion" data-src="https://dynamic.decorrespondent.nl/ff-1442238611/media/141/55f6b26688e9c8477336832.jpg" alt=""><noscript><img width="141" src="https://dynamic.decorrespondent.nl/ff-1442238611/media/141/55f6b26688e9c8477336832.jpg" alt=""></noscript></div></div><div class="publication-insertion-link-content"><h3 class="publication-insertion-link-title">About the photographer</h3><div class="publication-insertion-link-description">
+          Photographer Pieter van den Boogert worked with me on a series of articles on the humanitarian aid sector.  His previous work includes the prizewinning book What We Wear, the clothing industry in photographs.
+        </div><div class="publication-insertion-link-label glyph-right-after">View other work by Pieter here</div></div></a></div></p>
 
 <p><em>Would you rather read this article <a class="publication-sidenote-link" href="https://decorrespondent.nl/2019/Zo-vergaat-het-de-Filipijnen-een-jaar-na-de-tyfoon/87969849-120aee81" target="_blank">in Dutch?</a>
-<a href="https://decorrespondent.nl/2019/Zo-vergaat-het-de-Filipijnen-een-jaar-na-de-tyfoon/87969849-120aee81" class="publication-sidenote entry-unrelated instapaper_ignore" title="Read the Dutch version here." target="_blank">
+<a href="https://decorrespondent.nl/2019/Zo-vergaat-het-de-Filipijnen-een-jaar-na-de-tyfoon/87969849-120aee81" class="publication-sidenote entry-unrelated instapaper_ignore" title="Read the Dutch version here." target="_blank" aria-hidden="true">
 	<span class="glyph-sidenote-dot-large"></span>
 	<span class="glyph-sidenote-dot-small"></span>
 	<span class="glyph-sidenote glyph-sidenote-internalarticle"></span>
@@ -408,17 +451,37 @@ When asked how many people live there, district leader Emelita Montalban gives a
 
 			</article>
 
-					</main><div class="share-publication-footer">
-			<ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">2&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip"><div class="mid"><ul class="share-options" data-parent="ul" data-url="https://decorrespondent.nl/3352/Life-after-a-typhoon-a-post-disaster-power-struggle/165783923272-ecaf0fab" data-id="3352" data-title="Life after a typhoon -- a post-disaster power struggle" data-text="" data-related="maitevermeulen" data-expertise="Correspondent Conflict &amp; Ontwikkeling" data-mailto="mailto:?subject=Tip: Life%20after%20a%20typhoon%20--%20a%20post-disaster%20power%20struggle&body=Op De Correspondent zag ik een verhaal van Maite%20Vermeulen dat ik graag met je wil delen:%0D%0A%0D%0ALife%20after%20a%20typhoon%20--%20a%20post-disaster%20power%20struggle - https%3A%2F%2Fdecorrespondent.nl%2F3352%2FLife-after-a-typhoon-a-post-disaster-power-struggle%2F165783923272-ecaf0fab%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail" data-object-name="publication"><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">Linkedin</a></li><li class="mail"><a href="javascript: void(0);" data-share-type="mail" class="glyph-mail">
+			</main><div class="share-publication-footer">
+			<ul class="publication-options"><li class="share-publication share-publication-view"><a title="Deel deze publicatie" href="javascript:void(0);" data-toggle="tooltip"><span class="glyph-arrow"></span><span class="share-amount-text">4&nbsp;x gedeeld</span><span class="share-text">Delen</span></a><div class="corres-tooltip "><div class="mid"><ul class="share-options"
+	data-parent="ul"
+	data-url="https://decorrespondent.nl/3352/life-after-a-typhoon-a-post-disaster-power-struggle/165783923272-ecaf0fab"
+	data-id="3352"
+	data-title="Life after a typhoon – a post-disaster power struggle"
+	data-text=""
+	data-related="maitevermeulen"
+	data-expertise="Correspondent Conflict &amp; Ontwikkeling"
+	data-mailto="mailto:?subject=Tip: Life%20after%20a%20typhoon%20%E2%80%93%20a%20post-disaster%20power%20struggle&body=Op De Correspondent zag ik een verhaal van Maite%20Vermeulen dat ik graag met je wil delen:%0D%0A%0D%0ALife%20after%20a%20typhoon%20%E2%80%93%20a%20post-disaster%20power%20struggle - https%3A%2F%2Fdecorrespondent.nl%2F3352%2Flife-after-a-typhoon-a-post-disaster-power-struggle%2F165783923272-ecaf0fab%0D%0A%0D%0A%0D%0A%0D%0AP.S. Overweeg je ook lid te worden van De Correspondent?%0D%0AJe kunt je vrijblijvend aanmelden voor onze proefmail. Dan ontvang je elke zaterdagochtend een verhaal in je inbox.%0D%0ASchrijf je hier gratis in: http://corr.es/ps-proefmail"
+	data-object-name="publication"
+><li class="facebook"><a href="javascript: void(0);" data-share-type="facebook" class="glyph-facebook">Facebook</a></li><li class="twitter"><a href="javascript: void(0);" data-share-type="twitter" class="glyph-twitter">Twitter</a></li><li class="linkedin"><a href="javascript: void(0);" data-share-type="linkedin" class="glyph-linkedin">LinkedIn</a></li><li class="mail"><a
+			href="javascript: void(0);"
+			data-share-type="mail"
+			class="glyph-mail">
 				E-mail
 		</a></li><li class="link"><a href="javascript: void(0);" data-share-type="link" class="glyph-link">Link</a></li><li class="whatsapp"><a href="javascript: void(0);" data-share-type="whatsapp" class="glyph-whatsapp">WhatsApp</a></li><li class="print"><a href="https://decorrespondent.nl/article/3352/print" target="_blank" class="glyph-print">Print</a></li><li class="pdf"><a href="https://decorrespondent.nl/article/3352.pdf" target="_blank" class="glyph-pdf">PDF</a></li></ul><div class="clear"></div><a class="close glyph-cross-bold" href="javascript:void(0);"></a></div></div></li><li class="save-publication"><a title="Bewaar deze publicatie" href="javascript:void(0);" class="save-publication-api" data-article-id="3352"><span class="glyph-bookmark"></span><span class="glyph-checkmark-small"></span><span class="glyph-cross-small"></span><span class="save-text">Bewaar</span><span class="saved-text">Bewaard</span></a></li><li class="publication-date"><span class="glyph-time"></span><time data-field="date" datetime="2015-09-14" title="14-9-2015 15:50">
 	14 september 2015</time></li></ul>	</div></section>
 
 
         
-        
-
-  
+                
 </section>
 
-    </section><div id="dialogContainer" class="dialog-container glyph-spinner-after" data-error="Excuses, de verbinding is mislukt. Probeer het nog een keer."><div id="dialog" class="dialog"><div id="dialogContent" class="dialog-content"></div><div id="dialogFooter" class="dialog-footer"></div><div class="clear"></div><a id="dialogClose" class="dialog-close glyph-cross-bold" href="javascript:void(0);"></a></div></div><div class="overlay-block" id="overlayBlock"></div><div id="notificationBar" class="notification-bar"><p id="notificationText">Je volgt nu deze discussie &mdash; bijdragen worden gebundeld naar je gemaild</p><a href="#" class="glyph-cross-menu notification-bar-close"></a></div><script>window.App.user = {}; window.App.messages = { keysErrorMessage: 'Er\x20gaat\x20iets\x20mis,\x20\x3Ca\x20class\x3D\x22notification\x2Dbar\x2Dlink\x22\x20href\x3D\x22\x2Flogout\x22\x3Elog\x20alstublieft\x20opnieuw\x20in\x3C\x2Fa\x3E' };      window.App.user = { id: '49458211', preferences: { commentorder : '', fontsize : 'big', typeface : 'serif', feedview : 'normal', theme: 'nightmode', readingtime: 'on' } }; </script><script async="" src="https://static.decorrespondent.nl/ff-g7068a19/js/main-build.js"></script></body></html>
+    </section><div id="dialogContainer" class="dialog-container glyph-spinner-after" data-error="Excuses, de verbinding is mislukt. Probeer het nog een keer."><div id="dialog" class="dialog"><div id="dialogContent" class="dialog-content"></div><div id="dialogFooter" class="dialog-footer"></div><div class="clear"></div><a id="dialogClose" class="dialog-close glyph-cross-bold" href="javascript:void(0);"></a></div></div><div class="overlay-block" id="overlayBlock"></div><div id="notificationBar" class="notification-bar "><p id="notificationText"></p><a href="#" class="glyph-cross-menu notification-bar-close"></a></div><script id="autocomplete-template-list" type="x-tmpl-mustache">
+  
+    {{#authors}}
+      <li class="autocomplete-list-item mod-{{roleGroup}}" data-href="{{href}}"><div class="autocomplete-list-item-thumbnail">{{#image}}<img src="{{image}}" />{{/image}}</div><div class="autocomplete-list-item-flex-wrapper"><div class="autocomplete-list-item-title">{{name}}</div><div><div class="autocomplete-list-item-subtitle">{{roleTitle}} {{department}}</div></div></div></li>
+    {{/authors}}
+    {{#articles}}
+      <li class="autocomplete-list-item" data-href="{{href}}"><div class="autocomplete-list-item-thumbnail">{{#image}}<img src="{{image}}" />{{/image}}</div><div class="autocomplete-list-item-flex-wrapper"><div class="autocomplete-list-item-title">{{title}}</div><div><div class="autocomplete-list-item-subtitle">Door {{author}}</div></div></div></li>
+    {{/articles}}
+  
+</script><script>window.App.user = {}; window.App.messages = { keysErrorMessage: 'Er\x20gaat\x20iets\x20mis,\x20\x3Ca\x20class\x3D\x22notification\x2Dbar\x2Dlink\x22\x20href\x3D\x22\x2Flogout\x22\x3Elog\x20alstublieft\x20opnieuw\x20in\x3C\x2Fa\x3E' };      window.App.user = { id: '49458211', preferences: { commentorder : '', fontsize : 'big', typeface : 'serif', feedview : 'normal', theme: 'nightmode', readingtime: 'on' } }; </script><script async src="https://static.decorrespondent.nl/ff-g02f0c6e/js/main-build.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"58a9cb8fa7","applicationID":"21642978","transactionName":"ZQNSbUFWX0JSAhVbW1xJcVpHXl5fHCYkZmtbAm9KX0JWbkAJAEBRQA==","queueTime":0,"applicationTime":196,"atts":"SURRGwlMTEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body></html>
