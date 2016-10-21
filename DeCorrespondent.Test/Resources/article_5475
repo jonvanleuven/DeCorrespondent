@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<!--[if IE]><script type="text/javascript">window.location = "/notsupported";</script><![endif]-->
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#" lang="nl">
+<head>
+  <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="https://static.cdn-decorrespondent.nl/app.1476962077.css"  crossorigin="anonymous">
+	<title>Vannacht werd er weer gedebatteerd over een karikatuur van Amerika. Zo is het echt in Flyover Country</title>
+  
+  	
+
+
+
+<link rel="canonical" href="https://decorrespondent.nl/5475/vannacht-werd-er-weer-gedebatteerd-over-een-karikatuur-van-amerika-zo-is-het-echt-in-flyover-country/1548604390575-16cfcc54">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vannacht werd er weer gedebatteerd over een karikatuur van Amerika. Zo is het echt in Flyover Country">
+<meta property="og:description" content="Afgelopen nacht kruisten presidentskandidaten Donald Trump en Hillary Clinton voor het laatst de degens in een groot debat. Een debat dat al maanden doorspekt is met clich&amp;eacute;s, stereotypen en leugens. Ik woon in het deel van Amerika waar men slechts &amp;#39;overheen vliegt&amp;#39; als men van New York naar Sillicon Valley gaat. Daar zie je verpaupering, ja, maar ook hoop en gemeenschapszin.">
+<meta property="og:url" content="https://decorrespondent.nl/5475/vannacht-werd-er-weer-gedebatteerd-over-een-karikatuur-van-amerika-zo-is-het-echt-in-flyover-country/1548604390575-16cfcc54">
+
+	<meta property="og:image" content="https://dynamic.decorrespondent.nl/media/1920/5807c4f6c24d30158748517.jpg">
+	<meta property="og:image:secure_url" content="https://dynamic.decorrespondent.nl/media/1920/5807c4f6c24d30158748517.jpg">
+	<meta property="og:image:type" content="">
+	<meta property="og:image:width" content="1920">
+	
+<meta property="article:published_time" content="2016-10-19T14:21:52+00:00">
+<meta name="twitter:title" content="Vannacht werd er weer gedebatteerd over een karikatuur van Amerika. Zo is het echt in Flyover Country">
+<meta name="twitter:description" content="Afgelopen nacht kruisten presidentskandidaten Donald Trump en Hillary Clinton voor het laatst de degens in een groot debat. Een debat dat al maanden doorspekt is met clich&amp;eacute;s, stereotypen en leugens. Ik woon in het deel van Amerika waar men slechts &amp;#39;overheen vliegt&amp;#39; als men van New York naar Sillicon Valley gaat. Daar zie je verpaupering, ja, maar ook hoop en gemeenschapszin.">
+<meta name="twitter:card" content="summary_large_image">
+
+	<meta name="twitter:image" content="https://dynamic.decorrespondent.nl/media/1920/5807c4f6c24d30158748517.jpg">
+	<meta name="twitter:image:alt" content="">
+
+
+
+
+<meta property="og:site_name" content="De Correspondent">
+<meta property="og:locale" content="nl_NL">
+
+	<link rel="publisher" href="https://plus.google.com/+DecorrespondentNl">
+	<meta name="twitter:site" content="@decorrespondent">
+	<meta property="article:publisher" content="https://facebook.com/decorrespondent">
+
+
+
+
+	<meta name="author" content="Sarah Kendzior">
+	
+			<meta name="twitter:creator" content="@@sarahkendzior">
+				
+	<meta property="article:author:first_name" content="Sarah">
+	<meta property="article:author:last_name" content="Kendzior">
+	<meta property="article:author:image" content="https://dynamic.decorrespondent.nl/ff-1468504382/media/50/5787993e15e6a4418158986.png">
+	<meta property="article:author:image:secure_url" content="https://dynamic.decorrespondent.nl/ff-1468504382/media/50/5787993e15e6a4418158986.png">
+	
+	
+
+
+
+			
+	
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		ga('create', 'UA-44264013-1', 'auto');
+		ga('send', 'pageview');
+	
+	</script>
+
+	
+	
+	<script type="text/javascript">
+		var _paq = _paq || [];
+		_paq.push(['trackPageView']);
+		_paq.push(['enableLinkTracking']);
+		(function () {
+			var u = "//stats.decorrespondent.nl/piwik/";
+			_paq.push(['setTrackerUrl', u + 'piwik.php']);
+			_paq.push(['setSiteId', '2']);
+			var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+			g.type = 'text/javascript';
+			g.async = true;
+			g.defer = true;
+			g.src = u + 'piwik.js';
+			s.parentNode.insertBefore(g, s);
+		})();
+	</script>
+	<noscript><p><img src="//stats.decorrespondent.nl/piwik/piwik.php?idsite=2" style="border:0;" alt=""/></p></noscript>
+
+
+</head>
+
+									
+<body class="mod-readingbar-padding mod-article mod-fontsize mod-nightmode  navbar-top" data-vacature="Ben jij het nieuwe teamlid met programmeer-skills voor De Correspondent? https://decorrespondent.nl/vacatures">
+
+	
+  <div class="navbar-container ">
+    	<div class="navbar js-navbar ">
+	<div class="navbar-sidepanel-toggle js-sidepanel-toggle">
+		<div class="navbar-sidepanel-title">Menu</div>
+		<div class="navbar-sidepanel-toggle-button">
+			<div class="navbar-sidepanel-toggle-button-close">
+				<div class="navbar-sidepanel-toggle-button-close-line"></div>
+				<div class="navbar-sidepanel-toggle-button-close-line"></div>
+				<div class="navbar-sidepanel-toggle-button-close-line"></div>
+				<div class="navbar-sidepanel-toggle-button-close-line"></div>
+			</div>
+
+			<div class="navbar-sidepanel-toggle-button-open">
+				<div class="navbar-sidepanel-toggle-button-open-line"></div>
+				<div class="navbar-sidepanel-toggle-button-open-line"></div>
+				<div class="navbar-sidepanel-toggle-button-open-line"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="navbar-primary-menu">
+		<a class="navbar-primary-menu-link" href="https://decorrespondent.nl/" title="Homepage">
+			<div class="navbar-primary-menu-link-icon icon icon-navbar-home"></div>
+			<div class="navbar-primary-menu-link-label">
+				Home
+			</div>
+		</a>
+		
+		<a class="navbar-primary-menu-link" href="https://decorrespondent.nl/themas" title="Thema's">
+			<div class="navbar-primary-menu-link-icon icon icon-navbar-dossiers"></div>
+			<div class="navbar-primary-menu-link-label">
+				Thema's
+			</div>
+		</a>
+	</div>
+
+	<div class="navbar-search js-search-button" title="Zoeken">
+		<div class="navbar-search-icon">
+			<span class="icon icon-search"></span>
+		</div>
+		<div class="navbar-search-label">Zoeken</div>
+	</div>
+
+			<div class="navbar-user-menu js-usermenu" title="Open je persoonlijke menu">
+			<div class="navbar-user-menu-toggle js-usermenu-toggle">
+				<div class="navbar-user-menu-avatar">
+																					<img src="https://static.decorrespondent.nl/ff-g02f0c6e/images/users/avatars/100/J.png" class="navbar-user-menu-avatar-image"/>
+				</div>
+				<div class="navbar-user-menu-icon icon icon-chevron-down"></div>
+			</div>
+			<ul class="navbar-user-menu-list">
+								<li class="navbar-user-menu-list-item">
+					<a class="navbar-user-menu-list-item-link" href="https://decorrespondent.nl/instellingen">Instellingen</a>
+				</li>
+				<li class="navbar-user-menu-list-item">
+					<a class="navbar-user-menu-list-item-link" href="https://decorrespondent.nl/account">Account</a>
+				</li>
+				<li class="navbar-user-menu-list-item">
+					<a class="navbar-user-menu-list-item-link" href="https://decorrespondent.nl/bewaard">Bewaard</a>
+				</li>
+				<li class="navbar-user-menu-list-item">
+					<a class="navbar-user-menu-list-item-link" href="https://decorrespondent.nl/gelezen">Gelezen</a>
+				</li>
+				<li class="navbar-user-menu-list-item-divider"></li>
+				<li class="navbar-user-menu-list-item">
+					<a class="navbar-user-menu-list-item-link mod-logout" href="https://decorrespondent.nl/logout">Uitloggen</a>
+				</li>
+			</ul>
+		</div>
+	
+	<div class="navbar-logo">
+		<a href="https://decorrespondent.nl/" class="navbar-logo-full"></a>
+		<a href="https://decorrespondent.nl/" class="navbar-logo-small"></a>
+	</div>
+
+	<div class="navbar-autocomplete js-autocomplete">
+		<div class="navbar-autocomplete-icon">
+			<span class="icon icon-search"></span>
+		</div>
+
+		<form class="navbar-autocomplete-form" action="https://decorrespondent.nl/zoek">
+			<fieldset>
+				<input type="text" name="search_query" class="navbar-autocomplete-form-input js-input" placeholder="Zoek op artikelen en correspondenten"/>
+			</fieldset>
+		</form>
+
+		<div class="navbar-autocomplete-close js-autocomplete-close">
+			<span class="icon icon-close"></span>
+		</div>
+
+		<div class="navbar-autocomplete-list-container js-list-container">
+			<div class="navbar-autocomplete-list js-list"></div>
+		</div>
+	</div>
+</div>
+    	
+<div class="publication-readingbar js-readingbar">
+	<div class="publication-readingbar-authors">
+		<div class="publication-readingbar-authors-avatars ">
+		
+						<a class="publication-readingbar-authors-avatars-avatar" href="https://decorrespondent.nl/sarahkendzior">
+				<img src="https://dynamic.decorrespondent.nl/ff-1468504382/media/100/5787993e15e6a4418158986.png" class="publication-readingbar-authors-avatars-avatar-image">
+			</a>
+			</div>
+
+					<div class="publication-readingbar-authors-names">
+			
+							<a class="publication-readingbar-authors-names-name author-name" href="https://decorrespondent.nl/sarahkendzior">
+				<span>Sarah</span>
+				<span>Kendzior</span>
+			</a>
+			</div>
+			</div>
+
+	<div class="publication-readingbar-options">
+
+			<div class="publication-readingbar-options-option">
+			<div class="comment-balloon mod-readingbar-options js-comments">47</div>
+		</div>
+	
+					<div class="publication-readingbar-options-option js-favorite favorite-button is-not-favorited" data-publication-id="5475">
+			<div class="publication-readingbar-options-option-icon">
+				<span class="icon icon-save"></span>
+				<span class="icon icon-save-saved mod-red"></span>
+			</div>
+		</div>
+	
+			<div class="publication-readingbar-options-option js-reading-settings">
+			<div class="publication-readingbar-options-option-icon icon icon-reading-settings js-toggle"></div>
+	
+			<div class="tooltip js-tooltip mod-right mod-bottom mod-reading-settings">
+  <div class="tooltip-arrow mod-right mod-bottom mod-reading-settings"></div>
+  <div class="tooltip-close js-close">
+    <div class="icon icon-close"></div>
+  </div>
+  					
+		
+<div class="tooltip-reading-settings">
+  <div class="tooltip-reading-settings-setting js-fontsize">
+    <div class="tooltip-reading-settings-setting-icons-container">
+      <div class="tooltip-reading-settings-setting-icon-container js-on ">
+        <div class="tooltip-reading-settings-setting-icon icon icon-fontsize-small"></div>
+      </div>
+      <div class="tooltip-reading-settings-setting-icon-container js-off mod-active">
+        <div class="tooltip-reading-settings-setting-icon icon icon-fontsize-large"></div>
+      </div>
+    </div>
+    <div class="tooltip-reading-settings-setting-label">Lettergrootte</div>
+  </div>
+
+  <div class="tooltip-reading-settings-setting js-nightmode">
+    <div class="tooltip-reading-settings-setting-icons-container">
+      <div class="tooltip-reading-settings-setting-icon-container js-on ">
+        <div class="tooltip-reading-settings-setting-icon icon icon-daymode"></div>
+      </div>
+      <div class="tooltip-reading-settings-setting-icon-container js-off mod-active">
+        <div class="tooltip-reading-settings-setting-icon icon icon-nightmode"></div>
+      </div>
+    </div>
+    <div class="tooltip-reading-settings-setting-label">Leesmodus</div>
+  </div>
+
+  <div class="tooltip-reading-settings-setting js-typeface">
+    <div class="tooltip-reading-settings-setting-icons-container">
+      <div class="tooltip-reading-settings-setting-icon-container js-on mod-active">
+        <div class="tooltip-reading-settings-setting-icon icon icon-fontfamily-serif"></div>
+      </div>
+      <div class="tooltip-reading-settings-setting-icon-container js-off ">
+        <div class="tooltip-reading-settings-setting-icon icon icon-fontfamily-sansserif"></div>
+      </div>
+    </div>
+    <div class="tooltip-reading-settings-setting-label">Lettertype</div>
+  </div>
+</div>
+				
+</div>		</div>
+	
+	<div class="publication-readingbar-options-option js-sharing">
+		<div class="publication-readingbar-options-option-icon icon icon-sharing js-toggle"></div>
+
+		<div class="tooltip js-tooltip mod-right mod-bottom mod-sharing">
+  <div class="tooltip-arrow mod-right mod-bottom mod-sharing"></div>
+  <div class="tooltip-close js-close">
+    <div class="icon icon-close"></div>
+  </div>
+  									
+<div class="tooltip-sharing-options js-tooltip-sharing-options" data-title="Vannacht werd er weer gedebatteerd over een karikatuur van Amerika. Zo is het echt in Flyover Country" data-description="Afgelopen nacht kruisten presidentskandidaten Donald Trump en Hillary Clinton voor het laatst de degens in een groot debat. Een debat dat al maanden doorspekt is met clich&amp;eacute;s, stereotypen en leugens. Ik woon in het deel van Amerika waar men slechts &amp;#39;overheen vliegt&amp;#39; als men van New York naar Sillicon Valley gaat. Daar zie je verpaupering, ja, maar ook hoop en gemeenschapszin." data-url="https://decorrespondent.nl/5475/vannacht-werd-er-weer-gedebatteerd-over-een-karikatuur-van-amerika-zo-is-het-echt-in-flyover-country/270783705225-28122e79" data-image="https://dynamic.decorrespondent.nl/media/1920/5807c4f6c24d30158748517.jpg">
+	<div class="tooltip-sharing-options-option js-facebook">
+		<div class="tooltip-sharing-options-option-icon-container">
+			<div class="tooltip-sharing-options-option-icon icon icon-facebook"></div>
+		</div>
+		<div class="tooltip-sharing-options-option-label">Facebook</div>
+	</div>
+
+	<div class="tooltip-sharing-options-option js-twitter">
+		<div class="tooltip-sharing-options-option-icon-container">
+			<div class="tooltip-sharing-options-option-icon icon icon-twitter"></div>
+		</div>
+		<div class="tooltip-sharing-options-option-label">Twitter</div>
+	</div>
+
+	<div class="tooltip-sharing-options-option js-linkedin">
+		<div class="tooltip-sharing-options-option-icon-container">
+			<div class="tooltip-sharing-options-option-icon icon icon-linkedin"></div>
+		</div>
+		<div class="tooltip-sharing-options-option-label">LinkedIn</div>
+	</div>
+
+	<div class="tooltip-sharing-options-option js-whatsapp mod-whatsapp">
+		<div class="tooltip-sharing-options-option-icon-container">
+			<div class="tooltip-sharing-options-option-icon icon icon-whatsapp"></div>
+		</div>
+		<div class="tooltip-sharing-options-option-label">Whatsapp</div>
+	</div>
+
+	<a href="mailto:?subject=Tip%3A%20Vannacht%20werd%20er%20weer%20gedebatteerd%20over%20een%20karikatuur%20van%20Amerika.%20Zo%20is%20het%20echt%20in%20Flyover%20Country&body=Op%20De%20Correspondent%20las%20ik%20een%20artikel%20van%20Sarah%20Kendzior%20dat%20ik%20graag%20met%20je%20wil%20delen%3A%0A%0A%3Cem%3EVannacht%20werd%20er%20weer%20gedebatteerd%20over%20een%20karikatuur%20van%20Amerika.%20Zo%20is%20het%20echt%20in%20Flyover%20Country%3C%2Fem%3E%3A%0A%3Ca%20href%3D%22https%3A%2F%2Fdecorrespondent.nl%2F5475%2Fvannacht-werd-er-weer-gedebatteerd-over-een-karikatuur-van-amerika-zo-is-het-echt-in-flyover-country%2F270783705225-28122e79%22%3Ehttps%3A%2F%2Fdecorrespondent.nl%2F5475%2Fvannacht-werd-er-weer-gedebatteerd-over-een-karikatuur-van-amerika-zo-is-het-echt-in-flyover-country%2F270783705225-28122e79%3C%2Fa%3E%0A%0A%0AP.S.%20Overweeg%20je%20ook%20lid%20te%20worden%20van%20De%20Correspondent%3F%0AJe%20kunt%20je%20vrijblijvend%20aanmelden%20voor%20de%20proefmail.%20Dan%20ontvang%20je%20elke%20zaterdagochtend%20een%20verhaal%20in%20je%20inbox.%0ASchrijf%20je%20hier%20gratis%20in%3A%20%3Ca%20href%3D%22https%3A%2F%2Fcorr.es%2Fps-proefmail%22%3Ehttps%3A%2F%2Fcorr.es%2Fps-proefmail%3C%2Fa%3E%0A%0A%0A" class="tooltip-sharing-options-option js-email">
+		<div class="tooltip-sharing-options-option-icon-container">
+			<div class="tooltip-sharing-options-option-icon icon icon-email"></div>
+		</div>
+		<div class="tooltip-sharing-options-option-label">E-mail</div>
+	</a>
+
+	<div class="tooltip-sharing-options-option js-link">
+		<div class="tooltip-sharing-options-option-icon-container">
+			<div class="tooltip-sharing-options-option-icon icon icon-link"></div>
+		</div>
+		<div class="tooltip-sharing-options-option-label">Link</div>
+	</div>
+
+						<a href="https://decorrespondent.nl/article/5475/print" target="_blank" class="tooltip-sharing-options-option">
+				<div class="tooltip-sharing-options-option-icon-container">
+					<div class="tooltip-sharing-options-option-icon icon icon-print"></div>
+				</div>
+				<div class="tooltip-sharing-options-option-label">Print</div>
+			</a>
+			
+					<a href="https://decorrespondent.nl/article/5475.pdf" target="_blank" class="tooltip-sharing-options-option">
+				<div class="tooltip-sharing-options-option-icon-container">
+					<div class="tooltip-sharing-options-option-icon icon icon-pdf"></div>
+				</div>
+				<div class="tooltip-sharing-options-option-label">PDF</div>
+			</a>
+			</div>
+							
+</div>	</div>
+</div>
+	
+			<div class="publication-progressbar js-readingbar-progress">
+	<div class="publication-progressbar-progress js-progressbar-publication"></div>
+	<div class="publication-progressbar-progress mod-comments js-progressbar-comments"></div>
+</div>
+	</div>
+
+  </div>
+
+  <div class="sidepanel-background"></div>
+<div class="sidepanel js-sidepanel">
+  <div class="sidepanel-scroll-container js-scroll-container">
+    <ul class="sidepanel-menu">
+      <li class="sidepanel-menu-item">
+  <a class="sidepanel-menu-item-link " href="/correspondenten">
+    <div class="sidepanel-menu-item-link-icon">
+              <span class="icon icon-sidepanel-correspondents"></span>
+          </div>
+    <div class="sidepanel-menu-item-link-label">
+      Correspondenten
+    </div>
+  </a>
+</li>
+      <li class="sidepanel-menu-item">
+  <a class="sidepanel-menu-item-link " href="/videos">
+    <div class="sidepanel-menu-item-link-icon">
+              <span class="icon icon-sidepanel-video"></span>
+          </div>
+    <div class="sidepanel-menu-item-link-label">
+      Video&#039;s
+    </div>
+  </a>
+</li>
+      <li class="sidepanel-menu-item">
+  <a class="sidepanel-menu-item-link " href="/podcasts">
+    <div class="sidepanel-menu-item-link-icon">
+              <span class="icon icon-sidepanel-audio"></span>
+          </div>
+    <div class="sidepanel-menu-item-link-label">
+      Podcasts
+    </div>
+  </a>
+</li>    </ul>
+
+    <ul class="sidepanel-menu">
+      <li class="sidepanel-menu-item">
+  <a class="sidepanel-menu-item-link " href="/contact">
+    <div class="sidepanel-menu-item-link-icon">
+          </div>
+    <div class="sidepanel-menu-item-link-label">
+      Contact
+    </div>
+  </a>
+</li>
+      <li class="sidepanel-menu-item">
+  <a class="sidepanel-menu-item-link " href="/kiosk">
+    <div class="sidepanel-menu-item-link-icon">
+          </div>
+    <div class="sidepanel-menu-item-link-label">
+      Boeken
+    </div>
+  </a>
+</li>
+      <li class="sidepanel-menu-item">
+  <a class="sidepanel-menu-item-link " href="/sprekers">
+    <div class="sidepanel-menu-item-link-icon">
+          </div>
+    <div class="sidepanel-menu-item-link-label">
+      Sprekers
+    </div>
+  </a>
+</li>
+      <li class="sidepanel-menu-item">
+  <a class="sidepanel-menu-item-link " href="/geef-cadeau">
+    <div class="sidepanel-menu-item-link-icon">
+          </div>
+    <div class="sidepanel-menu-item-link-label">
+      Cadeaulidmaatschap
+    </div>
+  </a>
+</li>
+      <li class="sidepanel-menu-item">
+  <a class="sidepanel-menu-item-link " href="/agenda">
+    <div class="sidepanel-menu-item-link-icon">
+          </div>
+    <div class="sidepanel-menu-item-link-label">
+      Evenementen
+    </div>
+  </a>
+</li>    </ul>
+
+    <ul class="sidepanel-menu">
+      <li class="sidepanel-menu-item">
+  <a class="sidepanel-menu-item-link mod-secondary" href="/over">
+    <div class="sidepanel-menu-item-link-icon">
+          </div>
+    <div class="sidepanel-menu-item-link-label">
+      Over ons
+    </div>
+  </a>
+</li>
+      <li class="sidepanel-menu-item">
+  <a class="sidepanel-menu-item-link mod-secondary" href="/vacatures">
+    <div class="sidepanel-menu-item-link-icon">
+          </div>
+    <div class="sidepanel-menu-item-link-label">
+      Vacatures
+    </div>
+  </a>
+</li>
+      <li class="sidepanel-menu-item">
+  <a class="sidepanel-menu-item-link mod-secondary" href="/veelgestelde-vragen">
+    <div class="sidepanel-menu-item-link-icon">
+          </div>
+    <div class="sidepanel-menu-item-link-label">
+      Veelgestelde vragen
+    </div>
+  </a>
+</li>
+      <li class="sidepanel-menu-item">
+  <a class="sidepanel-menu-item-link mod-secondary" href="/voorwaarden">
+    <div class="sidepanel-menu-item-link-icon">
+          </div>
+    <div class="sidepanel-menu-item-link-label">
+      Voorwaarden
+    </div>
+  </a>
+</li>    </ul>
+  </div>
+</div>
+
+  <div class="content-container">
+    
+	<section class="publication js-publication" data-publication-id="5475" data-readtoken="5808bd73f52e3c4b744b408b" data-publication-type="article" data-is-published="1">
+
+				
+		<div class="article-head-container">
+	<div class="article-head">
+		<div class="article-head-labels">
+			
+
+
+<div class="publication-labels">
+
+	
+	<div class="publication-labels-label mod-article-page">
+									Verhaal van de dag
+						</div>
+</div>
+		</div>
+
+		<div class="article-head-metadata">
+			<div class="article-head-metadata-data mod-date">
+									<time datetime="2016-10-19T14:21" class="article-head-metadata-data mod-date">19 October 2016</time>
+							</div>
+			
+							<div class="article-head-metadata-divider"></div>
+				<div class="article-head-metadata-data mod-readingtime">
+					
+			Leestijd
+	
+	9 - 12
+	minuten
+				</div>
+					</div>
+
+		<div class="article-head-lead" data-field="intro">
+			Afgelopen nacht kruisten presidentskandidaten Donald Trump en Hillary Clinton voor het laatst de degens in een groot debat. Een debat dat al maanden doorspekt is met clich&eacute;s, stereotypen en leugens. Ik woon in het deel van Amerika waar men slechts &#39;overheen vliegt&#39; als men van New York naar Sillicon Valley gaat. Daar zie je verpaupering, ja, maar ook hoop en gemeenschapszin.
+		</div>
+	</div>
+
+	<div class="article-head-title" data-field="title">
+		Vannacht werd er weer gedebatteerd over een karikatuur van Amerika. Zo is het echt in Flyover Country
+	</div>
+
+	<div class="publication-authors  ">
+			<div class="publication-authors-department">
+			Correspondent Amerika voor Europeanen
+		</div>
+	
+	<div class="publication-authors-avatars">
+					<div class="publication-authors-avatars-avatar ">
+				<img class="publication-authors-avatars-avatar-image" src="https://dynamic.decorrespondent.nl/ff-1468504382/media/380/5787993e15e6a4418158986.png"/>
+			</div>
+			</div>
+
+	<div class="publication-authors-names">
+					<a class="publication-authors-names-name author-name" href="https://decorrespondent.nl/sarahkendzior">
+				<div>
+					<span>Sarah</span>
+					<span>Kendzior</span>
+				</div>
+			</a>
+					
+								<div class="publication-authors-names-follow-button js-author-follow is-not-following" data-author-id="110359" data-author-name="Sarah Kendzior">
+				<div class="publication-authors-names-follow-button-icon"><span class="icon icon-plus"></span></div>
+				<div class="publication-authors-names-follow-button-icon"><span class="icon icon-check"></span></div>
+				<div class="publication-authors-names-follow-button-icon"><span class="icon icon-close"></span></div>
+			</div>
+			</div>
+</div>
+</div>
+		<div class="article-mainvisual js-mainvisual">
+			<img class="article-mainvisual-image js-image" data-srcset="
+				https://dynamic.decorrespondent.nl/media/1920/5807c4f6c24d30158748517.jpg 1920w,
+				https://dynamic.decorrespondent.nl/media/1600/5807c4f6c24d30158748517.jpg 1600w,
+				https://dynamic.decorrespondent.nl/media/1366/5807c4f6c24d30158748517.jpg 1366w,
+				https://dynamic.decorrespondent.nl/media/1024/5807c4f6c24d30158748517.jpg 1024w,
+				https://dynamic.decorrespondent.nl/media/660/5807c4f6c24d30158748517.jpg 660w"/>
+	</div>
+		<div class="article-body publication-body js-publication-progress-container">
+			<div class="article-body-mainvisual-caption">
+			Foto: Brain Blanco / Getty Images
+		</div>
+	
+	<div class="article-body-text mod-dropcap" data-field="content">
+		<p>Op 9 oktober debatteerde Donald Trump met Hillary Clinton op een kleine twintig kilometer afstand van wat hij <span class="contentitem-sidenote ">
+		<a class="contentitem-sidenote-link" href="http://www.stltoday.com/news/local/govt-and-politics/trump-does-it-again-with-ferguson-calling-city-among-world/article_e227cf57-6f54-59d5-8d2a-b610144b1925.html" target="_blank">een van de gevaarlijkste plaatsen ter wereld</a>
+	
+		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="http://www.stltoday.com/news/local/govt-and-politics/trump-does-it-again-with-ferguson-calling-city-among-world/article_e227cf57-6f54-59d5-8d2a-b610144b1925.html" target="_blank" aria-hidden="true">
+		<span class="contentitem-sidenote-description-icon">
+			<span class="icon icon-sidenote-website"></span>
+		</span>
+		
+		Lees hier meer over Trumps typering van Ferguson
+	</a>
+	
+	<span class="contentitem-sidenote-snippet">een van de gevaarlijkste plaatsen ter wereld</span>
+</span>
+ noemt: Ferguson, Missouri. Je zou denken dat er wel wat concurrenten zijn voor die titel (Syri&euml; bijvoorbeeld?), maar nee. Sinds 2014 beweert hij regelmatig dat Ferguson overspoeld wordt door rondzwervende bendes illegale immigranten. &lsquo;Gevaarlijke types,&rsquo; zegt hij dreigend, terwijl hij belooft als president de allochtonen onder hen de grens over te <span class="contentitem-sidenote ">
+		<a class="contentitem-sidenote-link" href="https://decorrespondent.nl/5466/to-donald-trump-we-are-all-bit-players-in-a-fantasy-america-starring-donald-trump/1445863811106-4f5569e4" target="_blank">zetten.</a>
+	
+		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="https://decorrespondent.nl/5466/to-donald-trump-we-are-all-bit-players-in-a-fantasy-america-starring-donald-trump/1445863811106-4f5569e4" target="_blank" aria-hidden="true">
+		<span class="contentitem-sidenote-description-icon">
+			<span class="icon icon-sidenote-internalarticle"></span>
+		</span>
+		
+		Hier vind je de Engelse versie van dit artikel.
+	</a>
+	
+	<span class="contentitem-sidenote-snippet">zetten.</span>
+</span>
+</p>
+
+<p>Veel werk zou dat niet zijn, want het aandeel inwoners van Ferguson dat in het buitenland is geboren is 1,1 procent. Het aanpakken van bendes van illegale immigranten is nog makkelijker: die zijn er niet.</p>
+
+<p>Het Ferguson dat Donald Trump beschrijft, bestaat alleen in zijn fantasie.</p>
+
+<p>Goed, hij is niet de enige die een verkeerd beeld van Ferguson schetst. Toen twee jaar geleden de politie een 18-jarige jongen doodschoot en er rellen uitbraken, omschreven talloze media de vrij onopvallende arbeiderswijk als een &lsquo;getto&rsquo; of een &lsquo;oorlogsgebied.&rsquo; Niet echt accuraat. Maar de manier waarop Trump Fergusons ellende toeschrijft aan rondzwervende bendes illegale immigranten is onge&euml;venaard.</p>
+
+<p>Hoewel Ferguson over veel kwesties diep verdeeld is, zijn de inwoners &ndash; blank en zwart, demonstrant en politieagent &ndash; het over &eacute;&eacute;n ding eens: Donald Trump weet niets over hun woonplaats. Wat is het precies aan Ferguson, vragen ze zich af, waarvoor Trump zo bang is? De boerenmarkt? De nieuwe Starbucks? De winkelcentra?</p>
+
+<h2>Trump gedraagt zich als vreemdeling in eigen land</h2>
+
+<p>De inwoners van Ferguson zijn niet de enigen die verbijsterd zijn. Al sinds het begin van zijn campagne gedraagt Trump zich als een vreemdeling in zijn eigen land, ook al reist hij er permanent rond. Hij praat als een tijdreiziger met een blinddoek op, gestrand in 2016 maar geestelijk nog altijd verkerend in de vroege jaren tachtig. Als Trump zich het afgelopen jaar had opgesloten in zijn Trump Tower, met uitsluitend <span class="contentitem-infocard js-contentitem-infocard " data-id="79211">
+	
+	<span class="contentitem-infocard-toggle-container js-toggle">
+		<abbr class="contentitem-infocard-snippet" title="Grandmaster Flash was een hiphop-pionier die in de jaren tachtig bekend werd met zijn rauwe teksten over geweld en aftakeling in de Amerikaanse binnensteden, en de onverschilligheid voor het lot van de zwarte bewoners. Hij baseerde zijn teksten op de tijd dat hij in New York City woonde in de jaren zeventig en begin jaren tachtig - in wijken die sindsdien getransformeerd en verhipt zijn.
+
+John Mellencamp is een Amerikaanse popster uit Indiana die in de jaren tachtig over het vaak moeilijke bestaan van boeren en arme dorpjes zong. Mellencamp is een favoriet van veel Republikeinen vanwege zijn verheerlijking van het - overwegend witte - heartland, het Amerikaanse platteland. Maar Mellencamp heeft publiekelijk afstand genomen van de Republikeinen, omdat hij vindt dat veel van de plattelandsgemeenschappen zijn verdwenen door Republikeins beleid. Wat beide artiesten bezingen is een goede afspiegeling van de situatie in hun tijd, maar is tegenwoordig vrij gedateerd." aria-expanded="false" aria-controls="contentitem-infocard-contents-79211">
+			Grandmaster Flash en de heartland rock van John Mellencamp
+		</abbr>
+		
+		<span class="contentitem-infocard-toggle">
+			<span class="icon icon-chevron-down"></span>
+		</span>
+	</span>
+	
+	<span class="contentitem-infocard-contents" id="contentitem-infocard-contents-79211">
+					<img class="contentitem-infocard-contents-image js-image" data-src="https://dynamic.decorrespondent.nl/media//94/5807814f18adb8427658804.jpg" alt=""/>
+				<span class="contentitem-infocard-contents-text">Grandmaster Flash was een hiphop-pionier die in de jaren tachtig bekend werd met zijn rauwe teksten over geweld en aftakeling in de Amerikaanse binnensteden, en de onverschilligheid voor het lot van de zwarte bewoners. Hij baseerde zijn teksten op de tijd dat hij in New York City woonde in de jaren zeventig en begin jaren tachtig - in wijken die sindsdien getransformeerd en verhipt zijn.
+
+John Mellencamp is een Amerikaanse popster uit Indiana die in de jaren tachtig over het vaak moeilijke bestaan van boeren en arme dorpjes zong. Mellencamp is een favoriet van veel Republikeinen vanwege zijn verheerlijking van het - overwegend witte - heartland, het Amerikaanse platteland. Maar Mellencamp heeft publiekelijk afstand genomen van de Republikeinen, omdat hij vindt dat veel van de plattelandsgemeenschappen zijn verdwenen door Republikeins beleid. Wat beide artiesten bezingen is een goede afspiegeling van de situatie in hun tijd, maar is tegenwoordig vrij gedateerd.</span>
+	</span>
+	
+</span>
+ op de stereo, zou hij naar buiten zijn gekomen met exact dezelfde blik op het Amerikaanse platteland en het leven in de steden.</p>
+
+<p>Het was hilarisch geweest, als hij geen presidentskandidaat was.</p>
+
+<p>Natuurlijk, flagrante en kwaadaardige leugens, dat is waar Trump bekend om staat. Hij doet valse claims over stembusfraude, ontkent schaamteloos de dingen die hij heeft gezegd en gedaan, voert nare stereotyperingen op van etnische en religieuze groepen en belastert zijn tegenstanders.</p>
+
+<p>Het beeld dat hij schetst van Amerikaanse <span class="contentitem-infocard js-contentitem-infocard " data-id="79214">
+	
+	<span class="contentitem-infocard-toggle-container js-toggle">
+		<abbr class="contentitem-infocard-snippet" title="En voorsteden als Ferguson die hij foutief beschouwt als steden, aangezien hij er nooit is geweest." aria-expanded="false" aria-controls="contentitem-infocard-contents-79214">
+			steden
+		</abbr>
+		
+		<span class="contentitem-infocard-toggle">
+			<span class="icon icon-chevron-down"></span>
+		</span>
+	</span>
+	
+	<span class="contentitem-infocard-contents" id="contentitem-infocard-contents-79214">
+				<span class="contentitem-infocard-contents-text">En voorsteden als Ferguson die hij foutief beschouwt als steden, aangezien hij er nooit is geweest.</span>
+	</span>
+	
+</span>
+ valt niet in de categorie bewuste verdraa&iuml;ngen - het lijkt ergens anders vandaan te komen. Uit onwetendheid en onverschilligheid. Maar de gevolgen ervan zijn net zo verraderlijk als zijn leugens. Trumps opmerkingen over steden tonen overduidelijk aan dat hij nul respect heeft voor de inwoners. Zo weinig zelfs dat het hem niks kan schelen of ze hem met feiten weerspreken, of dat ze misschien beledigd zijn door zijn grove misvattingen. Ze zijn slechts figuranten in een bij elkaar gefantaseerd Amerika waarin Donald Trump de hoofdrol speelt.</p>
+
+<p><aside class="contentitem-image mod-full-width ">
+
+	<figure>
+					<img alt=""
+					 src="https://dynamic.decorrespondent.nl/media/320/580780102c2cb1174403313.jpg"
+					 srcset="https://dynamic.decorrespondent.nl/media/320/580780102c2cb1174403313.jpg 320w, https://dynamic.decorrespondent.nl/media/600/580780102c2cb1174403313.jpg 600w, https://dynamic.decorrespondent.nl/media/904/580780102c2cb1174403313.jpg 904w"/>
+		
+			</figure>
+
+</aside>
+<span style="display: none;"> </span></p>
+
+<p><aside class="contentitem-image mod-full-width ">
+
+	<figure>
+					<img alt="Foto&#039;s: Jewel Samad / AFP"
+					 src="https://dynamic.decorrespondent.nl/media/320/5807803a398437396755641.jpg"
+					 srcset="https://dynamic.decorrespondent.nl/media/320/5807803a398437396755641.jpg 320w, https://dynamic.decorrespondent.nl/media/600/5807803a398437396755641.jpg 600w, https://dynamic.decorrespondent.nl/media/904/5807803a398437396755641.jpg 904w"/>
+		
+					<figcaption class="contentitem-caption ">Foto&#039;s: Jewel Samad / AFP</figcaption>
+			</figure>
+
+</aside>
+<span style="display: none;"> </span></p>
+
+<h2>Zijn schets van Amerika is schofferend</h2>
+
+<p>&lsquo;Ik wil dingen doen die nog niet zijn gedaan,&rsquo; <span class="contentitem-sidenote ">
+		<a class="contentitem-sidenote-link" href="http://www.nytimes.com/2016/10/10/us/politics/transcript-second-debate.html" target="_blank">orakelde</a>
+	
+		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="http://www.nytimes.com/2016/10/10/us/politics/transcript-second-debate.html" target="_blank" aria-hidden="true">
+		<span class="contentitem-sidenote-description-icon">
+			<span class="icon icon-sidenote-website"></span>
+		</span>
+		
+		In het transcript van het debat lees je terug wat Trump precies zei
+	</a>
+	
+	<span class="contentitem-sidenote-snippet">orakelde</span>
+</span>
+ Trump tijdens het debat in St. Louis. &lsquo;Zoals het opknappen en verbeteren van onze verpauperde binnensteden, voor al die geweldige zwarte Amerikanen, voor de latino&rsquo;s, de hispanics. Ik zie er naar uit en ik noem dat: <em>making America great again.&rsquo;</em> Er is veel merkwaardigs aan deze opmerking - het gebruik van het lidwoord &lsquo;de&rsquo; voor elke etnische groep bijvoorbeeld, alsof het op zichzelf staande massa&rsquo;s zijn - maar zijn schets van stedelijk Amerika is op zichzelf al beledigend.</p>
+
+<p>Laten we beginnen met St. Louis, waar het tweede verkiezingsdebat werd gehouden. Een stad die ik heel goed ken, omdat ik er woon. Voordat Trump in oktober naar St. Louis kwam, was hij er al twee keer op campagnebezoek geweest. E&eacute;n keer voor een bezoek aan de opera, een andere keer voor een uitvaart van een bekende conservatieve Amerikaan. Anders dan Hillary Clinton, die tijdens de voorverkiezingen in gesprek ging met zwarte inwoners van St. Louis, maakte Trump geen aanstalten om St. Louis&rsquo; niet-witte buurten in te gaan.</p>
+
+<p>Toegegeven, had hij dat wel gedaan, dan had het zomaar verkeerd kunnen aflopen. De Trump-bijeenkomst in St. Louis was een van de eerste die werd <span class="contentitem-sidenote ">
+		<a class="contentitem-sidenote-link" href="https://www.theguardian.com/us-news/2016/mar/12/donald-trump-supporters-st-louis-rally-protest-violence" target="_blank">verstoord</a>
+	
+		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="https://www.theguardian.com/us-news/2016/mar/12/donald-trump-supporters-st-louis-rally-protest-violence" target="_blank" aria-hidden="true">
+		<span class="contentitem-sidenote-description-icon">
+			<span class="icon icon-sidenote-website"></span>
+		</span>
+		
+		The Guardian deed verslag van die rellen
+	</a>
+	
+	<span class="contentitem-sidenote-snippet">verstoord</span>
+</span>
+ door demonstranten, dit keer door een ongekend diverse groep inwoners van St. Louis. Zwart, latino, moslim, LHBT, joods, wit, jong, oud - ze vonden elkaar in hun verzet tegen Trumps kwaadaardige kortzichtigheid.</p>
+
+<blockquote>Trump sprak met geen woord over de voorsteden. Daar grijpt de Amerikaanse armoedecrisis juist het snelst om zich heen</blockquote>
+
+<p>Tegelijkertijd zou je denken dat Trump tenminste zou proberen de toestand in St. Louis voor eigen gewin in te zetten. St. Louis is immers &eacute;&eacute;n van de weinige steden die - in een paar opzichten - wel voldoen aan zijn stereotypering van &lsquo;de verpauperde binnenstad.&rsquo; Maar laten we voordat we kijken naar wat er - op een perverse en onbedoelde manier - klopt aan Trumps voorstelling van de binnenstad, eerst eens een blik werpen op de vele dingen die er niet aan kloppen.</p>
+
+<p>Tijdens het debat kreeg Trump een vraag van een man uit de buurt van St. Louis, ene James Carter. Hij wilde weten of Trump een &lsquo;toegewijde president voor alle inwoners van de Verenigde Staten&rsquo; zou zijn. Carter is zwart, en dus viel Trump meteen terug op allerlei <span class="contentitem-sidenote ">
+		<a class="contentitem-sidenote-link" href="http://www.nytimes.com/2016/10/10/us/politics/transcript-second-debate.html" target="_blank">stereotyperingen.</a>
+	
+		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="http://www.nytimes.com/2016/10/10/us/politics/transcript-second-debate.html" target="_blank" aria-hidden="true">
+		<span class="contentitem-sidenote-description-icon">
+			<span class="icon icon-sidenote-website"></span>
+		</span>
+		
+		Wat Trump precies zei, lees je terug in dit transcript van het debat
+	</a>
+	
+	<span class="contentitem-sidenote-snippet">stereotyperingen.</span>
+</span>
+</p>
+
+<p>&lsquo;Ik zou een president zijn voor iedereen, zwarte Amerikanen, in de binnensteden,&rsquo; begon zijn nogal onsamenhangende betoog. &lsquo;Verschrikkelijk wat er gebeurt in onze binnensteden. Je gaat de binnenstad in en - weet je, er is 45 procent armoede. Zwarte Amerikanen, nu 45 procent armoede in de binnensteden. Onderwijs is een ramp. <em>There are hardly any jobs</em>.&rsquo;</p>
+
+<p><aside class="contentitem-image mod-full-width ">
+
+	<figure>
+					<img alt=""
+					 src="https://dynamic.decorrespondent.nl/media/320/5807808280ae43564890136.jpg"
+					 srcset="https://dynamic.decorrespondent.nl/media/320/5807808280ae43564890136.jpg 320w, https://dynamic.decorrespondent.nl/media/600/5807808280ae43564890136.jpg 600w, https://dynamic.decorrespondent.nl/media/904/5807808280ae43564890136.jpg 904w"/>
+		
+			</figure>
+
+</aside>
+<span style="display: none;"> </span></p>
+
+<p><aside class="contentitem-image mod-full-width ">
+
+	<figure>
+					<img alt="Foto&#039;s: Sarah Rice / Getty Images"
+					 src="https://dynamic.decorrespondent.nl/media/320/5807809d97a005217022672.jpg"
+					 srcset="https://dynamic.decorrespondent.nl/media/320/5807809d97a005217022672.jpg 320w, https://dynamic.decorrespondent.nl/media/600/5807809d97a005217022672.jpg 600w, https://dynamic.decorrespondent.nl/media/904/5807809d97a005217022672.jpg 904w"/>
+		
+					<figcaption class="contentitem-caption ">Foto&#039;s: Sarah Rice / Getty Images</figcaption>
+			</figure>
+
+</aside>
+<span style="display: none;"> </span></p>
+
+<h2>Geen woord over de voorsteden, terwijl het daar juist slecht gaat</h2>
+
+<p>In Trumps wereldbeeld zijn er geen zwarte burgers die tot de midden- of hogere klassen behoren. Er zijn alleen hordes werkloze, laagopgeleide Amerikanen die proberen te <span class="contentitem-infocard js-contentitem-infocard " data-id="79227">
+	
+	<span class="contentitem-infocard-toggle-container js-toggle">
+		<abbr class="contentitem-infocard-snippet" title="En in de gevallen dat Trump zwarte Amerikanen niet behandelt als een soort betreurenswaardige en inwisselbare groep, behandelt hij ze als vijanden - zoals gebeurde met de Central Park Five, de zwarte tieners die in de jaren tachtig vals beschuldigd werden van verkrachting en dankzij Trump in de gevangenis terecht kwamen." aria-expanded="false" aria-controls="contentitem-infocard-contents-79227">
+			overleven
+		</abbr>
+		
+		<span class="contentitem-infocard-toggle">
+			<span class="icon icon-chevron-down"></span>
+		</span>
+	</span>
+	
+	<span class="contentitem-infocard-contents" id="contentitem-infocard-contents-79227">
+				<span class="contentitem-infocard-contents-text">En in de gevallen dat Trump zwarte Amerikanen niet behandelt als een soort betreurenswaardige en inwisselbare groep, behandelt hij ze als vijanden - zoals gebeurde met de Central Park Five, de zwarte tieners die in de jaren tachtig vals beschuldigd werden van verkrachting en dankzij Trump in de gevangenis terecht kwamen.</span>
+	</span>
+	
+</span>
+ in de stedelijke ellende.</p>
+
+<p>Verder beweert Trump dat armoede slechts op twee plaatsen voorkomt: in verarmde, kleine blanke dorpen, waar zijn aanhangers wonen, en in de gevaarlijke verpauperde binnensteden. Voorsteden komen in dit plaatje niet voor, en dat is kwalijk. Want juist daar, in die gemengde en verarmde <em><span class="contentitem-infocard js-contentitem-infocard " data-id="79228">
+	
+	<span class="contentitem-infocard-toggle-container js-toggle">
+		<abbr class="contentitem-infocard-snippet" title="In de Verenigde Staten zijn voorsteden - suburbs - een wezenlijk onderdeel van de American dream van een eigen huis in een veilige, vriendelijke buurt. In het economische hoogtij na de Tweede Wereldoorlog groeiden de voorsteden snel, met een nieuwe boost in de jaren zestig en zeventig toen blanke Amerikanen de binnenstad ontvluchtten - soms omdat ze niet naast niet-witte Amerikanen wilden wonen, maar ook als reactie op het geweld en de aftakeling in de binnensteden.
+
+Tegenwoordig trekken welgestelde witte mensen weer terug naar de binnenstad, waardoor de voorsteden armer én diverser worden. De economische crisis van 2008 sloeg heftig toe in de voorsteden, omdat de huizenprijs instortte en veel gezinnen hun huis uit moesten. Een leven in de suburbs maakt zo steeds minder deel uit van de American Dream." aria-expanded="false" aria-controls="contentitem-infocard-contents-79228">
+			suburbs,
+		</abbr>
+		
+		<span class="contentitem-infocard-toggle">
+			<span class="icon icon-chevron-down"></span>
+		</span>
+	</span>
+	
+	<span class="contentitem-infocard-contents" id="contentitem-infocard-contents-79228">
+				<span class="contentitem-infocard-contents-text">In de Verenigde Staten zijn voorsteden - suburbs - een wezenlijk onderdeel van de American dream van een eigen huis in een veilige, vriendelijke buurt. In het economische hoogtij na de Tweede Wereldoorlog groeiden de voorsteden snel, met een nieuwe boost in de jaren zestig en zeventig toen blanke Amerikanen de binnenstad ontvluchtten - soms omdat ze niet naast niet-witte Amerikanen wilden wonen, maar ook als reactie op het geweld en de aftakeling in de binnensteden.
+
+Tegenwoordig trekken welgestelde witte mensen weer terug naar de binnenstad, waardoor de voorsteden armer én diverser worden. De economische crisis van 2008 sloeg heftig toe in de voorsteden, omdat de huizenprijs instortte en veel gezinnen hun huis uit moesten. Een leven in de suburbs maakt zo steeds minder deel uit van de American Dream.</span>
+	</span>
+	
+</span>
+</em> grijpt de Amerikaanse armoedecrisis het snelst om zich heen.</p>
+
+<p>Ferguson en de omliggende voorsteden van de North County van St. Louis zijn schoolvoorbeelden van de transformatie die Amerikaanse suburbs de afgelopen jaren hebben doorgemaakt. Ooit werden de voorsteden in North County bewoond door overwegend blanke arbeiders, maar tegenwoordig wonen er voornamelijk zwarten die in de dienstensector werken. Het is een gevolg van:</p>
+
+<ul>
+	<li>De uitholling van de economie</li>
+	<li>De zwarte vlucht uit de binnenstad van St. Louis, waarbij gezinnen op zoek gingen naar een betere woonsituatie</li>
+	<li>De witte vlucht uit North County van mensen die niet tussen zwarte mensen wilden wonen</li>
+</ul>
+
+<p>De meesten die North County verlieten, streken neer in de overwegend witte <span class="contentitem-infocard js-contentitem-infocard " data-id="79229">
+	
+	<span class="contentitem-infocard-toggle-container js-toggle">
+		<abbr class="contentitem-infocard-snippet" title="Exurbs zijn welvarende regio&#039;s die voorbij de voorsteden liggen. Exurbs worden doorgaans bewoond door rijke gezinnen en bestaan vaak uit buurten die op het voormalige platteland worden gebouwd. De exurbs groeien nu de voorsteden steeds armer en gekleurder worden; de witte mensen vluchten weg." aria-expanded="false" aria-controls="contentitem-infocard-contents-79229">
+			exurbs.
+		</abbr>
+		
+		<span class="contentitem-infocard-toggle">
+			<span class="icon icon-chevron-down"></span>
+		</span>
+	</span>
+	
+	<span class="contentitem-infocard-contents" id="contentitem-infocard-contents-79229">
+				<span class="contentitem-infocard-contents-text">Exurbs zijn welvarende regio&#039;s die voorbij de voorsteden liggen. Exurbs worden doorgaans bewoond door rijke gezinnen en bestaan vaak uit buurten die op het voormalige platteland worden gebouwd. De exurbs groeien nu de voorsteden steeds armer en gekleurder worden; de witte mensen vluchten weg.</span>
+	</span>
+	
+</span>
+ Het is geen toeval dat de Trump-campagne zijn hoofdkwartier juist in deze exurbs heeft gevestigd.</p>
+
+<p>St. Louis is niet de enige stad met voorsteden waarin de armoede groeit. Het gebeurt overal in de VS: binnensteden verhippen, waardoor inwoners met een lager inkomen langzamerhand worden verdreven omdat het leven er te duur wordt. Die steden worden vaak gelauwerd als &lsquo;succesverhalen&rsquo; (New York City, Trumps thuisbasis, is h&eacute;t voorbeeld), maar het eindresultaat is vaak een letterlijke vorm van <em><span class="contentitem-sidenote ">
+		<a class="contentitem-sidenote-link" href="http://www.aljazeera.com/indepth/opinion/2014/05/peril-hipster-economics-2014527105521158885.html" target="_blank">white washing.</a>
+	
+		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="http://www.aljazeera.com/indepth/opinion/2014/05/peril-hipster-economics-2014527105521158885.html" target="_blank" aria-hidden="true">
+		<span class="contentitem-sidenote-description-icon">
+			<span class="icon icon-sidenote-website"></span>
+		</span>
+		
+		Op de site van Al-Jazeera lees je meer over &#039;white washing&#039; 
+	</a>
+	
+	<span class="contentitem-sidenote-snippet">white washing.</span>
+</span>
+</em></p>
+
+<p>Rijke witte nieuwkomers krijgen bovendien het geld en de middelen om &lsquo;de buurt op te knappen,&rsquo; middelen die de eerdere niet-witte inwoners nooit kregen. De oorspronkelijke bewoners profiteren zelden van de nieuwe bedrijfjes en winkels die zich er vestigen (aangezien die doorgaans geen locals in dienst nemen), maar hebben wel last van stijgende huurprijzen.</p>
+
+<p>Bovendien nemen de wegtrekkende inwoners van de binnensteden hun problemen (armoede, werkeloosheid en discriminatie) met zich mee naar hun nieuwe woonomgeving, naar de goedkopere voorsteden. Alsof dat niet erg genoeg is, hebben ze daar ook nog eens minder basisvoorzieningen. Goed openbaar vervoer, een divers aanbod van banen: in de voorsteden is het allemaal schaarser.</p>
+
+<h2>Inderdaad, sommige plekken zijn deplorabel</h2>
+
+<p>Er zijn buurten in de &lsquo;binnensteden&rsquo; die inderdaad iets weg hebben van Trumps karikaturale schets, zoals hier in St. Louis. De stad is al meer dan een eeuw populair bij vluchtelingen, deels dankzij de lage kosten voor levensonderhoud en de lange traditie van lokale organisaties die vluchtelingen bijstaan. Ik weet niet meer hoe vaak een vluchteling tegen me heeft gezegd dat sommige delen van St. Louis er slechter aan toe zijn dan de steden die hij of zij zelf ontvluchtte. Steden als Mogadishu in de jaren negentig, en Sarajevo.</p>
+
+<p>Langs de straten staan ingestorte en deels verbrande huizen, op elke straathoek vind je gedenktekens voor moordslachtoffers, de babysterfte is hoog, scholen zijn gesloten, er zijn vaak schietpartijen en de werkloosheid is gigantisch.</p>
+
+<blockquote>Talloze vluchtelingen zeiden tegen me dat sommige delen van St. Louis er slechter aan toe zijn dan de steden die ze zelf ontvluchtten</blockquote>
+
+<p>Deze buurten zijn doorgaans allemaal zwart, de problemen spelen er al tientallen jaren, en het ziet er niet naar uit dat er snel een oplossing voor komt. Natuurlijk lijkt het Trump totaal niet te boeien wat de inwoners van deze buurten doormaken, hoe ze met hun ellende omgaan, of wat ze willen. En eerlijk is eerlijk, ook de Democraten bekommeren zich nauwelijks om de inwoners, vertellen die me.</p>
+
+<p>Maar dat betekent niet dat niemand iets doet. In de binnensteden kom je vooral burgers tegen die, met extreem beperkte middelen en zonder noemenswaardige steun, de buurten zelf proberen op te knappen.</p>
+
+<p><aside class="contentitem-image mod-full-width ">
+
+	<figure>
+					<img alt=""
+					 src="https://dynamic.decorrespondent.nl/media/320/580780b2390111417983857.jpg"
+					 srcset="https://dynamic.decorrespondent.nl/media/320/580780b2390111417983857.jpg 320w, https://dynamic.decorrespondent.nl/media/600/580780b2390111417983857.jpg 600w, https://dynamic.decorrespondent.nl/media/904/580780b2390111417983857.jpg 904w"/>
+		
+			</figure>
+
+</aside>
+<span style="display: none;"> </span></p>
+
+<p><aside class="contentitem-image mod-full-width ">
+
+	<figure>
+					<img alt="Foto&#039;s: Brian Blanco / Getty Images"
+					 src="https://dynamic.decorrespondent.nl/media/320/580780cfb7fe24269470863.jpg"
+					 srcset="https://dynamic.decorrespondent.nl/media/320/580780cfb7fe24269470863.jpg 320w, https://dynamic.decorrespondent.nl/media/600/580780cfb7fe24269470863.jpg 600w, https://dynamic.decorrespondent.nl/media/904/580780cfb7fe24269470863.jpg 904w"/>
+		
+					<figcaption class="contentitem-caption ">Foto&#039;s: Brian Blanco / Getty Images</figcaption>
+			</figure>
+
+</aside>
+<span style="display: none;"> </span></p>
+
+<h2>Locals staan in de startblokken: ze willen hun buurten opknappen</h2>
+
+<p>Het meest voorkomende affiche in St. Louis is er niet een voor een presidentskandidaat, maar eentje met de tekst <span class="contentitem-sidenote ">
+		<a class="contentitem-sidenote-link" href="https://www.theguardian.com/world/2015/jun/01/black-lives-matter-signs-national-movement-st-louis" target="_blank">‘We must stop killing each other.’</a>
+	
+		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="https://www.theguardian.com/world/2015/jun/01/black-lives-matter-signs-national-movement-st-louis" target="_blank" aria-hidden="true">
+		<span class="contentitem-sidenote-description-icon">
+			<span class="icon icon-sidenote-website"></span>
+		</span>
+		
+		Voor The Guardian deed ik verslag van de opkomst van die affiches
+	</a>
+	
+	<span class="contentitem-sidenote-snippet">‘We must stop killing each other.’</span>
+</span>
+ De affiches kwamen van een lokale zwarte kerkgemeenschap en bleken mateloos populair onder mensen die genoeg hadden van al het geweld. Sommige inwoners zijn <span class="contentitem-infocard js-contentitem-infocard " data-id="79234">
+	
+	<span class="contentitem-infocard-toggle-container js-toggle">
+		<abbr class="contentitem-infocard-snippet" title="Zij zeggen: diepgewortelde problemen als racisme en politiegeweld los je niet op met affiches" aria-expanded="false" aria-controls="contentitem-infocard-contents-79234">
+			sceptisch,
+		</abbr>
+		
+		<span class="contentitem-infocard-toggle">
+			<span class="icon icon-chevron-down"></span>
+		</span>
+	</span>
+	
+	<span class="contentitem-infocard-contents" id="contentitem-infocard-contents-79234">
+				<span class="contentitem-infocard-contents-text">Zij zeggen: diepgewortelde problemen als racisme en politiegeweld los je niet op met affiches</span>
+	</span>
+	
+</span>
+ maar velen omarmen ze en zien ze als een vorm van collectieve afkeuring.</p>
+
+<p>Het haalt zelden het nieuws, maar overal in deze buurten zie je voorbeelden van liefdadigheid en barmhartigheid - soms groots, soms klein. Ik zie hoe jonge zwarte mannen (die door Trump zouden worden gekarakteriseerd als gevaarlijk) oudere, hulpbehoevende zwarte bewoners helpen. Ik spreek vaak zwarte schrijvers, kunstenaars en rappers die niets liever willen dan het verhaal van hun buurt naar buiten brengen, zodat hun buurtgenoten meer steun en middelen krijgen.</p>
+
+<p>Ik ben <span class="contentitem-sidenote ">
+		<a class="contentitem-sidenote-link" href="https://www.theguardian.com/us-news/2015/aug/19/st-louis-murders-dangerous-neighborhood-college-hill" target="_blank">op bezoek geweest</a>
+	
+		<a class="contentitem-sidenote-description js-contentitem-sidenote" href="https://www.theguardian.com/us-news/2015/aug/19/st-louis-murders-dangerous-neighborhood-college-hill" target="_blank" aria-hidden="true">
+		<span class="contentitem-sidenote-description-icon">
+			<span class="icon icon-sidenote-website"></span>
+		</span>
+		
+		Hier lees je mijn verslag over die naschoolse opvang
+	</a>
+	
+	<span class="contentitem-sidenote-snippet">op bezoek geweest</span>
+</span>
+ bij een naschoolse opvang, opgezet door een ex-gedetineerde die leuke en veilige activiteiten voor de buurtkinderen organiseert. Hij vertelde me dat veel drugsdealers hun kinderen naar die activiteiten sturen, in de hoop dat het buurtcentrum hun grut op het rechte pad houdt.</p>
+
+<h2>Geef de locals geld en middelen, dan gaan ze zelf aan de slag</h2>
+
+<p>Het aanpakken van verpauperde binnensteden, dat kunnen de inwoners van die verpauperde binnensteden z&eacute;lf doen. Wat zij nodig hebben is geld, middelen en het vertrouwen van bestuurders dat inwoners hun eigen problemen het beste kennen en daarom ook de beste oplossingen kunnen verzinnen.</p>
+
+<p>En dat is juist het probleem. Inwoners krijgen dat vertrouwen niet. Omdat ze arm zijn en doorgaans niet de opleiding of kwalificaties hebben die de instanties graag zien.</p>
+
+<p>Terug naar Trump. Zijn beschrijving van het leven in de binnenstad is misschien niet zo openlijk vijandig als zijn aanvallen op moslims, Mexicanen of andere religieuze en etnische groepen, maar ze is minstens zo ontmenselijkend. In zijn optiek zijn de zwarte inwoners van binnensteden geen spelers maar pionnen. Als Trump wordt gevraagd waarom zwarte kiezers op hem moeten stemmen, antwoordt hij achteloos &lsquo;Wat hebben ze te verliezen?&rsquo;.</p>
+
+<p>Wel, deze mensen hebben nog genoeg te verliezen. Kijk maar naar de probleembuurten van St. Louis: die hollen al decennia achteruit en het einde lijkt nog niet in zicht. Het kan altijd slechter.</p>
+
+<p>Ja, er zijn ook altijd kansen om de zaak ten goede te keren. Maar om dat voor elkaar te krijgen, moeten de inwoners van die binnensteden materi&euml;le steun krijgen van de overheid. En respect. Aan de valse clich&eacute;s van Donald Trump hebben ze niks.</p>
+
+<p><em>De vertaling uit het Engels is van Hans-Pieter van Stein Callenfels</em></p>
+
+<p>
+
+	<p>
+		<a class="contentitem-linkblock  js-contentitem-linkblock" href="https://decorrespondent.nl/5466/to-donald-trump-we-are-all-bit-players-in-a-fantasy-america-starring-donald-trump/1546058739522-5f0795c0" data-public="" target="_blank">
+							<span class="contentitem-linkblock-image-container">
+					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/580792f4aed2b8147087370.jpg" alt=""/>
+				</span>
+						<span class="contentitem-linkblock-content">
+					<span class="contentitem-linkblock-title">To Donald Trump, we are all bit players in a fantasy America starring Donald Trump</span>
+					<span class="contentitem-linkblock-lead">In Trump's worldview, there are no middle or upper-class black citizens, only a horde of jobless, uneducated Americans fighting for survival amid the urban blight. His latest comments are the clearest evidence yet that Trump has no respect for the actual inhabitants of actual places. How can a man who's been travelling the country all year still know so little about its people?</span>
+					<span class="contentitem-linkblock-button">
+						Lees het verhaal van Sarah hier in het Engels
+						<span class="icon icon-arrow-right"></span>
+					</span>
+				</span>
+		</a>
+	</p>
+
+<span style="display: none;"> </span></p>
+
+<h2>Meer lezen?</h2>
+
+<p>
+
+	<p>
+		<a class="contentitem-linkblock  js-contentitem-linkblock" href="https://decorrespondent.nl/5181/je-kunt-pas-een-echte-amerikaan-zijn-als-je-wit-bent-gemaakt/256242991191-4d397dc5" data-public="" target="_blank">
+							<span class="contentitem-linkblock-image-container">
+					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/5807c9cdb78550341927602.jpg" alt=""/>
+				</span>
+						<span class="contentitem-linkblock-content">
+					<span class="contentitem-linkblock-title">Je kunt pas een &#039;echte Amerikaan&#039; zijn als je wit bent gemaakt</span>
+					<span class="contentitem-linkblock-lead">Donald Trump is de eerste moderne openlijke 'witte suprematie'-kandidaat van een van de grote partijen in de VS. Voor hem is witheid een wapen. Daarmee brengt hij Amerika terug naar de achttiende eeuw.</span>
+					<span class="contentitem-linkblock-button">
+						Lees het verhaal van Sarah hier terug
+						<span class="icon icon-arrow-right"></span>
+					</span>
+				</span>
+		</a>
+	</p>
+
+
+
+	<p>
+		<a class="contentitem-linkblock  js-contentitem-linkblock" href="https://decorrespondent.nl/5464/deze-latinos-moeten-de-republikeinse-partij-uit-de-as-doen-herrijzen/270239664904-505600d1" data-public="" target="_blank">
+							<span class="contentitem-linkblock-image-container">
+					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/5807c9d9beaa60220449255.jpg" alt=""/>
+				</span>
+						<span class="contentitem-linkblock-content">
+					<span class="contentitem-linkblock-title">Deze latino&#039;s moeten de Republikeinse partij uit de as doen herrijzen</span>
+					<span class="contentitem-linkblock-lead">Donald Trump heeft de Republikeinse partij in een diepe crisis gestort. Ik ging op bezoek bij de groep die Trump het liefst beledigt: latino&rsquo;s. Want ondanks alles heeft conservatief Amerika hen hard nodig. Ze kunnen de kerken redden - én de 'Grand Old Party'.</span>
+					<span class="contentitem-linkblock-button">
+						Lees het verhaal van Robin hier terug
+						<span class="icon icon-arrow-right"></span>
+					</span>
+				</span>
+		</a>
+	</p>
+
+
+
+	<p>
+		<a class="contentitem-linkblock  js-contentitem-linkblock" href="https://decorrespondent.nl/4997/waarom-donald-trump-zich-vereenzelvigt-met-een-arbeidersklasse-die-al-vijftig-jaar-niet-meer-bestaat/247142680367-4ebb2d8a" data-public="" target="_blank">
+							<span class="contentitem-linkblock-image-container">
+					<img class="contentitem-linkblock-image" src="https://dynamic.decorrespondent.nl/media/141/5807c9eecf4281304738159.jpg" alt=""/>
+				</span>
+						<span class="contentitem-linkblock-content">
+					<span class="contentitem-linkblock-title">Waarom Donald Trump zich vereenzelvigt met een arbeidersklasse die al vijftig jaar niet meer bestaat</span>
+					<span class="contentitem-linkblock-lead">De middenklasse in Amerika kwijnt al decennia weg. Het verklaart het succes van Donald Trump, die zegt op te zullen komen voor de 'gewone arbeider'. Maar de ironie is: uit al zijn toespraken blijkt dat de Republikeinse presidentskandidaat geen flauw benul heeft wie die arbeider anno 2016 is, en wat die doet.</span>
+					<span class="contentitem-linkblock-button">
+						Lees het verhaal van Sarah hier terug
+						<span class="icon icon-arrow-right"></span>
+					</span>
+				</span>
+		</a>
+	</p>
+
+<span style="display: none;"> </span><span style="display: none;"> </span></p>
+
+	</div>
+
+	
+
+	<div class="article-body-options">
+		<div class="publication-options mod-article-page">
+	<div class="publication-options-option js-sharing">
+		<div class="publication-options-option-content mod-clickable js-toggle">
+			<div class="publication-options-option-content-icon">
+				<span class="icon icon-sharing"></span>
+			</div>
+
+			<div class="publication-options-option-content-label">
+				104 x gedeeld
+			</div>
+		</div>
+
+		<div class="tooltip js-tooltip mod-left mod-bottom mod-sharing">
+  <div class="tooltip-arrow mod-left mod-bottom mod-sharing"></div>
+  <div class="tooltip-close js-close">
+    <div class="icon icon-close"></div>
+  </div>
+  				
+<div class="tooltip-sharing-options js-tooltip-sharing-options" data-title="Vannacht werd er weer gedebatteerd over een karikatuur van Amerika. Zo is het echt in Flyover Country" data-description="Afgelopen nacht kruisten presidentskandidaten Donald Trump en Hillary Clinton voor het laatst de degens in een groot debat. Een debat dat al maanden doorspekt is met clich&amp;eacute;s, stereotypen en leugens. Ik woon in het deel van Amerika waar men slechts &amp;#39;overheen vliegt&amp;#39; als men van New York naar Sillicon Valley gaat. Daar zie je verpaupering, ja, maar ook hoop en gemeenschapszin." data-url="https://decorrespondent.nl/5475/vannacht-werd-er-weer-gedebatteerd-over-een-karikatuur-van-amerika-zo-is-het-echt-in-flyover-country/270783705225-28122e79" data-image="https://dynamic.decorrespondent.nl/media/1920/5807c4f6c24d30158748517.jpg">
+	<div class="tooltip-sharing-options-option js-facebook">
+		<div class="tooltip-sharing-options-option-icon-container">
+			<div class="tooltip-sharing-options-option-icon icon icon-facebook"></div>
+		</div>
+		<div class="tooltip-sharing-options-option-label">Facebook</div>
+	</div>
+
+	<div class="tooltip-sharing-options-option js-twitter">
+		<div class="tooltip-sharing-options-option-icon-container">
+			<div class="tooltip-sharing-options-option-icon icon icon-twitter"></div>
+		</div>
+		<div class="tooltip-sharing-options-option-label">Twitter</div>
+	</div>
+
+	<div class="tooltip-sharing-options-option js-linkedin">
+		<div class="tooltip-sharing-options-option-icon-container">
+			<div class="tooltip-sharing-options-option-icon icon icon-linkedin"></div>
+		</div>
+		<div class="tooltip-sharing-options-option-label">LinkedIn</div>
+	</div>
+
+	<div class="tooltip-sharing-options-option js-whatsapp mod-whatsapp">
+		<div class="tooltip-sharing-options-option-icon-container">
+			<div class="tooltip-sharing-options-option-icon icon icon-whatsapp"></div>
+		</div>
+		<div class="tooltip-sharing-options-option-label">Whatsapp</div>
+	</div>
+
+	<a href="mailto:?subject=Tip%3A%20Vannacht%20werd%20er%20weer%20gedebatteerd%20over%20een%20karikatuur%20van%20Amerika.%20Zo%20is%20het%20echt%20in%20Flyover%20Country&body=Op%20De%20Correspondent%20las%20ik%20een%20artikel%20van%20Sarah%20Kendzior%20dat%20ik%20graag%20met%20je%20wil%20delen%3A%0A%0A%3Cem%3EVannacht%20werd%20er%20weer%20gedebatteerd%20over%20een%20karikatuur%20van%20Amerika.%20Zo%20is%20het%20echt%20in%20Flyover%20Country%3C%2Fem%3E%3A%0A%3Ca%20href%3D%22https%3A%2F%2Fdecorrespondent.nl%2F5475%2Fvannacht-werd-er-weer-gedebatteerd-over-een-karikatuur-van-amerika-zo-is-het-echt-in-flyover-country%2F270783705225-28122e79%22%3Ehttps%3A%2F%2Fdecorrespondent.nl%2F5475%2Fvannacht-werd-er-weer-gedebatteerd-over-een-karikatuur-van-amerika-zo-is-het-echt-in-flyover-country%2F270783705225-28122e79%3C%2Fa%3E%0A%0A%0AP.S.%20Overweeg%20je%20ook%20lid%20te%20worden%20van%20De%20Correspondent%3F%0AJe%20kunt%20je%20vrijblijvend%20aanmelden%20voor%20de%20proefmail.%20Dan%20ontvang%20je%20elke%20zaterdagochtend%20een%20verhaal%20in%20je%20inbox.%0ASchrijf%20je%20hier%20gratis%20in%3A%20%3Ca%20href%3D%22https%3A%2F%2Fcorr.es%2Fps-proefmail%22%3Ehttps%3A%2F%2Fcorr.es%2Fps-proefmail%3C%2Fa%3E%0A%0A%0A" class="tooltip-sharing-options-option js-email">
+		<div class="tooltip-sharing-options-option-icon-container">
+			<div class="tooltip-sharing-options-option-icon icon icon-email"></div>
+		</div>
+		<div class="tooltip-sharing-options-option-label">E-mail</div>
+	</a>
+
+	<div class="tooltip-sharing-options-option js-link">
+		<div class="tooltip-sharing-options-option-icon-container">
+			<div class="tooltip-sharing-options-option-icon icon icon-link"></div>
+		</div>
+		<div class="tooltip-sharing-options-option-label">Link</div>
+	</div>
+
+						<a href="https://decorrespondent.nl/article/5475/print" target="_blank" class="tooltip-sharing-options-option">
+				<div class="tooltip-sharing-options-option-icon-container">
+					<div class="tooltip-sharing-options-option-icon icon icon-print"></div>
+				</div>
+				<div class="tooltip-sharing-options-option-label">Print</div>
+			</a>
+			
+					<a href="https://decorrespondent.nl/article/5475.pdf" target="_blank" class="tooltip-sharing-options-option">
+				<div class="tooltip-sharing-options-option-icon-container">
+					<div class="tooltip-sharing-options-option-icon icon icon-pdf"></div>
+				</div>
+				<div class="tooltip-sharing-options-option-label">PDF</div>
+			</a>
+			</div>
+			
+</div>	</div>
+
+					<div class="publication-options-option js-favorite favorite-button is-not-favorited" data-publication-id="5475">
+			<div class="publication-options-option-content mod-clickable">
+				<div class="publication-options-option-content-icon">
+					<span class="icon icon-save"></span>
+					<span class="icon icon-save-saved mod-red"></span>
+				</div>
+				<div class="publication-options-option-content-label">
+					<span>Bewaar</span>
+					<span>Bewaard</span>
+				</div>
+			</div>
+		</div>
+	
+	<div class="publication-options-option mod-hide-on-mobile">
+		<div class="publication-options-option-content">
+			<div class="publication-options-option-content-icon">
+				<span class="icon icon-reading-time"></span>
+			</div>
+			<div class="publication-options-option-content-label">
+				<time datetime="2016-10-19T14:21">October 19, 2016 14:21</time>
+			</div>
+		</div>
+	</div>
+</div>
+	</div>
+</div>
+
+	</section>
+
+		
+	
+								<div class="article-author-feed-promo">
+	<div class="article-author-feed-promo-text">
+		Wil je mijn andere verhalen lezen, meediscussiëren en verder onderzoek volgen?
+	</div>
+
+	<a class="article-author-feed-promo-button" href="https://decorrespondent.nl/sarahkendzior">
+		<div class="article-author-feed-promo-button-label">
+			Bekijk mijn artikelen
+		</div>
+		<div class="article-author-feed-promo-button-icon">
+			<span class="icon icon-arrow-right"></span>
+		</div>
+	</a>
+</div>
+		
+					<section class="comments js-comment-section js-comments-progress-container mod-article"
+				 data-publication-id="5475"
+				 data-sort-order="ASC">
+
+	<div class="comments-loading js-comments-loading">
+		<div class="loading-logo">
+	<span class="icon icon-logo"></span>
+</div>
+	</div>
+	
+	<div class="comments-loading-failed js-comments-loading-failed is-hidden">
+		<p>
+			Er is iets misgegaan bij het laden van de bijdragen.
+		</p>
+		<p>
+			Probeer het hier nog een keer
+		</p>
+		
+		<div class="comments-loading-failed-icon">
+			<span class="icon icon-reload"></span>
+		</div>
+	</div>
+	
+	<div class="js-comments-api-output"></div>
+</section>
+		
+	
+
+  </div>
+
+			<div class="general-footer mod-dark">
+	<div class="general-footer-container">
+
+		<div class="general-footer-container-links">
+			<h3 class="general-footer-container-links-title">Over ons</h3>
+
+			<ul>
+				<li class="general-footer-container-links-listitem">
+					<a class="general-footer-container-links-listitem-link" href="https://decorrespondent.nl/over">Over De Correspondent</a>
+				</li>
+				<li class="general-footer-container-links-listitem">
+					<a class="general-footer-container-links-listitem-link" href="https://decorrespondent.nl/colofon">Colofon</a>
+				</li>
+				<li class="general-footer-container-links-listitem">
+					<a class="general-footer-container-links-listitem-link" href="https://decorrespondent.nl/vacatures">Vacatures</a>
+				</li>
+				<li class="general-footer-container-links-listitem">
+					<a class="general-footer-container-links-listitem-link" href="https://decorrespondent.nl/voorwaarden">Voorwaarden</a>
+				</li>
+				<li class="general-footer-container-links-listitem">
+					<a class="general-footer-container-links-listitem-link" href="https://decorrespondent.nl/contact">Contact</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="general-footer-container-links">
+			<h3 class="general-footer-container-links-title">En verder</h3>
+
+			<ul>
+				<li class="general-footer-container-links-listitem">
+					<a class="general-footer-container-links-listitem-link" href="https://decorrespondent.nl/kiosk">Kiosk</a>
+				</li>
+				<li class="general-footer-container-links-listitem">
+					<a class="general-footer-container-links-listitem-link" href="https://decorrespondent.nl/evenementen">Evenementen</a>
+				</li>
+				<li class="general-footer-container-links-listitem">
+					<a class="general-footer-container-links-listitem-link" href="https://decorrespondent.nl/veelgestelde-vragen">Veelgestelde vragen</a>
+				</li>
+				<li class="general-footer-container-links-listitem">
+					<a class="general-footer-container-links-listitem-link" href="https://decorrespondent.nl/geef-cadeau">Cadeaulidmaatschappen</a>
+				</li>
+				<li class="general-footer-container-links-listitem">
+					<a class="general-footer-container-links-listitem-link" href="https://decorrespondent.nl/word-lid">Word lid</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="general-footer-container-social">
+			<h3 class="general-footer-container-links-title">Volg De Correspondent</h3>
+
+			<ul class="general-footer-container-social-list">
+				<li class="general-footer-container-social-list-listitem">
+					<a  class="general-footer-container-social-list-listitem-link" href="https://www.facebook.com/decorrespondent" title="Facebook" target="_blank">
+						<span class="icon icon-facebook"></span>
+					</a>
+				</li>
+				<li class="general-footer-container-social-list-listitem">
+					<a  class="general-footer-container-social-list-listitem-link" href="https://twitter.com/decorrespondent" title="Twitter" target="_blank">
+						<span class="icon icon-twitter"></span>
+					</a>
+				</li>
+				<li class="general-footer-container-social-list-listitem">
+					<a  class="general-footer-container-social-list-listitem-link" href="https://nl.linkedin.com/company/de-correspondent" title="LinkedIn" target="_blank">
+						<span class="icon icon-linkedin"></span>
+					</a>
+				</li>
+				<li class="general-footer-container-social-list-listitem">
+					<a  class="general-footer-container-social-list-listitem-link" href="https://www.instagram.com/decorrespondent/" title="Instagram" target="_blank">
+						<span class="icon icon-instagram"></span>
+					</a>
+				</li>
+				<li class="general-footer-container-social-list-listitem">
+					<a  class="general-footer-container-social-list-listitem-link" href="https://www.youtube.com/c/decorrespondentnl" title="YouTube" target="_blank">
+						<span class="icon icon-youtube"></span>
+					</a>
+				</li>
+				<li class="general-footer-container-social-list-listitem">
+					<a  class="general-footer-container-social-list-listitem-link" href="https://vimeo.com/decorrespondent" title="Vimeo" target="_blank">
+						<span class="icon icon-vimeo"></span>
+					</a>
+				</li>
+			</ul>
+
+		</div>
+
+	</div>
+</div>
+
+  <script type="text/javascript" src="https://static.cdn-decorrespondent.nl/app.1476959954.js"  crossorigin="anonymous"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"58a9cb8fa7","applicationID":"21642978","transactionName":"ZQNSbUFWX0JSAhVbW1xJc0xAQ15cHBEUUFhbBVFNWlhfHlAOD0ZGXQpcXEFEHkFGAw1bV1MSWVZdGFBDRwgCXlE=","queueTime":0,"applicationTime":120,"atts":"SURRGwlMTEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

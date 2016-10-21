@@ -21,7 +21,7 @@ namespace DeCorrespondent.Test.Impl
             File.WriteAllText("d:\\test.BodyHtml", result.BodyHtml);
             Assert.IsFalse(result.BodyHtml.Contains("<script"));
             Assert.IsFalse(result.BodyHtml.Contains("publication-sidenote "));
-            Assert.IsTrue(result.BodyHtml.Contains("publication-sidenote-link"));
+            Assert.IsTrue(result.BodyHtml.Contains("contentitem-sidenote-link"));
             Assert.IsFalse(result.BodyHtml.Contains("share-publication-footer"));
             //Assert.IsFalse(result.BodyHtml.Contains("publication-body-link"));
             Assert.IsFalse(result.BodyHtml.Contains("class=\"header"));
@@ -33,13 +33,13 @@ namespace DeCorrespondent.Test.Impl
             Assert.AreEqual(new[] { 6, 7 }, result.Metadata.ReadingTime.ToArray());
             Assert.AreEqual("Sanne", result.Metadata.AuthorFirstname);
             Assert.AreEqual("Blauw", result.Metadata.AuthorLastname);
-            Assert.AreEqual("https://dynamic.decorrespondent.nl/ff-1442375110/media/1024/55f8734d4e0455501740378.jpg", result.Metadata.MainImgUrl);
-            Assert.AreEqual("https://dynamic.decorrespondent.nl/ff-1442375110/media/660/55f8734d4e0455501740378.jpg", result.Metadata.MainImgUrlSmall);
-            Assert.AreEqual("https://dynamic.decorrespondent.nl/ff-1441719053/media/190/55eee30dc2bdd5475014700.png", result.Metadata.AuthorImgUrl);
+            Assert.AreEqual("https://dynamic.decorrespondent.nl/media/1024/55f8734d4e0455501740378.jpg", result.Metadata.MainImgUrl);
+            Assert.AreEqual("https://dynamic.decorrespondent.nl/media/660/55f8734d4e0455501740378.jpg", result.Metadata.MainImgUrlSmall);
+            Assert.AreEqual("https://dynamic.decorrespondent.nl/ff-1441719053/media/50/55eee30dc2bdd5475014700.png", result.Metadata.AuthorImgUrl);
             Assert.AreEqual("Ontcijferen", result.Metadata.Section);
             Assert.AreEqual("Data uit ontwikkelingslanden zijn vaak van slechte kwaliteit. Ik ging op zoek naar nieuwe technologieën om betere data te verzamelen. In deel twee van de serie: drie manieren waarop mobiele telefoons een verschil kunnen maken.", result.Metadata.Description);
             Assert.AreEqual(new DateTime(2015, 9, 16, 5, 45, 0), result.Metadata.Published);
-            Assert.AreEqual(new DateTime(2015, 12, 2, 13, 19, 23), result.Metadata.Modified);
+            Assert.AreEqual(new DateTime(2015, 9, 16, 5, 45, 0), result.Metadata.Modified); //modified time niet meer beschikbaar (21-10-2016)
         }
 
         [Test]
@@ -106,6 +106,16 @@ namespace DeCorrespondent.Test.Impl
 
             Assert.NotNull(result.BodyHtml);
             Assert.IsTrue(result.BodyHtml.Contains("een simpele telnet-hack"));
+        }
+
+        [Test]
+        public void ReadArticle5475()
+        {
+            var reader = new ArticleReader();
+
+            var result = reader.Read(new FileResources().Read("http://t/5475"));
+
+            Assert.IsNotNull(result.Metadata.Modified);
         }
     }
 }

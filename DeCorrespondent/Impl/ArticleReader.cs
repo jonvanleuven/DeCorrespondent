@@ -19,8 +19,9 @@ namespace DeCorrespondent.Impl
                 .ToDictionary(x => x.Key, x => x.FirstOrDefault());
             var body = doc.DocumentNode.SelectSingleNode("//body");
             var metadata = new ArticleMetadata(metadataValues);
-            var introNode = body.SelectSingleNode("//p[@class='intro']");
-            metadata.Description = (introNode != null ? introNode.InnerText : string.Empty).UnescapeHtml();
+            //var introNode = body.SelectSingleNode("//p[@class='intro']");
+            //metadata.Description = (introNode != null ? introNode.InnerText : string.Empty).UnescapeHtml();
+            metadata.Section = body.SelectSingleNode("//div[@class='publication-authors-department']")?.InnerText.Trim().UnescapeHtml().Replace("Correspondent ", "");
             metadata.ReadingTime = ReadingTime(body);
             RemoveNodes(body, "//script");
             RemoveNodes(body, "//noscript");
@@ -35,20 +36,25 @@ namespace DeCorrespondent.Impl
             RemoveNodes(body, "//a", "publication-sidenote");
             RemoveNodes(body, "//header");
             RemoveNodes(body, "//p", "publication-main-image-description");
-            (body.SelectNodes("//img[string-length(@data-src) > 0]")??EmptyNodes).Where(n => n != null).ToList().ForEach(n =>
+            (body.SelectNodes("//img[string-length(@data-srcset) > 0]") ??EmptyNodes).Where(n => n != null).ToList().ForEach(n =>
             {
-                var isMainImage = n.GetAttributeValue("class", "").Contains("mainimage");
-                var urlPlain = n.Attributes["data-src"].Value;
-                var url = urlPlain.Replace("{breakpoint-name}", !isMainImage ? "904" : "1024"); //320, 600 of 904 (of 660, 1024 of 1920 voor main image)
+                var isMainImage = n.GetAttributeValue("class", "").Contains("article-mainvisual-image");
+                var urlPlain = n.Attributes["data-srcset"].Value;
+                var url = isMainImage
+                    ? urlPlain.Split(',').Where(i => i.EndsWith("1024w")).Select(x => x.Trim().Split(' ').FirstOrDefault()).FirstOrDefault()
+                    : urlPlain.Split(',').Where(i => i.EndsWith("904w")).Select(x => x.Trim().Split(' ').FirstOrDefault()).FirstOrDefault();
+                    //320, 600 of 904 (of 660, 1024 of 1920 voor main image)
                 n.SetAttributeValue("src", url);
-                n.SetAttributeValue("data-src", "");
+                n.SetAttributeValue("data-srcset", "");
                 if (isMainImage)
                 {
                     metadata.MainImgUrl = url;
-                    metadata.MainImgUrlSmall = urlPlain.Replace("{breakpoint-name}", "660"); ;
+                    metadata.MainImgUrlSmall = urlPlain.Split(',').Where(i => i.EndsWith("660w")).Select(x => x.Trim().Split(' ').FirstOrDefault()).FirstOrDefault(); ;
                     n.Remove();
                 }
             });
+
+
             (body.SelectNodes("//iframe[string-length(@data-src) > 0]") ?? EmptyNodes).Where(n => n != null).ToList().ForEach(n =>
             {
                 var url = n.Attributes["data-src"].Value;
@@ -63,7 +69,7 @@ namespace DeCorrespondent.Impl
 
         private static IList<int> ReadingTime(HtmlNode body)
         {
-            var node = body.SelectSingleNode("//span[@class='reading-time']");
+            var node = body.SelectSingleNode("//div[@class='article-head-metadata-data mod-readingtime']");
             if (node == null) return new int[0];
             return string.Join("", node.InnerText.Where(l => Char.IsDigit(l) || l == '-')).Split('-')
                 .Select(int.Parse)
@@ -122,12 +128,12 @@ namespace DeCorrespondent.Impl
         public string AuthorFirstname { get { return GetValue("article:author:first_name"); } }
         public string AuthorLastname { get { return GetValue("article:author:last_name"); } }
         public DateTime Published { get { return ParseDate(GetValue("article:published_time")); } }
-        public DateTime Modified { get { return ParseDate(GetValue("article:modified_time")); } }
+        public DateTime Modified { get { return ParseDate(GetValue("article:modified_time")?? GetValue("article:published_time")); } }
         public string MainImgUrl { get; internal set; }
         public string MainImgUrlSmall { get; set; }
         public string AuthorImgUrl { get { return GetValue("article:author:image"); } }
-        public string Section { get { return GetValue("article:section").UnescapeHtml(); } }
-        public string Description { get; internal set; }
+        public string Section { get; internal set; }
+        public string Description { get { return GetValue("og:description").UnescapeHtml().UnescapeHtml(); } }
         public IList<IExternalMedia> ExternalMedia { get; private set; }
 
         public string Url
